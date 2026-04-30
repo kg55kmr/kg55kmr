@@ -1,0 +1,8 @@
+node_modules
+.*/
+!/.vscode
+dist
+.env.local
+
+!packages/distance-learning/dist
+!packages/posts/dist

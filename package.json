@@ -1,0 +1,20 @@
+{
+  "name": "kg55kmr",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "eslint": "^9.39.4",
+    "eslint-config": "workspace:^",
+    "pkgroll": "^2.27.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "turbo": "^2.9.6",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  }
+}

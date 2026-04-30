@@ -1,0 +1,14 @@
+{
+  "name": "checker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "yt": "dotenv -e ../../site/.env.local -- node src/yt.ts"
+  },
+  "dependencies": {
+    "dotenv-cli": "^11.0.0",
+    "fdir": "^6.5.0",
+    "rambda": "^11.1.0",
+    "zod": "^4.4.1"
+  }
+}

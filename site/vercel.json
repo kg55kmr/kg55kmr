@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/educational-work/main/safety-class-fire-safety",
+      "destination": "/educational-work/safety-class?id=fire-safety",
+      "permanent": true
+    },
+    {
+      "source": "/educational-work/main/safety-class-life-safety",
+      "destination": "/educational-work/safety-class?id=life-safety",
+      "permanent": true
+    },
+    {
+      "source": "/educational-work/main/safety-class-life-medical",
+      "destination": "/educational-work/safety-class?id=pre-medical-care",
+      "permanent": true
+    },
+    {
+      "source": "/educational-work/main/safety-class-mine-safety",
+      "destination": "/educational-work/safety-class?id=mine-safety",
+      "permanent": true
+    }
+  ]
+}

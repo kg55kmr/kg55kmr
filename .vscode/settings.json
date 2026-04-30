@@ -1,0 +1,13 @@
+{
+  "js/ts.tsdk.path": "node_modules\\typescript\\lib",
+  "tailwindCSS.classFunctions": ["cn"],
+  "tailwindCSS.classAttributes": [".*class.*"],
+  "editor.unicodeHighlight.allowedLocales": {
+    "ru": true
+  },
+  "editor.unicodeHighlight.allowedCharacters": {
+    "і": true,
+    "І": true
+  },
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**"]
+}

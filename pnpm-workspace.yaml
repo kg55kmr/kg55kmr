@@ -1,0 +1,10 @@
+packages:
+  - site
+  - packages/*
+  - content
+
+onlyBuiltDependencies:
+  - core-js
+  - esbuild
+  - vscode-ripgrep
+

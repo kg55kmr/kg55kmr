@@ -1,0 +1,14 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "env": [
+        "GOOGLE_API_KEY",
+        "IMAGEKIT_PRIVATE_KEY",
+        "GITHUB_PERSONAL_ACCESS_TOKEN"
+      ],
+      "outputs": []
+    }
+  }
+}

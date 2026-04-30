@@ -1,0 +1,141 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-main: "open sans";
+  --font-cambria: "cambria", "open sans";
+  --font-monotype-corsiva: "monotype corsiva";
+  --font-times-new-roman: "times new roman";
+  --font-philosopher: "philosopher";
+  --font-roboto-condensed: "roboto condensed";
+  --font-lobster: "lobster";
+}
+
+@utility content {
+  @layer base {
+    @apply text-justify;
+
+    p,
+    ul,
+    ol {
+      @apply my-4;
+    }
+
+    ul {
+      @apply ml-10 list-disc;
+    }
+
+    ol {
+      @apply ml-10 list-decimal;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply my-2 text-center font-bold;
+    }
+
+    h1 {
+      @apply text-2xl;
+    }
+
+    h2 {
+      @apply text-lg;
+    }
+
+    hr {
+      @apply my-2;
+    }
+  }
+}
+
+@utility table-responsive {
+  @layer base {
+    @apply w-full text-left;
+
+    colgroup col:not(:last-child) {
+      @apply w-0;
+    }
+
+    thead {
+      @apply hidden md:table-header-group;
+
+      tr th {
+        @apply px-2 pb-3;
+      }
+    }
+
+    tbody {
+      @apply flex flex-col md:table-row-group;
+
+      tr {
+        @apply block py-4 md:table-row;
+
+        &:first-child {
+          @apply pt-0;
+        }
+
+        &:last-child {
+          @apply pb-0;
+        }
+
+        td {
+          @apply block md:table-cell md:px-2 md:py-0.5;
+        }
+      }
+    }
+  }
+}
+
+@utility table-border {
+  @layer base {
+    td,
+    th {
+      @apply border border-gray-300 p-2;
+    }
+  }
+}
+
+@utility table-header-center {
+  @layer base {
+    th {
+      @apply text-center;
+    }
+  }
+}
+
+@utility table-content-center {
+  @layer base {
+    td {
+      @apply text-center;
+    }
+  }
+}
+
+@custom-variant table-th (& th);
+
+@utility list-counter {
+  @layer base {
+    @apply list-none [counter-reset:item];
+
+    & li {
+      @apply [counter-increment:item] marker:[content:counters(item,".")"._"];
+    }
+  }
+}
+
+@utility input {
+  @apply w-full rounded-sm border border-gray-400 p-1;
+}
+
+@utility text-border {
+  filter: drop-shadow(1px 1px 2px black) drop-shadow(1px 1px 2px black);
+}
+
+@layer base {
+  pre {
+    @apply font-[inherit] whitespace-pre-line;
+  }
+}

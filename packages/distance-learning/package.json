@@ -1,0 +1,20 @@
+{
+  "name": "distance-learning",
+  "type": "module",
+  "bin": {
+    "distance-learning": "./dist/bin/main/index.js",
+    "pdf": "./dist/bin/pdf/index.js",
+    "drive-export": "./dist/bin/drive-export/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "pkgroll --clean-dist"
+  },
+  "dependencies": {
+    "@hyperse/delete-empty-folders": "^1.0.1",
+    "clipboardy": "^5.3.1",
+    "fdir": "^6.5.0",
+    "node-html-parser": "^7.1.0"
+  }
+}

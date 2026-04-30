@@ -107,10 +107,8 @@ import { Route as mainHistoryRouteImport } from './routes/(main)/history'
 import { Route as mainGraduatesRouteImport } from './routes/(main)/graduates'
 import { Route as mainFeedbackRouteImport } from './routes/(main)/feedback'
 import { Route as mainEnergyEfficiencyRouteImport } from './routes/(main)/energy-efficiency'
-import { Route as mainEdupayRouteImport } from './routes/(main)/edupay'
 import { Route as mainDistanceLearningRouteImport } from './routes/(main)/distance-learning'
 import { Route as mainBudgetFundsRouteImport } from './routes/(main)/budget-funds'
-import { Route as mainAspectsImprovingInstitutionRouteImport } from './routes/(main)/aspects-improving-institution'
 import { Route as mainAlbumRouteImport } from './routes/(main)/album'
 import { Route as mainAdministrationRouteImport } from './routes/(main)/administration'
 import { Route as mainAboutRouteImport } from './routes/(main)/about'
@@ -743,11 +741,6 @@ const mainEnergyEfficiencyRoute = mainEnergyEfficiencyRouteImport.update({
   path: '/energy-efficiency',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainEdupayRoute = mainEdupayRouteImport.update({
-  id: '/edupay',
-  path: '/edupay',
-  getParentRoute: () => mainRouteRoute,
-} as any)
 const mainDistanceLearningRoute = mainDistanceLearningRouteImport.update({
   id: '/distance-learning',
   path: '/distance-learning',
@@ -758,12 +751,6 @@ const mainBudgetFundsRoute = mainBudgetFundsRouteImport.update({
   path: '/budget-funds',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainAspectsImprovingInstitutionRoute =
-  mainAspectsImprovingInstitutionRouteImport.update({
-    id: '/aspects-improving-institution',
-    path: '/aspects-improving-institution',
-    getParentRoute: () => mainRouteRoute,
-  } as any)
 const mainAlbumRoute = mainAlbumRouteImport.update({
   id: '/album',
   path: '/album',
@@ -1318,10 +1305,8 @@ export interface FileRoutesByFullPath {
   '/about': typeof mainAboutRoute
   '/administration': typeof mainAdministrationRoute
   '/album': typeof mainAlbumRouteWithChildren
-  '/aspects-improving-institution': typeof mainAspectsImprovingInstitutionRoute
   '/budget-funds': typeof mainBudgetFundsRoute
   '/distance-learning': typeof mainDistanceLearningRoute
-  '/edupay': typeof mainEdupayRoute
   '/energy-efficiency': typeof mainEnergyEfficiencyRoute
   '/feedback': typeof mainFeedbackRoute
   '/graduates': typeof mainGraduatesRoute
@@ -1496,10 +1481,8 @@ export interface FileRoutesByTo {
   '/project-activity': typeof ProjectActivityRouteRoute
   '/about': typeof mainAboutRoute
   '/administration': typeof mainAdministrationRoute
-  '/aspects-improving-institution': typeof mainAspectsImprovingInstitutionRoute
   '/budget-funds': typeof mainBudgetFundsRoute
   '/distance-learning': typeof mainDistanceLearningRoute
-  '/edupay': typeof mainEdupayRoute
   '/energy-efficiency': typeof mainEnergyEfficiencyRoute
   '/feedback': typeof mainFeedbackRoute
   '/graduates': typeof mainGraduatesRoute
@@ -1686,10 +1669,8 @@ export interface FileRoutesById {
   '/(main)/about': typeof mainAboutRoute
   '/(main)/administration': typeof mainAdministrationRoute
   '/(main)/album': typeof mainAlbumRouteWithChildren
-  '/(main)/aspects-improving-institution': typeof mainAspectsImprovingInstitutionRoute
   '/(main)/budget-funds': typeof mainBudgetFundsRoute
   '/(main)/distance-learning': typeof mainDistanceLearningRoute
-  '/(main)/edupay': typeof mainEdupayRoute
   '/(main)/energy-efficiency': typeof mainEnergyEfficiencyRoute
   '/(main)/feedback': typeof mainFeedbackRoute
   '/(main)/graduates': typeof mainGraduatesRoute
@@ -1877,10 +1858,8 @@ export interface FileRouteTypes {
     | '/about'
     | '/administration'
     | '/album'
-    | '/aspects-improving-institution'
     | '/budget-funds'
     | '/distance-learning'
-    | '/edupay'
     | '/energy-efficiency'
     | '/feedback'
     | '/graduates'
@@ -2055,10 +2034,8 @@ export interface FileRouteTypes {
     | '/project-activity'
     | '/about'
     | '/administration'
-    | '/aspects-improving-institution'
     | '/budget-funds'
     | '/distance-learning'
-    | '/edupay'
     | '/energy-efficiency'
     | '/feedback'
     | '/graduates'
@@ -2244,10 +2221,8 @@ export interface FileRouteTypes {
     | '/(main)/about'
     | '/(main)/administration'
     | '/(main)/album'
-    | '/(main)/aspects-improving-institution'
     | '/(main)/budget-funds'
     | '/(main)/distance-learning'
-    | '/(main)/edupay'
     | '/(main)/energy-efficiency'
     | '/(main)/feedback'
     | '/(main)/graduates'
@@ -3123,13 +3098,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainEnergyEfficiencyRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/edupay': {
-      id: '/(main)/edupay'
-      path: '/edupay'
-      fullPath: '/edupay'
-      preLoaderRoute: typeof mainEdupayRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
     '/(main)/distance-learning': {
       id: '/(main)/distance-learning'
       path: '/distance-learning'
@@ -3142,13 +3110,6 @@ declare module '@tanstack/react-router' {
       path: '/budget-funds'
       fullPath: '/budget-funds'
       preLoaderRoute: typeof mainBudgetFundsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/aspects-improving-institution': {
-      id: '/(main)/aspects-improving-institution'
-      path: '/aspects-improving-institution'
-      fullPath: '/aspects-improving-institution'
-      preLoaderRoute: typeof mainAspectsImprovingInstitutionRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/album': {
@@ -3788,10 +3749,8 @@ interface mainRouteRouteChildren {
   mainAboutRoute: typeof mainAboutRoute
   mainAdministrationRoute: typeof mainAdministrationRoute
   mainAlbumRoute: typeof mainAlbumRouteWithChildren
-  mainAspectsImprovingInstitutionRoute: typeof mainAspectsImprovingInstitutionRoute
   mainBudgetFundsRoute: typeof mainBudgetFundsRoute
   mainDistanceLearningRoute: typeof mainDistanceLearningRoute
-  mainEdupayRoute: typeof mainEdupayRoute
   mainEnergyEfficiencyRoute: typeof mainEnergyEfficiencyRoute
   mainFeedbackRoute: typeof mainFeedbackRoute
   mainGraduatesRoute: typeof mainGraduatesRoute
@@ -3820,10 +3779,8 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainAboutRoute: mainAboutRoute,
   mainAdministrationRoute: mainAdministrationRoute,
   mainAlbumRoute: mainAlbumRouteWithChildren,
-  mainAspectsImprovingInstitutionRoute: mainAspectsImprovingInstitutionRoute,
   mainBudgetFundsRoute: mainBudgetFundsRoute,
   mainDistanceLearningRoute: mainDistanceLearningRoute,
-  mainEdupayRoute: mainEdupayRoute,
   mainEnergyEfficiencyRoute: mainEnergyEfficiencyRoute,
   mainFeedbackRoute: mainFeedbackRoute,
   mainGraduatesRoute: mainGraduatesRoute,

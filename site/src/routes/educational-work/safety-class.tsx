@@ -53,8 +53,9 @@ function LifeSafety() {
 }
 
 function PreMedicalCare() {
-  // TODO: rename medical
-  return <ImageKitGallery path="educational-work/safety-class/medical" />;
+  return (
+    <ImageKitGallery path="educational-work/safety-class/pre-medical-care" />
+  );
 }
 
 function MineSafety() {

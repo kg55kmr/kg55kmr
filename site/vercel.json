@@ -24,6 +24,11 @@
       "source": "/posts/useful/view/2025-06-09",
       "destination": "/posts/useful/2025-06-09",
       "permanent": true
+    },
+    {
+      "source": "/public-info/territory-of-service",
+      "destination": "/public-info?id=catchment-area",
+      "permanent": true
     }
   ]
 }

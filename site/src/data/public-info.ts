@@ -117,6 +117,7 @@ export const publicInfo: ReportItemWithItems[] = [
     title:
       "Територія обслуговування, закріплена за закладом освіти його засновником",
     component: Neighborhood,
+    id: "catchment-area",
   },
   {
     title:

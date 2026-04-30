@@ -5,10 +5,10 @@ import { Tabs } from "~/components/tabs";
 
 export const Route = createFileRoute("/educational-work/safety-class")({
   component: RouteComponent,
+  validateSearch: z.object({ id: z.string().default("fire-safety") }),
   staticData: {
     title: "Клас безпеки",
   },
-  validateSearch: z.object({ id: z.string().default("fire-safety") }),
 });
 
 const data = {

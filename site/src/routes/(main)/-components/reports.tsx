@@ -4,11 +4,24 @@ import { Accordion } from "~/components/accordion";
 import { Embed } from "~/components/embed";
 import { Tabs } from "~/components/tabs";
 
-export function Reports(props: { data: ReportItemWithItems[] }) {
+type Props = {
+  data: ReportItemWithItems[];
+  defaultId?: string;
+};
+
+export function Reports(props: Props) {
   return (
-    <Tabs orientation="vertical" className="lg:grid-cols-[30%_auto]">
+    <Tabs
+      orientation="vertical"
+      defaultValue={props.defaultId}
+      className="lg:grid-cols-[30%_auto]"
+    >
       {props.data.map((item) => (
-        <Tabs.Tab key={item.title} id={item.title} title={item.title}>
+        <Tabs.Tab
+          key={item.title}
+          id={item.id ?? item.title}
+          title={item.title}
+        >
           <Content {...item} />
         </Tabs.Tab>
       ))}

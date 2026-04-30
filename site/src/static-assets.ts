@@ -190,6 +190,7 @@ export type StaticAssetPath =
   'images/працівники/гнатюк.jpg' |
   'images/працівники/гнечко.jpg' |
   'images/працівники/горевич.jpg' |
+  'images/працівники/гудзовський.jpg' |
   'images/працівники/давидов.jpg' |
   'images/працівники/добровольська.jpg' |
   'images/працівники/довмат.jpg' |
@@ -497,6 +498,7 @@ const assets = new Set<string>([
   'images/працівники/гнатюк.jpg',
   'images/працівники/гнечко.jpg',
   'images/працівники/горевич.jpg',
+  'images/працівники/гудзовський.jpg',
   'images/працівники/давидов.jpg',
   'images/працівники/добровольська.jpg',
   'images/працівники/довмат.jpg',

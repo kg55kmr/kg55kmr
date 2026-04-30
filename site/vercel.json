@@ -19,6 +19,11 @@
       "source": "/educational-work/main/safety-class-mine-safety",
       "destination": "/educational-work/safety-class?id=mine-safety",
       "permanent": true
+    },
+    {
+      "source": "/posts/useful/view/2025-06-09",
+      "destination": "/posts/useful/2025-06-09",
+      "permanent": true
     }
   ]
 }

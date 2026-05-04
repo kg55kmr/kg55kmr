@@ -1,7 +1,8 @@
 import type { FC } from "react";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { BookOpenText } from "lucide-react";
 
-type Props = { items: Record<string, unknown> };
+type Props = { items: Record<string, () => Promise<unknown>> };
 
 type FeedPost = {
   title?: string;
@@ -9,11 +10,14 @@ type FeedPost = {
 };
 
 export function Feed(props: Props) {
-  const items = toFeed(props.items);
+  const { data: items } = useSuspenseQuery({
+    queryKey: ["feed"],
+    queryFn: () => toFeed(props.items),
+  });
   return (
-    <div className="flex flex-col gap-10">
-      {items.map((post, i) => {
-        return (
+    <div className="">
+      <div className="flex flex-col gap-10">
+        {items.map((post, i) => (
           <div
             key={i}
             className="relative w-full rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15"
@@ -26,20 +30,24 @@ export function Feed(props: Props) {
             )}
             <post.Content />
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 }
 
-function toFeed(glob: Record<string, unknown>) {
-  return Object.keys(glob)
-    .toSorted((a, b) => a.localeCompare(b, "uk", { numeric: true }))
-    .toReversed()
-    .map((path) => {
-      assertIsFeedPost(glob[path], path);
-      return glob[path];
-    });
+function toFeed(glob: Record<string, () => Promise<unknown>>) {
+  return Promise.all(
+    Object.keys(glob)
+      .toSorted((a, b) => a.localeCompare(b, "uk", { numeric: true }))
+      .toReversed()
+      .slice(0, 2)
+      .map(async (path) => {
+        const post = await glob[path]();
+        assertIsFeedPost(post, path);
+        return post;
+      }),
+  );
 }
 
 function assertIsFeedPost(

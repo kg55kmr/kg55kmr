@@ -1,1 +1,1 @@
-export type PostType = "news" | "announcements" | "useful" | "camp";
+export type PostType = "announcements" | "news" | "useful" | "camp";

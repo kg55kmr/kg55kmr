@@ -8,12 +8,10 @@ export const Route = createFileRoute(
   staticData: {
     title: "Поради батькам",
   },
-  ssr: false,
 });
 
 const data = import.meta.glob(
   "./-practical-psychologist.tips-for-parents/*/*.tsx",
-  { eager: true },
 );
 
 function RouteComponent() {

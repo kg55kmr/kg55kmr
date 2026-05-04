@@ -3,7 +3,7 @@ import { upperCaseComponents } from "./convert";
 
 test("upperCaseComponents", () => {
   expect(upperCaseComponents('<slideshow id="123"></slideshow>')).toBe(
-    '<Gallery id="123"></Gallery>',
+    '<Carousel id="123"></Carousel>',
   );
   expect(upperCaseComponents("<pre>text</pre>")).toBe("<Pre>text</Pre>");
 });

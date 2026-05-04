@@ -12,6 +12,7 @@ export const Route = createFileRoute(
 
 const data = import.meta.glob(
   "./-practical-psychologist.tips-for-parents/*/*.tsx",
+  { eager: true },
 );
 
 function RouteComponent() {

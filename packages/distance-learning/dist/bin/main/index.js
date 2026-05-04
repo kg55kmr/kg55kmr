@@ -134,9 +134,9 @@ async function prettify(root = "data", callback) {
   }
   return modifiedCount;
 }
-const reTheme = /([\s\.])тема\./gi;
+const reTheme = /([\s.])тема\./gi;
 const reCopy = /коп[іи]я/gi;
-const reDate = /^(\d\d\.\d\d)([^\.].*)/;
+const reDate = /^(\d\d\.\d\d)([^.].*)/;
 function prettyName(filename) {
   filename = filename.replace(reTheme, "$1\u0422\u0435\u043C\u0430.");
   filename = filename.replace(reCopy, "");

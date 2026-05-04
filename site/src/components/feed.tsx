@@ -2,7 +2,7 @@ import type { FC } from "react";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { BookOpenText } from "lucide-react";
 
-type Props = { items: Record<string, () => Promise<unknown>> };
+type Props = { items: Record<string, unknown> };
 
 type FeedPost = {
   title?: string;
@@ -36,14 +36,13 @@ export function Feed(props: Props) {
   );
 }
 
-function toFeed(glob: Record<string, () => Promise<unknown>>) {
+function toFeed(glob: Record<string, unknown>) {
   return Promise.all(
     Object.keys(glob)
       .toSorted((a, b) => a.localeCompare(b, "uk", { numeric: true }))
       .toReversed()
-      .slice(0, 2)
-      .map(async (path) => {
-        const post = await glob[path]();
+      .map((path) => {
+        const post = glob[path];
         assertIsFeedPost(post, path);
         return post;
       }),

@@ -6,7 +6,7 @@ import { ClientOnlySuspense } from "~/components/client-only-suspense";
 import { ExternalLink, Link } from "~/components/link";
 import { yearsList } from "~/data/distance-learning";
 import { employees } from "~/data/employees";
-import { postsSHAQuery, useYouTubeList } from "~/hooks/use-queries";
+import { useYouTubeList } from "~/hooks/use-queries";
 import { useSections } from "~/hooks/use-sections";
 import {
   formatPostDate,
@@ -169,10 +169,9 @@ function Card() {
 }
 
 function Posts(props: { hide?: [PostType] }) {
-  const { data: sha } = useSuspenseQuery(postsSHAQuery);
   const posts = useSuspenseQuery({
     queryKey: ["latest posts"],
-    queryFn: () => getLatestPosts(sha),
+    queryFn: () => getLatestPosts(),
   }).data;
 
   return Object.entries(postTypes)
@@ -181,7 +180,7 @@ function Posts(props: { hide?: [PostType] }) {
       const items = [...posts[type].pin, ...posts[type].items].map((post) => ({
         title: post.title,
         date: formatPostDate(post.date),
-        preview: getPostThumbnailUrl(type, post.id, sha),
+        preview: getPostThumbnailUrl(type, post.id),
         link: linkOptions({
           to: "/posts/$type/$id",
           params: { type: type as PostType, id: post.id },

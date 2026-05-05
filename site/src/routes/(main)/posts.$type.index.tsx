@@ -1,6 +1,5 @@
 import type { Post, PostType } from "posts";
 import { Accordion } from "@base-ui/react/accordion";
-import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
 import { ChevronUp } from "lucide-react";
 import { type ReactElement, useRef, useState } from "react";
@@ -9,7 +8,6 @@ import { Highlight } from "~/components/highlight";
 import { Link } from "~/components/link";
 import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
-import { postsSHAQuery } from "~/hooks/use-queries";
 import { useStickyOffset } from "~/hooks/use-sticky";
 import { pagination } from "~/lib/pagination";
 import { getPosts, getPostThumbnailUrl } from "~/lib/posts";
@@ -26,10 +24,8 @@ export const Route = createFileRoute("/(main)/posts/$type/")({
   search: {
     middlewares: [stripSearchParams({ page: 1, search: "" })],
   },
-  loader: async ({ context }) => ({
-    groupedPosts: await getPosts(
-      await context.queryClient.ensureQueryData(postsSHAQuery),
-    ),
+  loader: async () => ({
+    groupedPosts: await getPosts(),
   }),
 });
 
@@ -117,7 +113,6 @@ function RouteComponent() {
 type PostHighlight = Omit<Post, "title"> & { title: ReactElement };
 
 function Item(props: { post: PostHighlight; type: PostType }) {
-  const { data: sha } = useSuspenseQuery(postsSHAQuery);
   const { post, type } = props;
   return (
     <Link
@@ -142,7 +137,7 @@ function Item(props: { post: PostHighlight; type: PostType }) {
         <div className="mx-auto w-50 shrink-0 rounded-lg border border-gray-300 md:mx-0">
           {post.thumbnailExists ? (
             <img
-              src={getPostThumbnailUrl(type, post.id, sha)}
+              src={getPostThumbnailUrl(type, post.id)}
               className="block aspect-4/3 w-full rounded-lg object-cover"
             />
           ) : (

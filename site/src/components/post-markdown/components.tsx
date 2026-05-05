@@ -1,5 +1,4 @@
 import type { PDFProps } from "../pdf";
-import { useSuspenseQuery } from "@tanstack/react-query";
 import {
   type ImgHTMLAttributes,
   type PropsWithChildren,
@@ -10,11 +9,7 @@ import {
   useContext,
 } from "react";
 import { Pdf } from "~/components/pdf";
-import {
-  postsSHAQuery,
-  useImagesSize,
-  usePostImages,
-} from "~/hooks/use-queries";
+import { useImagesSize, usePostImages } from "~/hooks/use-queries";
 import { getPostFileUrl } from "~/lib/posts";
 import { ImageCarousel } from "../carousel";
 import { Gallery } from "../gallery";
@@ -81,12 +76,11 @@ export function Image(props: { src: string }) {
 
 export function GalleryWrapper(props: { children: ReactNode }) {
   const { type, id } = useContext(PostContext);
-  const { data: sha } = useSuspenseQuery(postsSHAQuery);
   const items = Children.toArray(props.children)
     .map((item) => {
       if (!isValidElement<ImgHTMLAttributes<HTMLImageElement>>(item))
         throw new Error(`${item} is not a valid element`);
-      return getPostFileUrl(type, id, item.props.src!, sha);
+      return getPostFileUrl(type, id, item.props.src!);
     })
     .filter((v): v is NonNullable<typeof v> => v !== null);
 

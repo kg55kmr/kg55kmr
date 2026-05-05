@@ -7,7 +7,6 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { postsSHAQuery } from "~/hooks/use-queries";
 import styles from "~/styles/app.css?url";
 
 type Context = {
@@ -16,9 +15,6 @@ type Context = {
 
 export const Route = createRootRouteWithContext<Context>()({
   component: RootComponent,
-  loader: async ({ context }) => ({
-    postsSHA: await context.queryClient.ensureQueryData(postsSHAQuery),
-  }),
   head: () => ({
     meta: [
       {

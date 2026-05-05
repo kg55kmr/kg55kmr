@@ -1,7 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
-import { setResponseHeaders } from "@tanstack/react-start/server";
 import z from "zod";
-import { latestCommit } from "~/server/github";
 import { getImageKitImages, getPostImageKitImages } from "~/server/imagekit";
 import { getSheetContent } from "~/server/sheets";
 import { requestPlaylist } from "~/server/youtube";
@@ -34,15 +32,3 @@ export const getYouTubePlayList = createServerFn()
 export const getGoogleSheet = createServerFn()
   .inputValidator(z.object({ id: z.string() }))
   .handler(({ data }) => getSheetContent(data));
-
-export const getLatestCommit = createServerFn()
-  .inputValidator(z.object({ repo: z.string() }))
-  .handler(({ data }) => {
-    setResponseHeaders({
-      "Cache-Control": "no-store",
-      "Vercel-CDN-Cache-Control": "public, s-maxage=3600",
-      "Vercel-Cache-Tag": "posts-sha",
-    });
-
-    return latestCommit(data);
-  });

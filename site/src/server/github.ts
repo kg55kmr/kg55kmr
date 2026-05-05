@@ -4,15 +4,6 @@ import { serverEnv } from "~/config/env";
 
 const client = new Octokit({ auth: serverEnv.GITHUB_PERSONAL_ACCESS_TOKEN });
 
-export async function latestCommit(opts: { repo: string }) {
-  const response = await client.repos.getCommit({
-    owner: "kg55kmr",
-    repo: opts.repo,
-    ref: "main",
-  });
-  return response.data.sha;
-}
-
 export async function sha(opts: { repo: string; sha: string }) {
   const response = await client.git.getBlob({
     owner: "kg55kmr",

@@ -1,10 +1,10 @@
 import type { Class } from "distance-learning";
 import type { PostType } from "posts";
 import type { YouTubeItem } from "~/server/youtube";
-import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { getImagesSize } from "~/lib/images";
 import { formatPostDate, getPost } from "~/lib/posts";
-import { getLatestCommit, getYouTubePlayList } from "~/lib/server-functions";
+import { getYouTubePlayList } from "~/lib/server-functions";
 import { getPostImages } from "~/lib/server-functions";
 import { getImages } from "~/lib/server-functions";
 import { getGoogleSheet } from "~/lib/server-functions";
@@ -24,11 +24,10 @@ export function usePostImages(postId: string | string[]) {
 }
 
 export function usePost(type: PostType, postId: string) {
-  const { data: sha } = useSuspenseQuery(postsSHAQuery);
   return useSuspenseQuery({
-    queryKey: ["post", type, postId, sha],
+    queryKey: ["post", type, postId],
     queryFn: async () => {
-      const post = await getPost({ type, id: postId, sha });
+      const post = await getPost({ type, id: postId });
       const date = formatPostDate(post.date);
       return { post, date };
     },
@@ -89,8 +88,3 @@ export function useImagesSize(images: string[], useSSR: boolean = true) {
     },
   }).data;
 }
-
-export const postsSHAQuery = queryOptions({
-  queryKey: ["posts sha"],
-  queryFn: () => getLatestCommit({ data: { repo: "posts" } }),
-});

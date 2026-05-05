@@ -4,7 +4,6 @@ import { Highlight } from "~/components/highlight";
 import { Link } from "~/components/link";
 import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
-import { postsSHAQuery } from "~/hooks/use-queries";
 import { pagination } from "~/lib/pagination";
 import { type Album, formatPostDate, getAlbum } from "~/lib/posts";
 
@@ -17,10 +16,8 @@ export const Route = createFileRoute("/(main)/album/")({
   search: {
     middlewares: [stripSearchParams({ page: 1, search: "" })],
   },
-  loader: async ({ context }) => ({
-    album: await getAlbum(
-      await context.queryClient.ensureQueryData(postsSHAQuery),
-    ),
+  loader: async () => ({
+    album: await getAlbum(),
   }),
 });
 

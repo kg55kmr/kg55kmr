@@ -39,52 +39,47 @@ export const postType: string[] = [
   "camp",
 ] satisfies PostType[];
 
-export async function getPosts(sha: string) {
-  const response = await fetch(buildUrl("posts.json", sha), {
+export async function getPosts() {
+  const response = await fetch(buildUrl("posts.json"), {
     cache: "no-store",
   });
 
   return (await response.json()) as Posts;
 }
 
-export async function getLatestPosts(sha: string) {
-  const response = await fetch(buildUrl("latest-posts.json", sha), {
+export async function getLatestPosts() {
+  const response = await fetch(buildUrl("latest-posts.json"), {
     cache: "no-store",
   });
   return (await response.json()) as GroupedPosts;
 }
 
-export async function getAlbum(sha: string) {
-  const response = await fetch(buildUrl("album.json", sha), {
+export async function getAlbum() {
+  const response = await fetch(buildUrl("album.json"), {
     cache: "no-store",
   });
   return (await response.json()) as Album;
 }
 
-function buildUrl(path: string, sha: string) {
+function buildUrl(path: string) {
   if (import.meta.env.DEV) return `${__POSTS_FS__}/${path}`;
-  return `https://raw.githubusercontent.com/kg55kmr/posts/${sha}/${path}`;
+  return `https://raw.githubusercontent.com/kg55kmr/posts/refs/heads/main/${path}`;
 }
 
-export function getPostFileUrl(
-  type: string,
-  id: string,
-  file: string,
-  sha: string,
-) {
+export function getPostFileUrl(type: string, id: string, file: string) {
   if (isExternal(file)) return file;
-  return buildUrl(`${type}/${id}/${file}`, sha);
+  return buildUrl(`${type}/${id}/${file}`);
 }
 
-async function loadPost(type: string, id: string, sha: string) {
-  const response = await fetch(buildUrl(`${type}/${id}/index.md`, sha), {
+async function loadPost(type: string, id: string) {
+  const response = await fetch(buildUrl(`${type}/${id}/index.md`), {
     cache: "no-store",
   });
   return await response.text();
 }
 
-export function getPostThumbnailUrl(type: string, id: string, sha: string) {
-  return buildUrl(`${type}/${id}/thumbnail.jpg`, sha);
+export function getPostThumbnailUrl(type: string, id: string) {
+  return buildUrl(`${type}/${id}/thumbnail.jpg`);
 }
 
 export const imagekitTimestamp = new Date(2023, 5, 12);
@@ -126,15 +121,14 @@ export type ParsedPost = {
 export async function getPost(options: {
   type: string;
   id: string;
-  sha: string;
 }): Promise<ParsedPost> {
   const [year, month, day] = options.id.split("-");
-  const md = await loadPost(options.type, options.id, options.sha);
+  const md = await loadPost(options.type, options.id);
   const data = splitMarkdown(md);
   const post = {
     title: data.meta.title,
     date: { year, month, day },
-    thumbnail: getPostThumbnailUrl(options.type, options.id, options.sha),
+    thumbnail: getPostThumbnailUrl(options.type, options.id),
     content: data.body,
   };
 

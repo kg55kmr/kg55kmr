@@ -29,6 +29,11 @@
       "source": "/public-info/territory-of-service",
       "destination": "/public-info?id=catchment-area",
       "permanent": true
+    },
+    {
+      "source": "/psychological-service/psychologist/advices/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war",
+      "destination": "/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war",
+      "permanent": true
     }
   ]
 }

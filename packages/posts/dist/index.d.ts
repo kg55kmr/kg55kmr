@@ -1,6 +1,6 @@
 declare function extractSlideshows(kind: string, id: string, content: string): string[];
 
-type PostType = "announcements" | "news" | "useful" | "camp";
+type PostType = "news" | "announcements" | "useful" | "camp";
 
 type Post = {
     kind: string;

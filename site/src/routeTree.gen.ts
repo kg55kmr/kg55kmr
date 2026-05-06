@@ -34,6 +34,7 @@ import { Route as EducationalProcessIndexRouteImport } from './routes/educationa
 import { Route as mainIndexRouteImport } from './routes/(main)/index'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistRouteImport } from './routes/social-and-psychological-service/speech-therapist'
 import { Route as SocialAndPsychologicalServiceSitemapRouteImport } from './routes/social-and-psychological-service/sitemap'
+import { Route as SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRouteImport } from './routes/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
 import { Route as ParentForumTipsForParentsRouteImport } from './routes/parent-forum/tips-for-parents'
 import { Route as ParentForumSitemapRouteImport } from './routes/parent-forum/sitemap'
 import { Route as ParentForumPreparing5YearOldsForSchoolRouteImport } from './routes/parent-forum/preparing-5-year-olds-for-school'
@@ -326,6 +327,14 @@ const SocialAndPsychologicalServiceSitemapRoute =
     path: '/sitemap',
     getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
   } as any)
+const SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute =
+  SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRouteImport.update(
+    {
+      id: '/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war',
+      path: '/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+    } as any,
+  )
 const ParentForumTipsForParentsRoute =
   ParentForumTipsForParentsRouteImport.update({
     id: '/tips-for-parents',
@@ -1380,6 +1389,7 @@ export interface FileRoutesByFullPath {
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
+  '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   '/social-and-psychological-service/sitemap': typeof SocialAndPsychologicalServiceSitemapRoute
   '/social-and-psychological-service/speech-therapist': typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   '/': typeof mainIndexRoute
@@ -1556,6 +1566,7 @@ export interface FileRoutesByTo {
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
+  '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   '/social-and-psychological-service/sitemap': typeof SocialAndPsychologicalServiceSitemapRoute
   '/social-and-psychological-service/speech-therapist': typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   '/': typeof mainIndexRoute
@@ -1744,6 +1755,7 @@ export interface FileRoutesById {
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
+  '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   '/social-and-psychological-service/sitemap': typeof SocialAndPsychologicalServiceSitemapRoute
   '/social-and-psychological-service/speech-therapist': typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   '/(main)/': typeof mainIndexRoute
@@ -1933,6 +1945,7 @@ export interface FileRouteTypes {
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
+    | '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
     | '/social-and-psychological-service/sitemap'
     | '/social-and-psychological-service/speech-therapist'
     | '/'
@@ -2109,6 +2122,7 @@ export interface FileRouteTypes {
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
+    | '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
     | '/social-and-psychological-service/sitemap'
     | '/social-and-psychological-service/speech-therapist'
     | '/'
@@ -2296,6 +2310,7 @@ export interface FileRouteTypes {
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
+    | '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
     | '/social-and-psychological-service/sitemap'
     | '/social-and-psychological-service/speech-therapist'
     | '/(main)/'
@@ -2585,6 +2600,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap'
       fullPath: '/social-and-psychological-service/sitemap'
       preLoaderRoute: typeof SocialAndPsychologicalServiceSitemapRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': {
+      id: '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
+      path: '/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
+      fullPath: '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
     '/parent-forum/tips-for-parents': {
@@ -4222,6 +4244,7 @@ const ParentForumRouteRouteWithChildren =
   ParentForumRouteRoute._addFileChildren(ParentForumRouteRouteChildren)
 
 interface SocialAndPsychologicalServiceRouteRouteChildren {
+  SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute: typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   SocialAndPsychologicalServiceSitemapRoute: typeof SocialAndPsychologicalServiceSitemapRoute
   SocialAndPsychologicalServiceSpeechTherapistRoute: typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   SocialAndPsychologicalServiceIndexRoute: typeof SocialAndPsychologicalServiceIndexRoute
@@ -4246,6 +4269,8 @@ interface SocialAndPsychologicalServiceRouteRouteChildren {
 
 const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalServiceRouteRouteChildren =
   {
+    SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute:
+      SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute,
     SocialAndPsychologicalServiceSitemapRoute:
       SocialAndPsychologicalServiceSitemapRoute,
     SocialAndPsychologicalServiceSpeechTherapistRoute:

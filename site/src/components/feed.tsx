@@ -1,7 +1,7 @@
 import { Dialog } from "@base-ui/react/dialog";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { BookOpenText } from "lucide-react";
-import { type FC, useState } from "react";
+import { type FC } from "react";
 
 type Props = { items: Record<string, unknown> };
 
@@ -27,16 +27,21 @@ export function Feed(props: Props) {
 }
 
 function FeedItem({ post }: { post: FeedPost }) {
+  const item = (
+    <>
+      {post.title && (
+        <div className="flex items-center gap-2 pb-5">
+          <BookOpenText className="size-7 text-blue-700" />
+          <div className="text-xl font-bold">{post.title}</div>
+        </div>
+      )}
+      <post.Content />
+    </>
+  );
   return (
     <div className="rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15">
       <div className="relative h-100 w-full overflow-y-clip mask-b-from-20% mask-b-to-100%">
-        {post.title && (
-          <div className="flex items-center gap-2 pb-5">
-            <BookOpenText className="size-7 text-blue-700" />
-            <div className="text-xl font-bold">{post.title}</div>
-          </div>
-        )}
-        <post.Content />
+        {item}
       </div>
       <Dialog.Root>
         <Dialog.Trigger className="mt-4 cursor-pointer rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
@@ -50,13 +55,7 @@ function FeedItem({ post }: { post: FeedPost }) {
               "data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0"
             }
           >
-            {post.title && (
-              <div className="flex items-center gap-2 pb-5">
-                <BookOpenText className="size-7 text-blue-700" />
-                <div className="text-xl font-bold">{post.title}</div>
-              </div>
-            )}
-            <post.Content />
+            {item}
             <div className="sticky right-0 bottom-2 flex justify-end px-2">
               <Dialog.Close className="rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
                 Закрити

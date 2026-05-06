@@ -49,7 +49,7 @@ export function FBVideo(props: FBVideoProps) {
 
 export function PdfWrapper(props: PDFProps) {
   const src = usePostFile(props.src);
-  return <Pdf {...props} forceExternalViewer={true} src={src} />;
+  return <Pdf {...props} src={src} />;
 }
 
 export function Quote(props: PropsWithChildren<{ author: string }>) {

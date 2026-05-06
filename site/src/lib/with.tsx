@@ -3,7 +3,7 @@ import { type FC, Suspense } from "react";
 import { Loader } from "~/components/loader";
 
 export function withClientOnlySuspense<P extends object>(Component: FC<P>) {
-  return function WithClientOnlySUspense(props: P) {
+  return function WithClientOnlySuspense(props: P) {
     return (
       <ClientOnly>
         <Suspense fallback={<Loader />}>

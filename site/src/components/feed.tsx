@@ -1,27 +1,45 @@
 import { Dialog } from "@base-ui/react/dialog";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { BookOpenText } from "lucide-react";
-import { type FC } from "react";
-
-type Props = { items: Record<string, unknown> };
+import { type FC, useState } from "react";
+import { pagination } from "~/lib/pagination";
+import { Pagination } from "./pagination";
 
 type FeedPost = {
   title?: string;
   Content: FC;
 };
 
+type Props = {
+  items: Record<string, unknown>;
+};
+
 export function Feed(props: Props) {
+  const itemsPerPage = 5;
+  const [page, setPage] = useState(1);
   const { data: items } = useSuspenseQuery({
-    queryKey: ["feed"],
+    queryKey: ["feed", Object.keys(props.items)],
     queryFn: () => toFeed(props.items),
   });
+  const pageItems = pagination({
+    items,
+    itemsPerPage,
+    page: page - 1,
+  });
+
   return (
-    <div className="">
+    <div className="relative">
       <div className="flex flex-col gap-10">
-        {items.map((post, i) => (
+        {pageItems.items.map((post, i) => (
           <FeedItem key={i} post={post} />
         ))}
       </div>
+      <Pagination
+        currentPage={page}
+        itemsPerPage={itemsPerPage}
+        totalItems={items.length}
+        onPageChange={setPage}
+      />
     </div>
   );
 }
@@ -39,19 +57,17 @@ function FeedItem({ post }: { post: FeedPost }) {
     </>
   );
   return (
-    <div className="rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15">
-      <div className="relative h-100 w-full overflow-y-clip mask-b-from-20% mask-b-to-100%">
-        {item}
-      </div>
+    <div className="h-100 w-full overflow-y-clip rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15">
+      <div className="relative mask-b-from-20% mask-b-to-100%">{item}</div>
       <Dialog.Root>
         <Dialog.Trigger className="mt-4 cursor-pointer rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
           Переглянути
         </Dialog.Trigger>
         <Dialog.Portal>
-          <Dialog.Backdrop className="fixed inset-x-0 inset-y-0 z-20 min-h-dvh bg-black opacity-50 transition-all duration-150 data-ending-style:opacity-0 data-starting-style:opacity-0" />
+          <Dialog.Backdrop className="fixed inset-x-0 inset-y-0 z-20 min-h-dvh bg-black opacity-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0" />
           <Dialog.Popup
             className={
-              "fixed inset-10 z-20 overflow-y-auto rounded-lg bg-white p-2 text-gray-900 transition-all duration-150 " +
+              "fixed inset-10 z-20 overflow-y-auto rounded-lg bg-white p-2 text-gray-900 transition-all duration-200 " +
               "data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0"
             }
           >

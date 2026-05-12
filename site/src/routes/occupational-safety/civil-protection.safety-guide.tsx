@@ -10,10 +10,10 @@ export const Route = createFileRoute(
   },
 });
 
-const data = import.meta.glob("./-civil-protection.safety-guide/*.tsx", {
+const items = import.meta.glob("./-civil-protection.safety-guide/*.tsx", {
   eager: true,
 });
 
 function RouteComponent() {
-  return <Feed items={data} />;
+  return <Feed items={items} />;
 }

@@ -90,8 +90,6 @@ function RouteComponent() {
                 })
               }
               totalItems={filteredPosts.length}
-              className="bottom-2 mx-auto rounded-md border border-slate-500 bg-blue-100/75 p-1 text-lg sm:sticky"
-              buttonClassName="not-disabled:hover:bg-blue-200"
             />
           )}
         </div>

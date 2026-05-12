@@ -12,9 +12,6 @@ type PaginationProps = {
   itemsPerPage: number;
   currentPage: number;
   onPageChange: (page: number) => void;
-  className?: string;
-  iconClassName?: string;
-  buttonClassName?: string;
 };
 
 export function Pagination(props: PaginationProps) {
@@ -44,29 +41,26 @@ export function Pagination(props: PaginationProps) {
   return (
     <div
       className={cn(
-        "sticky bottom-0 mt-5 flex flex-wrap items-center justify-center gap-2 bg-white sm:static",
-        props.className,
+        "sticky bottom-2 mx-auto mt-5 flex w-fit flex-wrap items-center justify-center gap-2 rounded-md border border-slate-500 bg-blue-100/75 p-1 text-lg sm:sticky",
       )}
     >
       <button
         disabled={currentPage === 1}
         onClick={() => gotoPage(1)}
         className={cn(
-          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-slate-100 disabled:opacity-15",
-          props.buttonClassName,
+          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-blue-200 disabled:opacity-15",
         )}
       >
-        <ChevronFirst className={props.iconClassName} />
+        <ChevronFirst />
       </button>
       <button
         disabled={currentPage === 1}
         onClick={() => gotoPage(currentPage - 1)}
         className={cn(
-          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-slate-100 disabled:opacity-15",
-          props.buttonClassName,
+          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-blue-200 disabled:opacity-15",
         )}
       >
-        <ChevronLeft className={props.iconClassName} />
+        <ChevronLeft />
       </button>
       <input
         key={currentPage}
@@ -85,21 +79,19 @@ export function Pagination(props: PaginationProps) {
         disabled={currentPage === totalPages}
         onClick={() => gotoPage(currentPage + 1)}
         className={cn(
-          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-slate-100 disabled:opacity-15",
-          props.buttonClassName,
+          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-blue-200 disabled:opacity-15",
         )}
       >
-        <ChevronRight className={props.iconClassName} />
+        <ChevronRight />
       </button>
       <button
         disabled={currentPage === totalPages}
         onClick={() => gotoPage(totalPages)}
         className={cn(
-          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-slate-100 disabled:opacity-15",
-          props.buttonClassName,
+          "rounded-sm not-disabled:cursor-pointer not-disabled:hover:bg-blue-200 disabled:opacity-15",
         )}
       >
-        <ChevronLast className={props.iconClassName} />
+        <ChevronLast />
       </button>
     </div>
   );

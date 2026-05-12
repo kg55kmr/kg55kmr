@@ -10,11 +10,11 @@ export const Route = createFileRoute(
   },
 });
 
-const data = import.meta.glob(
+const items = import.meta.glob(
   "./-practical-psychologist.tips-for-parents/*/*.tsx",
   { eager: true },
 );
 
 function RouteComponent() {
-  return <Feed items={data} />;
+  return <Feed items={items} />;
 }

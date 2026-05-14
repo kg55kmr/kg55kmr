@@ -321,6 +321,7 @@ export const publicInfo: ReportItemWithItems[] = [
   },
   {
     title: "Установчі документи",
+    id: "constituent-documents",
     items: [
       {
         title: "Свідотство про державну реєстрацію юридичної особи",
@@ -333,6 +334,11 @@ export const publicInfo: ReportItemWithItems[] = [
       {
         title: "Колективний договір",
         href: "https://drive.google.com/file/d/1ecIPOHdMskfnfXMWRi3xCZ5XOZSu_J0U/preview",
+      },
+      {
+        title:
+          "Договір про послуги з надання пакетів оновлень та адміністрування (обслуговування) програмного комплексу КУРС",
+        href: "https://drive.google.com/file/d/1RB7nKrpFit4ekxwWOlcMMjNSo5RJqojC/preview",
       },
     ],
   },

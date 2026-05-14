@@ -14,4 +14,7 @@ export type ReportItem = {
 
 export type ReportItemId = z.output<typeof reportItemIdSchema>;
 
-export const reportItemIdSchema = z.union([z.literal("catchment-area")]);
+export const reportItemIdSchema = z.union([
+  z.literal("catchment-area"),
+  z.literal("constituent-documents"),
+]);

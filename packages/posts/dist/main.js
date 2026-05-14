@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs$1 from 'fs';
 import path from 'path';
+import { Redis } from '@upstash/redis';
 import { workspaceRoot } from 'workspace-root';
 import fs, { readFile, access } from 'fs/promises';
 import { fdir } from 'fdir';
@@ -121,25 +122,21 @@ function printUpload(localPath, count, total) {
   process.stdout.write(`${base} ${percent}%   \r`);
 }
 
-const root = await workspaceRoot() ?? throwExpression("workspace root is not found");
+const root = await workspaceRoot();
+if (root === null) throw new Error("workspace root is not found");
 const postsRoot = path.resolve(root, "..", "posts");
 await uploadImages(postsRoot);
 const { posts, latestPosts, album } = await processPosts(postsRoot);
-writePostTypes(posts);
+const redis = new Redis({
+  url: process.env["KV_REST_API_URL"],
+  token: process.env["KV_REST_API_TOKEN"]
+});
+await redis.json.set("posts", "$", posts);
+await redis.json.set("latest-posts", "$", latestPosts);
+await redis.json.set("album", "$", album);
 writePosts(posts, "posts.json");
 writePosts(latestPosts, "latest-posts.json");
 writePosts(album, "album.json");
 function writePosts(data, file) {
   fs$1.writeFileSync(path.resolve(postsRoot, file), JSON.stringify(data));
-}
-function writePostTypes(posts2) {
-  const union = Object.keys(posts2).map((p) => `"${p}"`).join(" | ");
-  fs$1.writeFileSync(
-    path.resolve(root, "packages/posts/src", "post-type.gen.ts"),
-    `export type PostType = ${union};
-`
-  );
-}
-function throwExpression(errorMessage) {
-  throw new Error(errorMessage);
 }

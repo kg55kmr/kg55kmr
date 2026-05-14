@@ -1,7 +1,5 @@
 declare function extractSlideshows(kind: string, id: string, content: string): string[];
 
-type PostType = "news" | "announcements" | "useful" | "camp";
-
 type Post = {
     kind: string;
     id: string;
@@ -25,6 +23,8 @@ type Posts = {
     latestPosts: GroupedPosts;
     album: Post[];
 };
+
+type PostType = "news" | "announcements" | "useful" | "camp";
 
 export { extractSlideshows };
 export type { GroupedPosts, Pin, Post, PostType, Posts };

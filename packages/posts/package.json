@@ -13,6 +13,7 @@
     "@imagekit/nodejs": "^7.5.0",
     "@supercharge/promise-pool": "^3.3.0",
     "@types/lodash": "^4.17.24",
+    "@upstash/redis": "^1.38.0",
     "dotenv-cli": "^11.0.0",
     "fdir": "^6.5.0",
     "gray-matter": "^4.0.3",
@@ -20,4 +21,3 @@
     "workspace-root": "^3.3.1"
   }
 }
-

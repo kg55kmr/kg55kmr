@@ -10,8 +10,9 @@ import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
 import { useStickyOffset } from "~/hooks/use-sticky";
 import { pagination } from "~/lib/pagination";
-import { getPosts, getPostThumbnailUrl } from "~/lib/posts";
+import { getPostThumbnailUrl } from "~/lib/posts";
 import { asset, cn } from "~/lib/utils";
+import { getPosts } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/posts/$type/")({
   component: RouteComponent,
@@ -90,6 +91,7 @@ function RouteComponent() {
                 })
               }
               totalItems={filteredPosts.length}
+              desktopSticky
             />
           )}
         </div>

@@ -39,31 +39,11 @@ export const postType: string[] = [
   "camp",
 ] satisfies PostType[];
 
-export async function getPosts() {
-  const response = await fetch(buildUrl("posts.json"), {
-    cache: "no-store",
-  });
-
-  return (await response.json()) as Posts;
-}
-
-export async function getLatestPosts() {
-  const response = await fetch(buildUrl("latest-posts.json"), {
-    cache: "no-store",
-  });
-  return (await response.json()) as GroupedPosts;
-}
-
 export async function getAlbum() {
   const response = await fetch(buildUrl("album.json"), {
     cache: "no-store",
   });
   return (await response.json()) as Album;
-}
-
-function buildUrl(path: string) {
-  if (import.meta.env.DEV) return `${__POSTS_FS__}/${path}`;
-  return `https://raw.githubusercontent.com/kg55kmr/posts/refs/heads/main/${path}`;
 }
 
 export function getPostFileUrl(type: string, id: string, file: string) {
@@ -80,6 +60,10 @@ async function loadPost(type: string, id: string) {
 
 export function getPostThumbnailUrl(type: string, id: string) {
   return buildUrl(`${type}/${id}/thumbnail.jpg`);
+}
+
+function buildUrl(path: string) {
+  return `https://raw.githubusercontent.com/kg55kmr/posts/refs/heads/main/${path}`;
 }
 
 export const imagekitTimestamp = new Date(2023, 5, 12);

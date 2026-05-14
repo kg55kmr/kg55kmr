@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
       tsconfigPaths: true,
     },
     define: {
-      __POSTS_FS__: isDev ? JSON.stringify(`/@fs/${postsRoot}`) : undefined,
+      __POSTS_FS__: isDev ? JSON.stringify(postsRoot) : undefined,
     },
     plugins: [
       tailwindcss(),

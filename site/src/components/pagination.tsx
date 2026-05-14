@@ -12,6 +12,7 @@ type PaginationProps = {
   itemsPerPage: number;
   currentPage: number;
   onPageChange: (page: number) => void;
+  desktopSticky?: boolean;
 };
 
 export function Pagination(props: PaginationProps) {
@@ -41,7 +42,8 @@ export function Pagination(props: PaginationProps) {
   return (
     <div
       className={cn(
-        "sticky bottom-2 mx-auto mt-5 flex w-fit flex-wrap items-center justify-center gap-2 rounded-md border border-slate-500 bg-blue-100/75 p-1 text-lg sm:sticky",
+        "sticky bottom-2 mx-auto mt-5 flex w-fit flex-wrap items-center justify-center gap-2 rounded-md border border-slate-500 bg-blue-100/85 p-1 text-lg sm:static",
+        props.desktopSticky && "sm:sticky",
       )}
     >
       <button

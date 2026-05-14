@@ -35,6 +35,7 @@ export default function Component(props: PDFProps) {
         itemsPerPage={1}
         currentPage={currentPage}
         onPageChange={setCurrentPage}
+        desktopSticky
       />
     </div>
   );

@@ -1,25 +1,25 @@
 import type { PostType } from "posts";
-import { useSuspenseQuery } from "@tanstack/react-query";
+import { queryOptions } from "@tanstack/react-query";
 import { createFileRoute, linkOptions } from "@tanstack/react-router";
-import { type ReactNode, Fragment } from "react";
-import { ClientOnlySuspense } from "~/components/client-only-suspense";
+import { type ReactNode, Fragment, Suspense } from "react";
 import { ExternalLink, Link } from "~/components/link";
 import { yearsList } from "~/data/distance-learning";
 import { employees } from "~/data/employees";
 import { useYouTubeList } from "~/hooks/use-queries";
 import { useSections } from "~/hooks/use-sections";
-import {
-  formatPostDate,
-  getLatestPosts,
-  getPostThumbnailUrl,
-  postTypes,
-} from "~/lib/posts";
+import { setCacheHeader } from "~/lib/headers";
+import { formatPostDate, getPostThumbnailUrl, postTypes } from "~/lib/posts";
 import { asset, dirAsset } from "~/lib/utils";
+import { getLatestPosts } from "~/server/server-fn";
 import { type BlockItem, Blocks } from "./-components/blocks";
 import { LatestPosts } from "./-components/latest-posts";
 
 export const Route = createFileRoute("/(main)/")({
   component: RouteComponent,
+  loader: async () => {
+    return { latestPosts: await getLatestPosts({ data: { latest: 5 } }) };
+  },
+  headers: setCacheHeader(5),
   staticData: {
     title: "Головна",
   },
@@ -108,12 +108,12 @@ function RouteComponent() {
       <DistanceLearning />
       <Header>КАРТКА КРИВОРІЖЦЯ</Header>
       <Card />
-      <ClientOnlySuspense>
+      <Suspense>
         <Posts hide={["camp"]} />
-      </ClientOnlySuspense>
-      <ClientOnlySuspense>
+      </Suspense>
+      <Suspense>
         <Playlists />
-      </ClientOnlySuspense>
+      </Suspense>
       <Header>КОРИСНІ САЙТИ</Header>
       <UsefulSites />
     </>
@@ -169,15 +169,12 @@ function Card() {
 }
 
 function Posts(props: { hide?: [PostType] }) {
-  const posts = useSuspenseQuery({
-    queryKey: ["latest posts"],
-    queryFn: () => getLatestPosts(),
-  }).data;
+  const { latestPosts } = Route.useLoaderData();
 
   return Object.entries(postTypes)
     .filter(([type]) => !props.hide?.includes(type as PostType))
     .map(([type, { title, to, params }]) => {
-      const items = [...posts[type].pin, ...posts[type].items].map((post) => ({
+      const items = latestPosts[type as PostType].map((post) => ({
         title: post.title,
         date: formatPostDate(post.date),
         preview: getPostThumbnailUrl(type, post.id),
@@ -310,3 +307,9 @@ function Header(props: { children: ReactNode }) {
     </h1>
   );
 }
+
+const latestPostsQuery = queryOptions({
+  queryKey: ["latest posts"],
+  queryFn: () => getLatestPosts({ data: { latest: 5 } }),
+  staleTime: 5_000,
+});

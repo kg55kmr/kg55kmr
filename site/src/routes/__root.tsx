@@ -50,11 +50,6 @@ export const Route = createRootRouteWithContext<Context>()({
         rel: "stylesheet",
       },
     ],
-    // scripts: [
-    //   {
-    //     src: "https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=default%2Ces2023%2Ces2022%2Ces2021%2Ces2020",
-    //   },
-    // ],
   }),
 });
 

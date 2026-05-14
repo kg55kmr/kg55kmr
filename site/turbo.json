@@ -6,7 +6,9 @@
       "env": [
         "GOOGLE_API_KEY",
         "IMAGEKIT_PRIVATE_KEY",
-        "GITHUB_PERSONAL_ACCESS_TOKEN"
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "KV_REST_API_URL",
+        "KV_REST_API_TOKEN"
       ],
       "outputs": []
     }

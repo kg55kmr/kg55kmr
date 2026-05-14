@@ -39,6 +39,7 @@ export function Feed(props: Props) {
         itemsPerPage={itemsPerPage}
         totalItems={items.length}
         onPageChange={setPage}
+        desktopSticky
       />
     </div>
   );

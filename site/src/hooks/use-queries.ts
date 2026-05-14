@@ -4,10 +4,10 @@ import type { YouTubeItem } from "~/server/youtube";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { getImagesSize } from "~/lib/images";
 import { formatPostDate, getPost } from "~/lib/posts";
-import { getYouTubePlayList } from "~/lib/server-functions";
-import { getPostImages } from "~/lib/server-functions";
-import { getImages } from "~/lib/server-functions";
-import { getGoogleSheet } from "~/lib/server-functions";
+import { getYouTubePlayList } from "~/server/server-fn";
+import { getPostImages } from "~/server/server-fn";
+import { getImages } from "~/server/server-fn";
+import { getGoogleSheet } from "~/server/server-fn";
 
 export function useImages(path: string) {
   return useSuspenseQuery({

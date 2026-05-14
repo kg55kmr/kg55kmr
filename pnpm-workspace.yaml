@@ -4,8 +4,10 @@ packages:
   - packages/*
   - content
 
+allowBuilds:
+  esbuild: true
+
 onlyBuiltDependencies:
   - core-js
   - esbuild
   - vscode-ripgrep
-

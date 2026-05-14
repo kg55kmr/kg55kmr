@@ -9,7 +9,6 @@ export const Route = createFileRoute("/(main)/posts/$type")({
       return { type };
     },
   },
-  ssr: false,
   staticData: {
     title: ({ params }): string => postTypes[(params as Params).type].title,
   },

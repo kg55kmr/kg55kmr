@@ -176,7 +176,7 @@ function Posts(props: { hide?: [PostType] }) {
       const lp = latestPosts[type as PostType];
       const items = [...lp.pin, ...lp.items].map((post) => ({
         title: post.title,
-        date: formatPostDate(post.date),
+        date: formatPostDate(post),
         preview: getPostThumbnailUrl(type, post.id),
         link: linkOptions({
           to: "/posts/$type/$id",
@@ -215,7 +215,11 @@ function Playlists() {
   return items.map((item, i) => {
     const posts = list[i].map((post) => ({
       title: post.title,
-      date: formatPostDate(post.date),
+      date: formatPostDate({
+        year: post.date.getFullYear(),
+        month: post.date.getMonth(),
+        day: post.date.getDate(),
+      }),
       preview: post.thumbnail,
       link: { href: post.url },
     }));

@@ -65,22 +65,11 @@ function isExternal(url: string) {
   return url.startsWith("http");
 }
 
-export function formatPostDate(
-  date:
-    | Date
-    | {
-        day: number;
-        month: number;
-        year: number;
-      },
-) {
-  if (date instanceof Date) {
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, "0");
-    const day = date.getDate().toString().padStart(2, "0");
-    return `${day}.${month}.${year}`;
-  }
-
+export function formatPostDate(date: {
+  day: number;
+  month: number;
+  year: number;
+}) {
   return `${date.day.toString().padStart(2, "0")}.${date.month.toString().padStart(2, "0")}.${date.year}`;
 }
 

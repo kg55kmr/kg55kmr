@@ -9,7 +9,6 @@ type Post = {
     month: number;
     day: number;
     noThumbnail?: boolean;
-    content: string;
 };
 type Pin = {
     items: Post[];

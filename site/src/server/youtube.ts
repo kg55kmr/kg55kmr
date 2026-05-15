@@ -5,7 +5,7 @@ export type YouTubeItem = {
   id: string;
   url: string;
   title: string;
-  date: string;
+  date: Date;
   description: string;
   thumbnail: string;
 };
@@ -29,7 +29,7 @@ export async function requestPlaylist(
     if (i.snippet.thumbnails === undefined) continue;
     if (i.snippet.thumbnails["high"] === undefined) continue;
 
-    const date = i.snippet.publishedAt;
+    const date = new Date(i.snippet.publishedAt);
     const id = i.snippet.resourceId.videoId;
 
     const url = "https://www.youtube.com/watch?v=" + id;

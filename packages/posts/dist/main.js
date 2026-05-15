@@ -36,8 +36,7 @@ async function processPosts(root) {
         year,
         month,
         day,
-        slideshows,
-        content
+        slideshows
       };
     })
   );

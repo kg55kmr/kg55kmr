@@ -1,5 +1,5 @@
 import { type LinkOptions } from "@tanstack/react-router";
-import { Link } from "~/components/link";
+import { ExternalLink, Link } from "~/components/link";
 import { asset, cn } from "~/lib/utils";
 
 type Props = {
@@ -26,8 +26,9 @@ type ItemProps = {
 };
 
 function PostItem(props: ItemProps) {
+  const L = props.link.href ? ExternalLink : Link;
   return (
-    <Link
+    <L
       {...props.link}
       className={cn(
         "group relative flex flex-col rounded-t-lg rounded-b-lg border border-gray-400 bg-gray-50 text-inherit hover:border-blue-500 hover:bg-blue-50",
@@ -51,6 +52,6 @@ function PostItem(props: ItemProps) {
 
       <div className="font-cambria p-1.5 text-xl">{props.title}</div>
       <div className="mt-auto p-1.5 text-slate-500">{props.date}</div>
-    </Link>
+    </L>
   );
 }

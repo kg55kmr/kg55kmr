@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "pkgroll --clean-dist",
-    "posts": "dotenv -e ../../site/.env.local ./dist/main",
+    "posts": "dotenv -e ../../site/.env.local node ./dist/main",
     "dev": "tsx --env-file=../../site/.env.local ./src/dev.ts"
   },
   "dependencies": {

@@ -4,5 +4,4 @@ export const Route = createFileRoute("/(main)/album")({
   staticData: {
     title: "Фотоальбом",
   },
-  ssr: false,
 });

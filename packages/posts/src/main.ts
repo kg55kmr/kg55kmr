@@ -12,7 +12,7 @@ const postsRoot = path.resolve(root, "..", "posts");
 
 await uploadImages(postsRoot);
 
-const { posts, latestPosts, album } = await processPosts(postsRoot);
+const { posts, album } = await processPosts(postsRoot);
 
 const redis = new Redis({
   url: process.env["KV_REST_API_URL"],
@@ -24,8 +24,6 @@ await Promise.all([
   redis.json.set("album", "$", album),
 ]);
 
-writePosts(posts, "posts.json");
-writePosts(latestPosts, "latest-posts.json");
 writePosts(album, "album.json");
 
 function writePosts(data: unknown, file: string) {

@@ -20,7 +20,6 @@ type Pin = {
 type GroupedPosts = Record<string, Pin>;
 type Posts = {
     posts: GroupedPosts;
-    latestPosts: GroupedPosts;
     album: Post[];
 };
 

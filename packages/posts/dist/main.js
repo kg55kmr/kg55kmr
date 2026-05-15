@@ -61,13 +61,8 @@ async function processPosts(root) {
     items,
     pin
   })).value();
-  const latestPosts = _.mapValues(groupedPosts, ({ items, pin }) => ({
-    items: items.slice(0, 5),
-    pin
-  }));
   return {
     posts: groupedPosts,
-    latestPosts,
     album
   };
 }
@@ -126,16 +121,15 @@ const root = await workspaceRoot();
 if (root === null) throw new Error("workspace root is not found");
 const postsRoot = path.resolve(root, "..", "posts");
 await uploadImages(postsRoot);
-const { posts, latestPosts, album } = await processPosts(postsRoot);
+const { posts, album } = await processPosts(postsRoot);
 const redis = new Redis({
   url: process.env["KV_REST_API_URL"],
   token: process.env["KV_REST_API_TOKEN"]
 });
-await redis.json.set("posts", "$", posts);
-await redis.json.set("latest-posts", "$", latestPosts);
-await redis.json.set("album", "$", album);
-writePosts(posts, "posts.json");
-writePosts(latestPosts, "latest-posts.json");
+await Promise.all([
+  redis.json.set("posts", "$", posts),
+  redis.json.set("album", "$", album)
+]);
 writePosts(album, "album.json");
 function writePosts(data, file) {
   fs$1.writeFileSync(path.resolve(postsRoot, file), JSON.stringify(data));

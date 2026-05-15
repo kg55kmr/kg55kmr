@@ -4,8 +4,10 @@ import { Highlight } from "~/components/highlight";
 import { Link } from "~/components/link";
 import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
+import { cacheHeader } from "~/lib/headers";
 import { pagination } from "~/lib/pagination";
-import { type Album, formatPostDate, getAlbum } from "~/lib/posts";
+import { type Album, formatPostDate } from "~/lib/posts";
+import { getAlbum } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/album/")({
   component: RouteComponent,
@@ -19,6 +21,7 @@ export const Route = createFileRoute("/(main)/album/")({
   loader: async () => ({
     album: await getAlbum(),
   }),
+  headers: cacheHeader(5),
 });
 
 function RouteComponent() {

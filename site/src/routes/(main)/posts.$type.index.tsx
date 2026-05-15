@@ -9,6 +9,7 @@ import { Link } from "~/components/link";
 import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
 import { useStickyOffset } from "~/hooks/use-sticky";
+import { cacheHeader } from "~/lib/headers";
 import { pagination } from "~/lib/pagination";
 import { getPostThumbnailUrl } from "~/lib/posts";
 import { asset, cn } from "~/lib/utils";
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/(main)/posts/$type/")({
   loader: async () => ({
     groupedPosts: await getPosts(),
   }),
+  headers: cacheHeader(5),
 });
 
 function RouteComponent() {

@@ -79,14 +79,8 @@ export async function processPosts(root: string): Promise<Posts> {
     }))
     .value();
 
-  const latestPosts = _.mapValues(groupedPosts, ({ items, pin }) => ({
-    items: items.slice(0, 5),
-    pin,
-  }));
-
   return {
     posts: groupedPosts,
-    latestPosts,
     album,
   };
 }

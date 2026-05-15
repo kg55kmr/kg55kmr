@@ -39,13 +39,6 @@ export const postType: string[] = [
   "camp",
 ] satisfies PostType[];
 
-export async function getAlbum() {
-  const response = await fetch(buildUrl("album.json"), {
-    cache: "no-store",
-  });
-  return (await response.json()) as Album;
-}
-
 export function getPostFileUrl(type: string, id: string, file: string) {
   if (isExternal(file)) return file;
   return buildUrl(`${type}/${id}/${file}`);

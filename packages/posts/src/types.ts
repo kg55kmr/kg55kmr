@@ -21,6 +21,5 @@ export type GroupedPosts = Record<string, Pin>;
 
 export type Posts = {
   posts: GroupedPosts;
-  latestPosts: GroupedPosts;
   album: Post[];
 };

@@ -3,10 +3,10 @@ import router from "@tanstack/eslint-plugin-router";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+import { reactRefresh } from "eslint-plugin-react-refresh";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import { reactRefresh } from "eslint-plugin-react-refresh";
 
 export default defineConfig(
   eslint.configs.recommended,

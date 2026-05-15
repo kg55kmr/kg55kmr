@@ -11,7 +11,7 @@ import { Pagination } from "~/components/pagination";
 import { useStickyOffset } from "~/hooks/use-sticky";
 import { cacheHeader } from "~/lib/headers";
 import { pagination } from "~/lib/pagination";
-import { getPostThumbnailUrl } from "~/lib/posts";
+import { formatPostDate, getPostThumbnailUrl } from "~/lib/posts";
 import { asset, cn } from "~/lib/utils";
 import { getPosts } from "~/server/server-fn";
 
@@ -20,8 +20,8 @@ export const Route = createFileRoute("/(main)/posts/$type/")({
   validateSearch: z.object({
     page: z.number().default(1),
     search: z.string().default(""),
-    year: z.string().optional(),
-    month: z.string().optional(),
+    year: z.number().optional(),
+    month: z.number().optional(),
   }),
   search: {
     middlewares: [stripSearchParams({ page: 1, search: "" })],
@@ -145,9 +145,7 @@ function Item(props: { post: PostHighlight; type: PostType }) {
         </div>
         <div className="relative">
           <div>{post.title}</div>
-          <div className="text-blue-700">
-            {post.date.day}.{post.date.month}.{post.date.year}
-          </div>
+          <div className="text-blue-700">{formatPostDate(post)}</div>
         </div>
       </div>
     </Link>
@@ -168,8 +166,8 @@ type ArchiveType = Record<
 
 type ArchiveProps = {
   posts: Post[];
-  year?: string;
-  month?: string;
+  year?: number;
+  month?: number;
   setFilter: (value: Pick<ArchiveProps, "month" | "year">) => void;
 };
 
@@ -177,8 +175,8 @@ type ArchiveProps = {
 function Archive(props: ArchiveProps) {
   const [startYear] = useState(props.year);
   const items = props.posts.reduce((acc: ArchiveType, post) => {
-    const { year, month } = post.date;
-    const monthName = getMonth(month);
+    const { year, month } = post;
+    const monthName = months[month];
 
     if (year in acc) {
       if (month in acc[year]) acc[year][month].count++;
@@ -186,7 +184,9 @@ function Archive(props: ArchiveProps) {
     } else acc[year] = {};
     return acc;
   }, {});
-  const itemsKey = Object.keys(items).toReversed();
+  const itemsKey = Object.keys(items)
+    .toReversed()
+    .map((v) => Number.parseInt(v));
 
   return (
     <div className="font-cambria mx-auto w-fit rounded-md border border-gray-300 bg-gray-50 text-xl drop-shadow-[7px_7px_7px] drop-shadow-black/10">
@@ -219,6 +219,7 @@ function Archive(props: ArchiveProps) {
             >
               {Object.keys(items[year])
                 .toSorted((a, b) => b.localeCompare(a))
+                .map((v) => Number.parseInt(v))
                 .map((month) => {
                   const { monthName, count } = items[year][month];
                   return (
@@ -264,14 +265,10 @@ const months = [
   "Грудень",
 ];
 
-function getMonth(month: string) {
-  return months[Number.parseInt(month) - 1];
-}
-
 function filterPosts(args: {
   posts: Post[];
-  year?: string;
-  month?: string;
+  year?: number;
+  month?: number;
   searchText: string;
 }) {
   const { posts, year, month, searchText } = args;
@@ -282,7 +279,7 @@ function filterPosts(args: {
 
   if (year && month) {
     const p = posts.filter((v) => {
-      return v.date.year === year && v.date.month === month;
+      return v.year === year && v.month === month;
     });
     if (p.length === 0) return posts;
     return p;

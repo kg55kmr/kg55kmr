@@ -28,8 +28,11 @@ export async function processPosts(root: string): Promise<Posts> {
       const sortId = data["id"] ? (data["id"] as string) : id;
       const title = data["title"] as string;
       const pin = data["pin"] !== undefined ? true : undefined;
-      const [year, month, day] = sortId.split("-");
-      const date = { year, month, day };
+      const idParts = sortId.split("-");
+      const year = Number.parseInt(idParts[0]);
+      const month = Number.parseInt(idParts[1]) - 1;
+      const day = Number.parseInt(idParts[2]);
+
       const slideshows = extractSlideshows(kind, id, content);
 
       return {
@@ -38,7 +41,9 @@ export async function processPosts(root: string): Promise<Posts> {
         sortId: sortId as string | undefined,
         title,
         pin,
-        date,
+        year,
+        month,
+        day,
         slideshows: slideshows as string[] | undefined,
       };
     }),

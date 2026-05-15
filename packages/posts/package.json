@@ -2,12 +2,15 @@
   "name": "posts",
   "version": "1.0.0",
   "type": "module",
-  "bin": "./dist/main.js",
   "types": "./dist/index.d.ts",
-  "exports": "./dist/index.js",
+  "exports": [
+    "./dist/index.js",
+    "./dist/main.js"
+  ],
   "scripts": {
-    "posts": "dotenv -e ../../site/.env.local -- node ./dist/main",
-    "build": "pkgroll --clean-dist"
+    "build": "pkgroll --clean-dist",
+    "posts": "dotenv -e ../../site/.env.local ./dist/main",
+    "dev": "tsx --env-file=../../site/.env.local ./src/dev.ts"
   },
   "dependencies": {
     "@imagekit/nodejs": "^7.6.0",
@@ -18,6 +21,8 @@
     "fdir": "^6.5.0",
     "gray-matter": "^4.0.3",
     "lodash": "^4.18.1",
+    "tsx": "^4.21.0",
     "workspace-root": "^3.3.1"
   }
 }
+

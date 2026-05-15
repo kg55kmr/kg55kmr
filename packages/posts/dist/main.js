@@ -1,12 +1,11 @@
-#!/usr/bin/env node
-import path from 'path';
 import { Redis } from '@upstash/redis';
-import { workspaceRoot } from 'workspace-root';
 import fs, { readFile } from 'fs/promises';
+import path from 'path';
 import { fdir } from 'fdir';
 import matter from 'gray-matter';
 import _ from 'lodash';
 import { extractSlideshows } from './index.js';
+import { workspaceRoot } from 'workspace-root';
 import { ImageKit } from '@imagekit/nodejs';
 import { PromisePool } from '@supercharge/promise-pool';
 
@@ -23,8 +22,10 @@ async function processPosts(root) {
       const sortId = data["id"] ? data["id"] : id;
       const title = data["title"];
       const pin = data["pin"] !== void 0 ? true : void 0;
-      const [year, month, day] = sortId.split("-");
-      const date = { year, month, day };
+      const idParts = sortId.split("-");
+      const year = Number.parseInt(idParts[0]);
+      const month = Number.parseInt(idParts[1]) - 1;
+      const day = Number.parseInt(idParts[2]);
       const slideshows = extractSlideshows(kind, id, content);
       return {
         kind,
@@ -32,8 +33,11 @@ async function processPosts(root) {
         sortId,
         title,
         pin,
-        date,
-        slideshows
+        year,
+        month,
+        day,
+        slideshows,
+        content
       };
     })
   );
@@ -62,6 +66,13 @@ async function processPosts(root) {
     latestPosts,
     album
   };
+}
+
+async function getRoot() {
+  const root = await workspaceRoot();
+  if (root === null) throw new Error("workspace root is not found");
+  const postsRoot = path.resolve(root, "..", "posts");
+  return postsRoot;
 }
 
 const imagekit = new ImageKit({
@@ -114,11 +125,9 @@ function printUpload(localPath, count, total) {
   process.stdout.write(`${base} ${percent}%   \r`);
 }
 
-const root = await workspaceRoot();
-if (root === null) throw new Error("workspace root is not found");
-const postsRoot = path.resolve(root, "..", "posts");
-await uploadImages(postsRoot);
-const { posts, latestPosts, album } = await processPosts(postsRoot);
+const root = await getRoot();
+await uploadImages(root);
+const { posts, latestPosts, album } = await processPosts(root);
 const redis = Redis.fromEnv();
 const pipeline = redis.pipeline();
 pipeline.json.set("posts", "$", posts);

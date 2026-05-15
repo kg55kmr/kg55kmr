@@ -16,7 +16,6 @@ export const getPosts = createServerFn().handler(async () => {
 export const getLatestPosts = createServerFn().handler(async () => {
   const result = await getFromRedis<Posts>("latest-posts");
   setCacheHeader(5);
-
   return result;
 });
 

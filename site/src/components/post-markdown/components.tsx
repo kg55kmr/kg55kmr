@@ -1,4 +1,3 @@
-import type { PDFProps } from "../pdf";
 import {
   type ImgHTMLAttributes,
   type PropsWithChildren,
@@ -8,7 +7,7 @@ import {
   isValidElement,
   useContext,
 } from "react";
-import { Pdf } from "~/components/pdf";
+import { type PDFProps, Pdf } from "~/components/pdf";
 import { useImagesSize, usePostImages } from "~/hooks/use-queries";
 import { getPostFileUrl } from "~/lib/posts";
 import { ImageCarousel } from "../carousel";

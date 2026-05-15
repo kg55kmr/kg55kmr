@@ -69,9 +69,9 @@ export function formatPostDate(
   date:
     | Date
     | {
-        day: string;
-        month: string;
-        year: string;
+        day: number;
+        month: number;
+        year: number;
       },
 ) {
   if (date instanceof Date) {
@@ -81,15 +81,15 @@ export function formatPostDate(
     return `${day}.${month}.${year}`;
   }
 
-  return `${date.day}.${date.month}.${date.year}`;
+  return `${date.day.toString().padStart(2, "0")}.${date.month.toString().padStart(2, "0")}.${date.year}`;
 }
 
 export type ParsedPost = {
   title: string;
   date: {
-    year: string;
-    month: string;
-    day: string;
+    year: number;
+    month: number;
+    day: number;
   };
   thumbnail: string;
   content: string;
@@ -99,7 +99,11 @@ export async function getPost(options: {
   type: string;
   id: string;
 }): Promise<ParsedPost> {
-  const [year, month, day] = options.id.split("-");
+  const idParts = options.id.split("-");
+  const year = Number.parseInt(idParts[0]);
+  const month = Number.parseInt(idParts[1]);
+  const day = Number.parseInt(idParts[2]);
+
   const md = await loadPost(options.type, options.id);
   const data = splitMarkdown(md);
   const post = {

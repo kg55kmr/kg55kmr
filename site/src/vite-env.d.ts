@@ -1,1 +1,1 @@
-declare const __POSTS_FS__: string;
+declare const __POSTS__: string;

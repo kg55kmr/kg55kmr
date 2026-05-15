@@ -3,11 +3,9 @@ export type Post = {
   id: string;
   title: string;
   pin?: boolean;
-  date: {
-    year: string;
-    month: string;
-    day: string;
-  };
+  year: number;
+  month: number;
+  day: number;
   noThumbnail?: boolean;
 };
 

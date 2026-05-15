@@ -1,17 +1,12 @@
-import path from "path";
 import { Redis } from "@upstash/redis";
-import { workspaceRoot } from "workspace-root";
 import { processPosts } from "./process";
+import { getRoot } from "./root";
 import { uploadImages } from "./upload-images";
 
-const root = await workspaceRoot();
-if (root === null) throw new Error("workspace root is not found");
+const root = await getRoot();
+await uploadImages(root);
 
-const postsRoot = path.resolve(root, "..", "posts");
-
-await uploadImages(postsRoot);
-
-const { posts, latestPosts, album } = await processPosts(postsRoot);
+const { posts, latestPosts, album } = await processPosts(root);
 
 const redis = Redis.fromEnv();
 const pipeline = redis.pipeline();

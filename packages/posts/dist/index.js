@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 const reSlideshow = /<slideshow( id="(.*)")* \/>/g;
 function extractSlideshows(kind, id, content) {
   const slideshows = [];

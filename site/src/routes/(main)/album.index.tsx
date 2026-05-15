@@ -67,7 +67,7 @@ function RouteComponent() {
                     to="/album/$id"
                     className="font-bold"
                   >
-                    {formatPostDate(item.date)}
+                    {formatPostDate(item)}
                   </Link>
                 </td>
                 <td>

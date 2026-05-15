@@ -1,5 +1,5 @@
 import type { Posts } from "./types";
-import { access, readFile } from "fs/promises";
+import { readFile } from "fs/promises";
 import path from "path";
 import { fdir } from "fdir";
 import matter from "gray-matter";
@@ -27,27 +27,18 @@ export async function processPosts(root: string): Promise<Posts> {
       const id = path.basename(item.trim());
       const sortId = data["id"] ? (data["id"] as string) : id;
       const title = data["title"] as string;
-      const titleLower = title.toLowerCase();
-      const pin = data["pin"] !== undefined;
+      const pin = data["pin"] !== undefined ? true : undefined;
       const [year, month, day] = sortId.split("-");
       const date = { year, month, day };
       const slideshows = extractSlideshows(kind, id, content);
-
-      let thumbnailExists = true;
-
-      await access(path.resolve(root, item, "thumbnail.jpg")).catch(
-        () => (thumbnailExists = false),
-      );
 
       return {
         kind,
         id,
         sortId: sortId as string | undefined,
         title,
-        titleLower,
         pin,
         date,
-        thumbnailExists,
         slideshows: slideshows as string[] | undefined,
       };
     }),
@@ -79,8 +70,14 @@ export async function processPosts(root: string): Promise<Posts> {
     }))
     .value();
 
+  const latestPosts = _.mapValues(groupedPosts, ({ items, pin }) => ({
+    items: items.slice(0, 5),
+    pin,
+  }));
+
   return {
     posts: groupedPosts,
+    latestPosts,
     album,
   };
 }

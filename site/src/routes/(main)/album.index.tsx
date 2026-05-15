@@ -109,14 +109,13 @@ function RouteComponent() {
 
 function searchInAlbum(album: Album, searchText: string) {
   if (searchText === "") return album;
-  const st = searchText.toLocaleLowerCase();
-  return album.filter((g) => g.titleLower.includes(st));
+  const match = new RegExp(searchText, "i");
+  return album.filter((g) => match.test(g.title));
 }
 
 function highlight(album: Album, searchText: string) {
-  const searchTextLower = searchText.toLowerCase();
   return album.map((p) => ({
     ...p,
-    title: <Highlight highlight={searchTextLower} text={p.title} />,
+    title: <Highlight highlight={searchText} text={p.title} />,
   }));
 }

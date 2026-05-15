@@ -12,7 +12,7 @@
   "dependencies": {
     "@base-ui/react": "^1.4.1",
     "@googleapis/sheets": "^13.0.1",
-    "@imagekit/nodejs": "^7.5.0",
+    "@imagekit/nodejs": "^7.6.0",
     "@octokit/rest": "^22.0.1",
     "@tanstack/react-query": "^5.100.10",
     "@tanstack/react-query-devtools": "^5.100.10",

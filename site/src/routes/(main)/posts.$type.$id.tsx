@@ -36,7 +36,7 @@ function Frontmatter(props: { post: ParsedPost; date: string }) {
 function Thumbnail(props: { src: string }) {
   const [hasError, setHasError] = useState(false);
 
-  if (hasError) return;
+  if (hasError) return <div />;
 
   return (
     <img

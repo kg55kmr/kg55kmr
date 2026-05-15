@@ -13,16 +13,14 @@ export function Highlight(props: Props) {
 
   let regex = prev.get(reText);
   if (!regex) {
-    regex = new RegExp(reText, "gi");
+    regex = new RegExp(reText, "i");
     prev.clear();
     prev.set(reText, regex);
   }
 
   const parts = props.text.split(regex);
 
-  return parts.map((v, i) => (
-    <Fragment key={i}>
-      {v.toLowerCase() === props.highlight.toLowerCase() ? <mark>{v}</mark> : v}
-    </Fragment>
+  return parts.map((p, i) => (
+    <Fragment key={i}>{regex.test(p) ? <mark>{p}</mark> : p}</Fragment>
   ));
 }

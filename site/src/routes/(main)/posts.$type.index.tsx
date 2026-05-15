@@ -44,7 +44,7 @@ function RouteComponent() {
     posts: mergedPosts,
     year,
     month,
-    searchText: searchText.toLowerCase(),
+    searchText,
   });
 
   const { items, itemsPlaceholder } = pagination({
@@ -55,7 +55,7 @@ function RouteComponent() {
 
   const el = useRef<HTMLInputElement>(null);
   const offset = useStickyOffset();
-  const highlightItems = highlight(items, searchText.toLocaleLowerCase());
+  const highlightItems = highlight(items, searchText);
 
   return (
     <>
@@ -137,14 +137,11 @@ function Item(props: { post: PostHighlight; type: PostType }) {
         )}
 
         <div className="mx-auto w-50 shrink-0 rounded-lg border border-gray-300 md:mx-0">
-          {post.thumbnailExists ? (
-            <img
-              src={getPostThumbnailUrl(type, post.id)}
-              className="block aspect-4/3 w-full rounded-lg object-cover"
-            />
-          ) : (
-            <div className="aspect-4/3 w-full" />
-          )}
+          <img
+            src={getPostThumbnailUrl(type, post.id)}
+            className="block aspect-4/3 w-full rounded-lg object-cover"
+          />
+          {/* <div className="aspect-4/3 w-full" /> */}
         </div>
         <div className="relative">
           <div>{post.title}</div>
@@ -278,10 +275,9 @@ function filterPosts(args: {
   searchText: string;
 }) {
   const { posts, year, month, searchText } = args;
+  const match = new RegExp(searchText, "i");
   if (searchText.length > 0) {
-    return posts.filter((v) => {
-      return v.titleLower.includes(searchText);
-    });
+    return posts.filter((v) => match.test(v.title));
   }
 
   if (year && month) {

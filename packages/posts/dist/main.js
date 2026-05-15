@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-import fs$1 from 'fs';
 import path from 'path';
 import { Redis } from '@upstash/redis';
 import { workspaceRoot } from 'workspace-root';
-import fs, { readFile, access } from 'fs/promises';
+import fs, { readFile } from 'fs/promises';
 import { fdir } from 'fdir';
 import matter from 'gray-matter';
 import _ from 'lodash';
@@ -23,24 +22,17 @@ async function processPosts(root) {
       const id = path.basename(item.trim());
       const sortId = data["id"] ? data["id"] : id;
       const title = data["title"];
-      const titleLower = title.toLowerCase();
-      const pin = data["pin"] !== void 0;
+      const pin = data["pin"] !== void 0 ? true : void 0;
       const [year, month, day] = sortId.split("-");
       const date = { year, month, day };
       const slideshows = extractSlideshows(kind, id, content);
-      let thumbnailExists = true;
-      await access(path.resolve(root, item, "thumbnail.jpg")).catch(
-        () => thumbnailExists = false
-      );
       return {
         kind,
         id,
         sortId,
         title,
-        titleLower,
         pin,
         date,
-        thumbnailExists,
         slideshows
       };
     })
@@ -61,8 +53,13 @@ async function processPosts(root) {
     items,
     pin
   })).value();
+  const latestPosts = _.mapValues(groupedPosts, ({ items, pin }) => ({
+    items: items.slice(0, 5),
+    pin
+  }));
   return {
     posts: groupedPosts,
+    latestPosts,
     album
   };
 }
@@ -122,15 +119,8 @@ if (root === null) throw new Error("workspace root is not found");
 const postsRoot = path.resolve(root, "..", "posts");
 await uploadImages(postsRoot);
 const { posts, album } = await processPosts(postsRoot);
-const redis = new Redis({
-  url: process.env["KV_REST_API_URL"],
-  token: process.env["KV_REST_API_TOKEN"]
-});
-await Promise.all([
-  redis.json.set("posts", "$", posts),
-  redis.json.set("album", "$", album)
-]);
-writePosts(album, "album.json");
-function writePosts(data, file) {
-  fs$1.writeFileSync(path.resolve(postsRoot, file), JSON.stringify(data));
-}
+const redis = Redis.fromEnv();
+const pipeline = redis.pipeline();
+pipeline.json.set("posts", "$", posts);
+pipeline.json.set("album", "$", album);
+await pipeline.exec();

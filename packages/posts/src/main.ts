@@ -1,4 +1,3 @@
-import fs from "fs";
 import path from "path";
 import { Redis } from "@upstash/redis";
 import { workspaceRoot } from "workspace-root";
@@ -14,18 +13,8 @@ await uploadImages(postsRoot);
 
 const { posts, album } = await processPosts(postsRoot);
 
-const redis = new Redis({
-  url: process.env["KV_REST_API_URL"],
-  token: process.env["KV_REST_API_TOKEN"],
-});
-
-await Promise.all([
-  redis.json.set("posts", "$", posts),
-  redis.json.set("album", "$", album),
-]);
-
-writePosts(album, "album.json");
-
-function writePosts(data: unknown, file: string) {
-  fs.writeFileSync(path.resolve(postsRoot, file), JSON.stringify(data));
-}
+const redis = Redis.fromEnv();
+const pipeline = redis.pipeline();
+pipeline.json.set("posts", "$", posts);
+pipeline.json.set("album", "$", album);
+await pipeline.exec();

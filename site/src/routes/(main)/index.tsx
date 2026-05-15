@@ -167,13 +167,14 @@ function Card() {
 function Posts(props: { hide?: [PostType] }) {
   const latestPosts = useSuspenseQuery({
     queryKey: ["latest posts"],
-    queryFn: () => getLatestPosts({ data: { latest: 5 } }),
+    queryFn: () => getLatestPosts(),
   }).data;
 
   return Object.entries(postTypes)
     .filter(([type]) => !props.hide?.includes(type as PostType))
     .map(([type, { title, to, params }]) => {
-      const items = latestPosts[type as PostType].map((post) => ({
+      const lp = latestPosts[type as PostType];
+      const items = [...lp.pin, ...lp.items].map((post) => ({
         title: post.title,
         date: formatPostDate(post.date),
         preview: getPostThumbnailUrl(type, post.id),

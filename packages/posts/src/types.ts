@@ -8,6 +8,7 @@ export type Post = {
     month: string;
     day: string;
   };
+  noThumbnail?: boolean;
 };
 
 export type Pin = {

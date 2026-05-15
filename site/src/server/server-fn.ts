@@ -1,5 +1,4 @@
 import type { Album, Posts } from "../lib/posts";
-import type { Post } from "posts";
 import { createServerFn } from "@tanstack/react-start";
 import z from "zod";
 import { setCacheHeader } from "./headers";
@@ -14,25 +13,12 @@ export const getPosts = createServerFn().handler(async () => {
   return result;
 });
 
-export const getLatestPosts = createServerFn()
-  .inputValidator(z.object({ latest: z.number() }).optional())
-  .handler(async ({ data }) => {
-    let req: string[] = [];
-    if (data?.latest)
-      req = ["news", "announcements", "useful", "camp"].flatMap((p) => [
-        `$.${p}.pin[:${data?.latest}]`,
-        `$.${p}.items[:${data?.latest}]`,
-      ]);
-    const result = await getFromRedis<Record<string, Post[]>>("posts", ...req);
-    setCacheHeader(5);
+export const getLatestPosts = createServerFn().handler(async () => {
+  const result = await getFromRedis<Posts>("latest-posts");
+  setCacheHeader(5);
 
-    return {
-      news: [...result[req[0]], ...result[req[1]]],
-      announcements: [...result[req[2]], ...result[req[3]]],
-      useful: [...result[req[4]], ...result[req[5]]],
-      camp: [...result[req[6]], ...result[req[7]]],
-    };
-  });
+  return result;
+});
 
 export const getAlbum = createServerFn().handler(async () => {
   const result = await getFromRedis<Album>("album");

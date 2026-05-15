@@ -11,10 +11,11 @@ const postsRoot = path.resolve(root, "..", "posts");
 
 await uploadImages(postsRoot);
 
-const { posts, album } = await processPosts(postsRoot);
+const { posts, latestPosts, album } = await processPosts(postsRoot);
 
 const redis = Redis.fromEnv();
 const pipeline = redis.pipeline();
 pipeline.json.set("posts", "$", posts);
+pipeline.json.set("latest-posts", "$", latestPosts);
 pipeline.json.set("album", "$", album);
 await pipeline.exec();

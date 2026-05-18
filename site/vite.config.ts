@@ -26,7 +26,6 @@ export default defineConfig(({ mode }) => {
       staticAssets(),
       tanstackStart(),
       nitro({
-        // TODO: remove
         devProxy: {
           "/src/routes/**/*.jpg": "http://localhost:3000/@fs",
           "/src/routes/**/*.png": "http://localhost:3000/@fs",

@@ -54,22 +54,26 @@ function FeedItem({ post }: { post: FeedPost }) {
     </>
   );
   return (
-    <div className="w-full rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15">
+    <div
+      className={
+        "w-full rounded-md border border-gray-400 bg-white drop-shadow-[7px_7px_7px] drop-shadow-black/15 " +
+        "group/feed hover:border-blue-400 hover:bg-sky-100"
+      }
+    >
       <Dialog.Root>
         <Dialog.Trigger
           render={<div />}
           nativeButton={false}
-          className="cursor-pointer"
+          className="relative h-100 cursor-pointer overflow-clip p-2"
         >
-          <div className="pointer-events-none h-100 overflow-y-clip mask-b-from-20% mask-b-to-100%">
-            {item}
-          </div>
+          {item}
+          <div className="absolute inset-0 bg-white mask-t-from-10% mask-t-to-100% group-hover/feed:bg-sky-100" />
         </Dialog.Trigger>
         <Dialog.Portal>
-          <Dialog.Backdrop className="fixed inset-0 z-20 min-h-dvh bg-black opacity-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0" />
+          <Dialog.Backdrop className="fixed inset-0 z-20 bg-black opacity-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0" />
           <Dialog.Popup
             className={
-              "fixed inset-10 z-20 rounded-lg bg-white p-2 text-gray-900 transition-all duration-200" +
+              "fixed inset-5 z-20 rounded-lg bg-white p-2 text-gray-900 transition-all duration-200" +
               "data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0"
             }
           >

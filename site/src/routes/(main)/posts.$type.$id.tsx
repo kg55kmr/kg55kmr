@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { PostInfo } from "~/components/post-info";
 import { PostMarkdown } from "~/components/post-markdown";
 import { usePost } from "~/hooks/use-queries";
@@ -34,14 +33,9 @@ function Frontmatter(props: { post: ParsedPost; date: string }) {
 }
 
 function Thumbnail(props: { src: string }) {
-  const [hasError, setHasError] = useState(false);
-
-  if (hasError) return;
-
   return (
     <img
       src={props.src}
-      onError={() => setHasError(true)}
       className="mx-auto mb-(--main-offset) max-h-80 rounded-md border object-contain drop-shadow-lg drop-shadow-black/50 sm:h-80"
     />
   );

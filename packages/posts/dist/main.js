@@ -3,7 +3,6 @@ import fs, { readFile } from 'fs/promises';
 import path from 'path';
 import { fdir } from 'fdir';
 import matter from 'gray-matter';
-import _ from 'lodash';
 import { extractSlideshows } from './index.js';
 import { workspaceRoot } from 'workspace-root';
 import { ImageKit } from '@imagekit/nodejs';
@@ -13,55 +12,54 @@ async function processPosts(root) {
   const dirs = await new fdir().onlyDirs().withRelativePaths().exclude((d) => d.startsWith(".")).filter((p) => p.split(path.sep).length === 3).crawl(root).withPromise();
   const posts = await Promise.all(
     dirs.map(async (item) => {
-      const { data, content } = matter(
-        await readFile(path.resolve(root, item, "index.md"), "utf8")
-      );
-      item = item.replaceAll("\\", "/");
+      const file = await readFile(path.resolve(root, item, "index.md"), "utf8");
+      const { data, content } = matter(file);
       const kind = path.basename(path.dirname(item));
       const id = path.basename(item.trim());
-      const sortId = data["id"] ? data["id"] : id;
-      const title = data["title"];
-      const pin = data["pin"] !== void 0 ? true : void 0;
-      const idParts = sortId.split("-");
-      const year = Number.parseInt(idParts[0]);
-      const month = Number.parseInt(idParts[1]) - 1;
-      const day = Number.parseInt(idParts[2]);
-      const slideshows = extractSlideshows(kind, id, content);
+      const sortId = data["id"] ?? id;
+      const [year, month, day] = sortId.split("-").map(Number);
       return {
         kind,
         id,
         sortId,
-        title,
-        pin,
+        title: data["title"],
+        pin: data["pin"] || void 0,
         year,
-        month,
+        month: month - 1,
         day,
-        slideshows
+        slideshows: extractSlideshows(kind, id, content),
+        thumbnail: void 0,
+        content
       };
     })
   );
   posts.sort(
     (a, b) => b.sortId.localeCompare(a.sortId, void 0, { numeric: true })
   );
-  const album = posts.filter((post) => post.kind === "news" && post.slideshows.length > 0).map((post) => ({ ...post }));
-  posts.forEach((p) => {
-    delete p.sortId;
-    delete p.slideshows;
-  });
-  const groupedPosts = _(posts).groupBy((v) => v.kind).mapValues((p) => {
-    const result = _.groupBy(p, (p2) => p2.pin ? "pin" : "items");
-    if (!("pin" in result)) result["pin"] = [];
-    return result;
-  }).mapValues(({ items, pin }) => ({
-    items,
-    pin
-  })).value();
-  const latestPosts = _.mapValues(groupedPosts, ({ items, pin }) => ({
-    items: items.slice(0, 5),
-    pin
-  }));
+  const postsList = {};
+  const fullPosts = {};
+  for (const post of posts) {
+    postsList[post.kind] ??= { items: [], pinItems: [] };
+    const target = post.pin ? postsList[post.kind].pinItems : postsList[post.kind].items;
+    target.push(post);
+    fullPosts[post.kind] ??= {};
+    fullPosts[post.kind][post.id] = post;
+  }
+  if (postsList["news"])
+    for (const post of postsList["news"].items.slice(-363)) {
+      post.thumbnail = false;
+    }
+  const latestPosts = {};
+  for (const [kind, group] of Object.entries(postsList)) {
+    latestPosts[kind] = {
+      items: group.items.slice(0, 5),
+      pinItems: group.pinItems
+    };
+  }
+  const album = posts.filter((post) => post.kind === "news" && post.slideshows.length > 0).map((post) => post);
   return {
-    posts: groupedPosts,
+    posts: fullPosts,
+    postsList,
     latestPosts,
     album
   };
@@ -126,10 +124,11 @@ function printUpload(localPath, count, total) {
 
 const root = await getRoot();
 await uploadImages(root);
-const { posts, latestPosts, album } = await processPosts(root);
+const { posts, postsList, latestPosts, album } = await processPosts(root);
 const redis = Redis.fromEnv();
 const pipeline = redis.pipeline();
 pipeline.json.set("posts", "$", posts);
+pipeline.json.set("posts-list", "$", postsList);
 pipeline.json.set("latest-posts", "$", latestPosts);
 pipeline.json.set("album", "$", album);
 await pipeline.exec();

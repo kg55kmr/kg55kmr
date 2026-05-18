@@ -13,7 +13,7 @@ import { cacheHeader } from "~/lib/headers";
 import { pagination } from "~/lib/pagination";
 import { formatPostDate, getPostThumbnailUrl } from "~/lib/posts";
 import { asset, cn } from "~/lib/utils";
-import { getPosts } from "~/server/server-fn";
+import { getPostsList } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/posts/$type/")({
   component: RouteComponent,
@@ -27,19 +27,20 @@ export const Route = createFileRoute("/(main)/posts/$type/")({
     middlewares: [stripSearchParams({ page: 1, search: "" })],
   },
   loader: async () => ({
-    groupedPosts: await getPosts(),
+    postsList: await getPostsList(),
   }),
   headers: cacheHeader(5),
 });
 
 function RouteComponent() {
-  const { groupedPosts } = Route.useLoaderData();
+  const { postsList } = Route.useLoaderData();
   const { type } = Route.useParams();
   const { page, search: searchText, year, month } = Route.useSearch();
   const navigate = Route.useNavigate();
 
+  console.log(postsList);
   const itemsPerPage = 5;
-  const mergedPosts = [...groupedPosts[type].pin, ...groupedPosts[type].items];
+  const mergedPosts = [...postsList[type].pinItems, ...postsList[type].items];
   const filteredPosts = filterPosts({
     posts: mergedPosts,
     year,
@@ -137,11 +138,10 @@ function Item(props: { post: PostHighlight; type: PostType }) {
         )}
 
         <div className="mx-auto w-50 shrink-0 rounded-lg border border-gray-300 md:mx-0">
-          <img
+          <Thumbnail
             src={getPostThumbnailUrl(type, post.id)}
-            className="block aspect-4/3 w-full rounded-lg object-cover"
+            placeholder={post.thumbnail === false}
           />
-          {/* <div className="aspect-4/3 w-full" /> */}
         </div>
         <div className="relative">
           <div>{post.title}</div>
@@ -149,6 +149,16 @@ function Item(props: { post: PostHighlight; type: PostType }) {
         </div>
       </div>
     </Link>
+  );
+}
+
+function Thumbnail(props: { src: string; placeholder?: boolean }) {
+  if (props.placeholder) return <div className="aspect-4/3 w-full" />;
+  return (
+    <img
+      src={props.src}
+      className="block aspect-4/3 w-full rounded-lg object-cover"
+    />
   );
 }
 

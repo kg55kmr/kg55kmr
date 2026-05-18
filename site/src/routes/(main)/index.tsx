@@ -174,7 +174,7 @@ function Posts(props: { hide?: [PostType] }) {
     .filter(([type]) => !props.hide?.includes(type as PostType))
     .map(([type, { title, to, params }]) => {
       const lp = latestPosts[type as PostType];
-      const items = [...lp.pin, ...lp.items].map((post) => ({
+      const items = [...lp.pinItems, ...lp.items].map((post) => ({
         title: post.title,
         date: formatPostDate(post),
         preview: getPostThumbnailUrl(type, post.id),

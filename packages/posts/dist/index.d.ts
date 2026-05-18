@@ -8,20 +8,25 @@ type Post = {
     year: number;
     month: number;
     day: number;
-    noThumbnail?: boolean;
+    thumbnail?: boolean;
+};
+type PostContent = {
+    content: string;
 };
 type Pin = {
     items: Post[];
-    pin: Post[];
+    pinItems: Post[];
 };
-type GroupedPosts = Record<string, Pin>;
+type PostsList = Record<string, Pin>;
+type FullPosts = Record<string, Record<string, Post & PostContent>>;
 type Posts = {
-    posts: GroupedPosts;
-    latestPosts: GroupedPosts;
+    posts: FullPosts;
+    postsList: PostsList;
+    latestPosts: PostsList;
     album: Post[];
 };
 
 type PostType = "news" | "announcements" | "useful" | "camp";
 
 export { extractSlideshows };
-export type { GroupedPosts, Pin, Post, PostType, Posts };
+export type { FullPosts, Pin, Post, PostContent, PostType, Posts, PostsList };

@@ -1,4 +1,5 @@
-import type { Album, Posts } from "../lib/posts";
+import type { Album } from "../lib/posts";
+import type { Post, PostContent, PostsList } from "posts";
 import { createServerFn } from "@tanstack/react-start";
 import z from "zod";
 import { setCacheHeader } from "./headers";
@@ -7,14 +8,14 @@ import { getFromRedis } from "./redis";
 import { getSheetContent } from "./sheets";
 import { requestPlaylist } from "./youtube";
 
-export const getPosts = createServerFn().handler(async () => {
-  const result = await getFromRedis<Posts>("posts");
+export const getPostsList = createServerFn().handler(async () => {
+  const result = await getFromRedis<PostsList>("posts-list");
   setCacheHeader(5);
   return result;
 });
 
 export const getLatestPosts = createServerFn().handler(async () => {
-  const result = await getFromRedis<Posts>("latest-posts");
+  const result = await getFromRedis<PostsList>("latest-posts");
   setCacheHeader(5);
   return result;
 });
@@ -24,6 +25,13 @@ export const getAlbum = createServerFn().handler(async () => {
   setCacheHeader(5);
   return result;
 });
+
+export const getPost = createServerFn()
+  .inputValidator(z.object({ type: z.string(), id: z.string() }))
+  .handler(async () => {
+    getFromRedis<Post & PostContent>("posts");
+    setCacheHeader(5);
+  });
 
 export const getImages = createServerFn()
   .inputValidator(z.string())

@@ -6,18 +6,22 @@ export type Post = {
   year: number;
   month: number;
   day: number;
-  noThumbnail?: boolean;
+  thumbnail?: boolean;
 };
+
+export type PostContent = { content: string };
 
 export type Pin = {
   items: Post[];
-  pin: Post[];
+  pinItems: Post[];
 };
 
-export type GroupedPosts = Record<string, Pin>;
+export type PostsList = Record<string, Pin>;
+export type FullPosts = Record<string, Record<string, Post & PostContent>>;
 
 export type Posts = {
-  posts: GroupedPosts;
-  latestPosts: GroupedPosts;
+  posts: FullPosts;
+  postsList: PostsList;
+  latestPosts: PostsList;
   album: Post[];
 };

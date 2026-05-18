@@ -55,12 +55,15 @@ function FeedItem({ post }: { post: FeedPost }) {
   );
   return (
     <div className="w-full rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15">
-      <div className="pointer-events-none h-100 overflow-y-clip mask-b-from-20% mask-b-to-100%">
-        {item}
-      </div>
       <Dialog.Root>
-        <Dialog.Trigger className="cursor-pointer rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
-          Переглянути
+        <Dialog.Trigger
+          render={<div />}
+          nativeButton={false}
+          className="cursor-pointer"
+        >
+          <div className="pointer-events-none h-100 overflow-y-clip mask-b-from-20% mask-b-to-100%">
+            {item}
+          </div>
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Backdrop className="fixed inset-0 z-20 min-h-dvh bg-black opacity-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0" />

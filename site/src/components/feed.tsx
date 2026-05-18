@@ -1,5 +1,4 @@
 import { Dialog } from "@base-ui/react/dialog";
-import { useSuspenseQuery } from "@tanstack/react-query";
 import { BookOpenText } from "lucide-react";
 import { type FC, useState } from "react";
 import { pagination } from "~/lib/pagination";
@@ -17,10 +16,7 @@ type Props = {
 export function Feed(props: Props) {
   const itemsPerPage = 5;
   const [page, setPage] = useState(1);
-  const { data: items } = useSuspenseQuery({
-    queryKey: ["feed", Object.keys(props.items)],
-    queryFn: () => toFeed(props.items),
-  });
+  const items = toFeed(props.items);
   const pageItems = pagination({
     items,
     itemsPerPage,
@@ -58,25 +54,29 @@ function FeedItem({ post }: { post: FeedPost }) {
     </>
   );
   return (
-    <div className="h-100 w-full overflow-y-clip rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15">
-      <div className="relative mask-b-from-20% mask-b-to-100%">{item}</div>
+    <div className="w-full rounded-md border border-gray-400 bg-white p-4 drop-shadow-[7px_7px_7px] drop-shadow-black/15">
+      <div className="pointer-events-none h-100 overflow-y-clip mask-b-from-20% mask-b-to-100%">
+        {item}
+      </div>
       <Dialog.Root>
-        <Dialog.Trigger className="mt-4 cursor-pointer rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
+        <Dialog.Trigger className="cursor-pointer rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
           Переглянути
         </Dialog.Trigger>
         <Dialog.Portal>
-          <Dialog.Backdrop className="fixed inset-x-0 inset-y-0 z-20 min-h-dvh bg-black opacity-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0" />
+          <Dialog.Backdrop className="fixed inset-0 z-20 min-h-dvh bg-black opacity-50 transition-all duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0" />
           <Dialog.Popup
             className={
-              "fixed inset-10 z-20 overflow-y-auto rounded-lg bg-white p-2 text-gray-900 transition-all duration-200 " +
+              "fixed inset-10 z-20 rounded-lg bg-white p-2 text-gray-900 transition-all duration-200" +
               "data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0"
             }
           >
-            {item}
-            <div className="sticky right-0 bottom-2 flex justify-end px-2">
-              <Dialog.Close className="rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
-                Закрити
-              </Dialog.Close>
+            <div className="grid h-full grid-rows-[1fr_auto] gap-2">
+              <div className="overflow-y-auto">{item}</div>
+              <div>
+                <Dialog.Close className="cursor-pointer rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
+                  Закрити
+                </Dialog.Close>
+              </div>
             </div>
           </Dialog.Popup>
         </Dialog.Portal>
@@ -86,16 +86,14 @@ function FeedItem({ post }: { post: FeedPost }) {
 }
 
 function toFeed(glob: Record<string, unknown>) {
-  return Promise.all(
-    Object.keys(glob)
-      .toSorted((a, b) => a.localeCompare(b, "uk", { numeric: true }))
-      .toReversed()
-      .map((path) => {
-        const post = glob[path];
-        assertIsFeedPost(post, path);
-        return post;
-      }),
-  );
+  return Object.keys(glob)
+    .toSorted((a, b) => a.localeCompare(b, "uk", { numeric: true }))
+    .toReversed()
+    .map((path) => {
+      const post = glob[path];
+      assertIsFeedPost(post, path);
+      return post;
+    });
 }
 
 function assertIsFeedPost(

@@ -17,7 +17,6 @@ export function Content() {
         переживання травматичного досвіду.
       </p>
       <ImageKitCarousel path="psychological-service/psychologist/Перша психологічна допомога дітям" />
-      ;
     </div>
   );
 }

@@ -38,7 +38,6 @@ function RouteComponent() {
   const { page, search: searchText, year, month } = Route.useSearch();
   const navigate = Route.useNavigate();
 
-  console.log(postsList);
   const itemsPerPage = 5;
   const mergedPosts = [...postsList[type].pinItems, ...postsList[type].items];
   const filteredPosts = filterPosts({

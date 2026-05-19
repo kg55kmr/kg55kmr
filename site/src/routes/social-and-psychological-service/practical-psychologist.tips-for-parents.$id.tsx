@@ -6,7 +6,7 @@ export const Route = createFileRoute(
 )({
   component: RouteComponent,
   ssr: false,
-  loader: ({ params }) =>
+  loader: ({ params }): Promise<FeedPost> =>
     import(`./-practical-psychologist.tips-for-parents/${params.id}/index.tsx`),
 });
 

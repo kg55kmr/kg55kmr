@@ -1,33 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PostInfo } from "~/components/post-info";
 import { PostMarkdown } from "~/components/post-markdown";
-import { usePost } from "~/hooks/use-queries";
-import { type ParsedPost } from "~/lib/posts";
+import { formatPostDate, getPostThumbnailUrl } from "~/lib/posts";
+import { getPost } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/posts/$type/$id")({
   component: RouteComponent,
   staticData: {
     hasParent: true,
   },
+  loader: async ({ params }) => {
+    const post = await getPost({ data: params });
+    return { post };
+  },
 });
 
 function RouteComponent() {
+  const { post } = Route.useLoaderData();
   const { type, id } = Route.useParams();
-  const { post, date } = usePost(type, id);
-
   return (
     <>
-      <Frontmatter post={post} date={date} />
+      <Frontmatter
+        type={type}
+        id={id}
+        title={post.title}
+        date={formatPostDate(post)}
+      />
       <PostMarkdown content={post.content} id={id} type={type} />
     </>
   );
 }
 
-function Frontmatter(props: { post: ParsedPost; date: string }) {
+function Frontmatter(props: {
+  type: string;
+  id: string;
+  title: string;
+  date: string;
+}) {
   return (
     <>
-      <Thumbnail src={props.post.thumbnail} />
-      <PostInfo title={props.post.title} date={props.date} />
+      <Thumbnail src={getPostThumbnailUrl(props.type, props.id)} />
+      <PostInfo title={props.title} date={props.date} />
     </>
   );
 }

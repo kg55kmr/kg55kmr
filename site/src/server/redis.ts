@@ -1,17 +1,20 @@
 import { readFile } from "fs/promises";
 import { Redis } from "@upstash/redis";
+import { JSONPath } from "jsonpath-plus";
 
-export async function getFromRedis<T>(key: string, ...path: string[]) {
+export async function getFromRedis<T>(key: string, path?: string): Promise<T> {
   if (import.meta.env.DEV) {
-    const result: T = await readFile(`${__POSTS__}/${key}.json`, "utf8").then(
-      (r) => JSON.parse(r),
+    const json = await readFile(`${__POSTS__}/${key}.json`, "utf8").then((r) =>
+      JSON.parse(r),
     );
 
-    return result;
+    if (path) return JSONPath({ path, json, wrap: false });
+    return json;
   }
 
   const redis = Redis.fromEnv();
-  const result = await redis.json.get<T>(key, ...path);
+  const result = await redis.json.get<T[]>(key, path ?? "$");
+
   if (!result) throw new Error(`${key} is null`);
-  return result;
+  return result[0];
 }

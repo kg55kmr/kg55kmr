@@ -65,6 +65,12 @@ async function processPosts(root) {
   };
 }
 
+const replacers = {
+  posts: ["kind", "id", "sortId", "pin", "slideshows"],
+  postsList: ["kind", "sortId", "slideshows", "content"],
+  album: ["kind", "sortId", "pin", "content"]
+};
+
 async function getRoot() {
   const root = await workspaceRoot();
   if (root === null) throw new Error("workspace root is not found");
@@ -127,8 +133,25 @@ await uploadImages(root);
 const { posts, postsList, latestPosts, album } = await processPosts(root);
 const redis = Redis.fromEnv();
 const pipeline = redis.pipeline();
-pipeline.json.set("posts", "$", posts);
-pipeline.json.set("posts-list", "$", postsList);
-pipeline.json.set("latest-posts", "$", latestPosts);
-pipeline.json.set("album", "$", album);
+pipeline.json.set("posts", "$", filterKeys(posts, replacers.posts));
+pipeline.json.set(
+  "posts-list",
+  "$",
+  filterKeys(postsList, replacers.postsList)
+);
+pipeline.json.set(
+  "latest-posts",
+  "$",
+  filterKeys(latestPosts, replacers.postsList)
+);
+pipeline.json.set("album", "$", filterKeys(album, replacers.album));
 await pipeline.exec();
+function filterKeys(value, exclude) {
+  const e = new Set(exclude);
+  return JSON.parse(
+    JSON.stringify(value, (key, value2) => {
+      if (e.has(key)) return void 0;
+      return value2;
+    })
+  );
+}

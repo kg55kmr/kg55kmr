@@ -34,7 +34,6 @@ import { Route as EducationalProcessIndexRouteImport } from './routes/educationa
 import { Route as mainIndexRouteImport } from './routes/(main)/index'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistRouteImport } from './routes/social-and-psychological-service/speech-therapist'
 import { Route as SocialAndPsychologicalServiceSitemapRouteImport } from './routes/social-and-psychological-service/sitemap'
-import { Route as SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRouteImport } from './routes/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
 import { Route as ParentForumTipsForParentsRouteImport } from './routes/parent-forum/tips-for-parents'
 import { Route as ParentForumSitemapRouteImport } from './routes/parent-forum/sitemap'
 import { Route as ParentForumPreparing5YearOldsForSchoolRouteImport } from './routes/parent-forum/preparing-5-year-olds-for-school'
@@ -135,7 +134,6 @@ import { Route as SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRout
 import { Route as SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport } from './routes/social-and-psychological-service/social-pedagogue.bullying'
 import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-teachers'
 import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-pupils'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents'
 import { Route as SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport } from './routes/social-and-psychological-service/practical-psychologist.resilience-center'
 import { Route as SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.regulatory-documents'
 import { Route as SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.hotline-numbers'
@@ -193,7 +191,9 @@ import { Route as mainAchievementsTeacherRouteImport } from './routes/(main)/ach
 import { Route as mainAchievementsSchoolPrideRouteImport } from './routes/(main)/achievements.school-pride'
 import { Route as mainAchievementsSchoolRouteImport } from './routes/(main)/achievements.school'
 import { Route as mainAchievementsPupilRouteImport } from './routes/(main)/achievements.pupil'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents.index'
 import { Route as mainPostsTypeIndexRouteImport } from './routes/(main)/posts.$type.index'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents.$id'
 import { Route as mainPostsTypeIdRouteImport } from './routes/(main)/posts.$type.$id'
 import { Route as ApiGithubShaRepoShaRouteImport } from './routes/api/github.sha.$repo.$sha'
 
@@ -327,14 +327,6 @@ const SocialAndPsychologicalServiceSitemapRoute =
     path: '/sitemap',
     getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
   } as any)
-const SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute =
-  SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRouteImport.update(
-    {
-      id: '/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war',
-      path: '/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-    } as any,
-  )
 const ParentForumTipsForParentsRoute =
   ParentForumTipsForParentsRouteImport.update({
     id: '/tips-for-parents',
@@ -918,14 +910,6 @@ const SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute =
       getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute =
-  SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRouteImport.update(
-    {
-      id: '/practical-psychologist/tips-for-parents',
-      path: '/practical-psychologist/tips-for-parents',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-    } as any,
-  )
 const SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute =
   SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport.update(
     {
@@ -1283,11 +1267,27 @@ const mainAchievementsPupilRoute = mainAchievementsPupilRouteImport.update({
   path: '/achievements/pupil',
   getParentRoute: () => mainRouteRoute,
 } as any)
+const SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute =
+  SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport.update(
+    {
+      id: '/practical-psychologist/tips-for-parents/',
+      path: '/practical-psychologist/tips-for-parents/',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+    } as any,
+  )
 const mainPostsTypeIndexRoute = mainPostsTypeIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => mainPostsTypeRoute,
 } as any)
+const SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute =
+  SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport.update(
+    {
+      id: '/practical-psychologist/tips-for-parents/$id',
+      path: '/practical-psychologist/tips-for-parents/$id',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+    } as any,
+  )
 const mainPostsTypeIdRoute = mainPostsTypeIdRouteImport.update({
   id: '/$id',
   path: '/$id',
@@ -1389,7 +1389,6 @@ export interface FileRoutesByFullPath {
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
-  '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   '/social-and-psychological-service/sitemap': typeof SocialAndPsychologicalServiceSitemapRoute
   '/social-and-psychological-service/speech-therapist': typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   '/': typeof mainIndexRoute
@@ -1460,7 +1459,6 @@ export interface FileRoutesByFullPath {
   '/social-and-psychological-service/practical-psychologist/hotline-numbers': typeof SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRoute
   '/social-and-psychological-service/practical-psychologist/regulatory-documents': typeof SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRoute
   '/social-and-psychological-service/practical-psychologist/resilience-center': typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
-  '/social-and-psychological-service/practical-psychologist/tips-for-parents': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
@@ -1484,7 +1482,9 @@ export interface FileRoutesByFullPath {
   '/social-and-psychological-service/practical-psychologist/': typeof SocialAndPsychologicalServicePracticalPsychologistIndexRoute
   '/social-and-psychological-service/social-pedagogue/': typeof SocialAndPsychologicalServiceSocialPedagogueIndexRoute
   '/posts/$type/$id': typeof mainPostsTypeIdRoute
+  '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute
   '/posts/$type/': typeof mainPostsTypeIndexRoute
+  '/social-and-psychological-service/practical-psychologist/tips-for-parents/': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute
   '/api/github/sha/$repo/$sha': typeof ApiGithubShaRepoShaRoute
 }
 export interface FileRoutesByTo {
@@ -1566,7 +1566,6 @@ export interface FileRoutesByTo {
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
-  '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   '/social-and-psychological-service/sitemap': typeof SocialAndPsychologicalServiceSitemapRoute
   '/social-and-psychological-service/speech-therapist': typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   '/': typeof mainIndexRoute
@@ -1636,7 +1635,6 @@ export interface FileRoutesByTo {
   '/social-and-psychological-service/practical-psychologist/hotline-numbers': typeof SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRoute
   '/social-and-psychological-service/practical-psychologist/regulatory-documents': typeof SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRoute
   '/social-and-psychological-service/practical-psychologist/resilience-center': typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
-  '/social-and-psychological-service/practical-psychologist/tips-for-parents': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
@@ -1660,7 +1658,9 @@ export interface FileRoutesByTo {
   '/social-and-psychological-service/practical-psychologist': typeof SocialAndPsychologicalServicePracticalPsychologistIndexRoute
   '/social-and-psychological-service/social-pedagogue': typeof SocialAndPsychologicalServiceSocialPedagogueIndexRoute
   '/posts/$type/$id': typeof mainPostsTypeIdRoute
+  '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute
   '/posts/$type': typeof mainPostsTypeIndexRoute
+  '/social-and-psychological-service/practical-psychologist/tips-for-parents': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute
   '/api/github/sha/$repo/$sha': typeof ApiGithubShaRepoShaRoute
 }
 export interface FileRoutesById {
@@ -1755,7 +1755,6 @@ export interface FileRoutesById {
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
-  '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   '/social-and-psychological-service/sitemap': typeof SocialAndPsychologicalServiceSitemapRoute
   '/social-and-psychological-service/speech-therapist': typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   '/(main)/': typeof mainIndexRoute
@@ -1826,7 +1825,6 @@ export interface FileRoutesById {
   '/social-and-psychological-service/practical-psychologist/hotline-numbers': typeof SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRoute
   '/social-and-psychological-service/practical-psychologist/regulatory-documents': typeof SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRoute
   '/social-and-psychological-service/practical-psychologist/resilience-center': typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
-  '/social-and-psychological-service/practical-psychologist/tips-for-parents': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
@@ -1850,7 +1848,9 @@ export interface FileRoutesById {
   '/social-and-psychological-service/practical-psychologist/': typeof SocialAndPsychologicalServicePracticalPsychologistIndexRoute
   '/social-and-psychological-service/social-pedagogue/': typeof SocialAndPsychologicalServiceSocialPedagogueIndexRoute
   '/(main)/posts/$type/$id': typeof mainPostsTypeIdRoute
+  '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute
   '/(main)/posts/$type/': typeof mainPostsTypeIndexRoute
+  '/social-and-psychological-service/practical-psychologist/tips-for-parents/': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute
   '/api/github/sha/$repo/$sha': typeof ApiGithubShaRepoShaRoute
 }
 export interface FileRouteTypes {
@@ -1945,7 +1945,6 @@ export interface FileRouteTypes {
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
-    | '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
     | '/social-and-psychological-service/sitemap'
     | '/social-and-psychological-service/speech-therapist'
     | '/'
@@ -2016,7 +2015,6 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/hotline-numbers'
     | '/social-and-psychological-service/practical-psychologist/regulatory-documents'
     | '/social-and-psychological-service/practical-psychologist/resilience-center'
-    | '/social-and-psychological-service/practical-psychologist/tips-for-parents'
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/bullying'
@@ -2040,7 +2038,9 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/'
     | '/social-and-psychological-service/social-pedagogue/'
     | '/posts/$type/$id'
+    | '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
     | '/posts/$type/'
+    | '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
     | '/api/github/sha/$repo/$sha'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -2122,7 +2122,6 @@ export interface FileRouteTypes {
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
-    | '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
     | '/social-and-psychological-service/sitemap'
     | '/social-and-psychological-service/speech-therapist'
     | '/'
@@ -2192,7 +2191,6 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/hotline-numbers'
     | '/social-and-psychological-service/practical-psychologist/regulatory-documents'
     | '/social-and-psychological-service/practical-psychologist/resilience-center'
-    | '/social-and-psychological-service/practical-psychologist/tips-for-parents'
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/bullying'
@@ -2216,7 +2214,9 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist'
     | '/social-and-psychological-service/social-pedagogue'
     | '/posts/$type/$id'
+    | '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
     | '/posts/$type'
+    | '/social-and-psychological-service/practical-psychologist/tips-for-parents'
     | '/api/github/sha/$repo/$sha'
   id:
     | '__root__'
@@ -2310,7 +2310,6 @@ export interface FileRouteTypes {
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
-    | '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
     | '/social-and-psychological-service/sitemap'
     | '/social-and-psychological-service/speech-therapist'
     | '/(main)/'
@@ -2381,7 +2380,6 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/hotline-numbers'
     | '/social-and-psychological-service/practical-psychologist/regulatory-documents'
     | '/social-and-psychological-service/practical-psychologist/resilience-center'
-    | '/social-and-psychological-service/practical-psychologist/tips-for-parents'
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/bullying'
@@ -2405,7 +2403,9 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/'
     | '/social-and-psychological-service/social-pedagogue/'
     | '/(main)/posts/$type/$id'
+    | '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
     | '/(main)/posts/$type/'
+    | '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
     | '/api/github/sha/$repo/$sha'
   fileRoutesById: FileRoutesById
 }
@@ -2600,13 +2600,6 @@ declare module '@tanstack/react-router' {
       path: '/sitemap'
       fullPath: '/social-and-psychological-service/sitemap'
       preLoaderRoute: typeof SocialAndPsychologicalServiceSitemapRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war': {
-      id: '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
-      path: '/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
-      fullPath: '/social-and-psychological-service/overcoming-panic-exercises-and-tips-on-how-to-stabilize-during-war'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
     '/parent-forum/tips-for-parents': {
@@ -3309,13 +3302,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
-    '/social-and-psychological-service/practical-psychologist/tips-for-parents': {
-      id: '/social-and-psychological-service/practical-psychologist/tips-for-parents'
-      path: '/practical-psychologist/tips-for-parents'
-      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-parents'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
     '/social-and-psychological-service/practical-psychologist/resilience-center': {
       id: '/social-and-psychological-service/practical-psychologist/resilience-center'
       path: '/practical-psychologist/resilience-center'
@@ -3715,12 +3701,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainAchievementsPupilRouteImport
       parentRoute: typeof mainRouteRoute
     }
+    '/social-and-psychological-service/practical-psychologist/tips-for-parents/': {
+      id: '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
+      path: '/practical-psychologist/tips-for-parents'
+      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
     '/(main)/posts/$type/': {
       id: '/(main)/posts/$type/'
       path: '/'
       fullPath: '/posts/$type/'
       preLoaderRoute: typeof mainPostsTypeIndexRouteImport
       parentRoute: typeof mainPostsTypeRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id': {
+      id: '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
+      path: '/practical-psychologist/tips-for-parents/$id'
+      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
     '/(main)/posts/$type/$id': {
       id: '/(main)/posts/$type/$id'
@@ -4244,14 +4244,12 @@ const ParentForumRouteRouteWithChildren =
   ParentForumRouteRoute._addFileChildren(ParentForumRouteRouteChildren)
 
 interface SocialAndPsychologicalServiceRouteRouteChildren {
-  SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute: typeof SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute
   SocialAndPsychologicalServiceSitemapRoute: typeof SocialAndPsychologicalServiceSitemapRoute
   SocialAndPsychologicalServiceSpeechTherapistRoute: typeof SocialAndPsychologicalServiceSpeechTherapistRoute
   SocialAndPsychologicalServiceIndexRoute: typeof SocialAndPsychologicalServiceIndexRoute
   SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRoute: typeof SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRoute
   SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRoute: typeof SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRoute
   SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute: typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
-  SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute
   SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   SocialAndPsychologicalServiceSocialPedagogueBullyingRoute: typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
@@ -4265,12 +4263,12 @@ interface SocialAndPsychologicalServiceRouteRouteChildren {
   SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute: typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
   SocialAndPsychologicalServicePracticalPsychologistIndexRoute: typeof SocialAndPsychologicalServicePracticalPsychologistIndexRoute
   SocialAndPsychologicalServiceSocialPedagogueIndexRoute: typeof SocialAndPsychologicalServiceSocialPedagogueIndexRoute
+  SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute
+  SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute
 }
 
 const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalServiceRouteRouteChildren =
   {
-    SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute:
-      SocialAndPsychologicalServiceOvercomingPanicExercisesAndTipsOnHowToStabilizeDuringWarRoute,
     SocialAndPsychologicalServiceSitemapRoute:
       SocialAndPsychologicalServiceSitemapRoute,
     SocialAndPsychologicalServiceSpeechTherapistRoute:
@@ -4283,8 +4281,6 @@ const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalSer
       SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRoute,
     SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute:
       SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute,
-    SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute:
-      SocialAndPsychologicalServicePracticalPsychologistTipsForParentsRoute,
     SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute:
       SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute,
     SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute:
@@ -4311,6 +4307,10 @@ const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalSer
       SocialAndPsychologicalServicePracticalPsychologistIndexRoute,
     SocialAndPsychologicalServiceSocialPedagogueIndexRoute:
       SocialAndPsychologicalServiceSocialPedagogueIndexRoute,
+    SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute:
+      SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute,
+    SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute:
+      SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute,
   }
 
 const SocialAndPsychologicalServiceRouteRouteWithChildren =

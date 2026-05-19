@@ -4,11 +4,6 @@ import { type FC, useState } from "react";
 import { pagination } from "~/lib/pagination";
 import { Pagination } from "./pagination";
 
-type FeedPost = {
-  title?: string;
-  Content: FC;
-};
-
 type Props = {
   items: Record<string, unknown>;
 };
@@ -110,3 +105,7 @@ function assertIsFeedPost(
   if (typeof data === "object" && data && "Content" in data) return;
   throw new Error(`(${path}) is not a feed post`);
 }
+export type FeedPost = {
+  title?: string;
+  Content: FC;
+};

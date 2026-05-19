@@ -1,3 +1,4 @@
+import type { AlbumPost } from "posts";
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
 import z from "zod";
 import { Highlight } from "~/components/highlight";
@@ -6,7 +7,7 @@ import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
 import { cacheHeader } from "~/lib/headers";
 import { pagination } from "~/lib/pagination";
-import { type Album, formatPostDate } from "~/lib/posts";
+import { formatPostDate } from "~/lib/posts";
 import { getAlbum } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/album/")({
@@ -67,7 +68,7 @@ function RouteComponent() {
                     to="/album/$id"
                     className="font-bold"
                   >
-                    {formatPostDate(item)}
+                    {formatPostDate(item.date)}
                   </Link>
                 </td>
                 <td>
@@ -107,13 +108,13 @@ function RouteComponent() {
   );
 }
 
-function searchInAlbum(album: Album, searchText: string) {
+function searchInAlbum(album: AlbumPost[], searchText: string) {
   if (searchText === "") return album;
   const match = new RegExp(searchText, "i");
   return album.filter((g) => match.test(g.title));
 }
 
-function highlight(album: Album, searchText: string) {
+function highlight(album: AlbumPost[], searchText: string) {
   return album.map((p) => ({
     ...p,
     title: <Highlight highlight={searchText} text={p.title} />,

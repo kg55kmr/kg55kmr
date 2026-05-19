@@ -1,4 +1,4 @@
-import type { Post, PostType } from "posts";
+import type { MetaPost, PostType } from "posts";
 import { Accordion } from "@base-ui/react/accordion";
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
 import { ChevronUp } from "lucide-react";
@@ -42,8 +42,7 @@ function RouteComponent() {
   const mergedPosts = [...postsList[type].pinItems, ...postsList[type].items];
   const filteredPosts = filterPosts({
     posts: mergedPosts,
-    year,
-    month,
+    date: { year, month },
     searchText,
   });
 
@@ -112,7 +111,7 @@ function RouteComponent() {
   );
 }
 
-type PostHighlight = Omit<Post, "title"> & { title: ReactElement };
+type PostHighlight = Omit<MetaPost, "title"> & { title: ReactElement };
 
 function Item(props: { post: PostHighlight; type: PostType }) {
   const { post, type } = props;
@@ -139,12 +138,12 @@ function Item(props: { post: PostHighlight; type: PostType }) {
         <div className="mx-auto w-50 shrink-0 rounded-lg border border-gray-300 md:mx-0">
           <Thumbnail
             src={getPostThumbnailUrl(type, post.id)}
-            placeholder={post.thumbnail === false}
+            placeholder={false}
           />
         </div>
         <div className="relative">
           <div>{post.title}</div>
-          <div className="text-blue-700">{formatPostDate(post)}</div>
+          <div className="text-blue-700">{formatPostDate(post.date)}</div>
         </div>
       </div>
     </Link>
@@ -161,7 +160,7 @@ function Thumbnail(props: { src: string; placeholder?: boolean }) {
   );
 }
 
-function highlight(posts: Post[], searchText: string) {
+function highlight(posts: MetaPost[], searchText: string) {
   return posts.map((p) => ({
     ...p,
     title: <Highlight highlight={searchText} text={p.title} />,
@@ -174,7 +173,7 @@ type ArchiveType = Record<
 >;
 
 type ArchiveProps = {
-  posts: Post[];
+  posts: MetaPost[];
   year?: number;
   month?: number;
   setFilter: (value: Pick<ArchiveProps, "month" | "year">) => void;
@@ -184,7 +183,7 @@ type ArchiveProps = {
 function Archive(props: ArchiveProps) {
   const [startYear] = useState(props.year);
   const items = props.posts.reduce((acc: ArchiveType, post) => {
-    const { year, month } = post;
+    const { year, month } = post.date;
     const monthName = months[month];
 
     if (year in acc) {
@@ -275,23 +274,22 @@ const months = [
 ];
 
 function filterPosts(args: {
-  posts: Post[];
-  year?: number;
-  month?: number;
+  posts: MetaPost[];
+  date: { year?: number; month?: number };
   searchText: string;
 }) {
-  const { posts, year, month, searchText } = args;
+  const { posts, date, searchText } = args;
   const match = new RegExp(searchText, "i");
   if (searchText.length > 0) {
     return posts.filter((v) => match.test(v.title));
   }
 
-  if (year && month) {
-    const p = posts.filter((v) => {
-      return v.year === year && v.month === month;
+  if (date.year && date.month) {
+    const result = posts.filter((post) => {
+      return post.date.year === date.year && post.date.month === date.month;
     });
-    if (p.length === 0) return posts;
-    return p;
+    if (result.length === 0) return posts;
+    return result;
   }
 
   return posts;

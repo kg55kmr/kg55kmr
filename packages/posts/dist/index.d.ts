@@ -1,32 +1,35 @@
 declare function extractSlideshows(kind: string, id: string, content: string): string[];
 
-type Post = {
-    kind: string;
+type MetaPost = {
     id: string;
     title: string;
     pin?: boolean;
-    year: number;
-    month: number;
-    day: number;
-    thumbnail?: boolean;
+    date: {
+        year: number;
+        month: number;
+        day: number;
+    };
 };
-type PostContent = {
+type MetaPostContent = {
+    items: MetaPost[];
+    pinItems: MetaPost[];
+};
+type Post = Omit<MetaPost, "id"> & {
     content: string;
 };
-type Pin = {
-    items: Post[];
-    pinItems: Post[];
+type AlbumPost = Omit<MetaPost, "pin"> & {
+    slideshows: string[];
 };
-type PostsList = Record<string, Pin>;
-type FullPosts = Record<string, Record<string, Post & PostContent>>;
+type PostsList = Record<string, MetaPostContent>;
+type FullPosts = Record<string, Record<string, Post>>;
 type Posts = {
     posts: FullPosts;
     postsList: PostsList;
     latestPosts: PostsList;
-    album: Post[];
+    album: AlbumPost[];
 };
 
 type PostType = "news" | "announcements" | "useful" | "camp";
 
 export { extractSlideshows };
-export type { FullPosts, Pin, Post, PostContent, PostType, Posts, PostsList };
+export type { AlbumPost, FullPosts, MetaPost, MetaPostContent, Post, PostType, Posts, PostsList };

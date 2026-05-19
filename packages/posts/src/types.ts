@@ -1,27 +1,27 @@
-export type Post = {
-  kind: string;
+export type MetaPost = {
   id: string;
   title: string;
   pin?: boolean;
-  year: number;
-  month: number;
-  day: number;
-  thumbnail?: boolean;
+  date: { year: number; month: number; day: number };
 };
 
-export type PostContent = { content: string };
-
-export type Pin = {
-  items: Post[];
-  pinItems: Post[];
+export type MetaPostContent = {
+  items: MetaPost[];
+  pinItems: MetaPost[];
 };
 
-export type PostsList = Record<string, Pin>;
-export type FullPosts = Record<string, Record<string, Post & PostContent>>;
+export type Post = Omit<MetaPost, "id"> & { content: string };
+
+export type AlbumPost = Omit<MetaPost, "pin"> & {
+  slideshows: string[];
+};
+
+export type PostsList = Record<string, MetaPostContent>;
+export type FullPosts = Record<string, Record<string, Post>>;
 
 export type Posts = {
   posts: FullPosts;
   postsList: PostsList;
   latestPosts: PostsList;
-  album: Post[];
+  album: AlbumPost[];
 };

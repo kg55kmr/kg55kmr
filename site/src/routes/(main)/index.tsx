@@ -176,7 +176,7 @@ function Posts(props: { hide?: [PostType] }) {
       const lp = latestPosts[type as PostType];
       const items = [...lp.pinItems, ...lp.items].map((post) => ({
         title: post.title,
-        date: formatPostDate(post),
+        date: formatPostDate(post.date),
         preview: getPostThumbnailUrl(type, post.id),
         link: linkOptions({
           to: "/posts/$type/$id",

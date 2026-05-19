@@ -24,7 +24,7 @@ function RouteComponent() {
         type={type}
         id={id}
         title={post.title}
-        date={formatPostDate(post)}
+        date={formatPostDate(post.date)}
       />
       <PostMarkdown content={post.content} id={id} type={type} />
     </>

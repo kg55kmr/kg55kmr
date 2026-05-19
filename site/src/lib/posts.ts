@@ -1,10 +1,7 @@
-import type { GroupedPosts, Post, PostType } from "posts";
+import type { PostType } from "posts";
 import { type LinkOptions } from "@tanstack/react-router";
 import { parse } from "yaml";
 import z from "zod";
-
-export type Posts = GroupedPosts;
-export type Album = Post[];
 
 export const postTypes = {
   news: {

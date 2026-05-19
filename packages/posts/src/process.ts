@@ -1,9 +1,25 @@
-import type { FullPosts, Posts, PostsList } from "./types";
+import type {
+  AlbumPost,
+  FullPosts,
+  MetaPost,
+  Post,
+  Posts,
+  PostsList,
+} from "./types";
 import { readFile } from "fs/promises";
 import path from "path";
 import { fdir } from "fdir";
 import matter from "gray-matter";
 import { extractSlideshows } from "./extract-slideshows";
+
+type ProcessedPost = {
+  full: Post;
+  meta: MetaPost;
+  albumPost?: AlbumPost;
+
+  type: string;
+  sortId: string;
+};
 
 export async function processPosts(root: string): Promise<Posts> {
   const dirs = await new fdir()
@@ -19,66 +35,82 @@ export async function processPosts(root: string): Promise<Posts> {
       const file = await readFile(path.resolve(root, item, "index.md"), "utf8");
       const { data, content } = matter(file);
 
-      const kind = path.basename(path.dirname(item));
+      const type = path.basename(path.dirname(item));
       const id = path.basename(item.trim());
+      const title: string = data["title"];
+      const pin: boolean | undefined = data["pin"];
       const sortId = (data["id"] as string | undefined) ?? id;
       const [year, month, day] = sortId.split("-").map(Number);
+      const date = { year, month: month - 1, day };
 
-      return {
-        kind,
-        id,
-        sortId: sortId as string | undefined,
-        title: data["title"] as string,
-        pin: data["pin"] || undefined,
-
-        year,
-        month: month - 1,
-        day,
-
-        slideshows: extractSlideshows(kind, id, content),
-        thumbnail: undefined,
+      const full: Post = {
+        title,
+        date,
+        pin,
         content,
       };
+
+      const meta: MetaPost = {
+        id,
+        title,
+        date,
+        pin,
+      };
+
+      let albumPost: AlbumPost | undefined;
+
+      if (type === "news") {
+        const slideshows = extractSlideshows(type, id, content);
+        if (slideshows.length > 0)
+          albumPost = {
+            id,
+            title,
+            date,
+            slideshows,
+          };
+      }
+
+      return {
+        full,
+        meta,
+        albumPost,
+        type,
+        sortId,
+      } satisfies ProcessedPost;
     }),
   );
 
   posts.sort((a, b) =>
-    b.sortId!.localeCompare(a.sortId!, undefined, { numeric: true }),
+    b.sortId!.localeCompare(a.sortId, undefined, { numeric: true }),
   );
 
-  const postsList: PostsList = {};
   const fullPosts: FullPosts = {};
+  const postsList: PostsList = {};
+  const album: AlbumPost[] = [];
 
-  for (const post of posts) {
-    postsList[post.kind] ??= { items: [], pinItems: [] };
+  for (const { full, meta, albumPost, type } of posts) {
+    fullPosts[type] ??= {};
+    fullPosts[type][meta.id] = full;
 
-    const target = post.pin
-      ? postsList[post.kind].pinItems
-      : postsList[post.kind].items;
+    postsList[type] ??= { items: [], pinItems: [] };
 
-    target.push(post);
+    const postsListTarget = meta.pin
+      ? postsList[type].pinItems
+      : postsList[type].items;
 
-    fullPosts[post.kind] ??= {};
-    fullPosts[post.kind][post.id] = post;
+    postsListTarget.push(meta);
+
+    if (albumPost) album.push(albumPost);
   }
-
-  if (postsList["news"])
-    for (const post of postsList["news"].items.slice(-363)) {
-      post.thumbnail = false;
-    }
 
   const latestPosts: PostsList = {};
 
-  for (const [kind, group] of Object.entries(postsList)) {
-    latestPosts[kind] = {
+  for (const [type, group] of Object.entries(postsList)) {
+    latestPosts[type] = {
       items: group.items.slice(0, 5),
       pinItems: group.pinItems,
     };
   }
-
-  const album = posts
-    .filter((post) => post.kind === "news" && post.slideshows!.length > 0)
-    .map((post) => post);
 
   return {
     posts: fullPosts,

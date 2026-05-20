@@ -8,19 +8,22 @@ import { getAlbumPost } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/album/$id")({
   component: RouteComponent,
-  loader: ({ params }) => getAlbumPost({ data: params }),
+  loader: async ({ params }) => {
+    const post = await getAlbumPost({ data: params });
+    return { post };
+  },
   staticData: {
     hasParent: true,
   },
 });
 
 function RouteComponent() {
-  const { title, date, postIds } = Route.useLoaderData();
-  const images = usePostImages(postIds).map(toGalleryImage);
+  const { post } = Route.useLoaderData();
+  const images = usePostImages(post.postIds).map(toGalleryImage);
 
   return (
     <>
-      <PostInfo title={title} date={formatPostDate(date)} />
+      <PostInfo title={post.title} date={formatPostDate(post.date)} />
       <Gallery images={images} />
     </>
   );

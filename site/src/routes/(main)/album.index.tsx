@@ -33,7 +33,10 @@ function RouteComponent() {
   const navigate = Route.useNavigate();
 
   const itemsPerPage = 20;
-  const albumEntries = Object.entries(album);
+  const albumEntries = Object.entries(album).toSorted((a, b) =>
+    b[0].localeCompare(a[0], undefined, { numeric: true }),
+  );
+
   const filteredAlbum = searchInAlbum(albumEntries, search);
   const { items, itemsPlaceholder } = pagination({
     items: filteredAlbum,

@@ -2,16 +2,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Gallery } from "~/components/gallery";
 import { PostInfo } from "~/components/post-info";
 import { usePostImages } from "~/hooks/use-queries";
+import { cacheHeader } from "~/lib/headers";
 import { toGalleryImage } from "~/lib/images";
 import { formatPostDate } from "~/lib/posts";
 import { getAlbumPost } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/album/$id")({
   component: RouteComponent,
-  loader: async ({ params }) => {
-    const post = await getAlbumPost({ data: params });
-    return { post };
-  },
+  loader: async ({ params }) => ({
+    post: await getAlbumPost({ data: params }),
+  }),
+  headers: cacheHeader(5),
   staticData: {
     hasParent: true,
   },

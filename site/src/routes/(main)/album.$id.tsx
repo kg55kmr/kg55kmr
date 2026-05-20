@@ -1,26 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { extractSlideshows } from "posts";
 import { Gallery } from "~/components/gallery";
 import { PostInfo } from "~/components/post-info";
-import { usePost, usePostImages } from "~/hooks/use-queries";
+import { usePostImages } from "~/hooks/use-queries";
 import { toGalleryImage } from "~/lib/images";
+import { formatPostDate } from "~/lib/posts";
+import { getAlbumPost } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/album/$id")({
   component: RouteComponent,
+  loader: ({ params }) => getAlbumPost({ data: params }),
   staticData: {
     hasParent: true,
   },
 });
 
 function RouteComponent() {
-  const { id } = Route.useParams();
-  const { post, date } = usePost("news", id);
-  const galleryIds = extractSlideshows("news", id, post.content);
-  const images = usePostImages(galleryIds).map(toGalleryImage);
+  const { title, date, postIds } = Route.useLoaderData();
+  const images = usePostImages(postIds).map(toGalleryImage);
 
   return (
     <>
-      <PostInfo title={post.title} date={date} />
+      <PostInfo title={title} date={formatPostDate(date)} />
       <Gallery images={images} />
     </>
   );

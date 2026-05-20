@@ -1,5 +1,6 @@
 import type {
   AlbumPost,
+  AlbumPosts,
   FullPosts,
   MetaPost,
   Post,
@@ -10,7 +11,6 @@ import { readFile } from "fs/promises";
 import path from "path";
 import { fdir } from "fdir";
 import matter from "gray-matter";
-import { extractSlideshows } from "./extract-slideshows";
 
 type ProcessedPost = {
   full: Post;
@@ -41,7 +41,7 @@ export async function processPosts(root: string): Promise<Posts> {
       const pin: boolean | undefined = data["pin"];
       const sortId = (data["id"] as string | undefined) ?? id;
       const [year, month, day] = sortId.split("-").map(Number);
-      const date = { year, month: month - 1, day };
+      const date = { year, month, day };
 
       const full: Post = {
         title,
@@ -60,13 +60,12 @@ export async function processPosts(root: string): Promise<Posts> {
       let albumPost: AlbumPost | undefined;
 
       if (type === "news") {
-        const slideshows = extractSlideshows(type, id, content);
-        if (slideshows.length > 0)
+        const postIds = findPostsWithImageKitRef(type, id, content);
+        if (postIds.length > 0)
           albumPost = {
-            id,
             title,
             date,
-            slideshows,
+            postIds,
           };
       }
 
@@ -86,7 +85,7 @@ export async function processPosts(root: string): Promise<Posts> {
 
   const fullPosts: FullPosts = {};
   const postsList: PostsList = {};
-  const album: AlbumPost[] = [];
+  const album: AlbumPosts = {};
 
   for (const { full, meta, albumPost, type } of posts) {
     fullPosts[type] ??= {};
@@ -100,7 +99,7 @@ export async function processPosts(root: string): Promise<Posts> {
 
     postsListTarget.push(meta);
 
-    if (albumPost) album.push(albumPost);
+    if (albumPost) album[meta.id] = albumPost;
   }
 
   const latestPosts: PostsList = {};
@@ -118,4 +117,30 @@ export async function processPosts(root: string): Promise<Posts> {
     latestPosts,
     album,
   };
+}
+
+const reSlideshow = /<slideshow( id="(.*)")* \/>/g;
+
+function findPostsWithImageKitRef(kind: string, id: string, content: string) {
+  const slideshows = [];
+  let m;
+
+  id = `${kind}/${id}`;
+
+  while ((m = reSlideshow.exec(content)) !== null) {
+    switch (true) {
+      case m[2] === undefined:
+        slideshows.push(id);
+        break;
+
+      case m[2].startsWith("*"):
+        slideshows.push(`${id}-${m[2].slice(1)}`);
+        break;
+
+      default:
+        slideshows.push(m[2]);
+    }
+  }
+
+  return slideshows;
 }

@@ -3,7 +3,6 @@ import path from 'path';
 import { readFile } from 'fs/promises';
 import { fdir } from 'fdir';
 import matter from 'gray-matter';
-import { extractSlideshows } from './index.js';
 import { workspaceRoot } from 'workspace-root';
 
 function write(root, data) {
@@ -28,7 +27,7 @@ async function processPosts(root) {
       const pin = data["pin"];
       const sortId = data["id"] ?? id;
       const [year, month, day] = sortId.split("-").map(Number);
-      const date = { year, month: month - 1, day };
+      const date = { year, month, day };
       const full = {
         title,
         date,
@@ -43,13 +42,12 @@ async function processPosts(root) {
       };
       let albumPost;
       if (type === "news") {
-        const slideshows = extractSlideshows(type, id, content);
-        if (slideshows.length > 0)
+        const postIds = findPostsWithImageKitRef(type, id, content);
+        if (postIds.length > 0)
           albumPost = {
-            id,
             title,
             date,
-            slideshows
+            postIds
           };
       }
       return {
@@ -66,14 +64,14 @@ async function processPosts(root) {
   );
   const fullPosts = {};
   const postsList = {};
-  const album = [];
+  const album = {};
   for (const { full, meta, albumPost, type } of posts) {
     fullPosts[type] ??= {};
     fullPosts[type][meta.id] = full;
     postsList[type] ??= { items: [], pinItems: [] };
     const postsListTarget = meta.pin ? postsList[type].pinItems : postsList[type].items;
     postsListTarget.push(meta);
-    if (albumPost) album.push(albumPost);
+    if (albumPost) album[meta.id] = albumPost;
   }
   const latestPosts = {};
   for (const [type, group] of Object.entries(postsList)) {
@@ -88,6 +86,25 @@ async function processPosts(root) {
     latestPosts,
     album
   };
+}
+const reSlideshow = /<slideshow( id="(.*)")* \/>/g;
+function findPostsWithImageKitRef(kind, id, content) {
+  const slideshows = [];
+  let m;
+  id = `${kind}/${id}`;
+  while ((m = reSlideshow.exec(content)) !== null) {
+    switch (true) {
+      case m[2] === void 0:
+        slideshows.push(id);
+        break;
+      case m[2].startsWith("*"):
+        slideshows.push(`${id}-${m[2].slice(1)}`);
+        break;
+      default:
+        slideshows.push(m[2]);
+    }
+  }
+  return slideshows;
 }
 
 async function getRoot() {

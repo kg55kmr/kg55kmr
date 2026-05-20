@@ -1,5 +1,5 @@
 import { Redis } from '@upstash/redis';
-import { g as getRoot, p as processPosts, w as write } from './root-SUnb-xWm.js';
+import { g as getRoot, p as processPosts, w as write } from './root-DgK-JMSH.js';
 import fs from 'fs/promises';
 import path from 'path';
 import { ImageKit } from '@imagekit/nodejs';
@@ -7,7 +7,6 @@ import { PromisePool } from '@supercharge/promise-pool';
 import { fdir } from 'fdir';
 import 'fs';
 import 'gray-matter';
-import './index.js';
 import 'workspace-root';
 
 const imagekit = new ImageKit({

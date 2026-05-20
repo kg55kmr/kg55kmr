@@ -1,9 +1,7 @@
 import type { Class } from "distance-learning";
-import type { PostType } from "posts";
 import type { YouTubeItem } from "~/server/youtube";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { getImagesSize } from "~/lib/images";
-import { formatPostDate, getPost } from "~/lib/posts";
 import { getYouTubePlayList } from "~/server/server-fn";
 import { getPostImages } from "~/server/server-fn";
 import { getImages } from "~/server/server-fn";
@@ -20,17 +18,6 @@ export function usePostImages(postId: string | string[]) {
   return useSuspenseQuery({
     queryKey: ["post imagekit", postId],
     queryFn: () => getPostImages({ data: postId }),
-  }).data;
-}
-
-export function usePost(type: PostType, postId: string) {
-  return useSuspenseQuery({
-    queryKey: ["post", type, postId],
-    queryFn: async () => {
-      const post = await getPost({ type, id: postId });
-      const date = formatPostDate(post.date);
-      return { post, date };
-    },
   }).data;
 }
 

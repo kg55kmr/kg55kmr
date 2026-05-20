@@ -1,5 +1,3 @@
-declare function extractSlideshows(kind: string, id: string, content: string): string[];
-
 type MetaPost = {
     id: string;
     title: string;
@@ -17,19 +15,19 @@ type MetaPostContent = {
 type Post = Omit<MetaPost, "id"> & {
     content: string;
 };
-type AlbumPost = Omit<MetaPost, "pin"> & {
-    slideshows: string[];
+type AlbumPost = Omit<MetaPost, "id" | "pin"> & {
+    postIds: string[];
 };
 type PostsList = Record<string, MetaPostContent>;
 type FullPosts = Record<string, Record<string, Post>>;
+type AlbumPosts = Record<string, AlbumPost>;
 type Posts = {
     posts: FullPosts;
     postsList: PostsList;
     latestPosts: PostsList;
-    album: AlbumPost[];
+    album: AlbumPosts;
 };
 
 type PostType = "news" | "announcements" | "useful" | "camp";
 
-export { extractSlideshows };
-export type { AlbumPost, FullPosts, MetaPost, MetaPostContent, Post, PostType, Posts, PostsList };
+export type { AlbumPost, AlbumPosts, FullPosts, MetaPost, MetaPostContent, Post, PostType, Posts, PostsList };

@@ -25,13 +25,16 @@ export const Route = createFileRoute("/(main)/album/")({
   headers: cacheHeader(5),
 });
 
+type AlbumEntries = [string, AlbumPost][];
+
 function RouteComponent() {
   const { album } = Route.useLoaderData();
   const { page, search } = Route.useSearch();
   const navigate = Route.useNavigate();
 
   const itemsPerPage = 20;
-  const filteredAlbum = searchInAlbum(album, search);
+  const albumEntries = Object.entries(album);
+  const filteredAlbum = searchInAlbum(albumEntries, search);
   const { items, itemsPlaceholder } = pagination({
     items: filteredAlbum,
     itemsPerPage,
@@ -108,15 +111,17 @@ function RouteComponent() {
   );
 }
 
-function searchInAlbum(album: AlbumPost[], searchText: string) {
+function searchInAlbum(album: AlbumEntries, searchText: string) {
   if (searchText === "") return album;
   const match = new RegExp(searchText, "i");
-  return album.filter((g) => match.test(g.title));
+
+  return album.filter(([, post]) => match.test(post.title));
 }
 
-function highlight(album: AlbumPost[], searchText: string) {
-  return album.map((p) => ({
+function highlight(album: AlbumEntries, searchText: string) {
+  return album.map(([id, p]) => ({
     ...p,
+    id,
     title: <Highlight highlight={searchText} text={p.title} />,
   }));
 }

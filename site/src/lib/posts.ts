@@ -1,7 +1,5 @@
 import type { PostType } from "posts";
 import { type LinkOptions } from "@tanstack/react-router";
-import { parse } from "yaml";
-import z from "zod";
 
 export const postTypes = {
   news: {
@@ -41,13 +39,6 @@ export function getPostFileUrl(type: string, id: string, file: string) {
   return buildUrl(`${type}/${id}/${file}`);
 }
 
-async function loadPost(type: string, id: string) {
-  const response = await fetch(buildUrl(`${type}/${id}/index.md`), {
-    cache: "no-store",
-  });
-  return await response.text();
-}
-
 export function getPostThumbnailUrl(type: string, id: string) {
   return buildUrl(`${type}/${id}/thumbnail.jpg`);
 }
@@ -80,36 +71,3 @@ export type ParsedPost = {
   thumbnail: string;
   content: string;
 };
-
-export async function getPost(options: {
-  type: string;
-  id: string;
-}): Promise<ParsedPost> {
-  const idParts = options.id.split("-");
-  const year = Number.parseInt(idParts[0]);
-  const month = Number.parseInt(idParts[1]);
-  const day = Number.parseInt(idParts[2]);
-
-  const md = await loadPost(options.type, options.id);
-  const data = splitMarkdown(md);
-  const post = {
-    title: data.meta.title,
-    date: { year, month, day },
-    thumbnail: getPostThumbnailUrl(options.type, options.id),
-    content: data.body,
-  };
-
-  return post;
-}
-
-function splitMarkdown(content: string) {
-  const data = reFrontmatter.exec(content);
-  if (!data) throw new Error(`Failed to extract frontmatter: ${content}`);
-
-  const [, frontmatter, body] = data;
-  const meta = schema.parse(parse(frontmatter));
-  return { meta, body };
-}
-
-const reFrontmatter = /---\s*([\s\S]*)\s*---\s*([\s\S]*)/;
-const schema = z.object({ title: z.string(), pin: z.boolean().optional() });

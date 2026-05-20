@@ -12,16 +12,17 @@ export type MetaPostContent = {
 
 export type Post = Omit<MetaPost, "id"> & { content: string };
 
-export type AlbumPost = Omit<MetaPost, "pin"> & {
-  slideshows: string[];
+export type AlbumPost = Omit<MetaPost, "id" | "pin"> & {
+  postIds: string[];
 };
 
 export type PostsList = Record<string, MetaPostContent>;
 export type FullPosts = Record<string, Record<string, Post>>;
+export type AlbumPosts = Record<string, AlbumPost>;
 
 export type Posts = {
   posts: FullPosts;
   postsList: PostsList;
   latestPosts: PostsList;
-  album: AlbumPost[];
+  album: AlbumPosts;
 };

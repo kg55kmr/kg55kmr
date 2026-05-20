@@ -1,4 +1,4 @@
-import type { AlbumPost, Post, PostsList } from "posts";
+import type { AlbumPost, AlbumPosts, Post, PostsList } from "posts";
 import { createServerFn } from "@tanstack/react-start";
 import z from "zod";
 import { setCacheHeader } from "./headers";
@@ -20,10 +20,18 @@ export const getLatestPosts = createServerFn().handler(async () => {
 });
 
 export const getAlbum = createServerFn().handler(async () => {
-  const result = await getFromRedis<AlbumPost[]>("album");
+  const result = await getFromRedis<AlbumPosts>("album");
   setCacheHeader(5);
   return result;
 });
+
+export const getAlbumPost = createServerFn()
+  .inputValidator(z.object({ id: z.string() }))
+  .handler(async ({ data }) => {
+    const result = await getFromRedis<AlbumPost>("album", `$["${data.id}"]`);
+    setCacheHeader(5);
+    return result;
+  });
 
 export const getPost = createServerFn()
   .inputValidator(z.object({ type: z.string(), id: z.string() }))

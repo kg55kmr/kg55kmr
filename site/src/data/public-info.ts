@@ -64,6 +64,10 @@ export const publicInfo: ReportItemWithItems[] = [
     ],
   },
   {
+    title: "Рішення про державну реєстрацію потужності",
+    href: "https://drive.google.com/file/d/1pr-RBN8usYaGUmTWCin7SGgw0dAUTNev/preview",
+  },
+  {
     title: "Структура та органи управління закладу освіти",
     component: StructureAndOrganization,
   },

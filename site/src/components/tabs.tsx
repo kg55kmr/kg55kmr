@@ -1,5 +1,11 @@
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
-import { type ReactNode, Children, isValidElement } from "react";
+import {
+  type CSSProperties,
+  type ReactNode,
+  Children,
+  isValidElement,
+} from "react";
+import { useStickyOffset } from "~/hooks/use-sticky";
 import { cn } from "~/lib/utils";
 import { Accordion } from "./accordion";
 import { Responsive } from "./responsive";
@@ -43,6 +49,15 @@ function Tabs(props: TabsProps) {
 }
 
 function Desktop(props: TabsProps & { items: TabProps[] }) {
+  const offset = useStickyOffset() + 5;
+  const verticalStyle = {
+    top: props.orientation === "vertical" ? `${offset}px` : undefined,
+    height:
+      props.orientation === "vertical"
+        ? `calc(100vh - ${offset}px)`
+        : undefined,
+  } satisfies CSSProperties;
+
   return (
     <TabsPrimitive.Root
       orientation={props.orientation}
@@ -55,9 +70,11 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
       )}
     >
       <TabsPrimitive.List
+        style={verticalStyle}
         className={cn(
           props.orientation === "horizontal" && "flex flex-wrap gap-x-1 py-2",
-          props.orientation === "vertical" && "flex flex-col gap-y-1",
+          props.orientation === "vertical" &&
+            "sticky flex flex-col content-start gap-y-1 overflow-y-auto",
           props.listClassName,
         )}
       >

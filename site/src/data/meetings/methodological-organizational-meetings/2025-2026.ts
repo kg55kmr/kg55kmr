@@ -1,8 +1,8 @@
-import type { Responsible, TimelineType } from "~/components/timeline";
+import type { ChronologyGroup, Responsible } from "~/components/chronology";
 
-export const data: TimelineType<Responsible>[] = [
+export const data: ChronologyGroup<Responsible>[] = [
   {
-    date: "Вересень 2025",
+    date: "09.2025",
     items: [
       {
         text: "Про особливості вивчення базових дисциплін у 2025/2026 н.р.",
@@ -28,7 +28,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Жовтень 2025",
+    date: "10.2025",
     items: [
       { text: "Про хід проведення предметних олімпіад.", responsible: "ЗДНВР" },
       {
@@ -50,7 +50,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Листопад 2025",
+    date: "11.2025",
     items: [
       {
         text: "Вимоги до розробок уроків учителів під час проведення предметних тижнів.",
@@ -72,7 +72,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Грудень 2025",
+    date: "12.2025",
     items: [
       {
         text: "Про відвідування учнями гімназії навчальних занять.",
@@ -85,7 +85,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Січень 2026",
+    date: "01.2026",
     items: [
       {
         text: "Про стан роботи з дітьми, які потребують особливої педагогічної уваги.",
@@ -106,7 +106,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Лютий 2026",
+    date: "02.2026",
     items: [
       {
         text: "Стан ведення щоденників учнями 8–9 класів.",
@@ -131,7 +131,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Березень 2026",
+    date: "03.2026",
     items: [
       { text: "Про стан гурткової роботи.", responsible: "ЗДВР" },
       {
@@ -149,7 +149,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Квітень 2026",
+    date: "04.2026",
     items: [
       {
         text: "Про навчально-методичне забезпечення профільного навчання.",
@@ -166,7 +166,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Травень 2026",
+    date: "05.2026",
     items: [
       {
         text: "Про підсумки роботи гімназії над науково-методичним проєктом.",

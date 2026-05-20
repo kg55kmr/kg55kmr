@@ -11,7 +11,7 @@
   "scripts": {
     "build": "pkgroll --clean-dist",
     "posts": "dotenv -e ../../site/.env.local node ./dist/main",
-    "dev": "tsx --env-file=../../site/.env.local ./src/dev.ts"
+    "dev": "node ./dist/dev"
   },
   "dependencies": {
     "@imagekit/nodejs": "^7.6.1",
@@ -20,7 +20,7 @@
     "dotenv-cli": "^11.0.0",
     "fdir": "^6.5.0",
     "gray-matter": "^4.0.3",
-    "tsx": "^4.22.2",
     "workspace-root": "^3.3.1"
   }
 }
+

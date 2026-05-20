@@ -1,9 +1,20 @@
-import { readFile } from 'fs/promises';
+import fs from 'fs';
 import path from 'path';
+import { readFile } from 'fs/promises';
 import { fdir } from 'fdir';
 import matter from 'gray-matter';
 import { extractSlideshows } from './index.js';
 import { workspaceRoot } from 'workspace-root';
+
+function write(root, data) {
+  writePosts(data.posts, "posts.json");
+  writePosts(data.postsList, "posts-list.json");
+  writePosts(data.latestPosts, "latest-posts.json");
+  writePosts(data.album, "album.json");
+  function writePosts(data2, file) {
+    fs.writeFileSync(path.resolve(root, file), JSON.stringify(data2));
+  }
+}
 
 async function processPosts(root) {
   const dirs = await new fdir().onlyDirs().withRelativePaths().exclude((d) => d.startsWith(".")).filter((p) => p.split(path.sep).length === 3).crawl(root).withPromise();
@@ -86,4 +97,4 @@ async function getRoot() {
   return postsRoot;
 }
 
-export { getRoot as g, processPosts as p };
+export { getRoot as g, processPosts as p, write as w };

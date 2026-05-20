@@ -1,8 +1,8 @@
-import type { Responsible, TimelineType } from "~/components/timeline";
+import type { ChronologyGroup, Responsible } from "~/components/chronology";
 
-export const data: TimelineType<Responsible>[] = [
+export const data: ChronologyGroup<Responsible>[] = [
   {
-    date: "Вересень 2024",
+    date: "09.2024",
     items: [
       {
         text: "Про особливості вивчення базових дисциплін у 2024/2025 н.р.",
@@ -31,7 +31,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Жовтень 2024",
+    date: "10.2024",
     items: [
       {
         text: "Про хід проведення предметних олімпіад.",
@@ -56,7 +56,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Листопад 2024",
+    date: "11.2024",
     items: [
       {
         text: "Вимоги до розробок уроків учителів під час проведення предметних тижнів. Створення моделі сучасного уроку.",
@@ -81,7 +81,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Грудень 2024",
+    date: "12.2024",
     items: [
       {
         text: "Про відвідування учнями гімназії навчальних занять. Стан ведення сигнального журналу.",
@@ -94,7 +94,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Січень 2025",
+    date: "01.2025",
     items: [
       {
         text: "Про стан роботи з дітьми, які потребують особливої педагогічної уваги.",
@@ -115,7 +115,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Лютий 2025",
+    date: "02.2025",
     items: [
       {
         text: "Стан ведення щоденників учнями 8-9 класів.",
@@ -140,7 +140,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Березень 2025",
+    date: "03.2025",
     items: [
       {
         text: "Про стан гурткової роботи.",
@@ -161,7 +161,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Квітень 2025",
+    date: "04.2025",
     items: [
       {
         text: "Про навчально-методичне забезпечення профільного навчання.",
@@ -178,7 +178,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Травень 2025",
+    date: "05.2025",
     items: [
       {
         text: "Про підсумки роботи гімназії над науково-методичною проєктом",

@@ -1,8 +1,8 @@
-import type { Responsible, TimelineType } from "~/components/timeline";
+import type { ChronologyGroup, Responsible } from "~/components/chronology";
 
-export const data: TimelineType<Responsible>[] = [
+export const data: ChronologyGroup<Responsible>[] = [
   {
-    date: "Вересень 2025",
+    date: "09.2025",
     items: [
       { text: "Про підсумки освітнього процесу закладу за 2024-2025 н.р." },
       {
@@ -42,7 +42,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Жовтень 2025",
+    date: "10.2025",
     items: [
       {
         text: "Про збереження життя та здоров’я  учнів гімназії під час навчання та у позаурочний час на осінніх канікулах.",
@@ -65,7 +65,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Грудень 2025",
+    date: "12.2025",
     items: [
       { text: "Про підсумки освітнього процесу за І семестр 2025-2026 н.р." },
       {
@@ -82,7 +82,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Березень 2026",
+    date: "03.2026",
     items: [
       {
         text: "Про посилення пропускного режиму та вдосконалення заходів безпеки у навчальному закладі.",
@@ -98,7 +98,7 @@ export const data: TimelineType<Responsible>[] = [
     ],
   },
   {
-    date: "Травень 2026",
+    date: "05.2026",
     items: [
       { text: "Звіт директора гімназії про роботу у 2025-2026 н.р. " },
       {

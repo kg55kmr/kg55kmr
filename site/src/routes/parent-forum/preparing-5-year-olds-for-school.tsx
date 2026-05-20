@@ -1,6 +1,6 @@
-import type { TimelineItem, TimelineType } from "~/components/timeline";
+import type { ChronologyEntry, ChronologyGroup } from "~/components/chronology";
 import { createFileRoute } from "@tanstack/react-router";
-import { Timeline } from "~/components/timeline";
+import { Chronology } from "~/components/chronology";
 import { academicYear } from "~/data/common";
 import { cn } from "~/lib/utils";
 
@@ -15,7 +15,7 @@ export const Route = createFileRoute(
 
 function RouteComponent() {
   return (
-    <Timeline items={data} titleComponent={Title} itemsComponent={Items} />
+    <Chronology items={data} titleComponent={Title} itemsComponent={Items} />
   );
 }
 
@@ -32,7 +32,7 @@ function Title(props: { date: string }) {
   );
 }
 
-function Items(props: { items: TimelineItem<object>[]; dot?: boolean }) {
+function Items(props: { items: ChronologyEntry<object>[]; dot?: boolean }) {
   const List = props.dot ? "ul" : "ol";
   return (
     <List className={cn("ml-8", props.dot ? "list-disc" : "list-decimal")}>
@@ -46,7 +46,7 @@ function Items(props: { items: TimelineItem<object>[]; dot?: boolean }) {
   );
 }
 
-const data: TimelineType<object>[] = [
+const data: ChronologyGroup<object>[] = [
   {
     date: `Вересень ${academicYear.start}`,
     items: [

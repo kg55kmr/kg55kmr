@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Archive } from "~/components/archive";
-import { MeetingsTimeline } from "~/components/timeline";
+import { MeetingsChronology } from "~/components/chronology";
 import { data } from "~/data/meetings/meetings-with-director";
 
 export const Route = createFileRoute("/(main)/meetings-with-director")({
@@ -12,6 +12,6 @@ export const Route = createFileRoute("/(main)/meetings-with-director")({
 
 function RouteComponent() {
   return (
-    <Archive items={data}>{(v) => <MeetingsTimeline items={v} />}</Archive>
+    <Archive items={data}>{(v) => <MeetingsChronology items={v} />}</Archive>
   );
 }

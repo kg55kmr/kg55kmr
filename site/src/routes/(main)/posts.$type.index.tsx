@@ -10,6 +10,7 @@ import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
 import { useStickyOffset } from "~/hooks/use-sticky";
 import { cacheHeader } from "~/lib/headers";
+import { monthsNominative } from "~/lib/months";
 import { pagination } from "~/lib/pagination";
 import { formatPostDate, getPostThumbnailUrl } from "~/lib/posts";
 import { asset, cn } from "~/lib/utils";
@@ -179,12 +180,11 @@ type ArchiveProps = {
   setFilter: (value: Pick<ArchiveProps, "month" | "year">) => void;
 };
 
-// TODO: replace string to number in post.date
 function Archive(props: ArchiveProps) {
   const [startYear] = useState(props.year);
   const items = props.posts.reduce((acc: ArchiveType, post) => {
     const { year, month } = post.date;
-    const monthName = months[month];
+    const monthName = monthsNominative[month];
 
     if (year in acc) {
       if (month in acc[year]) acc[year][month].count++;
@@ -257,21 +257,6 @@ function Archive(props: ArchiveProps) {
     </div>
   );
 }
-
-const months = [
-  "Січень",
-  "Лютий",
-  "Березень",
-  "Квітень",
-  "Травень",
-  "Червень",
-  "Липень",
-  "Серпень",
-  "Вересень",
-  "Жовтень",
-  "Листопад",
-  "Грудень",
-];
 
 function filterPosts(args: {
   posts: MetaPost[];

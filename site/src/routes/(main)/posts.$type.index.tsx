@@ -184,7 +184,7 @@ function Archive(props: ArchiveProps) {
   const [startYear] = useState(props.year);
   const items = props.posts.reduce((acc: ArchiveType, post) => {
     const { year, month } = post.date;
-    const monthName = monthsNominative[month];
+    const monthName = monthsNominative[month - 1];
 
     if (year in acc) {
       if (month in acc[year]) acc[year][month].count++;
@@ -192,9 +192,7 @@ function Archive(props: ArchiveProps) {
     } else acc[year] = {};
     return acc;
   }, {});
-  const itemsKey = Object.keys(items)
-    .toReversed()
-    .map((v) => Number.parseInt(v));
+  const itemsKey = Object.keys(items).map(Number).toReversed();
 
   return (
     <div className="font-cambria mx-auto w-fit rounded-md border border-gray-300 bg-gray-50 text-xl drop-shadow-[7px_7px_7px] drop-shadow-black/10">
@@ -226,8 +224,8 @@ function Archive(props: ArchiveProps) {
               }
             >
               {Object.keys(items[year])
-                .toSorted((a, b) => b.localeCompare(a))
-                .map((v) => Number.parseInt(v))
+                .map(Number)
+                .toSorted((a, b) => b - a)
                 .map((month) => {
                   const { monthName, count } = items[year][month];
                   return (

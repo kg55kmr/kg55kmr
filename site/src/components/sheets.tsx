@@ -1,7 +1,7 @@
 import type { Sheet, SheetCell } from "~/server/sheets";
+import { Suspense } from "react";
 import { useGoogleSheets } from "~/hooks/use-queries";
 import { cn } from "~/lib/utils";
-import { ClientOnlySuspense } from "./client-only-suspense";
 import { Loader } from "./loader";
 import { Tabs } from "./tabs";
 
@@ -36,9 +36,9 @@ export function Sheets(props: { items: SheetItem[] } & CellStyleFn) {
       {props.items.map((v) => (
         <Tabs.Tab key={v.title} id={v.title} title={v.title}>
           {"sheetId" in v ? (
-            <ClientOnlySuspense fallback={<Loader />}>
+            <Suspense fallback={<Loader />}>
               <Sheet sheetId={v.sheetId} cellStyleFn={props.cellStyleFn} />
-            </ClientOnlySuspense>
+            </Suspense>
           ) : (
             <Sheets items={v.items} cellStyleFn={props.cellStyleFn} />
           )}

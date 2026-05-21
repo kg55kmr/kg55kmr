@@ -13,7 +13,6 @@ export const Route = createFileRoute("/(main)/distance-learning")({
     class: z.string().default("1-А"),
   }),
   staticData: { title: "Дистанційне навчання" },
-  ssr: false,
   loaderDeps: ({ search }) => search,
   loader: ({ deps }) => ({
     title: `Дистанційне навчання ${deps.years}`,

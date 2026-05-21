@@ -7,7 +7,6 @@ export const Route = createFileRoute("/occupational-safety/meals/useful-tips")({
   staticData: {
     title: "Корисні поради",
   },
-  ssr: false,
 });
 
 function RouteComponent() {

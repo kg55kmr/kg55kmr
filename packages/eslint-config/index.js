@@ -17,9 +17,7 @@ export default defineConfig(
     extraHOCs: [
       "createFileRoute",
       "createRootRouteWithContext",
-      "withClientOnly",
-      "withClientOnlySuspense",
-      "createLink",
+      "withSuspense",
     ],
   }),
   {

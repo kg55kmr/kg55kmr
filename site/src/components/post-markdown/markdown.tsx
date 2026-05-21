@@ -1,5 +1,6 @@
 import Markdown, { type MarkdownToJSX } from "markdown-to-jsx";
 import { upperCaseComponents } from "~/lib/convert";
+import { withSuspense } from "~/lib/with";
 import { Embed } from "../embed";
 import {
   Carousel,
@@ -21,11 +22,11 @@ type Props = {
 
 const components: MarkdownToJSX.Overrides = {
   YouTube: YouTubeWrapper,
-  Carousel,
+  Carousel: withSuspense(Carousel),
   Quote,
   Pdf: PdfWrapper,
   Embed,
-  Gallery: GalleryWrapper,
+  Gallery: withSuspense(GalleryWrapper),
   FBVideo: FBVideo,
 
   a: Link,

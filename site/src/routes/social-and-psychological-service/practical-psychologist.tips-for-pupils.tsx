@@ -8,7 +8,6 @@ export const Route = createFileRoute(
   staticData: {
     title: "Поради учням",
   },
-  ssr: false,
 });
 
 const data = import.meta.glob(

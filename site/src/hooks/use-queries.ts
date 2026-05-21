@@ -68,7 +68,7 @@ export function useGoogleSheets(id: string) {
 
 export function useImagesSize(images: string[], useSSR: boolean = true) {
   return useSuspenseQuery({
-    queryKey: ["images-size", images],
+    queryKey: ["images-size", images, useSSR],
     queryFn: () => {
       if (!useSSR && import.meta.env.SSR) return [];
       return getImagesSize(images);

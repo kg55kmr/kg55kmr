@@ -12,7 +12,7 @@ import { useLightbox } from "~/hooks/use-lightbox";
 import { useImages, usePostImages } from "~/hooks/use-queries";
 import { useSlidesInView } from "~/hooks/use-slides-in-view";
 import { cn } from "~/lib/utils";
-import { withClientOnlySuspense } from "~/lib/with";
+import { withSuspense } from "~/lib/with";
 
 type Props = {
   images: ImageKitImage[];
@@ -100,24 +100,20 @@ type ImageKitCarouselProps = {
   className?: string;
 };
 
-export const ImageKitCarousel = withClientOnlySuspense(
-  (props: ImageKitCarouselProps) => {
-    const images = useImages(props.path);
-    return <ImageCarousel images={images} className={props.className} />;
-  },
-);
+export const ImageKitCarousel = withSuspense((props: ImageKitCarouselProps) => {
+  const images = useImages(props.path);
+  return <ImageCarousel images={images} className={props.className} />;
+});
 
 type PostCarouselProps = {
   id: string;
   className?: string;
 };
 
-export const PostCarousel = withClientOnlySuspense(
-  (props: PostCarouselProps) => {
-    const images = usePostImages(props.id);
-    return <ImageCarousel images={images} className={props.className} />;
-  },
-);
+export const PostCarousel = withSuspense((props: PostCarouselProps) => {
+  const images = usePostImages(props.id);
+  return <ImageCarousel images={images} className={props.className} />;
+});
 
 type ImageProps = {
   data: ImageKitImage;

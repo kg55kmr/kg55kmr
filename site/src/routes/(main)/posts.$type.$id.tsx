@@ -1,17 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PostInfo } from "~/components/post-info";
 import { PostMarkdown } from "~/components/post-markdown";
+import { cacheHeader } from "~/lib/headers";
 import { formatPostDate, getPostThumbnailUrl } from "~/lib/posts";
 import { getPost } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/posts/$type/$id")({
   component: RouteComponent,
+  loader: async ({ params }) => ({ post: await getPost({ data: params }) }),
+  headers: cacheHeader(5),
   staticData: {
     hasParent: true,
-  },
-  loader: async ({ params }) => {
-    const post = await getPost({ data: params });
-    return { post };
   },
 });
 

@@ -14,7 +14,8 @@ export function toGalleryImage(image: ImageKitImage): Image {
 export function getImagesSize(images: string[]) {
   return Promise.all(
     images.map(async (src) => {
-      const data = await fetch(src).then((r) => r.bytes());
+      const url = import.meta.env.DEV ? `http://localhost:3000${src}` : src;
+      const data = await fetch(url).then((r) => r.bytes());
       const size = imageSize(data);
       return {
         src,

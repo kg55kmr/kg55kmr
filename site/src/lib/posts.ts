@@ -44,10 +44,9 @@ export function getPostThumbnailUrl(type: string, id: string) {
 }
 
 function buildUrl(path: string) {
+  if (import.meta.env.DEV) return `/@fs/${__POSTS__}/${path}`;
   return `https://raw.githubusercontent.com/kg55kmr/posts/refs/heads/main/${path}`;
 }
-
-export const imagekitTimestamp = new Date(2023, 5, 12);
 
 function isExternal(url: string) {
   return url.startsWith("http");
@@ -71,3 +70,5 @@ export type ParsedPost = {
   thumbnail: string;
   content: string;
 };
+
+export const imagekitTimestamp = new Date(2023, 5, 12);

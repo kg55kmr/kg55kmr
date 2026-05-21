@@ -6,7 +6,7 @@ export function clientOnlyLazy<P extends object>(
 ) {
   const LazyComponent = lazy(load);
 
-  return (props: P) => {
+  return function ClientOnlyLazy(props: P) {
     return (
       <ClientOnly>
         <Suspense>

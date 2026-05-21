@@ -1,13 +1,14 @@
 import type { PostType } from "posts";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, linkOptions } from "@tanstack/react-router";
-import { type ReactNode, Fragment } from "react";
-import { ClientOnlySuspense } from "~/components/client-only-suspense";
+import { type ReactNode, Fragment, Suspense } from "react";
 import { ExternalLink, Link } from "~/components/link";
+import { Loader } from "~/components/loader";
 import { yearsList } from "~/data/distance-learning";
 import { employees } from "~/data/employees";
 import { useYouTubeList } from "~/hooks/use-queries";
 import { useSections } from "~/hooks/use-sections";
+import { cacheHeader } from "~/lib/headers";
 import { formatPostDate, getPostThumbnailUrl, postTypes } from "~/lib/posts";
 import { asset, dirAsset } from "~/lib/utils";
 import { getLatestPosts } from "~/server/server-fn";
@@ -16,6 +17,7 @@ import { LatestPosts } from "./-components/latest-posts";
 
 export const Route = createFileRoute("/(main)/")({
   component: RouteComponent,
+  headers: cacheHeader(5),
   staticData: {
     title: "Головна",
   },
@@ -104,12 +106,12 @@ function RouteComponent() {
       <DistanceLearning />
       <Header>КАРТКА КРИВОРІЖЦЯ</Header>
       <Card />
-      <ClientOnlySuspense>
+      <Suspense fallback={<Loader />}>
         <Posts hide={["camp"]} />
-      </ClientOnlySuspense>
-      <ClientOnlySuspense>
+      </Suspense>
+      <Suspense fallback={<Loader />}>
         <Playlists />
-      </ClientOnlySuspense>
+      </Suspense>
       <Header>КОРИСНІ САЙТИ</Header>
       <UsefulSites />
     </>

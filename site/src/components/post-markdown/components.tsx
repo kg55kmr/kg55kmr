@@ -84,7 +84,6 @@ export function GalleryWrapper(props: { children: ReactNode }) {
     .filter((v): v is NonNullable<typeof v> => v !== null);
 
   const images = useImagesSize(items);
-
   return (
     <GalleryContext value={true}>
       {props.children}

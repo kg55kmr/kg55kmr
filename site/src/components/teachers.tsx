@@ -1,11 +1,10 @@
-import { type FC, Fragment } from "react";
+import { type FC, Fragment, Suspense } from "react";
 import { type EmployeeName, employees } from "~/data/employees";
 import {
   type MethodologicalAssociation,
   methodologicalAssociations,
 } from "~/data/employees/methodological-association";
 import { useImagesSize } from "~/hooks/use-queries";
-import { ClientOnlySuspense } from "./client-only-suspense";
 import { Gallery } from "./gallery";
 import { ExternalLink } from "./link";
 import { Loader } from "./loader";
@@ -47,9 +46,9 @@ export function Certificates(props: { ma: MethodologicalAssociation }) {
     <TeachersContent
       data={data}
       render={({ item }) => (
-        <ClientOnlySuspense fallback={<Loader />}>
+        <Suspense fallback={<Loader />}>
           <LoadCertificates data={item.content ?? []} />
-        </ClientOnlySuspense>
+        </Suspense>
       )}
     />
   );

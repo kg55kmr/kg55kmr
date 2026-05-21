@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { useHydrated } from "@tanstack/react-router";
 import { useMediaMatch } from "rooks";
+import { type BreakpointType, breakpoints } from "~/lib/breakpoints";
 
 type Props = { when: BreakpointType; render: ReactNode; fallback: ReactNode };
 
@@ -19,16 +20,6 @@ export function Responsive(props: Props) {
   if (match) return props.render;
   return props.fallback;
 }
-
-type BreakpointType = "sm" | "md" | "lg" | "xl" | "2xl";
-
-const breakpoints: Record<BreakpointType, number> = {
-  sm: 40,
-  md: 48,
-  lg: 64,
-  xl: 80,
-  "2xl": 96,
-};
 
 const styles: Record<BreakpointType, { render: string; fallback: string }> = {
   sm: { render: "hidden sm:contents", fallback: "contents sm:hidden" },

@@ -10,7 +10,7 @@
     "fetch": "tsx --env-file=.env.local ./scripts/fetch.ts"
   },
   "dependencies": {
-    "@base-ui/react": "^1.4.1",
+    "@base-ui/react": "^1.5.0",
     "@googleapis/sheets": "^13.0.1",
     "@imagekit/nodejs": "^7.6.1",
     "@octokit/rest": "^22.0.1",
@@ -52,7 +52,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "@tanstack/react-router-devtools": "^1.167.0",
     "@types/papaparse": "^5.5.2",
-    "@types/react": "^19.2.14",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
     "babel-plugin-react-compiler": "1.0.0",
@@ -60,9 +60,8 @@
     "jsonpath-plus": "^10.4.0",
     "nitro": "3.0.260429-beta",
     "tailwindcss": "^4.3.0",
-    "tsx": "^4.22.2",
+    "tsx": "^4.22.3",
     "vite": "^8.0.13",
     "vite-static-assets-plugin": "^1.2.2"
   }
 }
-

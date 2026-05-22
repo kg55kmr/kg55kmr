@@ -20,10 +20,7 @@ function RouteComponent() {
   const [year, setYear] = useState(years[0]);
 
   return (
-    <Tabs
-      value={year.toString()}
-      onValueChange={(v) => setYear(Number.parseInt(v))}
-    >
+    <Tabs value={year.toString()} onValueChange={(v) => setYear(Number(v))}>
       {years.map((year) => (
         <Tabs.Tab key={year} title={year.toString()} id={year.toString()}>
           <div className="grid gap-20 lg:grid-cols-2">

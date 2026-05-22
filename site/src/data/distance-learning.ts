@@ -13,7 +13,7 @@ export const primaryClasses = [
 export const classes = ["5-А,Б", "6-А,Б", "7-А,Б", "8-А,Б", "9-А,Б"];
 
 export function getClass(className: string) {
-  const classNumber = Number.parseInt(className[0]);
+  const classNumber = Number(className[0]);
   if (classNumber > 4) return classNumber.toString();
   return className;
 }

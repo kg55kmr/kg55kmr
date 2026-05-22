@@ -1,7 +1,7 @@
 export function getLessonDate(title: string, yearsString: string) {
-  const years = yearsString.split("-").map((v) => Number.parseInt(v));
+  const years = yearsString.split("-").map(Number);
   const itemDate = title.slice(0, 5);
-  const [day, month] = itemDate.split(".").map((v) => Number.parseInt(v));
+  const [day, month] = itemDate.split(".").map(Number);
   const year = month < 9 ? years[1] : years[0];
 
   return new Date(year, month - 1, day);

@@ -54,7 +54,7 @@ async function get(link) {
   }
 }
 function toMB(contentLength) {
-  return Math.trunc(Number.parseInt(contentLength) / 1024 / 1024);
+  return Math.trunc(Number(contentLength) / 1024 / 1024);
 }
 async function getFilename(url) {
   const resp = await fetch(url);

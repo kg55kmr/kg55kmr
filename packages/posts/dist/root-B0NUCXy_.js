@@ -17,6 +17,7 @@ function write(root, data) {
 
 async function processPosts(root) {
   const dirs = await new fdir().onlyDirs().withRelativePaths().exclude((d) => d.startsWith(".")).filter((p) => p.split(path.sep).length === 3).crawl(root).withPromise();
+  const dateNoThumbnail = new Date(2016, 11, 27);
   const posts = await Promise.all(
     dirs.map(async (item) => {
       const file = await readFile(path.resolve(root, item, "index.md"), "utf8");
@@ -28,17 +29,20 @@ async function processPosts(root) {
       const sortId = data["id"] ?? id;
       const [year, month, day] = sortId.split("-").map(Number);
       const date = { year, month, day };
+      const noThumbnail = type === "news" && new Date(year, month - 1, day) < dateNoThumbnail || void 0;
       const full = {
         title,
         date,
         pin,
-        content
+        content,
+        noThumbnail
       };
       const meta = {
         id,
         title,
         date,
-        pin
+        pin,
+        noThumbnail
       };
       let albumPost;
       if (type === "news") {

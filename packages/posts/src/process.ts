@@ -30,6 +30,7 @@ export async function processPosts(root: string): Promise<Posts> {
     .crawl(root)
     .withPromise();
 
+  const dateNoThumbnail = new Date(2016, 11, 27);
   const posts = await Promise.all(
     dirs.map(async (item) => {
       const file = await readFile(path.resolve(root, item, "index.md"), "utf8");
@@ -42,12 +43,15 @@ export async function processPosts(root: string): Promise<Posts> {
       const sortId = (data["id"] as string | undefined) ?? id;
       const [year, month, day] = sortId.split("-").map(Number);
       const date = { year, month, day };
-
+      const noThumbnail =
+        (type === "news" && new Date(year, month - 1, day) < dateNoThumbnail) ||
+        undefined;
       const full: Post = {
         title,
         date,
         pin,
         content,
+        noThumbnail,
       };
 
       const meta: MetaPost = {
@@ -55,6 +59,7 @@ export async function processPosts(root: string): Promise<Posts> {
         title,
         date,
         pin,
+        noThumbnail,
       };
 
       let albumPost: AlbumPost | undefined;
@@ -80,7 +85,7 @@ export async function processPosts(root: string): Promise<Posts> {
   );
 
   posts.sort((a, b) =>
-    b.sortId!.localeCompare(a.sortId, undefined, { numeric: true }),
+    b.sortId.localeCompare(a.sortId, undefined, { numeric: true }),
   );
 
   const fullPosts: FullPosts = {};

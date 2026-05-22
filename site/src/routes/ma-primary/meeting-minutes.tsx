@@ -10,7 +10,6 @@ export const Route = createFileRoute("/ma-primary/meeting-minutes")({
 });
 
 function RouteComponent() {
-  // TODO: add sheets data
   return (
     <Tabs>
       <Tabs.Tab title="2024-2025" id="2024-2025">

@@ -17,18 +17,17 @@ export async function getImageKitImages(path: string) {
   const response = await imagekit.assets.list({ path });
   const images = response
     .filter((item): item is ImageKit.Files.File => item.type === "file")
-    .map(
-      (item) =>
-        ({
-          name: item.name!, // TODO: add null check
-          url: item.url!,
-          previewUrl: `${item.url}&tr=w-640`,
-          downloadUrl: `${item.url}&tr=orig-true&ik-attachment=true`,
-          width: item.width!,
-          height: item.height!,
-          aspectRatio: item.width! / item.height!,
-        }) satisfies ImageKitImage,
-    );
+    .map((item) => {
+      return {
+        name: item.name!,
+        url: item.url!,
+        previewUrl: `${item.url}&tr=w-640`,
+        downloadUrl: `${item.url}&tr=orig-true&ik-attachment=true`,
+        width: item.width!,
+        height: item.height!,
+        aspectRatio: item.width! / item.height!,
+      } satisfies ImageKitImage;
+    });
 
   images.sort((a, b) =>
     a.name.localeCompare(b.name, undefined, { numeric: true }),
@@ -41,11 +40,7 @@ export function getPostImageKitImages(postId: string) {
   const [type, date] = postId.split("/").slice(-2);
   const [year, month, day] = date.split("-");
 
-  const parsedDate = new Date(
-    Number.parseInt(year),
-    Number.parseInt(month) - 1,
-    Number.parseInt(day),
-  );
+  const parsedDate = new Date(Number(year), Number(month) - 1, Number(day));
   if (parsedDate >= imagekitTimestamp)
     return getImageKitImages(`posts/${postId}`);
 

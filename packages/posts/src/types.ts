@@ -1,18 +1,19 @@
-export type MetaPost = {
-  id: string;
-  title: string;
-  pin?: boolean;
-  date: { year: number; month: number; day: number };
-};
-
 export type MetaPostContent = {
   items: MetaPost[];
   pinItems: MetaPost[];
 };
 
+export type MetaPost = {
+  id: string;
+  title: string;
+  pin?: boolean;
+  date: { year: number; month: number; day: number };
+  noThumbnail?: boolean;
+};
+
 export type Post = Omit<MetaPost, "id"> & { content: string };
 
-export type AlbumPost = Omit<MetaPost, "id" | "pin"> & {
+export type AlbumPost = Omit<MetaPost, "id" | "pin" | "noThumbnail"> & {
   postIds: string[];
 };
 

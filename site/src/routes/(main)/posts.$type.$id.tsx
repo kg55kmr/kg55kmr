@@ -24,6 +24,7 @@ function RouteComponent() {
         id={id}
         title={post.title}
         date={formatPostDate(post.date)}
+        thumbnail={!post.noThumbnail}
       />
       <PostMarkdown content={post.content} id={id} type={type} />
     </>
@@ -35,10 +36,13 @@ function Frontmatter(props: {
   id: string;
   title: string;
   date: string;
+  thumbnail: boolean;
 }) {
   return (
     <>
-      <Thumbnail src={getPostThumbnailUrl(props.type, props.id)} />
+      {props.thumbnail && (
+        <Thumbnail src={getPostThumbnailUrl(props.type, props.id)} />
+      )}
       <PostInfo title={props.title} date={props.date} />
     </>
   );

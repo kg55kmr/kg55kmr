@@ -139,7 +139,7 @@ function Item(props: { post: PostHighlight; type: PostType }) {
         <div className="mx-auto w-50 shrink-0 rounded-lg border border-gray-300 md:mx-0">
           <Thumbnail
             src={getPostThumbnailUrl(type, post.id)}
-            placeholder={false}
+            placeholder={post.noThumbnail}
           />
         </div>
         <div className="relative">

@@ -1,5 +1,5 @@
 import { Dialog } from "@base-ui/react/dialog";
-import { BookOpenText } from "lucide-react";
+import { BookOpenText, CircleX } from "lucide-react";
 import { type FC, useState } from "react";
 import { pagination } from "~/lib/pagination";
 import { Pagination } from "./pagination";
@@ -37,17 +37,6 @@ export function Feed(props: Props) {
 }
 
 function FeedItem({ post }: { post: FeedPost }) {
-  const item = (
-    <>
-      {post.title && (
-        <div className="flex items-center gap-2 pb-5">
-          <BookOpenText className="size-7 text-blue-700" />
-          <div className="text-xl font-bold">{post.title}</div>
-        </div>
-      )}
-      <post.Content />
-    </>
-  );
   return (
     <div
       className={
@@ -61,7 +50,13 @@ function FeedItem({ post }: { post: FeedPost }) {
           nativeButton={false}
           className="relative h-100 cursor-pointer overflow-clip p-2"
         >
-          {item}
+          {post.title && (
+            <div className="flex gap-2">
+              <BookOpenText className="size-7 translate-y-0.5 text-blue-700" />
+              <div className="text-xl font-bold">{post.title}</div>
+            </div>
+          )}
+          <post.Content />
           <div className="absolute inset-0 bg-white mask-t-from-10% mask-t-to-100% group-hover/feed:bg-sky-100" />
         </Dialog.Trigger>
         <Dialog.Portal>
@@ -72,12 +67,15 @@ function FeedItem({ post }: { post: FeedPost }) {
               "data-ending-style:scale-90 data-ending-style:opacity-0 data-starting-style:scale-90 data-starting-style:opacity-0"
             }
           >
-            <div className="grid h-full grid-rows-[1fr_auto] gap-2">
-              <div className="overflow-y-auto">{item}</div>
-              <div>
-                <Dialog.Close className="cursor-pointer rounded-md border border-sky-400 bg-sky-100 p-2 hover:bg-sky-200">
-                  Закрити
+            <div className="grid h-full grid-rows-[auto_1fr] gap-2">
+              <div className="flex gap-2">
+                <Dialog.Close className="cursor-pointer">
+                  <CircleX />
                 </Dialog.Close>
+                <div className="text-xl font-bold">{post.title}</div>
+              </div>
+              <div className="overflow-y-auto">
+                <post.Content />
               </div>
             </div>
           </Dialog.Popup>
@@ -89,8 +87,7 @@ function FeedItem({ post }: { post: FeedPost }) {
 
 function toFeed(glob: Record<string, unknown>) {
   return Object.keys(glob)
-    .toSorted((a, b) => a.localeCompare(b, "uk", { numeric: true }))
-    .toReversed()
+    .toSorted((a, b) => b.localeCompare(a, "uk", { numeric: true }))
     .map((path) => {
       const post = glob[path];
       assertIsFeedPost(post, path);

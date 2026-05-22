@@ -1,3 +1,7 @@
+type MetaPostContent = {
+    items: MetaPost[];
+    pinItems: MetaPost[];
+};
 type MetaPost = {
     id: string;
     title: string;
@@ -7,15 +11,12 @@ type MetaPost = {
         month: number;
         day: number;
     };
-};
-type MetaPostContent = {
-    items: MetaPost[];
-    pinItems: MetaPost[];
+    noThumbnail?: boolean;
 };
 type Post = Omit<MetaPost, "id"> & {
     content: string;
 };
-type AlbumPost = Omit<MetaPost, "id" | "pin"> & {
+type AlbumPost = Omit<MetaPost, "id" | "pin" | "noThumbnail"> & {
     postIds: string[];
 };
 type PostsList = Record<string, MetaPostContent>;

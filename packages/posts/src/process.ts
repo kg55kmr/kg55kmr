@@ -33,8 +33,13 @@ export async function processPosts(root: string): Promise<Posts> {
   const dateNoThumbnail = new Date(2016, 11, 27);
   const posts = await Promise.all(
     dirs.map(async (item) => {
-      const file = await readFile(path.resolve(root, item, "index.md"), "utf8");
+      const filePath = path.resolve(root, item, "index.md");
+      const file = await readFile(filePath, "utf8");
       const { data, content } = matter(file);
+
+      const errors = checkTags(content);
+      if (errors.length > 0)
+        throw new Error(`${filePath}: unknown tags: ${JSON.stringify(errors)}`);
 
       const type = path.basename(path.dirname(item));
       const id = path.basename(item.trim());
@@ -162,6 +167,7 @@ const allowedTags = new Set([
   "pre",
   "br",
 ]);
+
 const reTag = /<\/?([^>\s]*)/g;
 
 function checkTags(content: string) {
@@ -173,6 +179,8 @@ function checkTags(content: string) {
       reTag.lastIndex++;
     }
 
-    if (!allowedTags.has(m[1])) errors.push(``);
+    if (!allowedTags.has(m[1])) errors.push(m[1]);
   }
+
+  return errors;
 }

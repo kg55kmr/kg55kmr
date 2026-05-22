@@ -20,8 +20,12 @@ async function processPosts(root) {
   const dateNoThumbnail = new Date(2016, 11, 27);
   const posts = await Promise.all(
     dirs.map(async (item) => {
-      const file = await readFile(path.resolve(root, item, "index.md"), "utf8");
+      const filePath = path.resolve(root, item, "index.md");
+      const file = await readFile(filePath, "utf8");
       const { data, content } = matter(file);
+      const errors = checkTags(content);
+      if (errors.length > 0)
+        throw new Error(`${filePath}: unknown tags: ${JSON.stringify(errors)}`);
       const type = path.basename(path.dirname(item));
       const id = path.basename(item.trim());
       const title = data["title"];
@@ -109,6 +113,30 @@ function findPostsWithImageKitRef(kind, id, content) {
     }
   }
   return carousels;
+}
+const allowedTags = /* @__PURE__ */ new Set([
+  "Carousel",
+  "Gallery",
+  "YouTube",
+  "FBVideo",
+  "Pdf",
+  "Embed",
+  "Quote",
+  "img",
+  "pre",
+  "br"
+]);
+const reTag = /<\/?([^>\s]*)/g;
+function checkTags(content) {
+  const errors = [];
+  let m;
+  while ((m = reTag.exec(content)) !== null) {
+    if (m.index === reTag.lastIndex) {
+      reTag.lastIndex++;
+    }
+    if (!allowedTags.has(m[1])) errors.push(m[1]);
+  }
+  return errors;
 }
 
 async function getRoot() {

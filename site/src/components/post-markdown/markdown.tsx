@@ -1,5 +1,4 @@
 import Markdown, { type MarkdownToJSX } from "markdown-to-jsx";
-import { upperCaseComponents } from "~/lib/convert";
 import { withSuspense } from "~/lib/with";
 import { Embed } from "../embed";
 import {
@@ -35,7 +34,6 @@ const components: MarkdownToJSX.Overrides = {
 
 export function PostMarkdown(props: Props) {
   const { type, id } = props;
-  const content = upperCaseComponents(props.content);
 
   return (
     <PostContext value={{ type, id }}>
@@ -43,7 +41,7 @@ export function PostMarkdown(props: Props) {
         options={{
           overrides: components,
         }}
-        children={content}
+        children={props.content}
         className="content"
       />
     </PostContext>

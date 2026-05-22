@@ -124,28 +124,55 @@ export async function processPosts(root: string): Promise<Posts> {
   };
 }
 
-const reSlideshow = /<slideshow( id="(.*)")* \/>/g;
+const reCarousel = /<Carousel( id="(.*)")* \/>/g;
 
 function findPostsWithImageKitRef(kind: string, id: string, content: string) {
-  const slideshows = [];
+  const carousels = [];
   let m;
 
   id = `${kind}/${id}`;
 
-  while ((m = reSlideshow.exec(content)) !== null) {
+  while ((m = reCarousel.exec(content)) !== null) {
     switch (true) {
       case m[2] === undefined:
-        slideshows.push(id);
+        carousels.push(id);
         break;
 
       case m[2].startsWith("*"):
-        slideshows.push(`${id}-${m[2].slice(1)}`);
+        carousels.push(`${id}-${m[2].slice(1)}`);
         break;
 
       default:
-        slideshows.push(m[2]);
+        carousels.push(m[2]);
     }
   }
 
-  return slideshows;
+  return carousels;
+}
+
+const allowedTags = new Set([
+  "Carousel",
+  "Gallery",
+  "YouTube",
+  "FBVideo",
+  "Pdf",
+  "Embed",
+  "Quote",
+  "img",
+  "pre",
+  "br",
+]);
+const reTag = /<\/?([^>\s]*)/g;
+
+function checkTags(content: string) {
+  const errors: string[] = [];
+  let m;
+
+  while ((m = reTag.exec(content)) !== null) {
+    if (m.index === reTag.lastIndex) {
+      reTag.lastIndex++;
+    }
+
+    if (!allowedTags.has(m[1])) errors.push(``);
+  }
 }

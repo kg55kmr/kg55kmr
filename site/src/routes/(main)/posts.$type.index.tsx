@@ -1,8 +1,13 @@
 import type { MetaPost, PostType } from "posts";
 import { Accordion } from "@base-ui/react/accordion";
-import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
+import {
+  createFileRoute,
+  stripSearchParams,
+  useRouter,
+} from "@tanstack/react-router";
 import { ChevronUp } from "lucide-react";
 import { type ReactElement, useRef, useState } from "react";
+import { useWindowEventListener } from "rooks";
 import z from "zod";
 import { Highlight } from "~/components/highlight";
 import { Link } from "~/components/link";
@@ -34,10 +39,12 @@ export const Route = createFileRoute("/(main)/posts/$type/")({
 });
 
 function RouteComponent() {
+  const router = useRouter();
   const { postsList } = Route.useLoaderData();
   const { type } = Route.useParams();
   const { page, search: searchText, year, month } = Route.useSearch();
   const navigate = Route.useNavigate();
+  useWindowEventListener("focus", () => router.load());
 
   const itemsPerPage = 5;
   const mergedPosts = [...postsList[type].pinItems, ...postsList[type].items];

@@ -1,21 +1,24 @@
-import fs from "fs";
+import { writeFile } from "fs/promises";
 import path from "path";
 
-export function write(
+export async function write(
   root: string,
   data: {
     posts: unknown;
     postsList: unknown;
     latestPosts: unknown;
     album: unknown;
+    isUpToDate: boolean;
   },
 ) {
-  writePosts(data.posts, "posts.json");
-  writePosts(data.postsList, "posts-list.json");
-  writePosts(data.latestPosts, "latest-posts.json");
-  writePosts(data.album, "album.json");
+  if (data.isUpToDate) return;
 
-  function writePosts(data: unknown, file: string) {
-    fs.writeFileSync(path.resolve(root, file), JSON.stringify(data));
+  await writePosts(data.posts, "posts.json");
+  await writePosts(data.postsList, "posts-list.json");
+  await writePosts(data.latestPosts, "latest-posts.json");
+  await writePosts(data.album, "album.json");
+
+  async function writePosts(data: unknown, file: string) {
+    await writeFile(path.resolve(root, file), JSON.stringify(data));
   }
 }

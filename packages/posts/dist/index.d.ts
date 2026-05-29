@@ -15,6 +15,7 @@ type MetaPost = {
 };
 type Post = Omit<MetaPost, "id"> & {
     content: string;
+    mtimeMs: number;
 };
 type AlbumPost = Omit<MetaPost, "id" | "pin" | "noThumbnail"> & {
     postIds: string[];
@@ -27,8 +28,12 @@ type Posts = {
     postsList: PostsList;
     latestPosts: PostsList;
     album: AlbumPosts;
+    isUpToDate: boolean;
 };
+
+declare function getPosts(): Promise<Posts>;
 
 type PostType = "news" | "announcements" | "useful" | "camp";
 
+export { getPosts };
 export type { AlbumPost, AlbumPosts, FullPosts, MetaPost, MetaPostContent, Post, PostType, Posts, PostsList };

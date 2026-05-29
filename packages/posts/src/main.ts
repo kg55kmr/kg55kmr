@@ -17,4 +17,4 @@ pipeline.json.set("latest-posts", "$", latestPosts);
 pipeline.json.set("album", "$", album);
 await pipeline.exec();
 
-write(root, { posts, postsList, latestPosts, album });
+await write(root, { posts, postsList, latestPosts, album });

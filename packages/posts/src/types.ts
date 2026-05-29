@@ -11,7 +11,10 @@ export type MetaPost = {
   noThumbnail?: boolean;
 };
 
-export type Post = Omit<MetaPost, "id"> & { content: string };
+export type Post = Omit<MetaPost, "id"> & {
+  content: string;
+  mtimeMs: number;
+};
 
 export type AlbumPost = Omit<MetaPost, "id" | "pin" | "noThumbnail"> & {
   postIds: string[];
@@ -26,4 +29,5 @@ export type Posts = {
   postsList: PostsList;
   latestPosts: PostsList;
   album: AlbumPosts;
+  isUpToDate: boolean;
 };

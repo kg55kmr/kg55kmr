@@ -40,7 +40,7 @@ export function getPostFileUrl(type: string, id: string, file: string) {
 }
 
 export function getPostThumbnailUrl(type: string, id: string) {
-  return buildUrl(`${type}/${id}/thumbnail.jpg`);
+  return getPostFileUrl(type, id, "thumbnail.jpg");
 }
 
 function buildUrl(path: string) {

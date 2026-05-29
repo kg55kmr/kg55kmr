@@ -1,5 +1,5 @@
 import { Redis } from '@upstash/redis';
-import { g as getRoot, p as processPosts, w as write } from './root-CyMGac_H.js';
+import { g as getRoot, p as processPosts, w as write } from './root-CXgI_lXG.js';
 import fs from 'fs/promises';
 import path from 'path';
 import { ImageKit } from '@imagekit/nodejs';
@@ -69,4 +69,4 @@ pipeline.json.set("posts-list", "$", postsList);
 pipeline.json.set("latest-posts", "$", latestPosts);
 pipeline.json.set("album", "$", album);
 await pipeline.exec();
-write(root, { posts, postsList, latestPosts, album });
+await write(root, { posts, postsList, latestPosts, album });

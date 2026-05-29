@@ -7,10 +7,9 @@ import type {
   Posts,
   PostsList,
 } from "./types";
-import { readFile } from "fs/promises";
 import path from "path";
 import { fdir } from "fdir";
-import matter from "gray-matter";
+import { Cache } from "./cache";
 
 type ProcessedPost = {
   full: Post;
@@ -18,65 +17,34 @@ type ProcessedPost = {
   albumPost?: AlbumPost;
 
   type: string;
-  sortId: string;
+  id: string;
 };
 
 export async function processPosts(root: string): Promise<Posts> {
+  const cache = new Cache(root);
+
   const dirs = await new fdir()
-    .onlyDirs()
     .withRelativePaths()
-    .exclude((d) => d.startsWith("."))
-    .filter((p) => p.split(path.sep).length === 3)
+    .glob("**/index.md")
     .crawl(root)
     .withPromise();
 
-  const dateNoThumbnail = new Date(2016, 11, 27);
   const posts = await Promise.all(
     dirs.map(async (item) => {
-      const filePath = path.resolve(root, item, "index.md");
-      const file = await readFile(filePath, "utf8");
-      const { data, content } = matter(file);
+      const { full, type, id, filePath } = await cache.get(path.dirname(item));
+      const { title, date, content, pin, noThumbnail } = full;
 
       const errors = checkTags(content);
       if (errors.length > 0)
         throw new Error(`${filePath}: unknown tags: ${JSON.stringify(errors)}`);
 
-      const type = path.basename(path.dirname(item));
-      const id = path.basename(item.trim());
-      const title: string = data["title"];
-      const pin: boolean | undefined = data["pin"];
-      const sortId = (data["id"] as string | undefined) ?? id;
-      const [year, month, day] = sortId.split("-").map(Number);
-      const date = { year, month, day };
-      const noThumbnail =
-        (type === "news" && new Date(year, month - 1, day) < dateNoThumbnail) ||
-        undefined;
-      const full: Post = {
-        title,
-        date,
-        pin,
-        content,
-        noThumbnail,
-      };
-
-      const meta: MetaPost = {
-        id,
-        title,
-        date,
-        pin,
-        noThumbnail,
-      };
+      const meta: MetaPost = { id, title, date, pin, noThumbnail };
 
       let albumPost: AlbumPost | undefined;
 
       if (type === "news") {
         const postIds = findPostsWithImageKitRef(type, id, content);
-        if (postIds.length > 0)
-          albumPost = {
-            title,
-            date,
-            postIds,
-          };
+        if (postIds.length > 0) albumPost = { title, date, postIds };
       }
 
       return {
@@ -84,22 +52,20 @@ export async function processPosts(root: string): Promise<Posts> {
         meta,
         albumPost,
         type,
-        sortId,
+        id,
       } satisfies ProcessedPost;
     }),
   );
 
-  posts.sort((a, b) =>
-    b.sortId.localeCompare(a.sortId, undefined, { numeric: true }),
-  );
+  posts.sort((a, b) => b.id.localeCompare(a.id, undefined, { numeric: true }));
 
   const fullPosts: FullPosts = {};
   const postsList: PostsList = {};
   const album: AlbumPosts = {};
 
-  for (const { full, meta, albumPost, type } of posts) {
+  for (const { full, meta, albumPost, type, id } of posts) {
     fullPosts[type] ??= {};
-    fullPosts[type][meta.id] = full;
+    fullPosts[type][id] = full;
 
     postsList[type] ??= { items: [], pinItems: [] };
 
@@ -109,7 +75,7 @@ export async function processPosts(root: string): Promise<Posts> {
 
     postsListTarget.push(meta);
 
-    if (albumPost) album[meta.id] = albumPost;
+    if (albumPost) album[id] = albumPost;
   }
 
   const latestPosts: PostsList = {};
@@ -126,6 +92,7 @@ export async function processPosts(root: string): Promise<Posts> {
     postsList,
     latestPosts,
     album,
+    isUpToDate: cache.isUpToDate,
   };
 }
 

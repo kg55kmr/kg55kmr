@@ -10,10 +10,11 @@
     "@types/node": "^24.12.4",
     "eslint": "^10.4.0",
     "eslint-config": "workspace:^",
-    "pkgroll": "^2.27.0",
+    "pkgroll": "^2.27.1",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "turbo": "^2.9.14",
+    "tsx": "^4.22.3",
+    "turbo": "^2.9.15",
     "typescript": "^6.0.3",
     "vitest": "^4.1.7"
   }

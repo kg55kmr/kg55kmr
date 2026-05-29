@@ -11,7 +11,6 @@
   "scripts": {
     "build": "pkgroll --clean-dist",
     "posts": "dotenv -e ../../site/.env.local node ./dist/main",
-    "dev": "node ./dist/dev",
     "format": "prettier -w ../../../posts/**/*.md"
   },
   "dependencies": {
@@ -24,3 +23,4 @@
     "workspace-root": "^3.3.1"
   }
 }
+

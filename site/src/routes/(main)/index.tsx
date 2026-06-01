@@ -107,7 +107,7 @@ function RouteComponent() {
       <Header>КАРТКА КРИВОРІЖЦЯ</Header>
       <Card />
       <Suspense fallback={<Loader />}>
-        <Posts hide={["camp"]} />
+        <Posts />
       </Suspense>
       <Suspense fallback={<Loader />}>
         <Playlists />

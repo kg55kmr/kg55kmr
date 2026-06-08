@@ -6,12 +6,11 @@ import 'fs';
 import 'gray-matter';
 import 'workspace-root';
 
-const root = await getRoot();
 async function getPosts() {
+  const root = await getRoot();
   const data = await processPosts(root);
   write(root, data);
   return data;
 }
-await getPosts();
 
 export { getPosts };

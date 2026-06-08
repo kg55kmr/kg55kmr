@@ -184,10 +184,11 @@ function Archive(props: ArchiveProps) {
     const { year, month } = post.date;
     const monthName = monthsNominative[month - 1];
 
-    if (year in acc) {
-      if (month in acc[year]) acc[year][month].count++;
-      else acc[year][month] = { monthName, count: 1 };
-    } else acc[year] = {};
+    if (!(year in acc)) acc[year] = {};
+
+    if (month in acc[year]) acc[year][month].count++;
+    else acc[year][month] = { monthName, count: 1 };
+
     return acc;
   }, {});
   const itemsKey = Object.keys(items).map(Number).toReversed();

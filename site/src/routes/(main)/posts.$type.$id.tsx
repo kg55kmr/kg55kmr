@@ -1,4 +1,3 @@
-import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 import { PostInfo } from "~/components/post-info";
 import { PostMarkdown } from "~/components/post-markdown";
@@ -8,25 +7,15 @@ import { getPost } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/posts/$type/$id")({
   component: RouteComponent,
-  loader: async ({ context, params }) => {
-    context.queryClient.ensureQueryData(postQuery(params));
-  },
+  loader: async ({ params }) => ({ post: await getPost({ data: params }) }),
   headers: cacheHeader(5),
   staticData: {
     hasParent: true,
   },
 });
 
-const postQuery = (opts: { type: string; id: string }) =>
-  queryOptions({
-    queryKey: ["posts", opts],
-    queryFn: () => getPost({ data: opts }),
-    staleTime: 5_000,
-  });
-
 function RouteComponent() {
-  const params = Route.useParams();
-  const { data: post } = useSuspenseQuery(postQuery(params));
+  const { post } = Route.useLoaderData();
   const { type, id } = Route.useParams();
   return (
     <>

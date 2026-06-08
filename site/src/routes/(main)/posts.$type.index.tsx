@@ -1,6 +1,5 @@
 import type { MetaPost, PostType } from "posts";
 import { Accordion } from "@base-ui/react/accordion";
-import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
 import { ChevronUp } from "lucide-react";
 import { type ReactElement, useRef, useState } from "react";
@@ -28,19 +27,13 @@ export const Route = createFileRoute("/(main)/posts/$type/")({
   search: {
     middlewares: [stripSearchParams({ page: 1, search: "" })],
   },
-  loader: ({ context }) => context.queryClient.ensureQueryData(postsListQuery),
+  loader: async () => ({ postsList: await getPostsList() }),
   headers: cacheHeader(5),
 });
 
-const postsListQuery = queryOptions({
-  queryKey: ["posts list"],
-  queryFn: () => getPostsList(),
-  staleTime: 5_000,
-});
-
 function RouteComponent() {
-  const { data: postsList } = useSuspenseQuery(postsListQuery);
   const { type } = Route.useParams();
+  const { postsList } = Route.useLoaderData();
   const { page, search: searchText, year, month } = Route.useSearch();
   const navigate = Route.useNavigate();
 

@@ -1,5 +1,4 @@
 import type { AlbumPost } from "posts";
-import { queryOptions } from "@tanstack/react-query";
 import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
 import z from "zod";
 import { Highlight } from "~/components/highlight";
@@ -26,11 +25,6 @@ export const Route = createFileRoute("/(main)/album/")({
   headers: cacheHeader(5),
 });
 
-const albumQuery = queryOptions({
-  queryKey: ["album"],
-  queryFn: () => getAlbum(),
-  staleTime: 5_000,
-});
 type AlbumEntries = [string, AlbumPost][];
 
 function RouteComponent() {

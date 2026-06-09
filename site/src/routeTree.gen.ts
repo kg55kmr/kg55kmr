@@ -37,7 +37,6 @@ import { Route as SocialAndPsychologicalServiceSitemapRouteImport } from './rout
 import { Route as ParentForumTipsForParentsRouteImport } from './routes/parent-forum/tips-for-parents'
 import { Route as ParentForumSitemapRouteImport } from './routes/parent-forum/sitemap'
 import { Route as ParentForumPreparing5YearOldsForSchoolRouteImport } from './routes/parent-forum/preparing-5-year-olds-for-school'
-import { Route as ParentForumEnrollmentOrderForGrade1RouteImport } from './routes/parent-forum/enrollment-order-for-grade-1'
 import { Route as ParentForumDevelopmentalAgeNormsRouteImport } from './routes/parent-forum/developmental-age-norms'
 import { Route as ParentForumAccessControlRouteImport } from './routes/parent-forum/access-control'
 import { Route as ParentForumAboutPersonalDataProtectionRouteImport } from './routes/parent-forum/about-personal-data-protection'
@@ -89,6 +88,7 @@ import { Route as EducationalProcessPupilsPerformanceMonitoringRouteImport } fro
 import { Route as EducationalProcessNetworkOfPupilsRouteImport } from './routes/educational-process/network-of-pupils'
 import { Route as EducationalProcessInstructionalMethodologicalRecommendationsRouteImport } from './routes/educational-process/instructional-methodological-recommendations'
 import { Route as EducationalProcessEvaluationCriteriaRouteImport } from './routes/educational-process/evaluation-criteria'
+import { Route as EducationalProcessEnrollmentTransfersGraduationRouteImport } from './routes/educational-process/enrollment-transfers-graduation'
 import { Route as EducationalProcessEducationalProgramsRouteImport } from './routes/educational-process/educational-programs'
 import { Route as EducationalProcessClassPeriodRouteImport } from './routes/educational-process/class-period'
 import { Route as mainTextbooksRouteImport } from './routes/(main)/textbooks'
@@ -342,12 +342,6 @@ const ParentForumPreparing5YearOldsForSchoolRoute =
   ParentForumPreparing5YearOldsForSchoolRouteImport.update({
     id: '/preparing-5-year-olds-for-school',
     path: '/preparing-5-year-olds-for-school',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const ParentForumEnrollmentOrderForGrade1Route =
-  ParentForumEnrollmentOrderForGrade1RouteImport.update({
-    id: '/enrollment-order-for-grade-1',
-    path: '/enrollment-order-for-grade-1',
     getParentRoute: () => ParentForumRouteRoute,
   } as any)
 const ParentForumDevelopmentalAgeNormsRoute =
@@ -646,6 +640,12 @@ const EducationalProcessEvaluationCriteriaRoute =
   EducationalProcessEvaluationCriteriaRouteImport.update({
     id: '/evaluation-criteria',
     path: '/evaluation-criteria',
+    getParentRoute: () => EducationalProcessRouteRoute,
+  } as any)
+const EducationalProcessEnrollmentTransfersGraduationRoute =
+  EducationalProcessEnrollmentTransfersGraduationRouteImport.update({
+    id: '/enrollment-transfers-graduation',
+    path: '/enrollment-transfers-graduation',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
 const EducationalProcessEducationalProgramsRoute =
@@ -1334,6 +1334,7 @@ export interface FileRoutesByFullPath {
   '/textbooks': typeof mainTextbooksRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
+  '/educational-process/enrollment-transfers-graduation': typeof EducationalProcessEnrollmentTransfersGraduationRoute
   '/educational-process/evaluation-criteria': typeof EducationalProcessEvaluationCriteriaRoute
   '/educational-process/instructional-methodological-recommendations': typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
   '/educational-process/network-of-pupils': typeof EducationalProcessNetworkOfPupilsRoute
@@ -1385,7 +1386,6 @@ export interface FileRoutesByFullPath {
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
   '/parent-forum/access-control': typeof ParentForumAccessControlRoute
   '/parent-forum/developmental-age-norms': typeof ParentForumDevelopmentalAgeNormsRoute
-  '/parent-forum/enrollment-order-for-grade-1': typeof ParentForumEnrollmentOrderForGrade1Route
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
@@ -1511,6 +1511,7 @@ export interface FileRoutesByTo {
   '/textbooks': typeof mainTextbooksRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
+  '/educational-process/enrollment-transfers-graduation': typeof EducationalProcessEnrollmentTransfersGraduationRoute
   '/educational-process/evaluation-criteria': typeof EducationalProcessEvaluationCriteriaRoute
   '/educational-process/instructional-methodological-recommendations': typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
   '/educational-process/network-of-pupils': typeof EducationalProcessNetworkOfPupilsRoute
@@ -1562,7 +1563,6 @@ export interface FileRoutesByTo {
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
   '/parent-forum/access-control': typeof ParentForumAccessControlRoute
   '/parent-forum/developmental-age-norms': typeof ParentForumDevelopmentalAgeNormsRoute
-  '/parent-forum/enrollment-order-for-grade-1': typeof ParentForumEnrollmentOrderForGrade1Route
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
@@ -1700,6 +1700,7 @@ export interface FileRoutesById {
   '/(main)/textbooks': typeof mainTextbooksRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
+  '/educational-process/enrollment-transfers-graduation': typeof EducationalProcessEnrollmentTransfersGraduationRoute
   '/educational-process/evaluation-criteria': typeof EducationalProcessEvaluationCriteriaRoute
   '/educational-process/instructional-methodological-recommendations': typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
   '/educational-process/network-of-pupils': typeof EducationalProcessNetworkOfPupilsRoute
@@ -1751,7 +1752,6 @@ export interface FileRoutesById {
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
   '/parent-forum/access-control': typeof ParentForumAccessControlRoute
   '/parent-forum/developmental-age-norms': typeof ParentForumDevelopmentalAgeNormsRoute
-  '/parent-forum/enrollment-order-for-grade-1': typeof ParentForumEnrollmentOrderForGrade1Route
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
@@ -1890,6 +1890,7 @@ export interface FileRouteTypes {
     | '/textbooks'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
+    | '/educational-process/enrollment-transfers-graduation'
     | '/educational-process/evaluation-criteria'
     | '/educational-process/instructional-methodological-recommendations'
     | '/educational-process/network-of-pupils'
@@ -1941,7 +1942,6 @@ export interface FileRouteTypes {
     | '/parent-forum/about-personal-data-protection'
     | '/parent-forum/access-control'
     | '/parent-forum/developmental-age-norms'
-    | '/parent-forum/enrollment-order-for-grade-1'
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
@@ -2067,6 +2067,7 @@ export interface FileRouteTypes {
     | '/textbooks'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
+    | '/educational-process/enrollment-transfers-graduation'
     | '/educational-process/evaluation-criteria'
     | '/educational-process/instructional-methodological-recommendations'
     | '/educational-process/network-of-pupils'
@@ -2118,7 +2119,6 @@ export interface FileRouteTypes {
     | '/parent-forum/about-personal-data-protection'
     | '/parent-forum/access-control'
     | '/parent-forum/developmental-age-norms'
-    | '/parent-forum/enrollment-order-for-grade-1'
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
@@ -2255,6 +2255,7 @@ export interface FileRouteTypes {
     | '/(main)/textbooks'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
+    | '/educational-process/enrollment-transfers-graduation'
     | '/educational-process/evaluation-criteria'
     | '/educational-process/instructional-methodological-recommendations'
     | '/educational-process/network-of-pupils'
@@ -2306,7 +2307,6 @@ export interface FileRouteTypes {
     | '/parent-forum/about-personal-data-protection'
     | '/parent-forum/access-control'
     | '/parent-forum/developmental-age-norms'
-    | '/parent-forum/enrollment-order-for-grade-1'
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
@@ -2621,13 +2621,6 @@ declare module '@tanstack/react-router' {
       path: '/preparing-5-year-olds-for-school'
       fullPath: '/parent-forum/preparing-5-year-olds-for-school'
       preLoaderRoute: typeof ParentForumPreparing5YearOldsForSchoolRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/enrollment-order-for-grade-1': {
-      id: '/parent-forum/enrollment-order-for-grade-1'
-      path: '/enrollment-order-for-grade-1'
-      fullPath: '/parent-forum/enrollment-order-for-grade-1'
-      preLoaderRoute: typeof ParentForumEnrollmentOrderForGrade1RouteImport
       parentRoute: typeof ParentForumRouteRoute
     }
     '/parent-forum/developmental-age-norms': {
@@ -2985,6 +2978,13 @@ declare module '@tanstack/react-router' {
       path: '/evaluation-criteria'
       fullPath: '/educational-process/evaluation-criteria'
       preLoaderRoute: typeof EducationalProcessEvaluationCriteriaRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/enrollment-transfers-graduation': {
+      id: '/educational-process/enrollment-transfers-graduation'
+      path: '/enrollment-transfers-graduation'
+      fullPath: '/educational-process/enrollment-transfers-graduation'
+      preLoaderRoute: typeof EducationalProcessEnrollmentTransfersGraduationRouteImport
       parentRoute: typeof EducationalProcessRouteRoute
     }
     '/educational-process/educational-programs': {
@@ -3835,6 +3835,7 @@ const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(
 interface EducationalProcessRouteRouteChildren {
   EducationalProcessClassPeriodRoute: typeof EducationalProcessClassPeriodRoute
   EducationalProcessEducationalProgramsRoute: typeof EducationalProcessEducationalProgramsRoute
+  EducationalProcessEnrollmentTransfersGraduationRoute: typeof EducationalProcessEnrollmentTransfersGraduationRoute
   EducationalProcessEvaluationCriteriaRoute: typeof EducationalProcessEvaluationCriteriaRoute
   EducationalProcessInstructionalMethodologicalRecommendationsRoute: typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
   EducationalProcessNetworkOfPupilsRoute: typeof EducationalProcessNetworkOfPupilsRoute
@@ -3854,6 +3855,8 @@ const EducationalProcessRouteRouteChildren: EducationalProcessRouteRouteChildren
     EducationalProcessClassPeriodRoute: EducationalProcessClassPeriodRoute,
     EducationalProcessEducationalProgramsRoute:
       EducationalProcessEducationalProgramsRoute,
+    EducationalProcessEnrollmentTransfersGraduationRoute:
+      EducationalProcessEnrollmentTransfersGraduationRoute,
     EducationalProcessEvaluationCriteriaRoute:
       EducationalProcessEvaluationCriteriaRoute,
     EducationalProcessInstructionalMethodologicalRecommendationsRoute:
@@ -4212,7 +4215,6 @@ interface ParentForumRouteRouteChildren {
   ParentForumAboutPersonalDataProtectionRoute: typeof ParentForumAboutPersonalDataProtectionRoute
   ParentForumAccessControlRoute: typeof ParentForumAccessControlRoute
   ParentForumDevelopmentalAgeNormsRoute: typeof ParentForumDevelopmentalAgeNormsRoute
-  ParentForumEnrollmentOrderForGrade1Route: typeof ParentForumEnrollmentOrderForGrade1Route
   ParentForumPreparing5YearOldsForSchoolRoute: typeof ParentForumPreparing5YearOldsForSchoolRoute
   ParentForumSitemapRoute: typeof ParentForumSitemapRoute
   ParentForumTipsForParentsRoute: typeof ParentForumTipsForParentsRoute
@@ -4228,8 +4230,6 @@ const ParentForumRouteRouteChildren: ParentForumRouteRouteChildren = {
     ParentForumAboutPersonalDataProtectionRoute,
   ParentForumAccessControlRoute: ParentForumAccessControlRoute,
   ParentForumDevelopmentalAgeNormsRoute: ParentForumDevelopmentalAgeNormsRoute,
-  ParentForumEnrollmentOrderForGrade1Route:
-    ParentForumEnrollmentOrderForGrade1Route,
   ParentForumPreparing5YearOldsForSchoolRoute:
     ParentForumPreparing5YearOldsForSchoolRoute,
   ParentForumSitemapRoute: ParentForumSitemapRoute,

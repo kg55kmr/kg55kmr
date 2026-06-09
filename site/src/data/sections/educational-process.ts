@@ -1,5 +1,6 @@
 import type { Section } from "./types";
 import {
+  Backpack,
   BookOpen,
   BookType,
   CalendarDays,
@@ -25,6 +26,10 @@ export const educationalProcess = [
           { to: "/educational-process/work-plan", icon: BookOpen },
           { to: "/educational-process/educational-programs", icon: Layers },
           { to: "/educational-process/class-period", icon: Clock },
+          {
+            to: "/educational-process/enrollment-transfers-graduation",
+            icon: Backpack,
+          },
           { to: "/educational-process/network-of-pupils", icon: Table2 },
           {
             to: "/educational-process/instructional-methodological-recommendations",

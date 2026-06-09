@@ -1,14 +1,5 @@
 import type { Section } from "./types";
-import {
-  Backpack,
-  Blocks,
-  Info,
-  LetterText,
-  List,
-  Lock,
-  Map,
-  Stars,
-} from "lucide-react";
+import { Backpack, Blocks, Info, List, Lock, Map, Stars } from "lucide-react";
 
 export const parentForum = [
   {
@@ -18,10 +9,6 @@ export const parentForum = [
         groupTitle: "Загальна інформація",
         items: [
           { to: "/parent-forum", icon: Info },
-          {
-            to: "/parent-forum/enrollment-order-for-grade-1",
-            icon: LetterText,
-          },
           {
             to: "/parent-forum/preparing-5-year-olds-for-school",
             icon: Blocks,

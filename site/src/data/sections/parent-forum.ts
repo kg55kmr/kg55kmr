@@ -1,5 +1,15 @@
 import type { Section } from "./types";
-import { Backpack, Blocks, Info, List, Lock, Map, Stars } from "lucide-react";
+import {
+  Backpack,
+  Blocks,
+  BookOpen,
+  Info,
+  List,
+  Lock,
+  LockKeyhole,
+  Map,
+  Stars,
+} from "lucide-react";
 
 export const parentForum = [
   {
@@ -44,8 +54,12 @@ export const parentForum = [
       {
         groupTitle: "Батькам",
         items: [
-          { to: "/parent-forum/access-control", icon: Lock },
-          { to: "/parent-forum/about-personal-data-protection", icon: Lock },
+          { to: "/parent-forum/access-rules", icon: Lock },
+          { to: "/parent-forum/access-control", icon: LockKeyhole },
+          {
+            to: "/parent-forum/about-personal-data-protection",
+            icon: BookOpen,
+          },
           { to: "/parent-forum/tips-for-parents", icon: List },
         ],
       },

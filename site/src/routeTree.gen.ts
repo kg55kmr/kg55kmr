@@ -38,6 +38,7 @@ import { Route as ParentForumTipsForParentsRouteImport } from './routes/parent-f
 import { Route as ParentForumSitemapRouteImport } from './routes/parent-forum/sitemap'
 import { Route as ParentForumPreparing5YearOldsForSchoolRouteImport } from './routes/parent-forum/preparing-5-year-olds-for-school'
 import { Route as ParentForumDevelopmentalAgeNormsRouteImport } from './routes/parent-forum/developmental-age-norms'
+import { Route as ParentForumAccessRulesRouteImport } from './routes/parent-forum/access-rules'
 import { Route as ParentForumAccessControlRouteImport } from './routes/parent-forum/access-control'
 import { Route as ParentForumAboutPersonalDataProtectionRouteImport } from './routes/parent-forum/about-personal-data-protection'
 import { Route as ParentForum50EssentialTasksForSchoolPreparationRouteImport } from './routes/parent-forum/50-essential-tasks-for-school-preparation'
@@ -157,6 +158,7 @@ import { Route as OccupationalSafetyCivilProtectionMineSafetyRouteImport } from 
 import { Route as OccupationalSafetyCivilProtectionLearnToSurviveRouteImport } from './routes/occupational-safety/civil-protection.learn-to-survive'
 import { Route as OccupationalSafetyCivilProtectionHostageTakingRouteImport } from './routes/occupational-safety/civil-protection.hostage-taking'
 import { Route as OccupationalSafetyCivilProtectionEvacuationRouteImport } from './routes/occupational-safety/civil-protection.evacuation'
+import { Route as OccupationalSafetyCivilProtectionAccessRulesRouteImport } from './routes/occupational-safety/civil-protection.access-rules'
 import { Route as OccupationalSafetyCivilProtectionAccessControlRouteImport } from './routes/occupational-safety/civil-protection.access-control'
 import { Route as MethodicalOfficeTeacherCertificationRegulatoryDocumentsRouteImport } from './routes/methodical-office/teacher-certification.regulatory-documents'
 import { Route as MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRouteImport } from './routes/methodical-office/teacher-certification.qualitative-composition-of-teaching-staff'
@@ -350,6 +352,11 @@ const ParentForumDevelopmentalAgeNormsRoute =
     path: '/developmental-age-norms',
     getParentRoute: () => ParentForumRouteRoute,
   } as any)
+const ParentForumAccessRulesRoute = ParentForumAccessRulesRouteImport.update({
+  id: '/access-rules',
+  path: '/access-rules',
+  getParentRoute: () => ParentForumRouteRoute,
+} as any)
 const ParentForumAccessControlRoute =
   ParentForumAccessControlRouteImport.update({
     id: '/access-control',
@@ -1056,6 +1063,12 @@ const OccupationalSafetyCivilProtectionEvacuationRoute =
     path: '/civil-protection/evacuation',
     getParentRoute: () => OccupationalSafetyRouteRoute,
   } as any)
+const OccupationalSafetyCivilProtectionAccessRulesRoute =
+  OccupationalSafetyCivilProtectionAccessRulesRouteImport.update({
+    id: '/civil-protection/access-rules',
+    path: '/civil-protection/access-rules',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
 const OccupationalSafetyCivilProtectionAccessControlRoute =
   OccupationalSafetyCivilProtectionAccessControlRouteImport.update({
     id: '/civil-protection/access-control',
@@ -1385,6 +1398,7 @@ export interface FileRoutesByFullPath {
   '/parent-forum/50-essential-tasks-for-school-preparation': typeof ParentForum50EssentialTasksForSchoolPreparationRoute
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
   '/parent-forum/access-control': typeof ParentForumAccessControlRoute
+  '/parent-forum/access-rules': typeof ParentForumAccessRulesRoute
   '/parent-forum/developmental-age-norms': typeof ParentForumDevelopmentalAgeNormsRoute
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
@@ -1436,6 +1450,7 @@ export interface FileRoutesByFullPath {
   '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff': typeof MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRoute
   '/methodical-office/teacher-certification/regulatory-documents': typeof MethodicalOfficeTeacherCertificationRegulatoryDocumentsRoute
   '/occupational-safety/civil-protection/access-control': typeof OccupationalSafetyCivilProtectionAccessControlRoute
+  '/occupational-safety/civil-protection/access-rules': typeof OccupationalSafetyCivilProtectionAccessRulesRoute
   '/occupational-safety/civil-protection/evacuation': typeof OccupationalSafetyCivilProtectionEvacuationRoute
   '/occupational-safety/civil-protection/hostage-taking': typeof OccupationalSafetyCivilProtectionHostageTakingRoute
   '/occupational-safety/civil-protection/learn-to-survive': typeof OccupationalSafetyCivilProtectionLearnToSurviveRoute
@@ -1562,6 +1577,7 @@ export interface FileRoutesByTo {
   '/parent-forum/50-essential-tasks-for-school-preparation': typeof ParentForum50EssentialTasksForSchoolPreparationRoute
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
   '/parent-forum/access-control': typeof ParentForumAccessControlRoute
+  '/parent-forum/access-rules': typeof ParentForumAccessRulesRoute
   '/parent-forum/developmental-age-norms': typeof ParentForumDevelopmentalAgeNormsRoute
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
@@ -1612,6 +1628,7 @@ export interface FileRoutesByTo {
   '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff': typeof MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRoute
   '/methodical-office/teacher-certification/regulatory-documents': typeof MethodicalOfficeTeacherCertificationRegulatoryDocumentsRoute
   '/occupational-safety/civil-protection/access-control': typeof OccupationalSafetyCivilProtectionAccessControlRoute
+  '/occupational-safety/civil-protection/access-rules': typeof OccupationalSafetyCivilProtectionAccessRulesRoute
   '/occupational-safety/civil-protection/evacuation': typeof OccupationalSafetyCivilProtectionEvacuationRoute
   '/occupational-safety/civil-protection/hostage-taking': typeof OccupationalSafetyCivilProtectionHostageTakingRoute
   '/occupational-safety/civil-protection/learn-to-survive': typeof OccupationalSafetyCivilProtectionLearnToSurviveRoute
@@ -1751,6 +1768,7 @@ export interface FileRoutesById {
   '/parent-forum/50-essential-tasks-for-school-preparation': typeof ParentForum50EssentialTasksForSchoolPreparationRoute
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
   '/parent-forum/access-control': typeof ParentForumAccessControlRoute
+  '/parent-forum/access-rules': typeof ParentForumAccessRulesRoute
   '/parent-forum/developmental-age-norms': typeof ParentForumDevelopmentalAgeNormsRoute
   '/parent-forum/preparing-5-year-olds-for-school': typeof ParentForumPreparing5YearOldsForSchoolRoute
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
@@ -1802,6 +1820,7 @@ export interface FileRoutesById {
   '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff': typeof MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRoute
   '/methodical-office/teacher-certification/regulatory-documents': typeof MethodicalOfficeTeacherCertificationRegulatoryDocumentsRoute
   '/occupational-safety/civil-protection/access-control': typeof OccupationalSafetyCivilProtectionAccessControlRoute
+  '/occupational-safety/civil-protection/access-rules': typeof OccupationalSafetyCivilProtectionAccessRulesRoute
   '/occupational-safety/civil-protection/evacuation': typeof OccupationalSafetyCivilProtectionEvacuationRoute
   '/occupational-safety/civil-protection/hostage-taking': typeof OccupationalSafetyCivilProtectionHostageTakingRoute
   '/occupational-safety/civil-protection/learn-to-survive': typeof OccupationalSafetyCivilProtectionLearnToSurviveRoute
@@ -1941,6 +1960,7 @@ export interface FileRouteTypes {
     | '/parent-forum/50-essential-tasks-for-school-preparation'
     | '/parent-forum/about-personal-data-protection'
     | '/parent-forum/access-control'
+    | '/parent-forum/access-rules'
     | '/parent-forum/developmental-age-norms'
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
@@ -1992,6 +2012,7 @@ export interface FileRouteTypes {
     | '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff'
     | '/methodical-office/teacher-certification/regulatory-documents'
     | '/occupational-safety/civil-protection/access-control'
+    | '/occupational-safety/civil-protection/access-rules'
     | '/occupational-safety/civil-protection/evacuation'
     | '/occupational-safety/civil-protection/hostage-taking'
     | '/occupational-safety/civil-protection/learn-to-survive'
@@ -2118,6 +2139,7 @@ export interface FileRouteTypes {
     | '/parent-forum/50-essential-tasks-for-school-preparation'
     | '/parent-forum/about-personal-data-protection'
     | '/parent-forum/access-control'
+    | '/parent-forum/access-rules'
     | '/parent-forum/developmental-age-norms'
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
@@ -2168,6 +2190,7 @@ export interface FileRouteTypes {
     | '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff'
     | '/methodical-office/teacher-certification/regulatory-documents'
     | '/occupational-safety/civil-protection/access-control'
+    | '/occupational-safety/civil-protection/access-rules'
     | '/occupational-safety/civil-protection/evacuation'
     | '/occupational-safety/civil-protection/hostage-taking'
     | '/occupational-safety/civil-protection/learn-to-survive'
@@ -2306,6 +2329,7 @@ export interface FileRouteTypes {
     | '/parent-forum/50-essential-tasks-for-school-preparation'
     | '/parent-forum/about-personal-data-protection'
     | '/parent-forum/access-control'
+    | '/parent-forum/access-rules'
     | '/parent-forum/developmental-age-norms'
     | '/parent-forum/preparing-5-year-olds-for-school'
     | '/parent-forum/sitemap'
@@ -2357,6 +2381,7 @@ export interface FileRouteTypes {
     | '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff'
     | '/methodical-office/teacher-certification/regulatory-documents'
     | '/occupational-safety/civil-protection/access-control'
+    | '/occupational-safety/civil-protection/access-rules'
     | '/occupational-safety/civil-protection/evacuation'
     | '/occupational-safety/civil-protection/hostage-taking'
     | '/occupational-safety/civil-protection/learn-to-survive'
@@ -2628,6 +2653,13 @@ declare module '@tanstack/react-router' {
       path: '/developmental-age-norms'
       fullPath: '/parent-forum/developmental-age-norms'
       preLoaderRoute: typeof ParentForumDevelopmentalAgeNormsRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/access-rules': {
+      id: '/parent-forum/access-rules'
+      path: '/access-rules'
+      fullPath: '/parent-forum/access-rules'
+      preLoaderRoute: typeof ParentForumAccessRulesRouteImport
       parentRoute: typeof ParentForumRouteRoute
     }
     '/parent-forum/access-control': {
@@ -3463,6 +3495,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OccupationalSafetyCivilProtectionEvacuationRouteImport
       parentRoute: typeof OccupationalSafetyRouteRoute
     }
+    '/occupational-safety/civil-protection/access-rules': {
+      id: '/occupational-safety/civil-protection/access-rules'
+      path: '/civil-protection/access-rules'
+      fullPath: '/occupational-safety/civil-protection/access-rules'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionAccessRulesRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
     '/occupational-safety/civil-protection/access-control': {
       id: '/occupational-safety/civil-protection/access-control'
       path: '/civil-protection/access-control'
@@ -4120,6 +4159,7 @@ interface OccupationalSafetyRouteRouteChildren {
   OccupationalSafetySitemapRoute: typeof OccupationalSafetySitemapRoute
   OccupationalSafetyIndexRoute: typeof OccupationalSafetyIndexRoute
   OccupationalSafetyCivilProtectionAccessControlRoute: typeof OccupationalSafetyCivilProtectionAccessControlRoute
+  OccupationalSafetyCivilProtectionAccessRulesRoute: typeof OccupationalSafetyCivilProtectionAccessRulesRoute
   OccupationalSafetyCivilProtectionEvacuationRoute: typeof OccupationalSafetyCivilProtectionEvacuationRoute
   OccupationalSafetyCivilProtectionHostageTakingRoute: typeof OccupationalSafetyCivilProtectionHostageTakingRoute
   OccupationalSafetyCivilProtectionLearnToSurviveRoute: typeof OccupationalSafetyCivilProtectionLearnToSurviveRoute
@@ -4163,6 +4203,8 @@ const OccupationalSafetyRouteRouteChildren: OccupationalSafetyRouteRouteChildren
     OccupationalSafetyIndexRoute: OccupationalSafetyIndexRoute,
     OccupationalSafetyCivilProtectionAccessControlRoute:
       OccupationalSafetyCivilProtectionAccessControlRoute,
+    OccupationalSafetyCivilProtectionAccessRulesRoute:
+      OccupationalSafetyCivilProtectionAccessRulesRoute,
     OccupationalSafetyCivilProtectionEvacuationRoute:
       OccupationalSafetyCivilProtectionEvacuationRoute,
     OccupationalSafetyCivilProtectionHostageTakingRoute:
@@ -4214,6 +4256,7 @@ interface ParentForumRouteRouteChildren {
   ParentForum50EssentialTasksForSchoolPreparationRoute: typeof ParentForum50EssentialTasksForSchoolPreparationRoute
   ParentForumAboutPersonalDataProtectionRoute: typeof ParentForumAboutPersonalDataProtectionRoute
   ParentForumAccessControlRoute: typeof ParentForumAccessControlRoute
+  ParentForumAccessRulesRoute: typeof ParentForumAccessRulesRoute
   ParentForumDevelopmentalAgeNormsRoute: typeof ParentForumDevelopmentalAgeNormsRoute
   ParentForumPreparing5YearOldsForSchoolRoute: typeof ParentForumPreparing5YearOldsForSchoolRoute
   ParentForumSitemapRoute: typeof ParentForumSitemapRoute
@@ -4229,6 +4272,7 @@ const ParentForumRouteRouteChildren: ParentForumRouteRouteChildren = {
   ParentForumAboutPersonalDataProtectionRoute:
     ParentForumAboutPersonalDataProtectionRoute,
   ParentForumAccessControlRoute: ParentForumAccessControlRoute,
+  ParentForumAccessRulesRoute: ParentForumAccessRulesRoute,
   ParentForumDevelopmentalAgeNormsRoute: ParentForumDevelopmentalAgeNormsRoute,
   ParentForumPreparing5YearOldsForSchoolRoute:
     ParentForumPreparing5YearOldsForSchoolRoute,

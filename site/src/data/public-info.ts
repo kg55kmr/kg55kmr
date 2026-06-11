@@ -303,6 +303,10 @@ export const publicInfo: ReportItemWithItems[] = [
     component: RulesOfAdmission,
   },
   {
+    title: "Правила доступу і перебування у закладі",
+    href: "https://drive.google.com/file/d/1n4YpoMf-8TuPLVZ4PNAA1Vwna7tFafQs/preview",
+  },
+  {
     title: "Положення про організацію пропускного режиму у закладі",
     href: "https://drive.google.com/file/d/1pxymNzHtjIa3U3C_HSv4ZNGdPDlKVjW6/preview",
   },

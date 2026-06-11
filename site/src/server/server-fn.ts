@@ -35,7 +35,7 @@ export const getAlbum = createServerFn().handler(async () => {
 });
 
 export const getAlbumPost = createServerFn()
-  .inputValidator(z.object({ id: z.string() }))
+  .validator(z.object({ id: z.string() }))
   .handler(async ({ data }) => {
     const path = `$["${data.id}"]`;
     if (import.meta.env.DEV) return getPostFromJSON<AlbumPost>("album", path);
@@ -46,7 +46,7 @@ export const getAlbumPost = createServerFn()
   });
 
 export const getPost = createServerFn()
-  .inputValidator(z.object({ type: z.string(), id: z.string() }))
+  .validator(z.object({ type: z.string(), id: z.string() }))
   .handler(async ({ data }) => {
     const path = `$.${data.type}["${data.id}"]`;
     if (import.meta.env.DEV) return getPostFromJSON<Post>("posts", path);
@@ -57,11 +57,11 @@ export const getPost = createServerFn()
   });
 
 export const getImages = createServerFn()
-  .inputValidator(z.string())
+  .validator(z.string())
   .handler(({ data }) => getImageKitImages(data));
 
 export const getPostImages = createServerFn()
-  .inputValidator(z.union([z.string(), z.string().array()]))
+  .validator(z.union([z.string(), z.string().array()]))
   .handler(async ({ data }) => {
     if (Array.isArray(data)) {
       const result = await Promise.all(
@@ -73,7 +73,7 @@ export const getPostImages = createServerFn()
   });
 
 export const getYouTubePlayList = createServerFn()
-  .inputValidator(
+  .validator(
     z.object({
       id: z.string(),
       limit: z.number().optional(),
@@ -82,5 +82,5 @@ export const getYouTubePlayList = createServerFn()
   .handler(({ data }) => requestPlaylist(data.id, data.limit));
 
 export const getGoogleSheet = createServerFn()
-  .inputValidator(z.object({ id: z.string() }))
+  .validator(z.object({ id: z.string() }))
   .handler(({ data }) => getSheetContent(data));

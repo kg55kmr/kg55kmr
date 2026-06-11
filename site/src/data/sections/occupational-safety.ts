@@ -20,6 +20,7 @@ import {
   Megaphone,
   NotebookPen,
   NotebookText,
+  ShieldAlert,
   ShieldCheck,
   ShieldPlus,
   Siren,
@@ -83,6 +84,10 @@ export const occupationalSafety = [
           {
             to: "/occupational-safety/civil-protection/regulatory-documents",
             icon: BookText,
+          },
+          {
+            to: "/occupational-safety/civil-protection/access-rules",
+            icon: ShieldAlert,
           },
           {
             to: "/occupational-safety/civil-protection/access-control",

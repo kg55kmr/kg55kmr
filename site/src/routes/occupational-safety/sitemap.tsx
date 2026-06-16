@@ -7,4 +7,3 @@ export const Route = createFileRoute("/occupational-safety/sitemap")({
     title: "Карта сайту",
   },
 });
-

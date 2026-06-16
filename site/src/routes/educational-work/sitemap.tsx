@@ -7,4 +7,3 @@ export const Route = createFileRoute("/educational-work/sitemap")({
     title: "Карта сайту",
   },
 });
-

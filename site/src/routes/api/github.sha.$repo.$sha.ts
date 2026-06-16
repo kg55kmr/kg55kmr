@@ -22,4 +22,3 @@ export const Route = createFileRoute("/api/github/sha/$repo/$sha")({
     },
   },
 });
-

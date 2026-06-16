@@ -37,8 +37,10 @@ export function useLightbox(opts: {
           el.style.alignItems = "center";
           el.style.justifyContent = "center";
           ps.on("change", () => {
-            (el as HTMLAnchorElement).href =
-              ps.currSlide!.content.element!.dataset["download"]!;
+            const downloadUrl =
+              ps.currSlide?.data.element?.dataset["downloadUrl"];
+            if (!downloadUrl) return;
+            (el as HTMLAnchorElement).href = downloadUrl;
           });
         },
       });

@@ -129,6 +129,7 @@ function Image(props: ImageProps) {
         data-pswp-width={props.data.width}
         data-pswp-height={props.data.height}
         data-image
+        data-download-url={data.downloadUrl}
       >
         <img
           src={inView ? data.previewUrl : PLACEHOLDER_SRC}

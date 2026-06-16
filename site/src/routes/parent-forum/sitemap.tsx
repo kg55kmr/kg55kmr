@@ -7,4 +7,3 @@ export const Route = createFileRoute("/parent-forum/sitemap")({
     title: "Карта сайту",
   },
 });
-

@@ -65,11 +65,11 @@ export const employees = define([
     isAdmin: true,
   },
   {
-    name: "Соловйова Наталія Аркадівна",
+    name: "Продан Наталія Аркадівна",
     post: "Вчитель-логопед Криворізької гімназії №55 КМР",
     rank: "спеціаліст другої категорії",
     blog: "https://logopedschool55kr.blogspot.com",
-    image: "соловйова.jpg",
+    image: "продан.jpg",
     job: "логопед",
   },
   // {
@@ -156,10 +156,10 @@ export const employees = define([
     image: "таран.jpg",
   },
   {
-    name: "Руда Дар'я Валеріївна",
+    name: "Тимофієва Дар'я Валеріївна",
     post: "Учитель англійської мови",
     rank: "спеціаліст",
-    image: "руда.jpg",
+    image: "тимофієва.jpg",
   },
   {
     name: "Гнечко Єлизавета Олексіївна",

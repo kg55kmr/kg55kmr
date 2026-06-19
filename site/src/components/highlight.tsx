@@ -9,7 +9,8 @@ const prev = new Map<string, RegExp>();
 
 export function Highlight(props: Props) {
   if (props.highlight.length === 0) return props.text;
-  const reText = `(${props.highlight})`;
+  const safe = RegExp.escape(props.highlight);
+  const reText = `(${safe})`;
 
   let regex = prev.get(reText);
   if (!regex) {

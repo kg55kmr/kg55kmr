@@ -116,7 +116,9 @@ function RouteComponent() {
 
 function searchInAlbum(album: AlbumEntries, searchText: string) {
   if (searchText === "") return album;
-  const match = new RegExp(searchText, "i");
+
+  const safe = RegExp.escape(searchText);
+  const match = new RegExp(safe, "i");
 
   return album.filter(([, post]) => match.test(post.title));
 }

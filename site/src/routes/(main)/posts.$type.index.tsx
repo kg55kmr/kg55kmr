@@ -261,7 +261,8 @@ function filterPosts(args: {
   searchText: string;
 }) {
   const { posts, date, searchText } = args;
-  const match = new RegExp(searchText, "i");
+  const safe = RegExp.escape(searchText);
+  const match = new RegExp(safe, "i");
   if (searchText.length > 0) {
     return posts.filter((v) => match.test(v.title));
   }

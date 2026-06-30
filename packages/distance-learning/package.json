@@ -15,6 +15,6 @@
     "@hyperse/delete-empty-folders": "^1.0.1",
     "clipboardy": "^5.3.1",
     "fdir": "^6.5.0",
-    "node-html-parser": "^7.1.0"
+    "node-html-parser": "^8.0.3"
   }
 }

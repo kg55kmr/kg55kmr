@@ -100,7 +100,7 @@ export function Pagination(props: PaginationProps) {
 }
 
 function validateInput(node: HTMLInputElement, totalPages: number) {
-  let inputPage = Number(node.value, 10);
+  let inputPage = Number(node.value);
   switch (true) {
     case Number.isNaN(inputPage):
       node.blur();

@@ -1,8 +1,4 @@
-import type {
-  FilesInFolder,
-  StaticAssetDirectory,
-  StaticAssetPath,
-} from "~/static-assets";
+import type { FilesInFolder, StaticAssetDirectory, StaticAssetPath } from "virtual:static-assets";
 import clsx, { type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 

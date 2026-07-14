@@ -10,4 +10,3 @@ allowBuilds:
 onlyBuiltDependencies:
   - core-js
   - esbuild
-  - vscode-ripgrep

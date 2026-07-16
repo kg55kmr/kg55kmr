@@ -14,7 +14,7 @@
     "format": "prettier -w ../../../posts/**/*.md"
   },
   "dependencies": {
-    "@imagekit/nodejs": "^7.9.1",
+    "@imagekit/nodejs": "^7.10.0",
     "@supercharge/promise-pool": "^3.3.0",
     "@upstash/redis": "^1.38.0",
     "dotenv-cli": "^11.0.0",

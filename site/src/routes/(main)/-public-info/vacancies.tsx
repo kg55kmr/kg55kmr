@@ -25,14 +25,13 @@ const technicalStaff: Vacancy[] = [
 
 export function Vacancies() {
   return (
-    <>
-      <img
-        src={asset("images/вакансії.jpg")}
-        className="float-right ml-4 w-120"
-      />
-      <Items data={teachingStaff} title="Педагогічний персонал" />
-      <Items data={technicalStaff} title="Технічний персонал" />
-    </>
+    <div className="flex flex-wrap-reverse items-end justify-center gap-10">
+      <div>
+        <Items data={teachingStaff} title="Педагогічний персонал" />
+        <Items data={technicalStaff} title="Технічний персонал" />
+      </div>
+      <img src={asset("images/вакансії.jpg")} className="w-120" />
+    </div>
   );
 }
 

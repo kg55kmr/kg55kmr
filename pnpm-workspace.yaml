@@ -1,8 +1,6 @@
 packages:
   - site
-  - studio
   - packages/*
-  - content
 
 allowBuilds:
   esbuild: true

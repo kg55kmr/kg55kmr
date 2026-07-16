@@ -14,7 +14,7 @@ export function Reports(props: Props) {
     <Tabs
       orientation="vertical"
       defaultValue={props.defaultId}
-      className="lg:grid-cols-[30%_auto]"
+      className="grid-cols-[30%_auto]"
     >
       {props.data.map((item) => (
         <Tabs.Tab

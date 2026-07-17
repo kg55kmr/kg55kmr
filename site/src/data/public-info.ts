@@ -157,6 +157,15 @@ export const publicInfo: ReportItemWithItems[] = [
     title: "Річний звіт про діяльність закладу освіти",
     items: [
       {
+        title: "2025-2026 н.р.",
+        items: [
+          {
+            title: "звіт директора",
+            href: "https://drive.google.com/file/d/1u0_txOb08uVSVldVyotgLCCLTwLOT9Wp/preview",
+          },
+        ],
+      },
+      {
         title: "2024-2025 н.р.",
         items: [
           {

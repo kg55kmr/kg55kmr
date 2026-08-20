@@ -43,7 +43,7 @@ function Tabs(props: TabsProps) {
     <Responsive
       when="sm"
       render={<Desktop {...props} items={items} orientation={orientation} />}
-      fallback={<Mobile items={items} />}
+      fallback={<Mobile {...props} items={items} />}
     />
   );
 }
@@ -107,9 +107,13 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
 
 // TODO: add controlled component support
 
-function Mobile(props: { items: TabProps[] }) {
+function Mobile(props: TabsProps & { items: TabProps[] }) {
   return (
-    <Accordion>
+    <Accordion
+      defaultValue={props.defaultValue}
+      value={props.value}
+      onValueChange={(v) => props.onValueChange?.(v)}
+    >
       {props.items.map((item) => (
         <Accordion.Item key={item.id} title={item.title} id={item.id}>
           {item.children}

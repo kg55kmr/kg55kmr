@@ -25,14 +25,12 @@ export const employees = define([
     // blog: "http://livakviktoria.blogspot.com/p/blog-page_12.html",
   },
   {
-    name: "Алтинбаєва Лариса Миколаївна",
+    name: "Чудна Наталія Володимирівна",
     post: "Заступник директора з виховної роботи Криворізької гімназії №55 КМР",
-    rank: 'спеціаліст вищої категорії, "учитель-методист"',
-    image: "алтинбаєва.jpg",
-    image2: "алтинбаєва-2.jpg",
+    rank: "спеціаліст вищої категорії",
+    image: "чудна.jpg",
     isAdmin: true,
     job: "ЗДВР",
-    blog: "http://altinbaeva.blogspot.com/p/blog-page.html",
   },
   {
     name: "Шуть Клавдія Сергіївна",
@@ -86,13 +84,6 @@ export const employees = define([
     image: "мугак.jpg",
   },
   {
-    name: "Довмат Ганна Василівна",
-    post: "Учитель початкових класів",
-    rank: 'спеціаліст першої категорії, "старший учитель"',
-    image: "довмат.jpg",
-    // blog: "http://annadovmat.blogspot.com/p/blog-page_23.html",
-  },
-  {
     name: "Половинкина Олена Адамівна",
     post: "Учитель початкових класів",
     rank: "спеціаліст першої категорії",
@@ -123,12 +114,6 @@ export const employees = define([
     rank: "спеціаліст першої категорії",
     image: "заярнюк.jpg",
     certificates: ["заярнюк-1.jpg"],
-  },
-  {
-    name: "Чудна Наталія Володимирівна",
-    post: "Учитель початкових класів",
-    rank: "спеціаліст вищої категорії",
-    image: "чудна.jpg",
   },
   {
     name: "Стрембицька Леся Анатоліївна",

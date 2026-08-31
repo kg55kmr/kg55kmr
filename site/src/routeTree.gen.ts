@@ -9,220 +9,223 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SocialAndPsychologicalServiceRouteRouteImport } from './routes/social-and-psychological-service/route'
-import { Route as ProjectActivityRouteRouteImport } from './routes/project-activity/route'
-import { Route as ParentForumRouteRouteImport } from './routes/parent-forum/route'
-import { Route as OccupationalSafetyRouteRouteImport } from './routes/occupational-safety/route'
-import { Route as MethodicalOfficeRouteRouteImport } from './routes/methodical-office/route'
-import { Route as MaSocialHumanitarianRouteRouteImport } from './routes/ma-social-humanitarian/route'
-import { Route as MaPrimaryRouteRouteImport } from './routes/ma-primary/route'
-import { Route as MaNaturalMathRouteRouteImport } from './routes/ma-natural-math/route'
-import { Route as LibraryRouteRouteImport } from './routes/library/route'
-import { Route as EducationalWorkRouteRouteImport } from './routes/educational-work/route'
-import { Route as EducationalProcessRouteRouteImport } from './routes/educational-process/route'
 import { Route as mainRouteRouteImport } from './routes/(main)/route'
-import { Route as SocialAndPsychologicalServiceIndexRouteImport } from './routes/social-and-psychological-service/index'
-import { Route as ParentForumIndexRouteImport } from './routes/parent-forum/index'
-import { Route as OccupationalSafetyIndexRouteImport } from './routes/occupational-safety/index'
-import { Route as MethodicalOfficeIndexRouteImport } from './routes/methodical-office/index'
-import { Route as MaSocialHumanitarianIndexRouteImport } from './routes/ma-social-humanitarian/index'
-import { Route as MaPrimaryIndexRouteImport } from './routes/ma-primary/index'
-import { Route as MaNaturalMathIndexRouteImport } from './routes/ma-natural-math/index'
-import { Route as LibraryIndexRouteImport } from './routes/library/index'
-import { Route as EducationalWorkIndexRouteImport } from './routes/educational-work/index'
-import { Route as EducationalProcessIndexRouteImport } from './routes/educational-process/index'
+import { Route as EducationalProcessRouteRouteImport } from './routes/educational-process/route'
+import { Route as EducationalWorkRouteRouteImport } from './routes/educational-work/route'
+import { Route as LibraryRouteRouteImport } from './routes/library/route'
+import { Route as MaNaturalMathRouteRouteImport } from './routes/ma-natural-math/route'
+import { Route as MaPrimaryRouteRouteImport } from './routes/ma-primary/route'
+import { Route as MaSocialHumanitarianRouteRouteImport } from './routes/ma-social-humanitarian/route'
+import { Route as MethodicalOfficeRouteRouteImport } from './routes/methodical-office/route'
+import { Route as OccupationalSafetyRouteRouteImport } from './routes/occupational-safety/route'
+import { Route as ParentForumRouteRouteImport } from './routes/parent-forum/route'
+import { Route as ProjectActivityRouteRouteImport } from './routes/project-activity/route'
+import { Route as SocialAndPsychologicalServiceRouteRouteImport } from './routes/social-and-psychological-service/route'
 import { Route as mainIndexRouteImport } from './routes/(main)/index'
-import { Route as SocialAndPsychologicalServiceSpeechTherapistRouteImport } from './routes/social-and-psychological-service/speech-therapist'
-import { Route as SocialAndPsychologicalServiceSitemapRouteImport } from './routes/social-and-psychological-service/sitemap'
-import { Route as ParentForumTipsForParentsRouteImport } from './routes/parent-forum/tips-for-parents'
-import { Route as ParentForumSitemapRouteImport } from './routes/parent-forum/sitemap'
-import { Route as ParentForumPreparing5YearOldsForSchoolRouteImport } from './routes/parent-forum/preparing-5-year-olds-for-school'
-import { Route as ParentForumDevelopmentalAgeNormsRouteImport } from './routes/parent-forum/developmental-age-norms'
-import { Route as ParentForumAccessRulesRouteImport } from './routes/parent-forum/access-rules'
-import { Route as ParentForumAccessControlRouteImport } from './routes/parent-forum/access-control'
-import { Route as ParentForumAboutPersonalDataProtectionRouteImport } from './routes/parent-forum/about-personal-data-protection'
-import { Route as ParentForum50EssentialTasksForSchoolPreparationRouteImport } from './routes/parent-forum/50-essential-tasks-for-school-preparation'
-import { Route as OccupationalSafetySitemapRouteImport } from './routes/occupational-safety/sitemap'
-import { Route as OccupationalSafetySanitaryRegulationsRouteImport } from './routes/occupational-safety/sanitary-regulations'
-import { Route as OccupationalSafetySafetyGuideRouteImport } from './routes/occupational-safety/safety-guide'
-import { Route as OccupationalSafetyRulesOfConductRouteImport } from './routes/occupational-safety/rules-of-conduct'
-import { Route as OccupationalSafetyRegulatoryDocumentsRouteImport } from './routes/occupational-safety/regulatory-documents'
-import { Route as OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRouteImport } from './routes/occupational-safety/procedure-for-educational-staff-and-participants-accident'
-import { Route as OccupationalSafetyHealthAndSafetyActionPlanRouteImport } from './routes/occupational-safety/health-and-safety-action-plan'
-import { Route as OccupationalSafetyHealthAndHygieneStandardsRouteImport } from './routes/occupational-safety/health-and-hygiene-standards'
-import { Route as OccupationalSafetyDocumentationRouteImport } from './routes/occupational-safety/documentation'
-import { Route as MethodicalOfficeTeachersMethodologicalAchievementsRouteImport } from './routes/methodical-office/teachers-methodological-achievements'
-import { Route as MethodicalOfficeRecommendationsRouteImport } from './routes/methodical-office/recommendations'
-import { Route as MethodicalOfficeOrganizationOfMethodicalWorkRouteImport } from './routes/methodical-office/organization-of-methodical-work'
-import { Route as MethodicalOfficeMethodicalWorkRouteImport } from './routes/methodical-office/methodical-work'
-import { Route as MaSocialHumanitarianWorkReportRouteImport } from './routes/ma-social-humanitarian/work-report'
-import { Route as MaSocialHumanitarianMembersRouteImport } from './routes/ma-social-humanitarian/members'
-import { Route as MaSocialHumanitarianMeetingMinutesRouteImport } from './routes/ma-social-humanitarian/meeting-minutes'
-import { Route as MaPrimaryWorkReportRouteImport } from './routes/ma-primary/work-report'
-import { Route as MaPrimaryMembersRouteImport } from './routes/ma-primary/members'
-import { Route as MaPrimaryMeetingTopicsRouteImport } from './routes/ma-primary/meeting-topics'
-import { Route as MaPrimaryMeetingMinutesRouteImport } from './routes/ma-primary/meeting-minutes'
-import { Route as MaPrimaryCalendarPlanRouteImport } from './routes/ma-primary/calendar-plan'
-import { Route as MaNaturalMathWorkReportRouteImport } from './routes/ma-natural-math/work-report'
-import { Route as MaNaturalMathMembersRouteImport } from './routes/ma-natural-math/members'
-import { Route as MaNaturalMathMeetingTopicsRouteImport } from './routes/ma-natural-math/meeting-topics'
-import { Route as MaNaturalMathMeetingMinutesRouteImport } from './routes/ma-natural-math/meeting-minutes'
-import { Route as MaNaturalMathInternetSafetyRouteImport } from './routes/ma-natural-math/internet-safety'
-import { Route as LibraryPortfolioRouteImport } from './routes/library/portfolio'
-import { Route as LibraryAnnualPlanRouteImport } from './routes/library/annual-plan'
-import { Route as EducationalWorkYearOfStatehoodInKeyDatesRouteImport } from './routes/educational-work/year-of-statehood-in-key-dates'
-import { Route as EducationalWorkSitemapRouteImport } from './routes/educational-work/sitemap'
-import { Route as EducationalWorkSafetyClassRouteImport } from './routes/educational-work/safety-class'
-import { Route as EducationalWorkSafeEducationalEnvironmentRouteImport } from './routes/educational-work/safe-educational-environment'
-import { Route as EducationalWorkRegulatoryDocumentsRouteImport } from './routes/educational-work/regulatory-documents'
-import { Route as EducationalWorkRainbowRouteImport } from './routes/educational-work/rainbow'
-import { Route as EducationalWorkPlanRouteImport } from './routes/educational-work/plan'
-import { Route as EducationalWorkParentalResponsibilityRouteImport } from './routes/educational-work/parental-responsibility'
-import { Route as EducationalWorkMemorandumOfCooperationRouteImport } from './routes/educational-work/memorandum-of-cooperation'
-import { Route as EducationalWorkMaClassTeachersRouteImport } from './routes/educational-work/ma-class-teachers'
-import { Route as EducationalWorkAnnualSummaryRouteImport } from './routes/educational-work/annual-summary'
-import { Route as EducationalProcessWorkPlanRouteImport } from './routes/educational-process/work-plan'
-import { Route as EducationalProcessSubjectWeeksRouteImport } from './routes/educational-process/subject-weeks'
-import { Route as EducationalProcessSitemapRouteImport } from './routes/educational-process/sitemap'
-import { Route as EducationalProcessResultsOfTextbookSelectionRouteImport } from './routes/educational-process/results-of-textbook-selection'
-import { Route as EducationalProcessPupilsPerformanceMonitoringRouteImport } from './routes/educational-process/pupils-performance-monitoring'
-import { Route as EducationalProcessNetworkOfPupilsRouteImport } from './routes/educational-process/network-of-pupils'
-import { Route as EducationalProcessInstructionalMethodologicalRecommendationsRouteImport } from './routes/educational-process/instructional-methodological-recommendations'
-import { Route as EducationalProcessEvaluationCriteriaRouteImport } from './routes/educational-process/evaluation-criteria'
-import { Route as EducationalProcessEnrollmentTransfersGraduationRouteImport } from './routes/educational-process/enrollment-transfers-graduation'
-import { Route as EducationalProcessEducationalProgramsRouteImport } from './routes/educational-process/educational-programs'
-import { Route as EducationalProcessClassPeriodRouteImport } from './routes/educational-process/class-period'
-import { Route as mainTextbooksRouteImport } from './routes/(main)/textbooks'
-import { Route as mainTeachingStaffRouteImport } from './routes/(main)/teaching-staff'
-import { Route as mainSitemapRouteImport } from './routes/(main)/sitemap'
-import { Route as mainRegulatoryDocumentsRouteImport } from './routes/(main)/regulatory-documents'
-import { Route as mainPublicInfoRouteImport } from './routes/(main)/public-info'
-import { Route as mainPedagogicalCouncilsRouteImport } from './routes/(main)/pedagogical-councils'
-import { Route as mainParentCommitteeRouteImport } from './routes/(main)/parent-committee'
-import { Route as mainNonBudgetFundsRouteImport } from './routes/(main)/non-budget-funds'
-import { Route as mainNeedsRouteImport } from './routes/(main)/needs'
-import { Route as mainMethodologicalOrganizationalMeetingsRouteImport } from './routes/(main)/methodological-organizational-meetings'
-import { Route as mainMeetingsWithDirectorRouteImport } from './routes/(main)/meetings-with-director'
-import { Route as mainInformantLettersRouteImport } from './routes/(main)/informant-letters'
-import { Route as mainHistoryRouteImport } from './routes/(main)/history'
-import { Route as mainGraduatesRouteImport } from './routes/(main)/graduates'
-import { Route as mainFeedbackRouteImport } from './routes/(main)/feedback'
-import { Route as mainEnergyEfficiencyRouteImport } from './routes/(main)/energy-efficiency'
-import { Route as mainDistanceLearningRouteImport } from './routes/(main)/distance-learning'
-import { Route as mainBudgetFundsRouteImport } from './routes/(main)/budget-funds'
-import { Route as mainAlbumRouteImport } from './routes/(main)/album'
-import { Route as mainAdministrationRouteImport } from './routes/(main)/administration'
 import { Route as mainAboutRouteImport } from './routes/(main)/about'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport } from './routes/social-and-psychological-service/social-pedagogue.index'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistIndexRouteImport } from './routes/social-and-psychological-service/practical-psychologist.index'
-import { Route as OccupationalSafetyMedicalCareIndexRouteImport } from './routes/occupational-safety/medical-care.index'
-import { Route as OccupationalSafetyMealsIndexRouteImport } from './routes/occupational-safety/meals.index'
-import { Route as OccupationalSafetyCovid19IndexRouteImport } from './routes/occupational-safety/covid-19.index'
-import { Route as EducationalWorkNationalAndPatrioticEducationIndexRouteImport } from './routes/educational-work/national-and-patriotic-education.index'
-import { Route as EducationalWorkFalconSquireIndexRouteImport } from './routes/educational-work/falcon-squire.index'
-import { Route as EducationalWorkCareerGuidanceWorkIndexRouteImport } from './routes/educational-work/career-guidance-work.index'
-import { Route as EducationalWorkCaPrimroseIndexRouteImport } from './routes/educational-work/ca-primrose.index'
-import { Route as EducationalProcessGiftedPupilsIndexRouteImport } from './routes/educational-process/gifted-pupils.index'
-import { Route as mainAlbumIndexRouteImport } from './routes/(main)/album.index'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport } from './routes/social-and-psychological-service/social-pedagogue.work-in-the-neighborhood'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRouteImport } from './routes/social-and-psychological-service/social-pedagogue.tips-for-teachers-on-working-with-families'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRouteImport } from './routes/social-and-psychological-service/social-pedagogue.tips-for-teachers'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRouteImport } from './routes/social-and-psychological-service/social-pedagogue.tips-for-parents'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueSafeInternetRouteImport } from './routes/social-and-psychological-service/social-pedagogue.safe-internet'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/social-pedagogue.regulatory-documents'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport } from './routes/social-and-psychological-service/social-pedagogue.information-asc'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport } from './routes/social-and-psychological-service/social-pedagogue.hotline-numbers'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport } from './routes/social-and-psychological-service/social-pedagogue.bullying'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-teachers'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-pupils'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport } from './routes/social-and-psychological-service/practical-psychologist.resilience-center'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.regulatory-documents'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.hotline-numbers'
-import { Route as ParentForumAdmissionPolicyGrade29RouteImport } from './routes/parent-forum/admission-policy.grade-2-9'
-import { Route as ParentForumAdmissionPolicyGrade1RouteImport } from './routes/parent-forum/admission-policy.grade-1'
-import { Route as OccupationalSafetyMedicalCareVaccinationsRouteImport } from './routes/occupational-safety/medical-care.vaccinations'
-import { Route as OccupationalSafetyMedicalCareTipsRouteImport } from './routes/occupational-safety/medical-care.tips'
-import { Route as OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRouteImport } from './routes/occupational-safety/medical-care.medical-examination-of-employees'
-import { Route as OccupationalSafetyMealsUsefulTipsRouteImport } from './routes/occupational-safety/meals.useful-tips'
-import { Route as OccupationalSafetyMealsRegulatoryDocumentsRouteImport } from './routes/occupational-safety/meals.regulatory-documents'
-import { Route as OccupationalSafetyCovid19ReminderForSchoolStaffRouteImport } from './routes/occupational-safety/covid-19.reminder-for-school-staff'
-import { Route as OccupationalSafetyCovid19ReminderForParentsRouteImport } from './routes/occupational-safety/covid-19.reminder-for-parents'
-import { Route as OccupationalSafetyCovid19PreventionRouteImport } from './routes/occupational-safety/covid-19.prevention'
-import { Route as OccupationalSafetyCovid19AlgorithmOfActionsRouteImport } from './routes/occupational-safety/covid-19.algorithm-of-actions'
-import { Route as OccupationalSafetyCivilProtectionSesuRouteImport } from './routes/occupational-safety/civil-protection.sesu'
-import { Route as OccupationalSafetyCivilProtectionSafetyGuideRouteImport } from './routes/occupational-safety/civil-protection.safety-guide'
-import { Route as OccupationalSafetyCivilProtectionSafetyAbcRouteImport } from './routes/occupational-safety/civil-protection.safety-abc'
-import { Route as OccupationalSafetyCivilProtectionRegulatoryDocumentsRouteImport } from './routes/occupational-safety/civil-protection.regulatory-documents'
-import { Route as OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRouteImport } from './routes/occupational-safety/civil-protection.population-actions-during-evacuation'
-import { Route as OccupationalSafetyCivilProtectionMineSafetyRouteImport } from './routes/occupational-safety/civil-protection.mine-safety'
-import { Route as OccupationalSafetyCivilProtectionLearnToSurviveRouteImport } from './routes/occupational-safety/civil-protection.learn-to-survive'
-import { Route as OccupationalSafetyCivilProtectionHostageTakingRouteImport } from './routes/occupational-safety/civil-protection.hostage-taking'
-import { Route as OccupationalSafetyCivilProtectionEvacuationRouteImport } from './routes/occupational-safety/civil-protection.evacuation'
-import { Route as OccupationalSafetyCivilProtectionAccessRulesRouteImport } from './routes/occupational-safety/civil-protection.access-rules'
-import { Route as OccupationalSafetyCivilProtectionAccessControlRouteImport } from './routes/occupational-safety/civil-protection.access-control'
-import { Route as MethodicalOfficeTeacherCertificationRegulatoryDocumentsRouteImport } from './routes/methodical-office/teacher-certification.regulatory-documents'
-import { Route as MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRouteImport } from './routes/methodical-office/teacher-certification.qualitative-composition-of-teaching-staff'
-import { Route as MethodicalOfficeTeacherCertificationLongTermPlanRouteImport } from './routes/methodical-office/teacher-certification.long-term-plan'
-import { Route as MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRouteImport } from './routes/methodical-office/teacher-certification.lists-of-teachers-under-certification'
-import { Route as MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRouteImport } from './routes/methodical-office/teacher-certification.indicative-professional-development-plan'
-import { Route as MethodicalOfficeMethodicalCouncilWorkPlanRouteImport } from './routes/methodical-office/methodical-council.work-plan'
-import { Route as MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRouteImport } from './routes/methodical-office/methodical-council.regulatory-documents'
-import { Route as MethodicalOfficeMethodicalCouncilCommitteeMembersRouteImport } from './routes/methodical-office/methodical-council.committee-members'
-import { Route as MaPrimaryMethodologicalAchievementsPupilsWorkRouteImport } from './routes/ma-primary/methodological-achievements.pupils-work'
-import { Route as MaPrimaryMethodologicalAchievementsEducationalActivitiesRouteImport } from './routes/ma-primary/methodological-achievements.educational-activities'
-import { Route as MaPrimaryMethodologicalAchievementsCertificatesRouteImport } from './routes/ma-primary/methodological-achievements.certificates'
-import { Route as EducationalWorkNationalAndPatrioticEducationReportRouteImport } from './routes/educational-work/national-and-patriotic-education.report'
-import { Route as EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRouteImport } from './routes/educational-work/national-and-patriotic-education.regulatory-documents'
-import { Route as EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport } from './routes/educational-work/national-and-patriotic-education.heroes-live-forever'
-import { Route as EducationalWorkNationalAndPatrioticEducationActionPlansRouteImport } from './routes/educational-work/national-and-patriotic-education.action-plans'
-import { Route as EducationalWorkFalconSquireRegulationRouteImport } from './routes/educational-work/falcon-squire.regulation'
-import { Route as EducationalWorkFalconSquirePatrolsRouteImport } from './routes/educational-work/falcon-squire.patrols'
-import { Route as EducationalWorkCareerGuidanceWorkUsefulInformationRouteImport } from './routes/educational-work/career-guidance-work.useful-information'
-import { Route as EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRouteImport } from './routes/educational-work/career-guidance-work.student-career-guidance-card'
-import { Route as EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRouteImport } from './routes/educational-work/career-guidance-work.new-challenges-and-prospects'
-import { Route as EducationalWorkCareerGuidanceWorkAnnouncementsRouteImport } from './routes/educational-work/career-guidance-work.announcements'
-import { Route as EducationalWorkCaPrimroseRulesRouteImport } from './routes/educational-work/ca-primrose.rules'
-import { Route as EducationalWorkCaPrimroseDirectionsRouteImport } from './routes/educational-work/ca-primrose.directions'
-import { Route as EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport } from './routes/educational-work/ca-primrose.conditions-for-effectiveness'
-import { Route as EducationalWorkCaPrimroseCharterRouteImport } from './routes/educational-work/ca-primrose.charter'
-import { Route as EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport } from './routes/educational-process/gifted-pupils.сompetition-regulations'
-import { Route as EducationalProcessGiftedPupilsScientificResearchWorkRouteImport } from './routes/educational-process/gifted-pupils.scientific-research-work'
-import { Route as mainPostsTypeRouteImport } from './routes/(main)/posts.$type'
-import { Route as mainAlbumIdRouteImport } from './routes/(main)/album.$id'
-import { Route as mainAchievementsTeacherRouteImport } from './routes/(main)/achievements.teacher'
-import { Route as mainAchievementsSchoolPrideRouteImport } from './routes/(main)/achievements.school-pride'
-import { Route as mainAchievementsSchoolRouteImport } from './routes/(main)/achievements.school'
+import { Route as mainAdministrationRouteImport } from './routes/(main)/administration'
+import { Route as mainAlbumRouteImport } from './routes/(main)/album'
+import { Route as mainBudgetFundsRouteImport } from './routes/(main)/budget-funds'
+import { Route as mainDistanceLearningRouteImport } from './routes/(main)/distance-learning'
+import { Route as mainEnergyEfficiencyRouteImport } from './routes/(main)/energy-efficiency'
+import { Route as mainFeedbackRouteImport } from './routes/(main)/feedback'
+import { Route as mainGraduatesRouteImport } from './routes/(main)/graduates'
+import { Route as mainHistoryRouteImport } from './routes/(main)/history'
+import { Route as mainInformantLettersRouteImport } from './routes/(main)/informant-letters'
+import { Route as mainMeetingsWithDirectorRouteImport } from './routes/(main)/meetings-with-director'
+import { Route as mainMethodologicalOrganizationalMeetingsRouteImport } from './routes/(main)/methodological-organizational-meetings'
+import { Route as mainNeedsRouteImport } from './routes/(main)/needs'
+import { Route as mainNonBudgetFundsRouteImport } from './routes/(main)/non-budget-funds'
+import { Route as mainParentCommitteeRouteImport } from './routes/(main)/parent-committee'
+import { Route as mainPedagogicalCouncilsRouteImport } from './routes/(main)/pedagogical-councils'
+import { Route as mainPublicInfoRouteImport } from './routes/(main)/public-info'
+import { Route as mainRegulatoryDocumentsRouteImport } from './routes/(main)/regulatory-documents'
+import { Route as mainSitemapRouteImport } from './routes/(main)/sitemap'
+import { Route as mainTeachingStaffRouteImport } from './routes/(main)/teaching-staff'
+import { Route as mainTextbooksRouteImport } from './routes/(main)/textbooks'
+import { Route as EducationalProcessIndexRouteImport } from './routes/educational-process/index'
+import { Route as EducationalProcessClassPeriodRouteImport } from './routes/educational-process/class-period'
+import { Route as EducationalProcessEducationalProgramsRouteImport } from './routes/educational-process/educational-programs'
+import { Route as EducationalProcessEnrollmentTransfersGraduationRouteImport } from './routes/educational-process/enrollment-transfers-graduation'
+import { Route as EducationalProcessEvaluationCriteriaRouteImport } from './routes/educational-process/evaluation-criteria'
+import { Route as EducationalProcessInstructionalMethodologicalRecommendationsRouteImport } from './routes/educational-process/instructional-methodological-recommendations'
+import { Route as EducationalProcessNetworkOfPupilsRouteImport } from './routes/educational-process/network-of-pupils'
+import { Route as EducationalProcessPupilsPerformanceMonitoringRouteImport } from './routes/educational-process/pupils-performance-monitoring'
+import { Route as EducationalProcessResultsOfTextbookSelectionRouteImport } from './routes/educational-process/results-of-textbook-selection'
+import { Route as EducationalProcessSitemapRouteImport } from './routes/educational-process/sitemap'
+import { Route as EducationalProcessSubjectWeeksRouteImport } from './routes/educational-process/subject-weeks'
+import { Route as EducationalProcessWorkPlanRouteImport } from './routes/educational-process/work-plan'
+import { Route as EducationalWorkIndexRouteImport } from './routes/educational-work/index'
+import { Route as EducationalWorkAnnualSummaryRouteImport } from './routes/educational-work/annual-summary'
+import { Route as EducationalWorkMaClassTeachersRouteImport } from './routes/educational-work/ma-class-teachers'
+import { Route as EducationalWorkMemorandumOfCooperationRouteImport } from './routes/educational-work/memorandum-of-cooperation'
+import { Route as EducationalWorkParentalResponsibilityRouteImport } from './routes/educational-work/parental-responsibility'
+import { Route as EducationalWorkPlanRouteImport } from './routes/educational-work/plan'
+import { Route as EducationalWorkRainbowRouteImport } from './routes/educational-work/rainbow'
+import { Route as EducationalWorkRegulatoryDocumentsRouteImport } from './routes/educational-work/regulatory-documents'
+import { Route as EducationalWorkSafeEducationalEnvironmentRouteImport } from './routes/educational-work/safe-educational-environment'
+import { Route as EducationalWorkSafetyClassRouteImport } from './routes/educational-work/safety-class'
+import { Route as EducationalWorkSitemapRouteImport } from './routes/educational-work/sitemap'
+import { Route as EducationalWorkYearOfStatehoodInKeyDatesRouteImport } from './routes/educational-work/year-of-statehood-in-key-dates'
+import { Route as LibraryIndexRouteImport } from './routes/library/index'
+import { Route as LibraryAnnualPlanRouteImport } from './routes/library/annual-plan'
+import { Route as LibraryPortfolioRouteImport } from './routes/library/portfolio'
+import { Route as MaNaturalMathIndexRouteImport } from './routes/ma-natural-math/index'
+import { Route as MaNaturalMathInternetSafetyRouteImport } from './routes/ma-natural-math/internet-safety'
+import { Route as MaNaturalMathMeetingMinutesRouteImport } from './routes/ma-natural-math/meeting-minutes'
+import { Route as MaNaturalMathMeetingTopicsRouteImport } from './routes/ma-natural-math/meeting-topics'
+import { Route as MaNaturalMathMembersRouteImport } from './routes/ma-natural-math/members'
+import { Route as MaNaturalMathWorkReportRouteImport } from './routes/ma-natural-math/work-report'
+import { Route as MaPrimaryIndexRouteImport } from './routes/ma-primary/index'
+import { Route as MaPrimaryCalendarPlanRouteImport } from './routes/ma-primary/calendar-plan'
+import { Route as MaPrimaryMeetingMinutesRouteImport } from './routes/ma-primary/meeting-minutes'
+import { Route as MaPrimaryMeetingTopicsRouteImport } from './routes/ma-primary/meeting-topics'
+import { Route as MaPrimaryMembersRouteImport } from './routes/ma-primary/members'
+import { Route as MaPrimaryWorkReportRouteImport } from './routes/ma-primary/work-report'
+import { Route as MaSocialHumanitarianIndexRouteImport } from './routes/ma-social-humanitarian/index'
+import { Route as MaSocialHumanitarianMeetingMinutesRouteImport } from './routes/ma-social-humanitarian/meeting-minutes'
+import { Route as MaSocialHumanitarianMembersRouteImport } from './routes/ma-social-humanitarian/members'
+import { Route as MaSocialHumanitarianWorkReportRouteImport } from './routes/ma-social-humanitarian/work-report'
+import { Route as MethodicalOfficeIndexRouteImport } from './routes/methodical-office/index'
+import { Route as MethodicalOfficeMethodicalWorkRouteImport } from './routes/methodical-office/methodical-work'
+import { Route as MethodicalOfficeOrganizationOfMethodicalWorkRouteImport } from './routes/methodical-office/organization-of-methodical-work'
+import { Route as MethodicalOfficeRecommendationsRouteImport } from './routes/methodical-office/recommendations'
+import { Route as MethodicalOfficeTeachersMethodologicalAchievementsRouteImport } from './routes/methodical-office/teachers-methodological-achievements'
+import { Route as OccupationalSafetyIndexRouteImport } from './routes/occupational-safety/index'
+import { Route as OccupationalSafetyDocumentationRouteImport } from './routes/occupational-safety/documentation'
+import { Route as OccupationalSafetyHealthAndHygieneStandardsRouteImport } from './routes/occupational-safety/health-and-hygiene-standards'
+import { Route as OccupationalSafetyHealthAndSafetyActionPlanRouteImport } from './routes/occupational-safety/health-and-safety-action-plan'
+import { Route as OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRouteImport } from './routes/occupational-safety/procedure-for-educational-staff-and-participants-accident'
+import { Route as OccupationalSafetyRegulatoryDocumentsRouteImport } from './routes/occupational-safety/regulatory-documents'
+import { Route as OccupationalSafetyRulesOfConductRouteImport } from './routes/occupational-safety/rules-of-conduct'
+import { Route as OccupationalSafetySafetyGuideRouteImport } from './routes/occupational-safety/safety-guide'
+import { Route as OccupationalSafetySanitaryRegulationsRouteImport } from './routes/occupational-safety/sanitary-regulations'
+import { Route as OccupationalSafetySitemapRouteImport } from './routes/occupational-safety/sitemap'
+import { Route as ParentForumIndexRouteImport } from './routes/parent-forum/index'
+import { Route as ParentForum50EssentialTasksForSchoolPreparationRouteImport } from './routes/parent-forum/50-essential-tasks-for-school-preparation'
+import { Route as ParentForumAboutPersonalDataProtectionRouteImport } from './routes/parent-forum/about-personal-data-protection'
+import { Route as ParentForumAccessControlRouteImport } from './routes/parent-forum/access-control'
+import { Route as ParentForumAccessRulesRouteImport } from './routes/parent-forum/access-rules'
+import { Route as ParentForumDevelopmentalAgeNormsRouteImport } from './routes/parent-forum/developmental-age-norms'
+import { Route as ParentForumPreparing5YearOldsForSchoolRouteImport } from './routes/parent-forum/preparing-5-year-olds-for-school'
+import { Route as ParentForumSitemapRouteImport } from './routes/parent-forum/sitemap'
+import { Route as ParentForumTipsForParentsRouteImport } from './routes/parent-forum/tips-for-parents'
+import { Route as SocialAndPsychologicalServiceIndexRouteImport } from './routes/social-and-psychological-service/index'
+import { Route as SocialAndPsychologicalServiceSitemapRouteImport } from './routes/social-and-psychological-service/sitemap'
+import { Route as SocialAndPsychologicalServiceSpeechTherapistRouteImport } from './routes/social-and-psychological-service/speech-therapist'
 import { Route as mainAchievementsPupilRouteImport } from './routes/(main)/achievements.pupil'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents.index'
+import { Route as mainAchievementsSchoolRouteImport } from './routes/(main)/achievements.school'
+import { Route as mainAchievementsSchoolPrideRouteImport } from './routes/(main)/achievements.school-pride'
+import { Route as mainAchievementsTeacherRouteImport } from './routes/(main)/achievements.teacher'
+import { Route as mainAlbumIndexRouteImport } from './routes/(main)/album.index'
+import { Route as mainAlbumIdRouteImport } from './routes/(main)/album.$id'
+import { Route as mainPostsTypeRouteImport } from './routes/(main)/posts.$type'
+import { Route as EducationalProcessGiftedPupilsIndexRouteImport } from './routes/educational-process/gifted-pupils.index'
+import { Route as EducationalProcessGiftedPupilsScientificResearchWorkRouteImport } from './routes/educational-process/gifted-pupils.scientific-research-work'
+import { Route as EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport } from './routes/educational-process/gifted-pupils.сompetition-regulations'
+import { Route as EducationalWorkCaPrimroseIndexRouteImport } from './routes/educational-work/ca-primrose.index'
+import { Route as EducationalWorkCaPrimroseCharterRouteImport } from './routes/educational-work/ca-primrose.charter'
+import { Route as EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport } from './routes/educational-work/ca-primrose.conditions-for-effectiveness'
+import { Route as EducationalWorkCaPrimroseDirectionsRouteImport } from './routes/educational-work/ca-primrose.directions'
+import { Route as EducationalWorkCaPrimroseRulesRouteImport } from './routes/educational-work/ca-primrose.rules'
+import { Route as EducationalWorkCareerGuidanceWorkIndexRouteImport } from './routes/educational-work/career-guidance-work.index'
+import { Route as EducationalWorkCareerGuidanceWorkAnnouncementsRouteImport } from './routes/educational-work/career-guidance-work.announcements'
+import { Route as EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRouteImport } from './routes/educational-work/career-guidance-work.new-challenges-and-prospects'
+import { Route as EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRouteImport } from './routes/educational-work/career-guidance-work.student-career-guidance-card'
+import { Route as EducationalWorkCareerGuidanceWorkUsefulInformationRouteImport } from './routes/educational-work/career-guidance-work.useful-information'
+import { Route as EducationalWorkFalconSquireIndexRouteImport } from './routes/educational-work/falcon-squire.index'
+import { Route as EducationalWorkFalconSquirePatrolsRouteImport } from './routes/educational-work/falcon-squire.patrols'
+import { Route as EducationalWorkFalconSquireRegulationRouteImport } from './routes/educational-work/falcon-squire.regulation'
+import { Route as EducationalWorkNationalAndPatrioticEducationIndexRouteImport } from './routes/educational-work/national-and-patriotic-education.index'
+import { Route as EducationalWorkNationalAndPatrioticEducationActionPlansRouteImport } from './routes/educational-work/national-and-patriotic-education.action-plans'
+import { Route as EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport } from './routes/educational-work/national-and-patriotic-education.heroes-live-forever'
+import { Route as EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRouteImport } from './routes/educational-work/national-and-patriotic-education.regulatory-documents'
+import { Route as EducationalWorkNationalAndPatrioticEducationReportRouteImport } from './routes/educational-work/national-and-patriotic-education.report'
+import { Route as MaPrimaryMethodologicalAchievementsCertificatesRouteImport } from './routes/ma-primary/methodological-achievements.certificates'
+import { Route as MaPrimaryMethodologicalAchievementsEducationalActivitiesRouteImport } from './routes/ma-primary/methodological-achievements.educational-activities'
+import { Route as MaPrimaryMethodologicalAchievementsPupilsWorkRouteImport } from './routes/ma-primary/methodological-achievements.pupils-work'
+import { Route as MethodicalOfficeMethodicalCouncilCommitteeMembersRouteImport } from './routes/methodical-office/methodical-council.committee-members'
+import { Route as MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRouteImport } from './routes/methodical-office/methodical-council.regulatory-documents'
+import { Route as MethodicalOfficeMethodicalCouncilWorkPlanRouteImport } from './routes/methodical-office/methodical-council.work-plan'
+import { Route as MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRouteImport } from './routes/methodical-office/teacher-certification.indicative-professional-development-plan'
+import { Route as MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRouteImport } from './routes/methodical-office/teacher-certification.lists-of-teachers-under-certification'
+import { Route as MethodicalOfficeTeacherCertificationLongTermPlanRouteImport } from './routes/methodical-office/teacher-certification.long-term-plan'
+import { Route as MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRouteImport } from './routes/methodical-office/teacher-certification.qualitative-composition-of-teaching-staff'
+import { Route as MethodicalOfficeTeacherCertificationRegulatoryDocumentsRouteImport } from './routes/methodical-office/teacher-certification.regulatory-documents'
+import { Route as OccupationalSafetyCivilProtectionAccessControlRouteImport } from './routes/occupational-safety/civil-protection.access-control'
+import { Route as OccupationalSafetyCivilProtectionAccessRulesRouteImport } from './routes/occupational-safety/civil-protection.access-rules'
+import { Route as OccupationalSafetyCivilProtectionEvacuationRouteImport } from './routes/occupational-safety/civil-protection.evacuation'
+import { Route as OccupationalSafetyCivilProtectionHostageTakingRouteImport } from './routes/occupational-safety/civil-protection.hostage-taking'
+import { Route as OccupationalSafetyCivilProtectionLearnToSurviveRouteImport } from './routes/occupational-safety/civil-protection.learn-to-survive'
+import { Route as OccupationalSafetyCivilProtectionMineSafetyRouteImport } from './routes/occupational-safety/civil-protection.mine-safety'
+import { Route as OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRouteImport } from './routes/occupational-safety/civil-protection.population-actions-during-evacuation'
+import { Route as OccupationalSafetyCivilProtectionRegulatoryDocumentsRouteImport } from './routes/occupational-safety/civil-protection.regulatory-documents'
+import { Route as OccupationalSafetyCivilProtectionSafetyAbcRouteImport } from './routes/occupational-safety/civil-protection.safety-abc'
+import { Route as OccupationalSafetyCivilProtectionSafetyGuideRouteImport } from './routes/occupational-safety/civil-protection.safety-guide'
+import { Route as OccupationalSafetyCivilProtectionSesuRouteImport } from './routes/occupational-safety/civil-protection.sesu'
+import { Route as OccupationalSafetyCovid19IndexRouteImport } from './routes/occupational-safety/covid-19.index'
+import { Route as OccupationalSafetyCovid19AlgorithmOfActionsRouteImport } from './routes/occupational-safety/covid-19.algorithm-of-actions'
+import { Route as OccupationalSafetyCovid19PreventionRouteImport } from './routes/occupational-safety/covid-19.prevention'
+import { Route as OccupationalSafetyCovid19ReminderForParentsRouteImport } from './routes/occupational-safety/covid-19.reminder-for-parents'
+import { Route as OccupationalSafetyCovid19ReminderForSchoolStaffRouteImport } from './routes/occupational-safety/covid-19.reminder-for-school-staff'
+import { Route as OccupationalSafetyMealsIndexRouteImport } from './routes/occupational-safety/meals.index'
+import { Route as OccupationalSafetyMealsRegulatoryDocumentsRouteImport } from './routes/occupational-safety/meals.regulatory-documents'
+import { Route as OccupationalSafetyMealsUsefulTipsRouteImport } from './routes/occupational-safety/meals.useful-tips'
+import { Route as OccupationalSafetyMedicalCareIndexRouteImport } from './routes/occupational-safety/medical-care.index'
+import { Route as OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRouteImport } from './routes/occupational-safety/medical-care.medical-examination-of-employees'
+import { Route as OccupationalSafetyMedicalCareTipsRouteImport } from './routes/occupational-safety/medical-care.tips'
+import { Route as OccupationalSafetyMedicalCareVaccinationsRouteImport } from './routes/occupational-safety/medical-care.vaccinations'
+import { Route as ParentForumAdmissionPolicyGrade1RouteImport } from './routes/parent-forum/admission-policy.grade-1'
+import { Route as ParentForumAdmissionPolicyGrade29RouteImport } from './routes/parent-forum/admission-policy.grade-2-9'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistIndexRouteImport } from './routes/social-and-psychological-service/practical-psychologist.index'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.hotline-numbers'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.regulatory-documents'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport } from './routes/social-and-psychological-service/practical-psychologist.resilience-center'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-pupils'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-teachers'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport } from './routes/social-and-psychological-service/social-pedagogue.index'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport } from './routes/social-and-psychological-service/social-pedagogue.bullying'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport } from './routes/social-and-psychological-service/social-pedagogue.hotline-numbers'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport } from './routes/social-and-psychological-service/social-pedagogue.information-asc'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/social-pedagogue.regulatory-documents'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueSafeInternetRouteImport } from './routes/social-and-psychological-service/social-pedagogue.safe-internet'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRouteImport } from './routes/social-and-psychological-service/social-pedagogue.tips-for-parents'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRouteImport } from './routes/social-and-psychological-service/social-pedagogue.tips-for-teachers'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRouteImport } from './routes/social-and-psychological-service/social-pedagogue.tips-for-teachers-on-working-with-families'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport } from './routes/social-and-psychological-service/social-pedagogue.work-in-the-neighborhood'
 import { Route as mainPostsTypeIndexRouteImport } from './routes/(main)/posts.$type.index'
-import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents.$id'
 import { Route as mainPostsTypeIdRouteImport } from './routes/(main)/posts.$type.$id'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents.index'
+import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents.$id'
 import { Route as ApiGithubShaRepoShaRouteImport } from './routes/api/github.sha.$repo.$sha'
 
-const SocialAndPsychologicalServiceRouteRoute =
-  SocialAndPsychologicalServiceRouteRouteImport.update({
-    id: '/social-and-psychological-service',
-    path: '/social-and-psychological-service',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ProjectActivityRouteRoute = ProjectActivityRouteRouteImport.update({
-  id: '/project-activity',
-  path: '/project-activity',
+const mainRouteRoute = mainRouteRouteImport.update({
+  id: '/(main)',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ParentForumRouteRoute = ParentForumRouteRouteImport.update({
-  id: '/parent-forum',
-  path: '/parent-forum',
+const EducationalProcessRouteRoute = EducationalProcessRouteRouteImport.update({
+  id: '/educational-process',
+  path: '/educational-process',
   getParentRoute: () => rootRouteImport,
 } as any)
-const OccupationalSafetyRouteRoute = OccupationalSafetyRouteRouteImport.update({
-  id: '/occupational-safety',
-  path: '/occupational-safety',
+const EducationalWorkRouteRoute = EducationalWorkRouteRouteImport.update({
+  id: '/educational-work',
+  path: '/educational-work',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MethodicalOfficeRouteRoute = MethodicalOfficeRouteRouteImport.update({
-  id: '/methodical-office',
-  path: '/methodical-office',
+const LibraryRouteRoute = LibraryRouteRouteImport.update({
+  id: '/library',
+  path: '/library',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MaNaturalMathRouteRoute = MaNaturalMathRouteRouteImport.update({
+  id: '/ma-natural-math',
+  path: '/ma-natural-math',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MaPrimaryRouteRoute = MaPrimaryRouteRouteImport.update({
+  id: '/ma-primary',
+  path: '/ma-primary',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MaSocialHumanitarianRouteRoute =
@@ -231,408 +234,171 @@ const MaSocialHumanitarianRouteRoute =
     path: '/ma-social-humanitarian',
     getParentRoute: () => rootRouteImport,
   } as any)
-const MaPrimaryRouteRoute = MaPrimaryRouteRouteImport.update({
-  id: '/ma-primary',
-  path: '/ma-primary',
+const MethodicalOfficeRouteRoute = MethodicalOfficeRouteRouteImport.update({
+  id: '/methodical-office',
+  path: '/methodical-office',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MaNaturalMathRouteRoute = MaNaturalMathRouteRouteImport.update({
-  id: '/ma-natural-math',
-  path: '/ma-natural-math',
+const OccupationalSafetyRouteRoute = OccupationalSafetyRouteRouteImport.update({
+  id: '/occupational-safety',
+  path: '/occupational-safety',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LibraryRouteRoute = LibraryRouteRouteImport.update({
-  id: '/library',
-  path: '/library',
+const ParentForumRouteRoute = ParentForumRouteRouteImport.update({
+  id: '/parent-forum',
+  path: '/parent-forum',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EducationalWorkRouteRoute = EducationalWorkRouteRouteImport.update({
-  id: '/educational-work',
-  path: '/educational-work',
+const ProjectActivityRouteRoute = ProjectActivityRouteRouteImport.update({
+  id: '/project-activity',
+  path: '/project-activity',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EducationalProcessRouteRoute = EducationalProcessRouteRouteImport.update({
-  id: '/educational-process',
-  path: '/educational-process',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const mainRouteRoute = mainRouteRouteImport.update({
-  id: '/(main)',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SocialAndPsychologicalServiceIndexRoute =
-  SocialAndPsychologicalServiceIndexRouteImport.update({
-    id: '/',
-    path: '/',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+const SocialAndPsychologicalServiceRouteRoute =
+  SocialAndPsychologicalServiceRouteRouteImport.update({
+    id: '/social-and-psychological-service',
+    path: '/social-and-psychological-service',
+    getParentRoute: () => rootRouteImport,
   } as any)
-const ParentForumIndexRoute = ParentForumIndexRouteImport.update({
+const mainIndexRoute = mainIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => ParentForumRouteRoute,
+  getParentRoute: () => mainRouteRoute,
 } as any)
-const OccupationalSafetyIndexRoute = OccupationalSafetyIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => OccupationalSafetyRouteRoute,
+const mainAboutRoute = mainAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => mainRouteRoute,
 } as any)
-const MethodicalOfficeIndexRoute = MethodicalOfficeIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => MethodicalOfficeRouteRoute,
+const mainAdministrationRoute = mainAdministrationRouteImport.update({
+  id: '/administration',
+  path: '/administration',
+  getParentRoute: () => mainRouteRoute,
 } as any)
-const MaSocialHumanitarianIndexRoute =
-  MaSocialHumanitarianIndexRouteImport.update({
-    id: '/',
-    path: '/',
-    getParentRoute: () => MaSocialHumanitarianRouteRoute,
+const mainAlbumRoute = mainAlbumRouteImport.update({
+  id: '/album',
+  path: '/album',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainBudgetFundsRoute = mainBudgetFundsRouteImport.update({
+  id: '/budget-funds',
+  path: '/budget-funds',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainDistanceLearningRoute = mainDistanceLearningRouteImport.update({
+  id: '/distance-learning',
+  path: '/distance-learning',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainEnergyEfficiencyRoute = mainEnergyEfficiencyRouteImport.update({
+  id: '/energy-efficiency',
+  path: '/energy-efficiency',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainFeedbackRoute = mainFeedbackRouteImport.update({
+  id: '/feedback',
+  path: '/feedback',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainGraduatesRoute = mainGraduatesRouteImport.update({
+  id: '/graduates',
+  path: '/graduates',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainHistoryRoute = mainHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainInformantLettersRoute = mainInformantLettersRouteImport.update({
+  id: '/informant-letters',
+  path: '/informant-letters',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainMeetingsWithDirectorRoute =
+  mainMeetingsWithDirectorRouteImport.update({
+    id: '/meetings-with-director',
+    path: '/meetings-with-director',
+    getParentRoute: () => mainRouteRoute,
   } as any)
-const MaPrimaryIndexRoute = MaPrimaryIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => MaPrimaryRouteRoute,
+const mainMethodologicalOrganizationalMeetingsRoute =
+  mainMethodologicalOrganizationalMeetingsRouteImport.update({
+    id: '/methodological-organizational-meetings',
+    path: '/methodological-organizational-meetings',
+    getParentRoute: () => mainRouteRoute,
+  } as any)
+const mainNeedsRoute = mainNeedsRouteImport.update({
+  id: '/needs',
+  path: '/needs',
+  getParentRoute: () => mainRouteRoute,
 } as any)
-const MaNaturalMathIndexRoute = MaNaturalMathIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => MaNaturalMathRouteRoute,
+const mainNonBudgetFundsRoute = mainNonBudgetFundsRouteImport.update({
+  id: '/non-budget-funds',
+  path: '/non-budget-funds',
+  getParentRoute: () => mainRouteRoute,
 } as any)
-const LibraryIndexRoute = LibraryIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => LibraryRouteRoute,
+const mainParentCommitteeRoute = mainParentCommitteeRouteImport.update({
+  id: '/parent-committee',
+  path: '/parent-committee',
+  getParentRoute: () => mainRouteRoute,
 } as any)
-const EducationalWorkIndexRoute = EducationalWorkIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => EducationalWorkRouteRoute,
+const mainPedagogicalCouncilsRoute = mainPedagogicalCouncilsRouteImport.update({
+  id: '/pedagogical-councils',
+  path: '/pedagogical-councils',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainPublicInfoRoute = mainPublicInfoRouteImport.update({
+  id: '/public-info',
+  path: '/public-info',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainRegulatoryDocumentsRoute = mainRegulatoryDocumentsRouteImport.update({
+  id: '/regulatory-documents',
+  path: '/regulatory-documents',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainSitemapRoute = mainSitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainTeachingStaffRoute = mainTeachingStaffRouteImport.update({
+  id: '/teaching-staff',
+  path: '/teaching-staff',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainTextbooksRoute = mainTextbooksRouteImport.update({
+  id: '/textbooks',
+  path: '/textbooks',
+  getParentRoute: () => mainRouteRoute,
 } as any)
 const EducationalProcessIndexRoute = EducationalProcessIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => EducationalProcessRouteRoute,
 } as any)
-const mainIndexRoute = mainIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const SocialAndPsychologicalServiceSpeechTherapistRoute =
-  SocialAndPsychologicalServiceSpeechTherapistRouteImport.update({
-    id: '/speech-therapist',
-    path: '/speech-therapist',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const SocialAndPsychologicalServiceSitemapRoute =
-  SocialAndPsychologicalServiceSitemapRouteImport.update({
-    id: '/sitemap',
-    path: '/sitemap',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const ParentForumTipsForParentsRoute =
-  ParentForumTipsForParentsRouteImport.update({
-    id: '/tips-for-parents',
-    path: '/tips-for-parents',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const ParentForumSitemapRoute = ParentForumSitemapRouteImport.update({
-  id: '/sitemap',
-  path: '/sitemap',
-  getParentRoute: () => ParentForumRouteRoute,
-} as any)
-const ParentForumPreparing5YearOldsForSchoolRoute =
-  ParentForumPreparing5YearOldsForSchoolRouteImport.update({
-    id: '/preparing-5-year-olds-for-school',
-    path: '/preparing-5-year-olds-for-school',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const ParentForumDevelopmentalAgeNormsRoute =
-  ParentForumDevelopmentalAgeNormsRouteImport.update({
-    id: '/developmental-age-norms',
-    path: '/developmental-age-norms',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const ParentForumAccessRulesRoute = ParentForumAccessRulesRouteImport.update({
-  id: '/access-rules',
-  path: '/access-rules',
-  getParentRoute: () => ParentForumRouteRoute,
-} as any)
-const ParentForumAccessControlRoute =
-  ParentForumAccessControlRouteImport.update({
-    id: '/access-control',
-    path: '/access-control',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const ParentForumAboutPersonalDataProtectionRoute =
-  ParentForumAboutPersonalDataProtectionRouteImport.update({
-    id: '/about-personal-data-protection',
-    path: '/about-personal-data-protection',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const ParentForum50EssentialTasksForSchoolPreparationRoute =
-  ParentForum50EssentialTasksForSchoolPreparationRouteImport.update({
-    id: '/50-essential-tasks-for-school-preparation',
-    path: '/50-essential-tasks-for-school-preparation',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const OccupationalSafetySitemapRoute =
-  OccupationalSafetySitemapRouteImport.update({
-    id: '/sitemap',
-    path: '/sitemap',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetySanitaryRegulationsRoute =
-  OccupationalSafetySanitaryRegulationsRouteImport.update({
-    id: '/sanitary-regulations',
-    path: '/sanitary-regulations',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetySafetyGuideRoute =
-  OccupationalSafetySafetyGuideRouteImport.update({
-    id: '/safety-guide',
-    path: '/safety-guide',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyRulesOfConductRoute =
-  OccupationalSafetyRulesOfConductRouteImport.update({
-    id: '/rules-of-conduct',
-    path: '/rules-of-conduct',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyRegulatoryDocumentsRoute =
-  OccupationalSafetyRegulatoryDocumentsRouteImport.update({
-    id: '/regulatory-documents',
-    path: '/regulatory-documents',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRoute =
-  OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRouteImport.update(
-    {
-      id: '/procedure-for-educational-staff-and-participants-accident',
-      path: '/procedure-for-educational-staff-and-participants-accident',
-      getParentRoute: () => OccupationalSafetyRouteRoute,
-    } as any,
-  )
-const OccupationalSafetyHealthAndSafetyActionPlanRoute =
-  OccupationalSafetyHealthAndSafetyActionPlanRouteImport.update({
-    id: '/health-and-safety-action-plan',
-    path: '/health-and-safety-action-plan',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyHealthAndHygieneStandardsRoute =
-  OccupationalSafetyHealthAndHygieneStandardsRouteImport.update({
-    id: '/health-and-hygiene-standards',
-    path: '/health-and-hygiene-standards',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyDocumentationRoute =
-  OccupationalSafetyDocumentationRouteImport.update({
-    id: '/documentation',
-    path: '/documentation',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const MethodicalOfficeTeachersMethodologicalAchievementsRoute =
-  MethodicalOfficeTeachersMethodologicalAchievementsRouteImport.update({
-    id: '/teachers-methodological-achievements',
-    path: '/teachers-methodological-achievements',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MethodicalOfficeRecommendationsRoute =
-  MethodicalOfficeRecommendationsRouteImport.update({
-    id: '/recommendations',
-    path: '/recommendations',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MethodicalOfficeOrganizationOfMethodicalWorkRoute =
-  MethodicalOfficeOrganizationOfMethodicalWorkRouteImport.update({
-    id: '/organization-of-methodical-work',
-    path: '/organization-of-methodical-work',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MethodicalOfficeMethodicalWorkRoute =
-  MethodicalOfficeMethodicalWorkRouteImport.update({
-    id: '/methodical-work',
-    path: '/methodical-work',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MaSocialHumanitarianWorkReportRoute =
-  MaSocialHumanitarianWorkReportRouteImport.update({
-    id: '/work-report',
-    path: '/work-report',
-    getParentRoute: () => MaSocialHumanitarianRouteRoute,
-  } as any)
-const MaSocialHumanitarianMembersRoute =
-  MaSocialHumanitarianMembersRouteImport.update({
-    id: '/members',
-    path: '/members',
-    getParentRoute: () => MaSocialHumanitarianRouteRoute,
-  } as any)
-const MaSocialHumanitarianMeetingMinutesRoute =
-  MaSocialHumanitarianMeetingMinutesRouteImport.update({
-    id: '/meeting-minutes',
-    path: '/meeting-minutes',
-    getParentRoute: () => MaSocialHumanitarianRouteRoute,
-  } as any)
-const MaPrimaryWorkReportRoute = MaPrimaryWorkReportRouteImport.update({
-  id: '/work-report',
-  path: '/work-report',
-  getParentRoute: () => MaPrimaryRouteRoute,
-} as any)
-const MaPrimaryMembersRoute = MaPrimaryMembersRouteImport.update({
-  id: '/members',
-  path: '/members',
-  getParentRoute: () => MaPrimaryRouteRoute,
-} as any)
-const MaPrimaryMeetingTopicsRoute = MaPrimaryMeetingTopicsRouteImport.update({
-  id: '/meeting-topics',
-  path: '/meeting-topics',
-  getParentRoute: () => MaPrimaryRouteRoute,
-} as any)
-const MaPrimaryMeetingMinutesRoute = MaPrimaryMeetingMinutesRouteImport.update({
-  id: '/meeting-minutes',
-  path: '/meeting-minutes',
-  getParentRoute: () => MaPrimaryRouteRoute,
-} as any)
-const MaPrimaryCalendarPlanRoute = MaPrimaryCalendarPlanRouteImport.update({
-  id: '/calendar-plan',
-  path: '/calendar-plan',
-  getParentRoute: () => MaPrimaryRouteRoute,
-} as any)
-const MaNaturalMathWorkReportRoute = MaNaturalMathWorkReportRouteImport.update({
-  id: '/work-report',
-  path: '/work-report',
-  getParentRoute: () => MaNaturalMathRouteRoute,
-} as any)
-const MaNaturalMathMembersRoute = MaNaturalMathMembersRouteImport.update({
-  id: '/members',
-  path: '/members',
-  getParentRoute: () => MaNaturalMathRouteRoute,
-} as any)
-const MaNaturalMathMeetingTopicsRoute =
-  MaNaturalMathMeetingTopicsRouteImport.update({
-    id: '/meeting-topics',
-    path: '/meeting-topics',
-    getParentRoute: () => MaNaturalMathRouteRoute,
-  } as any)
-const MaNaturalMathMeetingMinutesRoute =
-  MaNaturalMathMeetingMinutesRouteImport.update({
-    id: '/meeting-minutes',
-    path: '/meeting-minutes',
-    getParentRoute: () => MaNaturalMathRouteRoute,
-  } as any)
-const MaNaturalMathInternetSafetyRoute =
-  MaNaturalMathInternetSafetyRouteImport.update({
-    id: '/internet-safety',
-    path: '/internet-safety',
-    getParentRoute: () => MaNaturalMathRouteRoute,
-  } as any)
-const LibraryPortfolioRoute = LibraryPortfolioRouteImport.update({
-  id: '/portfolio',
-  path: '/portfolio',
-  getParentRoute: () => LibraryRouteRoute,
-} as any)
-const LibraryAnnualPlanRoute = LibraryAnnualPlanRouteImport.update({
-  id: '/annual-plan',
-  path: '/annual-plan',
-  getParentRoute: () => LibraryRouteRoute,
-} as any)
-const EducationalWorkYearOfStatehoodInKeyDatesRoute =
-  EducationalWorkYearOfStatehoodInKeyDatesRouteImport.update({
-    id: '/year-of-statehood-in-key-dates',
-    path: '/year-of-statehood-in-key-dates',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkSitemapRoute = EducationalWorkSitemapRouteImport.update({
-  id: '/sitemap',
-  path: '/sitemap',
-  getParentRoute: () => EducationalWorkRouteRoute,
-} as any)
-const EducationalWorkSafetyClassRoute =
-  EducationalWorkSafetyClassRouteImport.update({
-    id: '/safety-class',
-    path: '/safety-class',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkSafeEducationalEnvironmentRoute =
-  EducationalWorkSafeEducationalEnvironmentRouteImport.update({
-    id: '/safe-educational-environment',
-    path: '/safe-educational-environment',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkRegulatoryDocumentsRoute =
-  EducationalWorkRegulatoryDocumentsRouteImport.update({
-    id: '/regulatory-documents',
-    path: '/regulatory-documents',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkRainbowRoute = EducationalWorkRainbowRouteImport.update({
-  id: '/rainbow',
-  path: '/rainbow',
-  getParentRoute: () => EducationalWorkRouteRoute,
-} as any)
-const EducationalWorkPlanRoute = EducationalWorkPlanRouteImport.update({
-  id: '/plan',
-  path: '/plan',
-  getParentRoute: () => EducationalWorkRouteRoute,
-} as any)
-const EducationalWorkParentalResponsibilityRoute =
-  EducationalWorkParentalResponsibilityRouteImport.update({
-    id: '/parental-responsibility',
-    path: '/parental-responsibility',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkMemorandumOfCooperationRoute =
-  EducationalWorkMemorandumOfCooperationRouteImport.update({
-    id: '/memorandum-of-cooperation',
-    path: '/memorandum-of-cooperation',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkMaClassTeachersRoute =
-  EducationalWorkMaClassTeachersRouteImport.update({
-    id: '/ma-class-teachers',
-    path: '/ma-class-teachers',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkAnnualSummaryRoute =
-  EducationalWorkAnnualSummaryRouteImport.update({
-    id: '/annual-summary',
-    path: '/annual-summary',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalProcessWorkPlanRoute =
-  EducationalProcessWorkPlanRouteImport.update({
-    id: '/work-plan',
-    path: '/work-plan',
+const EducationalProcessClassPeriodRoute =
+  EducationalProcessClassPeriodRouteImport.update({
+    id: '/class-period',
+    path: '/class-period',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const EducationalProcessSubjectWeeksRoute =
-  EducationalProcessSubjectWeeksRouteImport.update({
-    id: '/subject-weeks',
-    path: '/subject-weeks',
+const EducationalProcessEducationalProgramsRoute =
+  EducationalProcessEducationalProgramsRouteImport.update({
+    id: '/educational-programs',
+    path: '/educational-programs',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const EducationalProcessSitemapRoute =
-  EducationalProcessSitemapRouteImport.update({
-    id: '/sitemap',
-    path: '/sitemap',
+const EducationalProcessEnrollmentTransfersGraduationRoute =
+  EducationalProcessEnrollmentTransfersGraduationRouteImport.update({
+    id: '/enrollment-transfers-graduation',
+    path: '/enrollment-transfers-graduation',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const EducationalProcessResultsOfTextbookSelectionRoute =
-  EducationalProcessResultsOfTextbookSelectionRouteImport.update({
-    id: '/results-of-textbook-selection',
-    path: '/results-of-textbook-selection',
-    getParentRoute: () => EducationalProcessRouteRoute,
-  } as any)
-const EducationalProcessPupilsPerformanceMonitoringRoute =
-  EducationalProcessPupilsPerformanceMonitoringRouteImport.update({
-    id: '/pupils-performance-monitoring',
-    path: '/pupils-performance-monitoring',
-    getParentRoute: () => EducationalProcessRouteRoute,
-  } as any)
-const EducationalProcessNetworkOfPupilsRoute =
-  EducationalProcessNetworkOfPupilsRouteImport.update({
-    id: '/network-of-pupils',
-    path: '/network-of-pupils',
+const EducationalProcessEvaluationCriteriaRoute =
+  EducationalProcessEvaluationCriteriaRouteImport.update({
+    id: '/evaluation-criteria',
+    path: '/evaluation-criteria',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
 const EducationalProcessInstructionalMethodologicalRecommendationsRoute =
@@ -643,177 +409,455 @@ const EducationalProcessInstructionalMethodologicalRecommendationsRoute =
       getParentRoute: () => EducationalProcessRouteRoute,
     } as any,
   )
-const EducationalProcessEvaluationCriteriaRoute =
-  EducationalProcessEvaluationCriteriaRouteImport.update({
-    id: '/evaluation-criteria',
-    path: '/evaluation-criteria',
+const EducationalProcessNetworkOfPupilsRoute =
+  EducationalProcessNetworkOfPupilsRouteImport.update({
+    id: '/network-of-pupils',
+    path: '/network-of-pupils',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const EducationalProcessEnrollmentTransfersGraduationRoute =
-  EducationalProcessEnrollmentTransfersGraduationRouteImport.update({
-    id: '/enrollment-transfers-graduation',
-    path: '/enrollment-transfers-graduation',
+const EducationalProcessPupilsPerformanceMonitoringRoute =
+  EducationalProcessPupilsPerformanceMonitoringRouteImport.update({
+    id: '/pupils-performance-monitoring',
+    path: '/pupils-performance-monitoring',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const EducationalProcessEducationalProgramsRoute =
-  EducationalProcessEducationalProgramsRouteImport.update({
-    id: '/educational-programs',
-    path: '/educational-programs',
+const EducationalProcessResultsOfTextbookSelectionRoute =
+  EducationalProcessResultsOfTextbookSelectionRouteImport.update({
+    id: '/results-of-textbook-selection',
+    path: '/results-of-textbook-selection',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const EducationalProcessClassPeriodRoute =
-  EducationalProcessClassPeriodRouteImport.update({
-    id: '/class-period',
-    path: '/class-period',
+const EducationalProcessSitemapRoute =
+  EducationalProcessSitemapRouteImport.update({
+    id: '/sitemap',
+    path: '/sitemap',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const mainTextbooksRoute = mainTextbooksRouteImport.update({
-  id: '/textbooks',
-  path: '/textbooks',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainTeachingStaffRoute = mainTeachingStaffRouteImport.update({
-  id: '/teaching-staff',
-  path: '/teaching-staff',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainSitemapRoute = mainSitemapRouteImport.update({
-  id: '/sitemap',
-  path: '/sitemap',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainRegulatoryDocumentsRoute = mainRegulatoryDocumentsRouteImport.update({
-  id: '/regulatory-documents',
-  path: '/regulatory-documents',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainPublicInfoRoute = mainPublicInfoRouteImport.update({
-  id: '/public-info',
-  path: '/public-info',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainPedagogicalCouncilsRoute = mainPedagogicalCouncilsRouteImport.update({
-  id: '/pedagogical-councils',
-  path: '/pedagogical-councils',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainParentCommitteeRoute = mainParentCommitteeRouteImport.update({
-  id: '/parent-committee',
-  path: '/parent-committee',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainNonBudgetFundsRoute = mainNonBudgetFundsRouteImport.update({
-  id: '/non-budget-funds',
-  path: '/non-budget-funds',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainNeedsRoute = mainNeedsRouteImport.update({
-  id: '/needs',
-  path: '/needs',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainMethodologicalOrganizationalMeetingsRoute =
-  mainMethodologicalOrganizationalMeetingsRouteImport.update({
-    id: '/methodological-organizational-meetings',
-    path: '/methodological-organizational-meetings',
-    getParentRoute: () => mainRouteRoute,
+const EducationalProcessSubjectWeeksRoute =
+  EducationalProcessSubjectWeeksRouteImport.update({
+    id: '/subject-weeks',
+    path: '/subject-weeks',
+    getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const mainMeetingsWithDirectorRoute =
-  mainMeetingsWithDirectorRouteImport.update({
-    id: '/meetings-with-director',
-    path: '/meetings-with-director',
-    getParentRoute: () => mainRouteRoute,
+const EducationalProcessWorkPlanRoute =
+  EducationalProcessWorkPlanRouteImport.update({
+    id: '/work-plan',
+    path: '/work-plan',
+    getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const mainInformantLettersRoute = mainInformantLettersRouteImport.update({
-  id: '/informant-letters',
-  path: '/informant-letters',
-  getParentRoute: () => mainRouteRoute,
+const EducationalWorkIndexRoute = EducationalWorkIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EducationalWorkRouteRoute,
 } as any)
-const mainHistoryRoute = mainHistoryRouteImport.update({
-  id: '/history',
-  path: '/history',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainGraduatesRoute = mainGraduatesRouteImport.update({
-  id: '/graduates',
-  path: '/graduates',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainFeedbackRoute = mainFeedbackRouteImport.update({
-  id: '/feedback',
-  path: '/feedback',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainEnergyEfficiencyRoute = mainEnergyEfficiencyRouteImport.update({
-  id: '/energy-efficiency',
-  path: '/energy-efficiency',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainDistanceLearningRoute = mainDistanceLearningRouteImport.update({
-  id: '/distance-learning',
-  path: '/distance-learning',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainBudgetFundsRoute = mainBudgetFundsRouteImport.update({
-  id: '/budget-funds',
-  path: '/budget-funds',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainAlbumRoute = mainAlbumRouteImport.update({
-  id: '/album',
-  path: '/album',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainAdministrationRoute = mainAdministrationRouteImport.update({
-  id: '/administration',
-  path: '/administration',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainAboutRoute = mainAboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const SocialAndPsychologicalServiceSocialPedagogueIndexRoute =
-  SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport.update({
-    id: '/social-pedagogue/',
-    path: '/social-pedagogue/',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const SocialAndPsychologicalServicePracticalPsychologistIndexRoute =
-  SocialAndPsychologicalServicePracticalPsychologistIndexRouteImport.update({
-    id: '/practical-psychologist/',
-    path: '/practical-psychologist/',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const OccupationalSafetyMedicalCareIndexRoute =
-  OccupationalSafetyMedicalCareIndexRouteImport.update({
-    id: '/medical-care/',
-    path: '/medical-care/',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyMealsIndexRoute =
-  OccupationalSafetyMealsIndexRouteImport.update({
-    id: '/meals/',
-    path: '/meals/',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCovid19IndexRoute =
-  OccupationalSafetyCovid19IndexRouteImport.update({
-    id: '/covid-19/',
-    path: '/covid-19/',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const EducationalWorkNationalAndPatrioticEducationIndexRoute =
-  EducationalWorkNationalAndPatrioticEducationIndexRouteImport.update({
-    id: '/national-and-patriotic-education/',
-    path: '/national-and-patriotic-education/',
+const EducationalWorkAnnualSummaryRoute =
+  EducationalWorkAnnualSummaryRouteImport.update({
+    id: '/annual-summary',
+    path: '/annual-summary',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
-const EducationalWorkFalconSquireIndexRoute =
-  EducationalWorkFalconSquireIndexRouteImport.update({
-    id: '/falcon-squire/',
-    path: '/falcon-squire/',
+const EducationalWorkMaClassTeachersRoute =
+  EducationalWorkMaClassTeachersRouteImport.update({
+    id: '/ma-class-teachers',
+    path: '/ma-class-teachers',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkMemorandumOfCooperationRoute =
+  EducationalWorkMemorandumOfCooperationRouteImport.update({
+    id: '/memorandum-of-cooperation',
+    path: '/memorandum-of-cooperation',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkParentalResponsibilityRoute =
+  EducationalWorkParentalResponsibilityRouteImport.update({
+    id: '/parental-responsibility',
+    path: '/parental-responsibility',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkPlanRoute = EducationalWorkPlanRouteImport.update({
+  id: '/plan',
+  path: '/plan',
+  getParentRoute: () => EducationalWorkRouteRoute,
+} as any)
+const EducationalWorkRainbowRoute = EducationalWorkRainbowRouteImport.update({
+  id: '/rainbow',
+  path: '/rainbow',
+  getParentRoute: () => EducationalWorkRouteRoute,
+} as any)
+const EducationalWorkRegulatoryDocumentsRoute =
+  EducationalWorkRegulatoryDocumentsRouteImport.update({
+    id: '/regulatory-documents',
+    path: '/regulatory-documents',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkSafeEducationalEnvironmentRoute =
+  EducationalWorkSafeEducationalEnvironmentRouteImport.update({
+    id: '/safe-educational-environment',
+    path: '/safe-educational-environment',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkSafetyClassRoute =
+  EducationalWorkSafetyClassRouteImport.update({
+    id: '/safety-class',
+    path: '/safety-class',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkSitemapRoute = EducationalWorkSitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => EducationalWorkRouteRoute,
+} as any)
+const EducationalWorkYearOfStatehoodInKeyDatesRoute =
+  EducationalWorkYearOfStatehoodInKeyDatesRouteImport.update({
+    id: '/year-of-statehood-in-key-dates',
+    path: '/year-of-statehood-in-key-dates',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const LibraryIndexRoute = LibraryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LibraryRouteRoute,
+} as any)
+const LibraryAnnualPlanRoute = LibraryAnnualPlanRouteImport.update({
+  id: '/annual-plan',
+  path: '/annual-plan',
+  getParentRoute: () => LibraryRouteRoute,
+} as any)
+const LibraryPortfolioRoute = LibraryPortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => LibraryRouteRoute,
+} as any)
+const MaNaturalMathIndexRoute = MaNaturalMathIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => MaNaturalMathRouteRoute,
+} as any)
+const MaNaturalMathInternetSafetyRoute =
+  MaNaturalMathInternetSafetyRouteImport.update({
+    id: '/internet-safety',
+    path: '/internet-safety',
+    getParentRoute: () => MaNaturalMathRouteRoute,
+  } as any)
+const MaNaturalMathMeetingMinutesRoute =
+  MaNaturalMathMeetingMinutesRouteImport.update({
+    id: '/meeting-minutes',
+    path: '/meeting-minutes',
+    getParentRoute: () => MaNaturalMathRouteRoute,
+  } as any)
+const MaNaturalMathMeetingTopicsRoute =
+  MaNaturalMathMeetingTopicsRouteImport.update({
+    id: '/meeting-topics',
+    path: '/meeting-topics',
+    getParentRoute: () => MaNaturalMathRouteRoute,
+  } as any)
+const MaNaturalMathMembersRoute = MaNaturalMathMembersRouteImport.update({
+  id: '/members',
+  path: '/members',
+  getParentRoute: () => MaNaturalMathRouteRoute,
+} as any)
+const MaNaturalMathWorkReportRoute = MaNaturalMathWorkReportRouteImport.update({
+  id: '/work-report',
+  path: '/work-report',
+  getParentRoute: () => MaNaturalMathRouteRoute,
+} as any)
+const MaPrimaryIndexRoute = MaPrimaryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => MaPrimaryRouteRoute,
+} as any)
+const MaPrimaryCalendarPlanRoute = MaPrimaryCalendarPlanRouteImport.update({
+  id: '/calendar-plan',
+  path: '/calendar-plan',
+  getParentRoute: () => MaPrimaryRouteRoute,
+} as any)
+const MaPrimaryMeetingMinutesRoute = MaPrimaryMeetingMinutesRouteImport.update({
+  id: '/meeting-minutes',
+  path: '/meeting-minutes',
+  getParentRoute: () => MaPrimaryRouteRoute,
+} as any)
+const MaPrimaryMeetingTopicsRoute = MaPrimaryMeetingTopicsRouteImport.update({
+  id: '/meeting-topics',
+  path: '/meeting-topics',
+  getParentRoute: () => MaPrimaryRouteRoute,
+} as any)
+const MaPrimaryMembersRoute = MaPrimaryMembersRouteImport.update({
+  id: '/members',
+  path: '/members',
+  getParentRoute: () => MaPrimaryRouteRoute,
+} as any)
+const MaPrimaryWorkReportRoute = MaPrimaryWorkReportRouteImport.update({
+  id: '/work-report',
+  path: '/work-report',
+  getParentRoute: () => MaPrimaryRouteRoute,
+} as any)
+const MaSocialHumanitarianIndexRoute =
+  MaSocialHumanitarianIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => MaSocialHumanitarianRouteRoute,
+  } as any)
+const MaSocialHumanitarianMeetingMinutesRoute =
+  MaSocialHumanitarianMeetingMinutesRouteImport.update({
+    id: '/meeting-minutes',
+    path: '/meeting-minutes',
+    getParentRoute: () => MaSocialHumanitarianRouteRoute,
+  } as any)
+const MaSocialHumanitarianMembersRoute =
+  MaSocialHumanitarianMembersRouteImport.update({
+    id: '/members',
+    path: '/members',
+    getParentRoute: () => MaSocialHumanitarianRouteRoute,
+  } as any)
+const MaSocialHumanitarianWorkReportRoute =
+  MaSocialHumanitarianWorkReportRouteImport.update({
+    id: '/work-report',
+    path: '/work-report',
+    getParentRoute: () => MaSocialHumanitarianRouteRoute,
+  } as any)
+const MethodicalOfficeIndexRoute = MethodicalOfficeIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => MethodicalOfficeRouteRoute,
+} as any)
+const MethodicalOfficeMethodicalWorkRoute =
+  MethodicalOfficeMethodicalWorkRouteImport.update({
+    id: '/methodical-work',
+    path: '/methodical-work',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const MethodicalOfficeOrganizationOfMethodicalWorkRoute =
+  MethodicalOfficeOrganizationOfMethodicalWorkRouteImport.update({
+    id: '/organization-of-methodical-work',
+    path: '/organization-of-methodical-work',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const MethodicalOfficeRecommendationsRoute =
+  MethodicalOfficeRecommendationsRouteImport.update({
+    id: '/recommendations',
+    path: '/recommendations',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const MethodicalOfficeTeachersMethodologicalAchievementsRoute =
+  MethodicalOfficeTeachersMethodologicalAchievementsRouteImport.update({
+    id: '/teachers-methodological-achievements',
+    path: '/teachers-methodological-achievements',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const OccupationalSafetyIndexRoute = OccupationalSafetyIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => OccupationalSafetyRouteRoute,
+} as any)
+const OccupationalSafetyDocumentationRoute =
+  OccupationalSafetyDocumentationRouteImport.update({
+    id: '/documentation',
+    path: '/documentation',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyHealthAndHygieneStandardsRoute =
+  OccupationalSafetyHealthAndHygieneStandardsRouteImport.update({
+    id: '/health-and-hygiene-standards',
+    path: '/health-and-hygiene-standards',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyHealthAndSafetyActionPlanRoute =
+  OccupationalSafetyHealthAndSafetyActionPlanRouteImport.update({
+    id: '/health-and-safety-action-plan',
+    path: '/health-and-safety-action-plan',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRoute =
+  OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRouteImport.update(
+    {
+      id: '/procedure-for-educational-staff-and-participants-accident',
+      path: '/procedure-for-educational-staff-and-participants-accident',
+      getParentRoute: () => OccupationalSafetyRouteRoute,
+    } as any,
+  )
+const OccupationalSafetyRegulatoryDocumentsRoute =
+  OccupationalSafetyRegulatoryDocumentsRouteImport.update({
+    id: '/regulatory-documents',
+    path: '/regulatory-documents',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyRulesOfConductRoute =
+  OccupationalSafetyRulesOfConductRouteImport.update({
+    id: '/rules-of-conduct',
+    path: '/rules-of-conduct',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetySafetyGuideRoute =
+  OccupationalSafetySafetyGuideRouteImport.update({
+    id: '/safety-guide',
+    path: '/safety-guide',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetySanitaryRegulationsRoute =
+  OccupationalSafetySanitaryRegulationsRouteImport.update({
+    id: '/sanitary-regulations',
+    path: '/sanitary-regulations',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetySitemapRoute =
+  OccupationalSafetySitemapRouteImport.update({
+    id: '/sitemap',
+    path: '/sitemap',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const ParentForumIndexRoute = ParentForumIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ParentForumRouteRoute,
+} as any)
+const ParentForum50EssentialTasksForSchoolPreparationRoute =
+  ParentForum50EssentialTasksForSchoolPreparationRouteImport.update({
+    id: '/50-essential-tasks-for-school-preparation',
+    path: '/50-essential-tasks-for-school-preparation',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const ParentForumAboutPersonalDataProtectionRoute =
+  ParentForumAboutPersonalDataProtectionRouteImport.update({
+    id: '/about-personal-data-protection',
+    path: '/about-personal-data-protection',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const ParentForumAccessControlRoute =
+  ParentForumAccessControlRouteImport.update({
+    id: '/access-control',
+    path: '/access-control',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const ParentForumAccessRulesRoute = ParentForumAccessRulesRouteImport.update({
+  id: '/access-rules',
+  path: '/access-rules',
+  getParentRoute: () => ParentForumRouteRoute,
+} as any)
+const ParentForumDevelopmentalAgeNormsRoute =
+  ParentForumDevelopmentalAgeNormsRouteImport.update({
+    id: '/developmental-age-norms',
+    path: '/developmental-age-norms',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const ParentForumPreparing5YearOldsForSchoolRoute =
+  ParentForumPreparing5YearOldsForSchoolRouteImport.update({
+    id: '/preparing-5-year-olds-for-school',
+    path: '/preparing-5-year-olds-for-school',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const ParentForumSitemapRoute = ParentForumSitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => ParentForumRouteRoute,
+} as any)
+const ParentForumTipsForParentsRoute =
+  ParentForumTipsForParentsRouteImport.update({
+    id: '/tips-for-parents',
+    path: '/tips-for-parents',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceIndexRoute =
+  SocialAndPsychologicalServiceIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSitemapRoute =
+  SocialAndPsychologicalServiceSitemapRouteImport.update({
+    id: '/sitemap',
+    path: '/sitemap',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSpeechTherapistRoute =
+  SocialAndPsychologicalServiceSpeechTherapistRouteImport.update({
+    id: '/speech-therapist',
+    path: '/speech-therapist',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const mainAchievementsPupilRoute = mainAchievementsPupilRouteImport.update({
+  id: '/achievements/pupil',
+  path: '/achievements/pupil',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainAchievementsSchoolRoute = mainAchievementsSchoolRouteImport.update({
+  id: '/achievements/school',
+  path: '/achievements/school',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainAchievementsSchoolPrideRoute =
+  mainAchievementsSchoolPrideRouteImport.update({
+    id: '/achievements/school-pride',
+    path: '/achievements/school-pride',
+    getParentRoute: () => mainRouteRoute,
+  } as any)
+const mainAchievementsTeacherRoute = mainAchievementsTeacherRouteImport.update({
+  id: '/achievements/teacher',
+  path: '/achievements/teacher',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const mainAlbumIndexRoute = mainAlbumIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => mainAlbumRoute,
+} as any)
+const mainAlbumIdRoute = mainAlbumIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => mainAlbumRoute,
+} as any)
+const mainPostsTypeRoute = mainPostsTypeRouteImport.update({
+  id: '/posts/$type',
+  path: '/posts/$type',
+  getParentRoute: () => mainRouteRoute,
+} as any)
+const EducationalProcessGiftedPupilsIndexRoute =
+  EducationalProcessGiftedPupilsIndexRouteImport.update({
+    id: '/gifted-pupils/',
+    path: '/gifted-pupils/',
+    getParentRoute: () => EducationalProcessRouteRoute,
+  } as any)
+const EducationalProcessGiftedPupilsScientificResearchWorkRoute =
+  EducationalProcessGiftedPupilsScientificResearchWorkRouteImport.update({
+    id: '/gifted-pupils/scientific-research-work',
+    path: '/gifted-pupils/scientific-research-work',
+    getParentRoute: () => EducationalProcessRouteRoute,
+  } as any)
+const EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute =
+  EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport.update(
+    {
+      id: '/gifted-pupils/сompetition-regulations',
+      path: '/gifted-pupils/сompetition-regulations',
+      getParentRoute: () => EducationalProcessRouteRoute,
+    } as any,
+  )
+const EducationalWorkCaPrimroseIndexRoute =
+  EducationalWorkCaPrimroseIndexRouteImport.update({
+    id: '/ca-primrose/',
+    path: '/ca-primrose/',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkCaPrimroseCharterRoute =
+  EducationalWorkCaPrimroseCharterRouteImport.update({
+    id: '/ca-primrose/charter',
+    path: '/ca-primrose/charter',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkCaPrimroseConditionsForEffectivenessRoute =
+  EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport.update({
+    id: '/ca-primrose/conditions-for-effectiveness',
+    path: '/ca-primrose/conditions-for-effectiveness',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkCaPrimroseDirectionsRoute =
+  EducationalWorkCaPrimroseDirectionsRouteImport.update({
+    id: '/ca-primrose/directions',
+    path: '/ca-primrose/directions',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkCaPrimroseRulesRoute =
+  EducationalWorkCaPrimroseRulesRouteImport.update({
+    id: '/ca-primrose/rules',
+    path: '/ca-primrose/rules',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
 const EducationalWorkCareerGuidanceWorkIndexRoute =
@@ -822,106 +866,317 @@ const EducationalWorkCareerGuidanceWorkIndexRoute =
     path: '/career-guidance-work/',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
-const EducationalWorkCaPrimroseIndexRoute =
-  EducationalWorkCaPrimroseIndexRouteImport.update({
-    id: '/ca-primrose/',
-    path: '/ca-primrose/',
+const EducationalWorkCareerGuidanceWorkAnnouncementsRoute =
+  EducationalWorkCareerGuidanceWorkAnnouncementsRouteImport.update({
+    id: '/career-guidance-work/announcements',
+    path: '/career-guidance-work/announcements',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
-const EducationalProcessGiftedPupilsIndexRoute =
-  EducationalProcessGiftedPupilsIndexRouteImport.update({
-    id: '/gifted-pupils/',
-    path: '/gifted-pupils/',
-    getParentRoute: () => EducationalProcessRouteRoute,
+const EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute =
+  EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRouteImport.update({
+    id: '/career-guidance-work/new-challenges-and-prospects',
+    path: '/career-guidance-work/new-challenges-and-prospects',
+    getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
-const mainAlbumIndexRoute = mainAlbumIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => mainAlbumRoute,
-} as any)
-const SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute =
-  SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport.update(
+const EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRoute =
+  EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRouteImport.update({
+    id: '/career-guidance-work/student-career-guidance-card',
+    path: '/career-guidance-work/student-career-guidance-card',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkCareerGuidanceWorkUsefulInformationRoute =
+  EducationalWorkCareerGuidanceWorkUsefulInformationRouteImport.update({
+    id: '/career-guidance-work/useful-information',
+    path: '/career-guidance-work/useful-information',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkFalconSquireIndexRoute =
+  EducationalWorkFalconSquireIndexRouteImport.update({
+    id: '/falcon-squire/',
+    path: '/falcon-squire/',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkFalconSquirePatrolsRoute =
+  EducationalWorkFalconSquirePatrolsRouteImport.update({
+    id: '/falcon-squire/patrols',
+    path: '/falcon-squire/patrols',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkFalconSquireRegulationRoute =
+  EducationalWorkFalconSquireRegulationRouteImport.update({
+    id: '/falcon-squire/regulation',
+    path: '/falcon-squire/regulation',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkNationalAndPatrioticEducationIndexRoute =
+  EducationalWorkNationalAndPatrioticEducationIndexRouteImport.update({
+    id: '/national-and-patriotic-education/',
+    path: '/national-and-patriotic-education/',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkNationalAndPatrioticEducationActionPlansRoute =
+  EducationalWorkNationalAndPatrioticEducationActionPlansRouteImport.update({
+    id: '/national-and-patriotic-education/action-plans',
+    path: '/national-and-patriotic-education/action-plans',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute =
+  EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport.update(
     {
-      id: '/social-pedagogue/work-in-the-neighborhood',
-      path: '/social-pedagogue/work-in-the-neighborhood',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+      id: '/national-and-patriotic-education/heroes-live-forever',
+      path: '/national-and-patriotic-education/heroes-live-forever',
+      getParentRoute: () => EducationalWorkRouteRoute,
     } as any,
   )
-const SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute =
-  SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRouteImport.update(
+const EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute =
+  EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRouteImport.update(
     {
-      id: '/social-pedagogue/tips-for-teachers-on-working-with-families',
-      path: '/social-pedagogue/tips-for-teachers-on-working-with-families',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+      id: '/national-and-patriotic-education/regulatory-documents',
+      path: '/national-and-patriotic-education/regulatory-documents',
+      getParentRoute: () => EducationalWorkRouteRoute,
     } as any,
   )
-const SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRoute =
-  SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRouteImport.update(
+const EducationalWorkNationalAndPatrioticEducationReportRoute =
+  EducationalWorkNationalAndPatrioticEducationReportRouteImport.update({
+    id: '/national-and-patriotic-education/report',
+    path: '/national-and-patriotic-education/report',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const MaPrimaryMethodologicalAchievementsCertificatesRoute =
+  MaPrimaryMethodologicalAchievementsCertificatesRouteImport.update({
+    id: '/methodological-achievements/certificates',
+    path: '/methodological-achievements/certificates',
+    getParentRoute: () => MaPrimaryRouteRoute,
+  } as any)
+const MaPrimaryMethodologicalAchievementsEducationalActivitiesRoute =
+  MaPrimaryMethodologicalAchievementsEducationalActivitiesRouteImport.update({
+    id: '/methodological-achievements/educational-activities',
+    path: '/methodological-achievements/educational-activities',
+    getParentRoute: () => MaPrimaryRouteRoute,
+  } as any)
+const MaPrimaryMethodologicalAchievementsPupilsWorkRoute =
+  MaPrimaryMethodologicalAchievementsPupilsWorkRouteImport.update({
+    id: '/methodological-achievements/pupils-work',
+    path: '/methodological-achievements/pupils-work',
+    getParentRoute: () => MaPrimaryRouteRoute,
+  } as any)
+const MethodicalOfficeMethodicalCouncilCommitteeMembersRoute =
+  MethodicalOfficeMethodicalCouncilCommitteeMembersRouteImport.update({
+    id: '/methodical-council/committee-members',
+    path: '/methodical-council/committee-members',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRoute =
+  MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRouteImport.update({
+    id: '/methodical-council/regulatory-documents',
+    path: '/methodical-council/regulatory-documents',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const MethodicalOfficeMethodicalCouncilWorkPlanRoute =
+  MethodicalOfficeMethodicalCouncilWorkPlanRouteImport.update({
+    id: '/methodical-council/work-plan',
+    path: '/methodical-council/work-plan',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRoute =
+  MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRouteImport.update(
     {
-      id: '/social-pedagogue/tips-for-teachers',
-      path: '/social-pedagogue/tips-for-teachers',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+      id: '/teacher-certification/indicative-professional-development-plan',
+      path: '/teacher-certification/indicative-professional-development-plan',
+      getParentRoute: () => MethodicalOfficeRouteRoute,
     } as any,
   )
-const SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRoute =
-  SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRouteImport.update({
-    id: '/social-pedagogue/tips-for-parents',
-    path: '/social-pedagogue/tips-for-parents',
+const MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRoute =
+  MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRouteImport.update(
+    {
+      id: '/teacher-certification/lists-of-teachers-under-certification',
+      path: '/teacher-certification/lists-of-teachers-under-certification',
+      getParentRoute: () => MethodicalOfficeRouteRoute,
+    } as any,
+  )
+const MethodicalOfficeTeacherCertificationLongTermPlanRoute =
+  MethodicalOfficeTeacherCertificationLongTermPlanRouteImport.update({
+    id: '/teacher-certification/long-term-plan',
+    path: '/teacher-certification/long-term-plan',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRoute =
+  MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRouteImport.update(
+    {
+      id: '/teacher-certification/qualitative-composition-of-teaching-staff',
+      path: '/teacher-certification/qualitative-composition-of-teaching-staff',
+      getParentRoute: () => MethodicalOfficeRouteRoute,
+    } as any,
+  )
+const MethodicalOfficeTeacherCertificationRegulatoryDocumentsRoute =
+  MethodicalOfficeTeacherCertificationRegulatoryDocumentsRouteImport.update({
+    id: '/teacher-certification/regulatory-documents',
+    path: '/teacher-certification/regulatory-documents',
+    getParentRoute: () => MethodicalOfficeRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionAccessControlRoute =
+  OccupationalSafetyCivilProtectionAccessControlRouteImport.update({
+    id: '/civil-protection/access-control',
+    path: '/civil-protection/access-control',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionAccessRulesRoute =
+  OccupationalSafetyCivilProtectionAccessRulesRouteImport.update({
+    id: '/civil-protection/access-rules',
+    path: '/civil-protection/access-rules',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionEvacuationRoute =
+  OccupationalSafetyCivilProtectionEvacuationRouteImport.update({
+    id: '/civil-protection/evacuation',
+    path: '/civil-protection/evacuation',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionHostageTakingRoute =
+  OccupationalSafetyCivilProtectionHostageTakingRouteImport.update({
+    id: '/civil-protection/hostage-taking',
+    path: '/civil-protection/hostage-taking',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionLearnToSurviveRoute =
+  OccupationalSafetyCivilProtectionLearnToSurviveRouteImport.update({
+    id: '/civil-protection/learn-to-survive',
+    path: '/civil-protection/learn-to-survive',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionMineSafetyRoute =
+  OccupationalSafetyCivilProtectionMineSafetyRouteImport.update({
+    id: '/civil-protection/mine-safety',
+    path: '/civil-protection/mine-safety',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRoute =
+  OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRouteImport.update(
+    {
+      id: '/civil-protection/population-actions-during-evacuation',
+      path: '/civil-protection/population-actions-during-evacuation',
+      getParentRoute: () => OccupationalSafetyRouteRoute,
+    } as any,
+  )
+const OccupationalSafetyCivilProtectionRegulatoryDocumentsRoute =
+  OccupationalSafetyCivilProtectionRegulatoryDocumentsRouteImport.update({
+    id: '/civil-protection/regulatory-documents',
+    path: '/civil-protection/regulatory-documents',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionSafetyAbcRoute =
+  OccupationalSafetyCivilProtectionSafetyAbcRouteImport.update({
+    id: '/civil-protection/safety-abc',
+    path: '/civil-protection/safety-abc',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionSafetyGuideRoute =
+  OccupationalSafetyCivilProtectionSafetyGuideRouteImport.update({
+    id: '/civil-protection/safety-guide',
+    path: '/civil-protection/safety-guide',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCivilProtectionSesuRoute =
+  OccupationalSafetyCivilProtectionSesuRouteImport.update({
+    id: '/civil-protection/sesu',
+    path: '/civil-protection/sesu',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCovid19IndexRoute =
+  OccupationalSafetyCovid19IndexRouteImport.update({
+    id: '/covid-19/',
+    path: '/covid-19/',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCovid19AlgorithmOfActionsRoute =
+  OccupationalSafetyCovid19AlgorithmOfActionsRouteImport.update({
+    id: '/covid-19/algorithm-of-actions',
+    path: '/covid-19/algorithm-of-actions',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCovid19PreventionRoute =
+  OccupationalSafetyCovid19PreventionRouteImport.update({
+    id: '/covid-19/prevention',
+    path: '/covid-19/prevention',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCovid19ReminderForParentsRoute =
+  OccupationalSafetyCovid19ReminderForParentsRouteImport.update({
+    id: '/covid-19/reminder-for-parents',
+    path: '/covid-19/reminder-for-parents',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyCovid19ReminderForSchoolStaffRoute =
+  OccupationalSafetyCovid19ReminderForSchoolStaffRouteImport.update({
+    id: '/covid-19/reminder-for-school-staff',
+    path: '/covid-19/reminder-for-school-staff',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyMealsIndexRoute =
+  OccupationalSafetyMealsIndexRouteImport.update({
+    id: '/meals/',
+    path: '/meals/',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyMealsRegulatoryDocumentsRoute =
+  OccupationalSafetyMealsRegulatoryDocumentsRouteImport.update({
+    id: '/meals/regulatory-documents',
+    path: '/meals/regulatory-documents',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyMealsUsefulTipsRoute =
+  OccupationalSafetyMealsUsefulTipsRouteImport.update({
+    id: '/meals/useful-tips',
+    path: '/meals/useful-tips',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyMedicalCareIndexRoute =
+  OccupationalSafetyMedicalCareIndexRouteImport.update({
+    id: '/medical-care/',
+    path: '/medical-care/',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRoute =
+  OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRouteImport.update({
+    id: '/medical-care/medical-examination-of-employees',
+    path: '/medical-care/medical-examination-of-employees',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyMedicalCareTipsRoute =
+  OccupationalSafetyMedicalCareTipsRouteImport.update({
+    id: '/medical-care/tips',
+    path: '/medical-care/tips',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyMedicalCareVaccinationsRoute =
+  OccupationalSafetyMedicalCareVaccinationsRouteImport.update({
+    id: '/medical-care/vaccinations',
+    path: '/medical-care/vaccinations',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const ParentForumAdmissionPolicyGrade1Route =
+  ParentForumAdmissionPolicyGrade1RouteImport.update({
+    id: '/admission-policy/grade-1',
+    path: '/admission-policy/grade-1',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const ParentForumAdmissionPolicyGrade29Route =
+  ParentForumAdmissionPolicyGrade29RouteImport.update({
+    id: '/admission-policy/grade-2-9',
+    path: '/admission-policy/grade-2-9',
+    getParentRoute: () => ParentForumRouteRoute,
+  } as any)
+const SocialAndPsychologicalServicePracticalPsychologistIndexRoute =
+  SocialAndPsychologicalServicePracticalPsychologistIndexRouteImport.update({
+    id: '/practical-psychologist/',
+    path: '/practical-psychologist/',
     getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
   } as any)
-const SocialAndPsychologicalServiceSocialPedagogueSafeInternetRoute =
-  SocialAndPsychologicalServiceSocialPedagogueSafeInternetRouteImport.update({
-    id: '/social-pedagogue/safe-internet',
-    path: '/social-pedagogue/safe-internet',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRoute =
-  SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRouteImport.update(
+const SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRoute =
+  SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRouteImport.update(
     {
-      id: '/social-pedagogue/regulatory-documents',
-      path: '/social-pedagogue/regulatory-documents',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-    } as any,
-  )
-const SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute =
-  SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport.update({
-    id: '/social-pedagogue/information-asc',
-    path: '/social-pedagogue/information-asc',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute =
-  SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport.update({
-    id: '/social-pedagogue/hotline-numbers',
-    path: '/social-pedagogue/hotline-numbers',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const SocialAndPsychologicalServiceSocialPedagogueBullyingRoute =
-  SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport.update({
-    id: '/social-pedagogue/bullying',
-    path: '/social-pedagogue/bullying',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
-const SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute =
-  SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport.update(
-    {
-      id: '/practical-psychologist/tips-for-teachers',
-      path: '/practical-psychologist/tips-for-teachers',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-    } as any,
-  )
-const SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute =
-  SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport.update(
-    {
-      id: '/practical-psychologist/tips-for-pupils',
-      path: '/practical-psychologist/tips-for-pupils',
-      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-    } as any,
-  )
-const SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute =
-  SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport.update(
-    {
-      id: '/practical-psychologist/resilience-center',
-      path: '/practical-psychologist/resilience-center',
+      id: '/practical-psychologist/hotline-numbers',
+      path: '/practical-psychologist/hotline-numbers',
       getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
@@ -933,352 +1188,107 @@ const SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRoute
       getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRoute =
-  SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRouteImport.update(
+const SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute =
+  SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport.update(
     {
-      id: '/practical-psychologist/hotline-numbers',
-      path: '/practical-psychologist/hotline-numbers',
+      id: '/practical-psychologist/resilience-center',
+      path: '/practical-psychologist/resilience-center',
       getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const ParentForumAdmissionPolicyGrade29Route =
-  ParentForumAdmissionPolicyGrade29RouteImport.update({
-    id: '/admission-policy/grade-2-9',
-    path: '/admission-policy/grade-2-9',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const ParentForumAdmissionPolicyGrade1Route =
-  ParentForumAdmissionPolicyGrade1RouteImport.update({
-    id: '/admission-policy/grade-1',
-    path: '/admission-policy/grade-1',
-    getParentRoute: () => ParentForumRouteRoute,
-  } as any)
-const OccupationalSafetyMedicalCareVaccinationsRoute =
-  OccupationalSafetyMedicalCareVaccinationsRouteImport.update({
-    id: '/medical-care/vaccinations',
-    path: '/medical-care/vaccinations',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyMedicalCareTipsRoute =
-  OccupationalSafetyMedicalCareTipsRouteImport.update({
-    id: '/medical-care/tips',
-    path: '/medical-care/tips',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRoute =
-  OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRouteImport.update({
-    id: '/medical-care/medical-examination-of-employees',
-    path: '/medical-care/medical-examination-of-employees',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyMealsUsefulTipsRoute =
-  OccupationalSafetyMealsUsefulTipsRouteImport.update({
-    id: '/meals/useful-tips',
-    path: '/meals/useful-tips',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyMealsRegulatoryDocumentsRoute =
-  OccupationalSafetyMealsRegulatoryDocumentsRouteImport.update({
-    id: '/meals/regulatory-documents',
-    path: '/meals/regulatory-documents',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCovid19ReminderForSchoolStaffRoute =
-  OccupationalSafetyCovid19ReminderForSchoolStaffRouteImport.update({
-    id: '/covid-19/reminder-for-school-staff',
-    path: '/covid-19/reminder-for-school-staff',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCovid19ReminderForParentsRoute =
-  OccupationalSafetyCovid19ReminderForParentsRouteImport.update({
-    id: '/covid-19/reminder-for-parents',
-    path: '/covid-19/reminder-for-parents',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCovid19PreventionRoute =
-  OccupationalSafetyCovid19PreventionRouteImport.update({
-    id: '/covid-19/prevention',
-    path: '/covid-19/prevention',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCovid19AlgorithmOfActionsRoute =
-  OccupationalSafetyCovid19AlgorithmOfActionsRouteImport.update({
-    id: '/covid-19/algorithm-of-actions',
-    path: '/covid-19/algorithm-of-actions',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionSesuRoute =
-  OccupationalSafetyCivilProtectionSesuRouteImport.update({
-    id: '/civil-protection/sesu',
-    path: '/civil-protection/sesu',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionSafetyGuideRoute =
-  OccupationalSafetyCivilProtectionSafetyGuideRouteImport.update({
-    id: '/civil-protection/safety-guide',
-    path: '/civil-protection/safety-guide',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionSafetyAbcRoute =
-  OccupationalSafetyCivilProtectionSafetyAbcRouteImport.update({
-    id: '/civil-protection/safety-abc',
-    path: '/civil-protection/safety-abc',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionRegulatoryDocumentsRoute =
-  OccupationalSafetyCivilProtectionRegulatoryDocumentsRouteImport.update({
-    id: '/civil-protection/regulatory-documents',
-    path: '/civil-protection/regulatory-documents',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRoute =
-  OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRouteImport.update(
+const SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute =
+  SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport.update(
     {
-      id: '/civil-protection/population-actions-during-evacuation',
-      path: '/civil-protection/population-actions-during-evacuation',
-      getParentRoute: () => OccupationalSafetyRouteRoute,
+      id: '/practical-psychologist/tips-for-pupils',
+      path: '/practical-psychologist/tips-for-pupils',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const OccupationalSafetyCivilProtectionMineSafetyRoute =
-  OccupationalSafetyCivilProtectionMineSafetyRouteImport.update({
-    id: '/civil-protection/mine-safety',
-    path: '/civil-protection/mine-safety',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionLearnToSurviveRoute =
-  OccupationalSafetyCivilProtectionLearnToSurviveRouteImport.update({
-    id: '/civil-protection/learn-to-survive',
-    path: '/civil-protection/learn-to-survive',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionHostageTakingRoute =
-  OccupationalSafetyCivilProtectionHostageTakingRouteImport.update({
-    id: '/civil-protection/hostage-taking',
-    path: '/civil-protection/hostage-taking',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionEvacuationRoute =
-  OccupationalSafetyCivilProtectionEvacuationRouteImport.update({
-    id: '/civil-protection/evacuation',
-    path: '/civil-protection/evacuation',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionAccessRulesRoute =
-  OccupationalSafetyCivilProtectionAccessRulesRouteImport.update({
-    id: '/civil-protection/access-rules',
-    path: '/civil-protection/access-rules',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const OccupationalSafetyCivilProtectionAccessControlRoute =
-  OccupationalSafetyCivilProtectionAccessControlRouteImport.update({
-    id: '/civil-protection/access-control',
-    path: '/civil-protection/access-control',
-    getParentRoute: () => OccupationalSafetyRouteRoute,
-  } as any)
-const MethodicalOfficeTeacherCertificationRegulatoryDocumentsRoute =
-  MethodicalOfficeTeacherCertificationRegulatoryDocumentsRouteImport.update({
-    id: '/teacher-certification/regulatory-documents',
-    path: '/teacher-certification/regulatory-documents',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRoute =
-  MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRouteImport.update(
+const SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute =
+  SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport.update(
     {
-      id: '/teacher-certification/qualitative-composition-of-teaching-staff',
-      path: '/teacher-certification/qualitative-composition-of-teaching-staff',
-      getParentRoute: () => MethodicalOfficeRouteRoute,
+      id: '/practical-psychologist/tips-for-teachers',
+      path: '/practical-psychologist/tips-for-teachers',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const MethodicalOfficeTeacherCertificationLongTermPlanRoute =
-  MethodicalOfficeTeacherCertificationLongTermPlanRouteImport.update({
-    id: '/teacher-certification/long-term-plan',
-    path: '/teacher-certification/long-term-plan',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
+const SocialAndPsychologicalServiceSocialPedagogueIndexRoute =
+  SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport.update({
+    id: '/social-pedagogue/',
+    path: '/social-pedagogue/',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
   } as any)
-const MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRoute =
-  MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRouteImport.update(
+const SocialAndPsychologicalServiceSocialPedagogueBullyingRoute =
+  SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport.update({
+    id: '/social-pedagogue/bullying',
+    path: '/social-pedagogue/bullying',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute =
+  SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport.update({
+    id: '/social-pedagogue/hotline-numbers',
+    path: '/social-pedagogue/hotline-numbers',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute =
+  SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport.update({
+    id: '/social-pedagogue/information-asc',
+    path: '/social-pedagogue/information-asc',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRoute =
+  SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRouteImport.update(
     {
-      id: '/teacher-certification/lists-of-teachers-under-certification',
-      path: '/teacher-certification/lists-of-teachers-under-certification',
-      getParentRoute: () => MethodicalOfficeRouteRoute,
+      id: '/social-pedagogue/regulatory-documents',
+      path: '/social-pedagogue/regulatory-documents',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRoute =
-  MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRouteImport.update(
+const SocialAndPsychologicalServiceSocialPedagogueSafeInternetRoute =
+  SocialAndPsychologicalServiceSocialPedagogueSafeInternetRouteImport.update({
+    id: '/social-pedagogue/safe-internet',
+    path: '/social-pedagogue/safe-internet',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRoute =
+  SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRouteImport.update({
+    id: '/social-pedagogue/tips-for-parents',
+    path: '/social-pedagogue/tips-for-parents',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRoute =
+  SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRouteImport.update(
     {
-      id: '/teacher-certification/indicative-professional-development-plan',
-      path: '/teacher-certification/indicative-professional-development-plan',
-      getParentRoute: () => MethodicalOfficeRouteRoute,
+      id: '/social-pedagogue/tips-for-teachers',
+      path: '/social-pedagogue/tips-for-teachers',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const MethodicalOfficeMethodicalCouncilWorkPlanRoute =
-  MethodicalOfficeMethodicalCouncilWorkPlanRouteImport.update({
-    id: '/methodical-council/work-plan',
-    path: '/methodical-council/work-plan',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRoute =
-  MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRouteImport.update({
-    id: '/methodical-council/regulatory-documents',
-    path: '/methodical-council/regulatory-documents',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MethodicalOfficeMethodicalCouncilCommitteeMembersRoute =
-  MethodicalOfficeMethodicalCouncilCommitteeMembersRouteImport.update({
-    id: '/methodical-council/committee-members',
-    path: '/methodical-council/committee-members',
-    getParentRoute: () => MethodicalOfficeRouteRoute,
-  } as any)
-const MaPrimaryMethodologicalAchievementsPupilsWorkRoute =
-  MaPrimaryMethodologicalAchievementsPupilsWorkRouteImport.update({
-    id: '/methodological-achievements/pupils-work',
-    path: '/methodological-achievements/pupils-work',
-    getParentRoute: () => MaPrimaryRouteRoute,
-  } as any)
-const MaPrimaryMethodologicalAchievementsEducationalActivitiesRoute =
-  MaPrimaryMethodologicalAchievementsEducationalActivitiesRouteImport.update({
-    id: '/methodological-achievements/educational-activities',
-    path: '/methodological-achievements/educational-activities',
-    getParentRoute: () => MaPrimaryRouteRoute,
-  } as any)
-const MaPrimaryMethodologicalAchievementsCertificatesRoute =
-  MaPrimaryMethodologicalAchievementsCertificatesRouteImport.update({
-    id: '/methodological-achievements/certificates',
-    path: '/methodological-achievements/certificates',
-    getParentRoute: () => MaPrimaryRouteRoute,
-  } as any)
-const EducationalWorkNationalAndPatrioticEducationReportRoute =
-  EducationalWorkNationalAndPatrioticEducationReportRouteImport.update({
-    id: '/national-and-patriotic-education/report',
-    path: '/national-and-patriotic-education/report',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute =
-  EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRouteImport.update(
+const SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute =
+  SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRouteImport.update(
     {
-      id: '/national-and-patriotic-education/regulatory-documents',
-      path: '/national-and-patriotic-education/regulatory-documents',
-      getParentRoute: () => EducationalWorkRouteRoute,
+      id: '/social-pedagogue/tips-for-teachers-on-working-with-families',
+      path: '/social-pedagogue/tips-for-teachers-on-working-with-families',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute =
-  EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport.update(
+const SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute =
+  SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport.update(
     {
-      id: '/national-and-patriotic-education/heroes-live-forever',
-      path: '/national-and-patriotic-education/heroes-live-forever',
-      getParentRoute: () => EducationalWorkRouteRoute,
+      id: '/social-pedagogue/work-in-the-neighborhood',
+      path: '/social-pedagogue/work-in-the-neighborhood',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const EducationalWorkNationalAndPatrioticEducationActionPlansRoute =
-  EducationalWorkNationalAndPatrioticEducationActionPlansRouteImport.update({
-    id: '/national-and-patriotic-education/action-plans',
-    path: '/national-and-patriotic-education/action-plans',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkFalconSquireRegulationRoute =
-  EducationalWorkFalconSquireRegulationRouteImport.update({
-    id: '/falcon-squire/regulation',
-    path: '/falcon-squire/regulation',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkFalconSquirePatrolsRoute =
-  EducationalWorkFalconSquirePatrolsRouteImport.update({
-    id: '/falcon-squire/patrols',
-    path: '/falcon-squire/patrols',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCareerGuidanceWorkUsefulInformationRoute =
-  EducationalWorkCareerGuidanceWorkUsefulInformationRouteImport.update({
-    id: '/career-guidance-work/useful-information',
-    path: '/career-guidance-work/useful-information',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRoute =
-  EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRouteImport.update({
-    id: '/career-guidance-work/student-career-guidance-card',
-    path: '/career-guidance-work/student-career-guidance-card',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute =
-  EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRouteImport.update({
-    id: '/career-guidance-work/new-challenges-and-prospects',
-    path: '/career-guidance-work/new-challenges-and-prospects',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCareerGuidanceWorkAnnouncementsRoute =
-  EducationalWorkCareerGuidanceWorkAnnouncementsRouteImport.update({
-    id: '/career-guidance-work/announcements',
-    path: '/career-guidance-work/announcements',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCaPrimroseRulesRoute =
-  EducationalWorkCaPrimroseRulesRouteImport.update({
-    id: '/ca-primrose/rules',
-    path: '/ca-primrose/rules',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCaPrimroseDirectionsRoute =
-  EducationalWorkCaPrimroseDirectionsRouteImport.update({
-    id: '/ca-primrose/directions',
-    path: '/ca-primrose/directions',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCaPrimroseConditionsForEffectivenessRoute =
-  EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport.update({
-    id: '/ca-primrose/conditions-for-effectiveness',
-    path: '/ca-primrose/conditions-for-effectiveness',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkCaPrimroseCharterRoute =
-  EducationalWorkCaPrimroseCharterRouteImport.update({
-    id: '/ca-primrose/charter',
-    path: '/ca-primrose/charter',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute =
-  EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport.update(
-    {
-      id: '/gifted-pupils/сompetition-regulations',
-      path: '/gifted-pupils/сompetition-regulations',
-      getParentRoute: () => EducationalProcessRouteRoute,
-    } as any,
-  )
-const EducationalProcessGiftedPupilsScientificResearchWorkRoute =
-  EducationalProcessGiftedPupilsScientificResearchWorkRouteImport.update({
-    id: '/gifted-pupils/scientific-research-work',
-    path: '/gifted-pupils/scientific-research-work',
-    getParentRoute: () => EducationalProcessRouteRoute,
-  } as any)
-const mainPostsTypeRoute = mainPostsTypeRouteImport.update({
-  id: '/posts/$type',
-  path: '/posts/$type',
-  getParentRoute: () => mainRouteRoute,
+const mainPostsTypeIndexRoute = mainPostsTypeIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => mainPostsTypeRoute,
 } as any)
-const mainAlbumIdRoute = mainAlbumIdRouteImport.update({
+const mainPostsTypeIdRoute = mainPostsTypeIdRouteImport.update({
   id: '/$id',
   path: '/$id',
-  getParentRoute: () => mainAlbumRoute,
-} as any)
-const mainAchievementsTeacherRoute = mainAchievementsTeacherRouteImport.update({
-  id: '/achievements/teacher',
-  path: '/achievements/teacher',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainAchievementsSchoolPrideRoute =
-  mainAchievementsSchoolPrideRouteImport.update({
-    id: '/achievements/school-pride',
-    path: '/achievements/school-pride',
-    getParentRoute: () => mainRouteRoute,
-  } as any)
-const mainAchievementsSchoolRoute = mainAchievementsSchoolRouteImport.update({
-  id: '/achievements/school',
-  path: '/achievements/school',
-  getParentRoute: () => mainRouteRoute,
-} as any)
-const mainAchievementsPupilRoute = mainAchievementsPupilRouteImport.update({
-  id: '/achievements/pupil',
-  path: '/achievements/pupil',
-  getParentRoute: () => mainRouteRoute,
+  getParentRoute: () => mainPostsTypeRoute,
 } as any)
 const SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute =
   SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport.update(
@@ -1288,11 +1298,6 @@ const SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRoute
       getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const mainPostsTypeIndexRoute = mainPostsTypeIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => mainPostsTypeRoute,
-} as any)
 const SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute =
   SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport.update(
     {
@@ -1301,11 +1306,6 @@ const SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRoute =
       getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
-const mainPostsTypeIdRoute = mainPostsTypeIdRouteImport.update({
-  id: '/$id',
-  path: '/$id',
-  getParentRoute: () => mainPostsTypeRoute,
-} as any)
 const ApiGithubShaRepoShaRoute = ApiGithubShaRepoShaRouteImport.update({
   id: '/api/github/sha/$repo/$sha',
   path: '/api/github/sha/$repo/$sha',
@@ -2452,74 +2452,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/social-and-psychological-service': {
-      id: '/social-and-psychological-service'
-      path: '/social-and-psychological-service'
-      fullPath: '/social-and-psychological-service'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/project-activity': {
-      id: '/project-activity'
-      path: '/project-activity'
-      fullPath: '/project-activity'
-      preLoaderRoute: typeof ProjectActivityRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/parent-forum': {
-      id: '/parent-forum'
-      path: '/parent-forum'
-      fullPath: '/parent-forum'
-      preLoaderRoute: typeof ParentForumRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/occupational-safety': {
-      id: '/occupational-safety'
-      path: '/occupational-safety'
-      fullPath: '/occupational-safety'
-      preLoaderRoute: typeof OccupationalSafetyRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/methodical-office': {
-      id: '/methodical-office'
-      path: '/methodical-office'
-      fullPath: '/methodical-office'
-      preLoaderRoute: typeof MethodicalOfficeRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ma-social-humanitarian': {
-      id: '/ma-social-humanitarian'
-      path: '/ma-social-humanitarian'
-      fullPath: '/ma-social-humanitarian'
-      preLoaderRoute: typeof MaSocialHumanitarianRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ma-primary': {
-      id: '/ma-primary'
-      path: '/ma-primary'
-      fullPath: '/ma-primary'
-      preLoaderRoute: typeof MaPrimaryRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ma-natural-math': {
-      id: '/ma-natural-math'
-      path: '/ma-natural-math'
-      fullPath: '/ma-natural-math'
-      preLoaderRoute: typeof MaNaturalMathRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/library': {
-      id: '/library'
-      path: '/library'
-      fullPath: '/library'
-      preLoaderRoute: typeof LibraryRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/educational-work': {
-      id: '/educational-work'
-      path: '/educational-work'
-      fullPath: '/educational-work'
-      preLoaderRoute: typeof EducationalWorkRouteRouteImport
+    '/(main)': {
+      id: '/(main)'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof mainRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/educational-process': {
@@ -2529,648 +2466,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationalProcessRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/(main)': {
-      id: '/(main)'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof mainRouteRouteImport
+    '/educational-work': {
+      id: '/educational-work'
+      path: '/educational-work'
+      fullPath: '/educational-work'
+      preLoaderRoute: typeof EducationalWorkRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/social-and-psychological-service/': {
-      id: '/social-and-psychological-service/'
-      path: '/'
-      fullPath: '/social-and-psychological-service/'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceIndexRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    '/library': {
+      id: '/library'
+      path: '/library'
+      fullPath: '/library'
+      preLoaderRoute: typeof LibraryRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/parent-forum/': {
-      id: '/parent-forum/'
-      path: '/'
-      fullPath: '/parent-forum/'
-      preLoaderRoute: typeof ParentForumIndexRouteImport
-      parentRoute: typeof ParentForumRouteRoute
+    '/ma-natural-math': {
+      id: '/ma-natural-math'
+      path: '/ma-natural-math'
+      fullPath: '/ma-natural-math'
+      preLoaderRoute: typeof MaNaturalMathRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/occupational-safety/': {
-      id: '/occupational-safety/'
-      path: '/'
-      fullPath: '/occupational-safety/'
-      preLoaderRoute: typeof OccupationalSafetyIndexRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
+    '/ma-primary': {
+      id: '/ma-primary'
+      path: '/ma-primary'
+      fullPath: '/ma-primary'
+      preLoaderRoute: typeof MaPrimaryRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/methodical-office/': {
-      id: '/methodical-office/'
-      path: '/'
-      fullPath: '/methodical-office/'
-      preLoaderRoute: typeof MethodicalOfficeIndexRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
+    '/ma-social-humanitarian': {
+      id: '/ma-social-humanitarian'
+      path: '/ma-social-humanitarian'
+      fullPath: '/ma-social-humanitarian'
+      preLoaderRoute: typeof MaSocialHumanitarianRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/ma-social-humanitarian/': {
-      id: '/ma-social-humanitarian/'
-      path: '/'
-      fullPath: '/ma-social-humanitarian/'
-      preLoaderRoute: typeof MaSocialHumanitarianIndexRouteImport
-      parentRoute: typeof MaSocialHumanitarianRouteRoute
+    '/methodical-office': {
+      id: '/methodical-office'
+      path: '/methodical-office'
+      fullPath: '/methodical-office'
+      preLoaderRoute: typeof MethodicalOfficeRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/ma-primary/': {
-      id: '/ma-primary/'
-      path: '/'
-      fullPath: '/ma-primary/'
-      preLoaderRoute: typeof MaPrimaryIndexRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
+    '/occupational-safety': {
+      id: '/occupational-safety'
+      path: '/occupational-safety'
+      fullPath: '/occupational-safety'
+      preLoaderRoute: typeof OccupationalSafetyRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/ma-natural-math/': {
-      id: '/ma-natural-math/'
-      path: '/'
-      fullPath: '/ma-natural-math/'
-      preLoaderRoute: typeof MaNaturalMathIndexRouteImport
-      parentRoute: typeof MaNaturalMathRouteRoute
+    '/parent-forum': {
+      id: '/parent-forum'
+      path: '/parent-forum'
+      fullPath: '/parent-forum'
+      preLoaderRoute: typeof ParentForumRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/library/': {
-      id: '/library/'
-      path: '/'
-      fullPath: '/library/'
-      preLoaderRoute: typeof LibraryIndexRouteImport
-      parentRoute: typeof LibraryRouteRoute
+    '/project-activity': {
+      id: '/project-activity'
+      path: '/project-activity'
+      fullPath: '/project-activity'
+      preLoaderRoute: typeof ProjectActivityRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/educational-work/': {
-      id: '/educational-work/'
-      path: '/'
-      fullPath: '/educational-work/'
-      preLoaderRoute: typeof EducationalWorkIndexRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-process/': {
-      id: '/educational-process/'
-      path: '/'
-      fullPath: '/educational-process/'
-      preLoaderRoute: typeof EducationalProcessIndexRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
+    '/social-and-psychological-service': {
+      id: '/social-and-psychological-service'
+      path: '/social-and-psychological-service'
+      fullPath: '/social-and-psychological-service'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceRouteRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/(main)/': {
       id: '/(main)/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof mainIndexRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/social-and-psychological-service/speech-therapist': {
-      id: '/social-and-psychological-service/speech-therapist'
-      path: '/speech-therapist'
-      fullPath: '/social-and-psychological-service/speech-therapist'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/sitemap': {
-      id: '/social-and-psychological-service/sitemap'
-      path: '/sitemap'
-      fullPath: '/social-and-psychological-service/sitemap'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSitemapRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/parent-forum/tips-for-parents': {
-      id: '/parent-forum/tips-for-parents'
-      path: '/tips-for-parents'
-      fullPath: '/parent-forum/tips-for-parents'
-      preLoaderRoute: typeof ParentForumTipsForParentsRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/sitemap': {
-      id: '/parent-forum/sitemap'
-      path: '/sitemap'
-      fullPath: '/parent-forum/sitemap'
-      preLoaderRoute: typeof ParentForumSitemapRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/preparing-5-year-olds-for-school': {
-      id: '/parent-forum/preparing-5-year-olds-for-school'
-      path: '/preparing-5-year-olds-for-school'
-      fullPath: '/parent-forum/preparing-5-year-olds-for-school'
-      preLoaderRoute: typeof ParentForumPreparing5YearOldsForSchoolRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/developmental-age-norms': {
-      id: '/parent-forum/developmental-age-norms'
-      path: '/developmental-age-norms'
-      fullPath: '/parent-forum/developmental-age-norms'
-      preLoaderRoute: typeof ParentForumDevelopmentalAgeNormsRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/access-rules': {
-      id: '/parent-forum/access-rules'
-      path: '/access-rules'
-      fullPath: '/parent-forum/access-rules'
-      preLoaderRoute: typeof ParentForumAccessRulesRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/access-control': {
-      id: '/parent-forum/access-control'
-      path: '/access-control'
-      fullPath: '/parent-forum/access-control'
-      preLoaderRoute: typeof ParentForumAccessControlRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/about-personal-data-protection': {
-      id: '/parent-forum/about-personal-data-protection'
-      path: '/about-personal-data-protection'
-      fullPath: '/parent-forum/about-personal-data-protection'
-      preLoaderRoute: typeof ParentForumAboutPersonalDataProtectionRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/50-essential-tasks-for-school-preparation': {
-      id: '/parent-forum/50-essential-tasks-for-school-preparation'
-      path: '/50-essential-tasks-for-school-preparation'
-      fullPath: '/parent-forum/50-essential-tasks-for-school-preparation'
-      preLoaderRoute: typeof ParentForum50EssentialTasksForSchoolPreparationRouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/occupational-safety/sitemap': {
-      id: '/occupational-safety/sitemap'
-      path: '/sitemap'
-      fullPath: '/occupational-safety/sitemap'
-      preLoaderRoute: typeof OccupationalSafetySitemapRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/sanitary-regulations': {
-      id: '/occupational-safety/sanitary-regulations'
-      path: '/sanitary-regulations'
-      fullPath: '/occupational-safety/sanitary-regulations'
-      preLoaderRoute: typeof OccupationalSafetySanitaryRegulationsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/safety-guide': {
-      id: '/occupational-safety/safety-guide'
-      path: '/safety-guide'
-      fullPath: '/occupational-safety/safety-guide'
-      preLoaderRoute: typeof OccupationalSafetySafetyGuideRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/rules-of-conduct': {
-      id: '/occupational-safety/rules-of-conduct'
-      path: '/rules-of-conduct'
-      fullPath: '/occupational-safety/rules-of-conduct'
-      preLoaderRoute: typeof OccupationalSafetyRulesOfConductRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/regulatory-documents': {
-      id: '/occupational-safety/regulatory-documents'
-      path: '/regulatory-documents'
-      fullPath: '/occupational-safety/regulatory-documents'
-      preLoaderRoute: typeof OccupationalSafetyRegulatoryDocumentsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/procedure-for-educational-staff-and-participants-accident': {
-      id: '/occupational-safety/procedure-for-educational-staff-and-participants-accident'
-      path: '/procedure-for-educational-staff-and-participants-accident'
-      fullPath: '/occupational-safety/procedure-for-educational-staff-and-participants-accident'
-      preLoaderRoute: typeof OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/health-and-safety-action-plan': {
-      id: '/occupational-safety/health-and-safety-action-plan'
-      path: '/health-and-safety-action-plan'
-      fullPath: '/occupational-safety/health-and-safety-action-plan'
-      preLoaderRoute: typeof OccupationalSafetyHealthAndSafetyActionPlanRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/health-and-hygiene-standards': {
-      id: '/occupational-safety/health-and-hygiene-standards'
-      path: '/health-and-hygiene-standards'
-      fullPath: '/occupational-safety/health-and-hygiene-standards'
-      preLoaderRoute: typeof OccupationalSafetyHealthAndHygieneStandardsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/documentation': {
-      id: '/occupational-safety/documentation'
-      path: '/documentation'
-      fullPath: '/occupational-safety/documentation'
-      preLoaderRoute: typeof OccupationalSafetyDocumentationRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/methodical-office/teachers-methodological-achievements': {
-      id: '/methodical-office/teachers-methodological-achievements'
-      path: '/teachers-methodological-achievements'
-      fullPath: '/methodical-office/teachers-methodological-achievements'
-      preLoaderRoute: typeof MethodicalOfficeTeachersMethodologicalAchievementsRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/recommendations': {
-      id: '/methodical-office/recommendations'
-      path: '/recommendations'
-      fullPath: '/methodical-office/recommendations'
-      preLoaderRoute: typeof MethodicalOfficeRecommendationsRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/organization-of-methodical-work': {
-      id: '/methodical-office/organization-of-methodical-work'
-      path: '/organization-of-methodical-work'
-      fullPath: '/methodical-office/organization-of-methodical-work'
-      preLoaderRoute: typeof MethodicalOfficeOrganizationOfMethodicalWorkRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/methodical-work': {
-      id: '/methodical-office/methodical-work'
-      path: '/methodical-work'
-      fullPath: '/methodical-office/methodical-work'
-      preLoaderRoute: typeof MethodicalOfficeMethodicalWorkRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/ma-social-humanitarian/work-report': {
-      id: '/ma-social-humanitarian/work-report'
-      path: '/work-report'
-      fullPath: '/ma-social-humanitarian/work-report'
-      preLoaderRoute: typeof MaSocialHumanitarianWorkReportRouteImport
-      parentRoute: typeof MaSocialHumanitarianRouteRoute
-    }
-    '/ma-social-humanitarian/members': {
-      id: '/ma-social-humanitarian/members'
-      path: '/members'
-      fullPath: '/ma-social-humanitarian/members'
-      preLoaderRoute: typeof MaSocialHumanitarianMembersRouteImport
-      parentRoute: typeof MaSocialHumanitarianRouteRoute
-    }
-    '/ma-social-humanitarian/meeting-minutes': {
-      id: '/ma-social-humanitarian/meeting-minutes'
-      path: '/meeting-minutes'
-      fullPath: '/ma-social-humanitarian/meeting-minutes'
-      preLoaderRoute: typeof MaSocialHumanitarianMeetingMinutesRouteImport
-      parentRoute: typeof MaSocialHumanitarianRouteRoute
-    }
-    '/ma-primary/work-report': {
-      id: '/ma-primary/work-report'
-      path: '/work-report'
-      fullPath: '/ma-primary/work-report'
-      preLoaderRoute: typeof MaPrimaryWorkReportRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/ma-primary/members': {
-      id: '/ma-primary/members'
-      path: '/members'
-      fullPath: '/ma-primary/members'
-      preLoaderRoute: typeof MaPrimaryMembersRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/ma-primary/meeting-topics': {
-      id: '/ma-primary/meeting-topics'
-      path: '/meeting-topics'
-      fullPath: '/ma-primary/meeting-topics'
-      preLoaderRoute: typeof MaPrimaryMeetingTopicsRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/ma-primary/meeting-minutes': {
-      id: '/ma-primary/meeting-minutes'
-      path: '/meeting-minutes'
-      fullPath: '/ma-primary/meeting-minutes'
-      preLoaderRoute: typeof MaPrimaryMeetingMinutesRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/ma-primary/calendar-plan': {
-      id: '/ma-primary/calendar-plan'
-      path: '/calendar-plan'
-      fullPath: '/ma-primary/calendar-plan'
-      preLoaderRoute: typeof MaPrimaryCalendarPlanRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/ma-natural-math/work-report': {
-      id: '/ma-natural-math/work-report'
-      path: '/work-report'
-      fullPath: '/ma-natural-math/work-report'
-      preLoaderRoute: typeof MaNaturalMathWorkReportRouteImport
-      parentRoute: typeof MaNaturalMathRouteRoute
-    }
-    '/ma-natural-math/members': {
-      id: '/ma-natural-math/members'
-      path: '/members'
-      fullPath: '/ma-natural-math/members'
-      preLoaderRoute: typeof MaNaturalMathMembersRouteImport
-      parentRoute: typeof MaNaturalMathRouteRoute
-    }
-    '/ma-natural-math/meeting-topics': {
-      id: '/ma-natural-math/meeting-topics'
-      path: '/meeting-topics'
-      fullPath: '/ma-natural-math/meeting-topics'
-      preLoaderRoute: typeof MaNaturalMathMeetingTopicsRouteImport
-      parentRoute: typeof MaNaturalMathRouteRoute
-    }
-    '/ma-natural-math/meeting-minutes': {
-      id: '/ma-natural-math/meeting-minutes'
-      path: '/meeting-minutes'
-      fullPath: '/ma-natural-math/meeting-minutes'
-      preLoaderRoute: typeof MaNaturalMathMeetingMinutesRouteImport
-      parentRoute: typeof MaNaturalMathRouteRoute
-    }
-    '/ma-natural-math/internet-safety': {
-      id: '/ma-natural-math/internet-safety'
-      path: '/internet-safety'
-      fullPath: '/ma-natural-math/internet-safety'
-      preLoaderRoute: typeof MaNaturalMathInternetSafetyRouteImport
-      parentRoute: typeof MaNaturalMathRouteRoute
-    }
-    '/library/portfolio': {
-      id: '/library/portfolio'
-      path: '/portfolio'
-      fullPath: '/library/portfolio'
-      preLoaderRoute: typeof LibraryPortfolioRouteImport
-      parentRoute: typeof LibraryRouteRoute
-    }
-    '/library/annual-plan': {
-      id: '/library/annual-plan'
-      path: '/annual-plan'
-      fullPath: '/library/annual-plan'
-      preLoaderRoute: typeof LibraryAnnualPlanRouteImport
-      parentRoute: typeof LibraryRouteRoute
-    }
-    '/educational-work/year-of-statehood-in-key-dates': {
-      id: '/educational-work/year-of-statehood-in-key-dates'
-      path: '/year-of-statehood-in-key-dates'
-      fullPath: '/educational-work/year-of-statehood-in-key-dates'
-      preLoaderRoute: typeof EducationalWorkYearOfStatehoodInKeyDatesRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/sitemap': {
-      id: '/educational-work/sitemap'
-      path: '/sitemap'
-      fullPath: '/educational-work/sitemap'
-      preLoaderRoute: typeof EducationalWorkSitemapRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/safety-class': {
-      id: '/educational-work/safety-class'
-      path: '/safety-class'
-      fullPath: '/educational-work/safety-class'
-      preLoaderRoute: typeof EducationalWorkSafetyClassRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/safe-educational-environment': {
-      id: '/educational-work/safe-educational-environment'
-      path: '/safe-educational-environment'
-      fullPath: '/educational-work/safe-educational-environment'
-      preLoaderRoute: typeof EducationalWorkSafeEducationalEnvironmentRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/regulatory-documents': {
-      id: '/educational-work/regulatory-documents'
-      path: '/regulatory-documents'
-      fullPath: '/educational-work/regulatory-documents'
-      preLoaderRoute: typeof EducationalWorkRegulatoryDocumentsRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/rainbow': {
-      id: '/educational-work/rainbow'
-      path: '/rainbow'
-      fullPath: '/educational-work/rainbow'
-      preLoaderRoute: typeof EducationalWorkRainbowRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/plan': {
-      id: '/educational-work/plan'
-      path: '/plan'
-      fullPath: '/educational-work/plan'
-      preLoaderRoute: typeof EducationalWorkPlanRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/parental-responsibility': {
-      id: '/educational-work/parental-responsibility'
-      path: '/parental-responsibility'
-      fullPath: '/educational-work/parental-responsibility'
-      preLoaderRoute: typeof EducationalWorkParentalResponsibilityRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/memorandum-of-cooperation': {
-      id: '/educational-work/memorandum-of-cooperation'
-      path: '/memorandum-of-cooperation'
-      fullPath: '/educational-work/memorandum-of-cooperation'
-      preLoaderRoute: typeof EducationalWorkMemorandumOfCooperationRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/ma-class-teachers': {
-      id: '/educational-work/ma-class-teachers'
-      path: '/ma-class-teachers'
-      fullPath: '/educational-work/ma-class-teachers'
-      preLoaderRoute: typeof EducationalWorkMaClassTeachersRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/annual-summary': {
-      id: '/educational-work/annual-summary'
-      path: '/annual-summary'
-      fullPath: '/educational-work/annual-summary'
-      preLoaderRoute: typeof EducationalWorkAnnualSummaryRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-process/work-plan': {
-      id: '/educational-process/work-plan'
-      path: '/work-plan'
-      fullPath: '/educational-process/work-plan'
-      preLoaderRoute: typeof EducationalProcessWorkPlanRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/subject-weeks': {
-      id: '/educational-process/subject-weeks'
-      path: '/subject-weeks'
-      fullPath: '/educational-process/subject-weeks'
-      preLoaderRoute: typeof EducationalProcessSubjectWeeksRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/sitemap': {
-      id: '/educational-process/sitemap'
-      path: '/sitemap'
-      fullPath: '/educational-process/sitemap'
-      preLoaderRoute: typeof EducationalProcessSitemapRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/results-of-textbook-selection': {
-      id: '/educational-process/results-of-textbook-selection'
-      path: '/results-of-textbook-selection'
-      fullPath: '/educational-process/results-of-textbook-selection'
-      preLoaderRoute: typeof EducationalProcessResultsOfTextbookSelectionRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/pupils-performance-monitoring': {
-      id: '/educational-process/pupils-performance-monitoring'
-      path: '/pupils-performance-monitoring'
-      fullPath: '/educational-process/pupils-performance-monitoring'
-      preLoaderRoute: typeof EducationalProcessPupilsPerformanceMonitoringRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/network-of-pupils': {
-      id: '/educational-process/network-of-pupils'
-      path: '/network-of-pupils'
-      fullPath: '/educational-process/network-of-pupils'
-      preLoaderRoute: typeof EducationalProcessNetworkOfPupilsRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/instructional-methodological-recommendations': {
-      id: '/educational-process/instructional-methodological-recommendations'
-      path: '/instructional-methodological-recommendations'
-      fullPath: '/educational-process/instructional-methodological-recommendations'
-      preLoaderRoute: typeof EducationalProcessInstructionalMethodologicalRecommendationsRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/evaluation-criteria': {
-      id: '/educational-process/evaluation-criteria'
-      path: '/evaluation-criteria'
-      fullPath: '/educational-process/evaluation-criteria'
-      preLoaderRoute: typeof EducationalProcessEvaluationCriteriaRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/enrollment-transfers-graduation': {
-      id: '/educational-process/enrollment-transfers-graduation'
-      path: '/enrollment-transfers-graduation'
-      fullPath: '/educational-process/enrollment-transfers-graduation'
-      preLoaderRoute: typeof EducationalProcessEnrollmentTransfersGraduationRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/educational-programs': {
-      id: '/educational-process/educational-programs'
-      path: '/educational-programs'
-      fullPath: '/educational-process/educational-programs'
-      preLoaderRoute: typeof EducationalProcessEducationalProgramsRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/class-period': {
-      id: '/educational-process/class-period'
-      path: '/class-period'
-      fullPath: '/educational-process/class-period'
-      preLoaderRoute: typeof EducationalProcessClassPeriodRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/(main)/textbooks': {
-      id: '/(main)/textbooks'
-      path: '/textbooks'
-      fullPath: '/textbooks'
-      preLoaderRoute: typeof mainTextbooksRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/teaching-staff': {
-      id: '/(main)/teaching-staff'
-      path: '/teaching-staff'
-      fullPath: '/teaching-staff'
-      preLoaderRoute: typeof mainTeachingStaffRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/sitemap': {
-      id: '/(main)/sitemap'
-      path: '/sitemap'
-      fullPath: '/sitemap'
-      preLoaderRoute: typeof mainSitemapRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/regulatory-documents': {
-      id: '/(main)/regulatory-documents'
-      path: '/regulatory-documents'
-      fullPath: '/regulatory-documents'
-      preLoaderRoute: typeof mainRegulatoryDocumentsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/public-info': {
-      id: '/(main)/public-info'
-      path: '/public-info'
-      fullPath: '/public-info'
-      preLoaderRoute: typeof mainPublicInfoRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/pedagogical-councils': {
-      id: '/(main)/pedagogical-councils'
-      path: '/pedagogical-councils'
-      fullPath: '/pedagogical-councils'
-      preLoaderRoute: typeof mainPedagogicalCouncilsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/parent-committee': {
-      id: '/(main)/parent-committee'
-      path: '/parent-committee'
-      fullPath: '/parent-committee'
-      preLoaderRoute: typeof mainParentCommitteeRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/non-budget-funds': {
-      id: '/(main)/non-budget-funds'
-      path: '/non-budget-funds'
-      fullPath: '/non-budget-funds'
-      preLoaderRoute: typeof mainNonBudgetFundsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/needs': {
-      id: '/(main)/needs'
-      path: '/needs'
-      fullPath: '/needs'
-      preLoaderRoute: typeof mainNeedsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/methodological-organizational-meetings': {
-      id: '/(main)/methodological-organizational-meetings'
-      path: '/methodological-organizational-meetings'
-      fullPath: '/methodological-organizational-meetings'
-      preLoaderRoute: typeof mainMethodologicalOrganizationalMeetingsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/meetings-with-director': {
-      id: '/(main)/meetings-with-director'
-      path: '/meetings-with-director'
-      fullPath: '/meetings-with-director'
-      preLoaderRoute: typeof mainMeetingsWithDirectorRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/informant-letters': {
-      id: '/(main)/informant-letters'
-      path: '/informant-letters'
-      fullPath: '/informant-letters'
-      preLoaderRoute: typeof mainInformantLettersRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/history': {
-      id: '/(main)/history'
-      path: '/history'
-      fullPath: '/history'
-      preLoaderRoute: typeof mainHistoryRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/graduates': {
-      id: '/(main)/graduates'
-      path: '/graduates'
-      fullPath: '/graduates'
-      preLoaderRoute: typeof mainGraduatesRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/feedback': {
-      id: '/(main)/feedback'
-      path: '/feedback'
-      fullPath: '/feedback'
-      preLoaderRoute: typeof mainFeedbackRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/energy-efficiency': {
-      id: '/(main)/energy-efficiency'
-      path: '/energy-efficiency'
-      fullPath: '/energy-efficiency'
-      preLoaderRoute: typeof mainEnergyEfficiencyRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/distance-learning': {
-      id: '/(main)/distance-learning'
-      path: '/distance-learning'
-      fullPath: '/distance-learning'
-      preLoaderRoute: typeof mainDistanceLearningRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/budget-funds': {
-      id: '/(main)/budget-funds'
-      path: '/budget-funds'
-      fullPath: '/budget-funds'
-      preLoaderRoute: typeof mainBudgetFundsRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/album': {
-      id: '/(main)/album'
-      path: '/album'
-      fullPath: '/album'
-      preLoaderRoute: typeof mainAlbumRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
-    '/(main)/administration': {
-      id: '/(main)/administration'
-      path: '/administration'
-      fullPath: '/administration'
-      preLoaderRoute: typeof mainAdministrationRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/about': {
@@ -3180,550 +2550,641 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainAboutRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/social-and-psychological-service/social-pedagogue/': {
-      id: '/social-and-psychological-service/social-pedagogue/'
-      path: '/social-pedagogue'
-      fullPath: '/social-and-psychological-service/social-pedagogue/'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    '/(main)/administration': {
+      id: '/(main)/administration'
+      path: '/administration'
+      fullPath: '/administration'
+      preLoaderRoute: typeof mainAdministrationRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/social-and-psychological-service/practical-psychologist/': {
-      id: '/social-and-psychological-service/practical-psychologist/'
-      path: '/practical-psychologist'
-      fullPath: '/social-and-psychological-service/practical-psychologist/'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistIndexRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    '/(main)/album': {
+      id: '/(main)/album'
+      path: '/album'
+      fullPath: '/album'
+      preLoaderRoute: typeof mainAlbumRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/occupational-safety/medical-care/': {
-      id: '/occupational-safety/medical-care/'
-      path: '/medical-care'
-      fullPath: '/occupational-safety/medical-care/'
-      preLoaderRoute: typeof OccupationalSafetyMedicalCareIndexRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
+    '/(main)/budget-funds': {
+      id: '/(main)/budget-funds'
+      path: '/budget-funds'
+      fullPath: '/budget-funds'
+      preLoaderRoute: typeof mainBudgetFundsRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/occupational-safety/meals/': {
-      id: '/occupational-safety/meals/'
-      path: '/meals'
-      fullPath: '/occupational-safety/meals/'
-      preLoaderRoute: typeof OccupationalSafetyMealsIndexRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
+    '/(main)/distance-learning': {
+      id: '/(main)/distance-learning'
+      path: '/distance-learning'
+      fullPath: '/distance-learning'
+      preLoaderRoute: typeof mainDistanceLearningRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/occupational-safety/covid-19/': {
-      id: '/occupational-safety/covid-19/'
-      path: '/covid-19'
-      fullPath: '/occupational-safety/covid-19/'
-      preLoaderRoute: typeof OccupationalSafetyCovid19IndexRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
+    '/(main)/energy-efficiency': {
+      id: '/(main)/energy-efficiency'
+      path: '/energy-efficiency'
+      fullPath: '/energy-efficiency'
+      preLoaderRoute: typeof mainEnergyEfficiencyRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/educational-work/national-and-patriotic-education/': {
-      id: '/educational-work/national-and-patriotic-education/'
-      path: '/national-and-patriotic-education'
-      fullPath: '/educational-work/national-and-patriotic-education/'
-      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationIndexRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
+    '/(main)/feedback': {
+      id: '/(main)/feedback'
+      path: '/feedback'
+      fullPath: '/feedback'
+      preLoaderRoute: typeof mainFeedbackRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/educational-work/falcon-squire/': {
-      id: '/educational-work/falcon-squire/'
-      path: '/falcon-squire'
-      fullPath: '/educational-work/falcon-squire/'
-      preLoaderRoute: typeof EducationalWorkFalconSquireIndexRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
+    '/(main)/graduates': {
+      id: '/(main)/graduates'
+      path: '/graduates'
+      fullPath: '/graduates'
+      preLoaderRoute: typeof mainGraduatesRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/educational-work/career-guidance-work/': {
-      id: '/educational-work/career-guidance-work/'
-      path: '/career-guidance-work'
-      fullPath: '/educational-work/career-guidance-work/'
-      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkIndexRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
+    '/(main)/history': {
+      id: '/(main)/history'
+      path: '/history'
+      fullPath: '/history'
+      preLoaderRoute: typeof mainHistoryRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/educational-work/ca-primrose/': {
-      id: '/educational-work/ca-primrose/'
-      path: '/ca-primrose'
-      fullPath: '/educational-work/ca-primrose/'
-      preLoaderRoute: typeof EducationalWorkCaPrimroseIndexRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
+    '/(main)/informant-letters': {
+      id: '/(main)/informant-letters'
+      path: '/informant-letters'
+      fullPath: '/informant-letters'
+      preLoaderRoute: typeof mainInformantLettersRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/educational-process/gifted-pupils/': {
-      id: '/educational-process/gifted-pupils/'
-      path: '/gifted-pupils'
-      fullPath: '/educational-process/gifted-pupils/'
-      preLoaderRoute: typeof EducationalProcessGiftedPupilsIndexRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
+    '/(main)/meetings-with-director': {
+      id: '/(main)/meetings-with-director'
+      path: '/meetings-with-director'
+      fullPath: '/meetings-with-director'
+      preLoaderRoute: typeof mainMeetingsWithDirectorRouteImport
+      parentRoute: typeof mainRouteRoute
     }
-    '/(main)/album/': {
-      id: '/(main)/album/'
+    '/(main)/methodological-organizational-meetings': {
+      id: '/(main)/methodological-organizational-meetings'
+      path: '/methodological-organizational-meetings'
+      fullPath: '/methodological-organizational-meetings'
+      preLoaderRoute: typeof mainMethodologicalOrganizationalMeetingsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/needs': {
+      id: '/(main)/needs'
+      path: '/needs'
+      fullPath: '/needs'
+      preLoaderRoute: typeof mainNeedsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/non-budget-funds': {
+      id: '/(main)/non-budget-funds'
+      path: '/non-budget-funds'
+      fullPath: '/non-budget-funds'
+      preLoaderRoute: typeof mainNonBudgetFundsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/parent-committee': {
+      id: '/(main)/parent-committee'
+      path: '/parent-committee'
+      fullPath: '/parent-committee'
+      preLoaderRoute: typeof mainParentCommitteeRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/pedagogical-councils': {
+      id: '/(main)/pedagogical-councils'
+      path: '/pedagogical-councils'
+      fullPath: '/pedagogical-councils'
+      preLoaderRoute: typeof mainPedagogicalCouncilsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/public-info': {
+      id: '/(main)/public-info'
+      path: '/public-info'
+      fullPath: '/public-info'
+      preLoaderRoute: typeof mainPublicInfoRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/regulatory-documents': {
+      id: '/(main)/regulatory-documents'
+      path: '/regulatory-documents'
+      fullPath: '/regulatory-documents'
+      preLoaderRoute: typeof mainRegulatoryDocumentsRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/sitemap': {
+      id: '/(main)/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof mainSitemapRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/teaching-staff': {
+      id: '/(main)/teaching-staff'
+      path: '/teaching-staff'
+      fullPath: '/teaching-staff'
+      preLoaderRoute: typeof mainTeachingStaffRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/textbooks': {
+      id: '/(main)/textbooks'
+      path: '/textbooks'
+      fullPath: '/textbooks'
+      preLoaderRoute: typeof mainTextbooksRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/educational-process/': {
+      id: '/educational-process/'
       path: '/'
-      fullPath: '/album/'
-      preLoaderRoute: typeof mainAlbumIndexRouteImport
-      parentRoute: typeof mainAlbumRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': {
-      id: '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
-      path: '/social-pedagogue/work-in-the-neighborhood'
-      fullPath: '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': {
-      id: '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
-      path: '/social-pedagogue/tips-for-teachers-on-working-with-families'
-      fullPath: '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/tips-for-teachers': {
-      id: '/social-and-psychological-service/social-pedagogue/tips-for-teachers'
-      path: '/social-pedagogue/tips-for-teachers'
-      fullPath: '/social-and-psychological-service/social-pedagogue/tips-for-teachers'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/tips-for-parents': {
-      id: '/social-and-psychological-service/social-pedagogue/tips-for-parents'
-      path: '/social-pedagogue/tips-for-parents'
-      fullPath: '/social-and-psychological-service/social-pedagogue/tips-for-parents'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/safe-internet': {
-      id: '/social-and-psychological-service/social-pedagogue/safe-internet'
-      path: '/social-pedagogue/safe-internet'
-      fullPath: '/social-and-psychological-service/social-pedagogue/safe-internet'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueSafeInternetRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/regulatory-documents': {
-      id: '/social-and-psychological-service/social-pedagogue/regulatory-documents'
-      path: '/social-pedagogue/regulatory-documents'
-      fullPath: '/social-and-psychological-service/social-pedagogue/regulatory-documents'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/information-asc': {
-      id: '/social-and-psychological-service/social-pedagogue/information-asc'
-      path: '/social-pedagogue/information-asc'
-      fullPath: '/social-and-psychological-service/social-pedagogue/information-asc'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/hotline-numbers': {
-      id: '/social-and-psychological-service/social-pedagogue/hotline-numbers'
-      path: '/social-pedagogue/hotline-numbers'
-      fullPath: '/social-and-psychological-service/social-pedagogue/hotline-numbers'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/social-pedagogue/bullying': {
-      id: '/social-and-psychological-service/social-pedagogue/bullying'
-      path: '/social-pedagogue/bullying'
-      fullPath: '/social-and-psychological-service/social-pedagogue/bullying'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/practical-psychologist/tips-for-teachers': {
-      id: '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
-      path: '/practical-psychologist/tips-for-teachers'
-      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/practical-psychologist/tips-for-pupils': {
-      id: '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
-      path: '/practical-psychologist/tips-for-pupils'
-      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/practical-psychologist/resilience-center': {
-      id: '/social-and-psychological-service/practical-psychologist/resilience-center'
-      path: '/practical-psychologist/resilience-center'
-      fullPath: '/social-and-psychological-service/practical-psychologist/resilience-center'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/practical-psychologist/regulatory-documents': {
-      id: '/social-and-psychological-service/practical-psychologist/regulatory-documents'
-      path: '/practical-psychologist/regulatory-documents'
-      fullPath: '/social-and-psychological-service/practical-psychologist/regulatory-documents'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/social-and-psychological-service/practical-psychologist/hotline-numbers': {
-      id: '/social-and-psychological-service/practical-psychologist/hotline-numbers'
-      path: '/practical-psychologist/hotline-numbers'
-      fullPath: '/social-and-psychological-service/practical-psychologist/hotline-numbers'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
-    '/parent-forum/admission-policy/grade-2-9': {
-      id: '/parent-forum/admission-policy/grade-2-9'
-      path: '/admission-policy/grade-2-9'
-      fullPath: '/parent-forum/admission-policy/grade-2-9'
-      preLoaderRoute: typeof ParentForumAdmissionPolicyGrade29RouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/parent-forum/admission-policy/grade-1': {
-      id: '/parent-forum/admission-policy/grade-1'
-      path: '/admission-policy/grade-1'
-      fullPath: '/parent-forum/admission-policy/grade-1'
-      preLoaderRoute: typeof ParentForumAdmissionPolicyGrade1RouteImport
-      parentRoute: typeof ParentForumRouteRoute
-    }
-    '/occupational-safety/medical-care/vaccinations': {
-      id: '/occupational-safety/medical-care/vaccinations'
-      path: '/medical-care/vaccinations'
-      fullPath: '/occupational-safety/medical-care/vaccinations'
-      preLoaderRoute: typeof OccupationalSafetyMedicalCareVaccinationsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/medical-care/tips': {
-      id: '/occupational-safety/medical-care/tips'
-      path: '/medical-care/tips'
-      fullPath: '/occupational-safety/medical-care/tips'
-      preLoaderRoute: typeof OccupationalSafetyMedicalCareTipsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/medical-care/medical-examination-of-employees': {
-      id: '/occupational-safety/medical-care/medical-examination-of-employees'
-      path: '/medical-care/medical-examination-of-employees'
-      fullPath: '/occupational-safety/medical-care/medical-examination-of-employees'
-      preLoaderRoute: typeof OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/meals/useful-tips': {
-      id: '/occupational-safety/meals/useful-tips'
-      path: '/meals/useful-tips'
-      fullPath: '/occupational-safety/meals/useful-tips'
-      preLoaderRoute: typeof OccupationalSafetyMealsUsefulTipsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/meals/regulatory-documents': {
-      id: '/occupational-safety/meals/regulatory-documents'
-      path: '/meals/regulatory-documents'
-      fullPath: '/occupational-safety/meals/regulatory-documents'
-      preLoaderRoute: typeof OccupationalSafetyMealsRegulatoryDocumentsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/covid-19/reminder-for-school-staff': {
-      id: '/occupational-safety/covid-19/reminder-for-school-staff'
-      path: '/covid-19/reminder-for-school-staff'
-      fullPath: '/occupational-safety/covid-19/reminder-for-school-staff'
-      preLoaderRoute: typeof OccupationalSafetyCovid19ReminderForSchoolStaffRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/covid-19/reminder-for-parents': {
-      id: '/occupational-safety/covid-19/reminder-for-parents'
-      path: '/covid-19/reminder-for-parents'
-      fullPath: '/occupational-safety/covid-19/reminder-for-parents'
-      preLoaderRoute: typeof OccupationalSafetyCovid19ReminderForParentsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/covid-19/prevention': {
-      id: '/occupational-safety/covid-19/prevention'
-      path: '/covid-19/prevention'
-      fullPath: '/occupational-safety/covid-19/prevention'
-      preLoaderRoute: typeof OccupationalSafetyCovid19PreventionRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/covid-19/algorithm-of-actions': {
-      id: '/occupational-safety/covid-19/algorithm-of-actions'
-      path: '/covid-19/algorithm-of-actions'
-      fullPath: '/occupational-safety/covid-19/algorithm-of-actions'
-      preLoaderRoute: typeof OccupationalSafetyCovid19AlgorithmOfActionsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/sesu': {
-      id: '/occupational-safety/civil-protection/sesu'
-      path: '/civil-protection/sesu'
-      fullPath: '/occupational-safety/civil-protection/sesu'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionSesuRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/safety-guide': {
-      id: '/occupational-safety/civil-protection/safety-guide'
-      path: '/civil-protection/safety-guide'
-      fullPath: '/occupational-safety/civil-protection/safety-guide'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionSafetyGuideRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/safety-abc': {
-      id: '/occupational-safety/civil-protection/safety-abc'
-      path: '/civil-protection/safety-abc'
-      fullPath: '/occupational-safety/civil-protection/safety-abc'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionSafetyAbcRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/regulatory-documents': {
-      id: '/occupational-safety/civil-protection/regulatory-documents'
-      path: '/civil-protection/regulatory-documents'
-      fullPath: '/occupational-safety/civil-protection/regulatory-documents'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionRegulatoryDocumentsRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/population-actions-during-evacuation': {
-      id: '/occupational-safety/civil-protection/population-actions-during-evacuation'
-      path: '/civil-protection/population-actions-during-evacuation'
-      fullPath: '/occupational-safety/civil-protection/population-actions-during-evacuation'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/mine-safety': {
-      id: '/occupational-safety/civil-protection/mine-safety'
-      path: '/civil-protection/mine-safety'
-      fullPath: '/occupational-safety/civil-protection/mine-safety'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionMineSafetyRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/learn-to-survive': {
-      id: '/occupational-safety/civil-protection/learn-to-survive'
-      path: '/civil-protection/learn-to-survive'
-      fullPath: '/occupational-safety/civil-protection/learn-to-survive'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionLearnToSurviveRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/hostage-taking': {
-      id: '/occupational-safety/civil-protection/hostage-taking'
-      path: '/civil-protection/hostage-taking'
-      fullPath: '/occupational-safety/civil-protection/hostage-taking'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionHostageTakingRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/evacuation': {
-      id: '/occupational-safety/civil-protection/evacuation'
-      path: '/civil-protection/evacuation'
-      fullPath: '/occupational-safety/civil-protection/evacuation'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionEvacuationRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/access-rules': {
-      id: '/occupational-safety/civil-protection/access-rules'
-      path: '/civil-protection/access-rules'
-      fullPath: '/occupational-safety/civil-protection/access-rules'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionAccessRulesRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/occupational-safety/civil-protection/access-control': {
-      id: '/occupational-safety/civil-protection/access-control'
-      path: '/civil-protection/access-control'
-      fullPath: '/occupational-safety/civil-protection/access-control'
-      preLoaderRoute: typeof OccupationalSafetyCivilProtectionAccessControlRouteImport
-      parentRoute: typeof OccupationalSafetyRouteRoute
-    }
-    '/methodical-office/teacher-certification/regulatory-documents': {
-      id: '/methodical-office/teacher-certification/regulatory-documents'
-      path: '/teacher-certification/regulatory-documents'
-      fullPath: '/methodical-office/teacher-certification/regulatory-documents'
-      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationRegulatoryDocumentsRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff': {
-      id: '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff'
-      path: '/teacher-certification/qualitative-composition-of-teaching-staff'
-      fullPath: '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff'
-      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/teacher-certification/long-term-plan': {
-      id: '/methodical-office/teacher-certification/long-term-plan'
-      path: '/teacher-certification/long-term-plan'
-      fullPath: '/methodical-office/teacher-certification/long-term-plan'
-      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationLongTermPlanRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/teacher-certification/lists-of-teachers-under-certification': {
-      id: '/methodical-office/teacher-certification/lists-of-teachers-under-certification'
-      path: '/teacher-certification/lists-of-teachers-under-certification'
-      fullPath: '/methodical-office/teacher-certification/lists-of-teachers-under-certification'
-      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/teacher-certification/indicative-professional-development-plan': {
-      id: '/methodical-office/teacher-certification/indicative-professional-development-plan'
-      path: '/teacher-certification/indicative-professional-development-plan'
-      fullPath: '/methodical-office/teacher-certification/indicative-professional-development-plan'
-      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/methodical-council/work-plan': {
-      id: '/methodical-office/methodical-council/work-plan'
-      path: '/methodical-council/work-plan'
-      fullPath: '/methodical-office/methodical-council/work-plan'
-      preLoaderRoute: typeof MethodicalOfficeMethodicalCouncilWorkPlanRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/methodical-council/regulatory-documents': {
-      id: '/methodical-office/methodical-council/regulatory-documents'
-      path: '/methodical-council/regulatory-documents'
-      fullPath: '/methodical-office/methodical-council/regulatory-documents'
-      preLoaderRoute: typeof MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/methodical-office/methodical-council/committee-members': {
-      id: '/methodical-office/methodical-council/committee-members'
-      path: '/methodical-council/committee-members'
-      fullPath: '/methodical-office/methodical-council/committee-members'
-      preLoaderRoute: typeof MethodicalOfficeMethodicalCouncilCommitteeMembersRouteImport
-      parentRoute: typeof MethodicalOfficeRouteRoute
-    }
-    '/ma-primary/methodological-achievements/pupils-work': {
-      id: '/ma-primary/methodological-achievements/pupils-work'
-      path: '/methodological-achievements/pupils-work'
-      fullPath: '/ma-primary/methodological-achievements/pupils-work'
-      preLoaderRoute: typeof MaPrimaryMethodologicalAchievementsPupilsWorkRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/ma-primary/methodological-achievements/educational-activities': {
-      id: '/ma-primary/methodological-achievements/educational-activities'
-      path: '/methodological-achievements/educational-activities'
-      fullPath: '/ma-primary/methodological-achievements/educational-activities'
-      preLoaderRoute: typeof MaPrimaryMethodologicalAchievementsEducationalActivitiesRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/ma-primary/methodological-achievements/certificates': {
-      id: '/ma-primary/methodological-achievements/certificates'
-      path: '/methodological-achievements/certificates'
-      fullPath: '/ma-primary/methodological-achievements/certificates'
-      preLoaderRoute: typeof MaPrimaryMethodologicalAchievementsCertificatesRouteImport
-      parentRoute: typeof MaPrimaryRouteRoute
-    }
-    '/educational-work/national-and-patriotic-education/report': {
-      id: '/educational-work/national-and-patriotic-education/report'
-      path: '/national-and-patriotic-education/report'
-      fullPath: '/educational-work/national-and-patriotic-education/report'
-      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationReportRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/national-and-patriotic-education/regulatory-documents': {
-      id: '/educational-work/national-and-patriotic-education/regulatory-documents'
-      path: '/national-and-patriotic-education/regulatory-documents'
-      fullPath: '/educational-work/national-and-patriotic-education/regulatory-documents'
-      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/national-and-patriotic-education/heroes-live-forever': {
-      id: '/educational-work/national-and-patriotic-education/heroes-live-forever'
-      path: '/national-and-patriotic-education/heroes-live-forever'
-      fullPath: '/educational-work/national-and-patriotic-education/heroes-live-forever'
-      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/national-and-patriotic-education/action-plans': {
-      id: '/educational-work/national-and-patriotic-education/action-plans'
-      path: '/national-and-patriotic-education/action-plans'
-      fullPath: '/educational-work/national-and-patriotic-education/action-plans'
-      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationActionPlansRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/falcon-squire/regulation': {
-      id: '/educational-work/falcon-squire/regulation'
-      path: '/falcon-squire/regulation'
-      fullPath: '/educational-work/falcon-squire/regulation'
-      preLoaderRoute: typeof EducationalWorkFalconSquireRegulationRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/falcon-squire/patrols': {
-      id: '/educational-work/falcon-squire/patrols'
-      path: '/falcon-squire/patrols'
-      fullPath: '/educational-work/falcon-squire/patrols'
-      preLoaderRoute: typeof EducationalWorkFalconSquirePatrolsRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/career-guidance-work/useful-information': {
-      id: '/educational-work/career-guidance-work/useful-information'
-      path: '/career-guidance-work/useful-information'
-      fullPath: '/educational-work/career-guidance-work/useful-information'
-      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkUsefulInformationRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/career-guidance-work/student-career-guidance-card': {
-      id: '/educational-work/career-guidance-work/student-career-guidance-card'
-      path: '/career-guidance-work/student-career-guidance-card'
-      fullPath: '/educational-work/career-guidance-work/student-career-guidance-card'
-      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/career-guidance-work/new-challenges-and-prospects': {
-      id: '/educational-work/career-guidance-work/new-challenges-and-prospects'
-      path: '/career-guidance-work/new-challenges-and-prospects'
-      fullPath: '/educational-work/career-guidance-work/new-challenges-and-prospects'
-      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/career-guidance-work/announcements': {
-      id: '/educational-work/career-guidance-work/announcements'
-      path: '/career-guidance-work/announcements'
-      fullPath: '/educational-work/career-guidance-work/announcements'
-      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkAnnouncementsRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/ca-primrose/rules': {
-      id: '/educational-work/ca-primrose/rules'
-      path: '/ca-primrose/rules'
-      fullPath: '/educational-work/ca-primrose/rules'
-      preLoaderRoute: typeof EducationalWorkCaPrimroseRulesRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/ca-primrose/directions': {
-      id: '/educational-work/ca-primrose/directions'
-      path: '/ca-primrose/directions'
-      fullPath: '/educational-work/ca-primrose/directions'
-      preLoaderRoute: typeof EducationalWorkCaPrimroseDirectionsRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/ca-primrose/conditions-for-effectiveness': {
-      id: '/educational-work/ca-primrose/conditions-for-effectiveness'
-      path: '/ca-primrose/conditions-for-effectiveness'
-      fullPath: '/educational-work/ca-primrose/conditions-for-effectiveness'
-      preLoaderRoute: typeof EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/ca-primrose/charter': {
-      id: '/educational-work/ca-primrose/charter'
-      path: '/ca-primrose/charter'
-      fullPath: '/educational-work/ca-primrose/charter'
-      preLoaderRoute: typeof EducationalWorkCaPrimroseCharterRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-process/gifted-pupils/сompetition-regulations': {
-      id: '/educational-process/gifted-pupils/сompetition-regulations'
-      path: '/gifted-pupils/сompetition-regulations'
-      fullPath: '/educational-process/gifted-pupils/сompetition-regulations'
-      preLoaderRoute: typeof EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport
+      fullPath: '/educational-process/'
+      preLoaderRoute: typeof EducationalProcessIndexRouteImport
       parentRoute: typeof EducationalProcessRouteRoute
     }
-    '/educational-process/gifted-pupils/scientific-research-work': {
-      id: '/educational-process/gifted-pupils/scientific-research-work'
-      path: '/gifted-pupils/scientific-research-work'
-      fullPath: '/educational-process/gifted-pupils/scientific-research-work'
-      preLoaderRoute: typeof EducationalProcessGiftedPupilsScientificResearchWorkRouteImport
+    '/educational-process/class-period': {
+      id: '/educational-process/class-period'
+      path: '/class-period'
+      fullPath: '/educational-process/class-period'
+      preLoaderRoute: typeof EducationalProcessClassPeriodRouteImport
       parentRoute: typeof EducationalProcessRouteRoute
     }
-    '/(main)/posts/$type': {
-      id: '/(main)/posts/$type'
-      path: '/posts/$type'
-      fullPath: '/posts/$type'
-      preLoaderRoute: typeof mainPostsTypeRouteImport
-      parentRoute: typeof mainRouteRoute
+    '/educational-process/educational-programs': {
+      id: '/educational-process/educational-programs'
+      path: '/educational-programs'
+      fullPath: '/educational-process/educational-programs'
+      preLoaderRoute: typeof EducationalProcessEducationalProgramsRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
     }
-    '/(main)/album/$id': {
-      id: '/(main)/album/$id'
-      path: '/$id'
-      fullPath: '/album/$id'
-      preLoaderRoute: typeof mainAlbumIdRouteImport
-      parentRoute: typeof mainAlbumRoute
+    '/educational-process/enrollment-transfers-graduation': {
+      id: '/educational-process/enrollment-transfers-graduation'
+      path: '/enrollment-transfers-graduation'
+      fullPath: '/educational-process/enrollment-transfers-graduation'
+      preLoaderRoute: typeof EducationalProcessEnrollmentTransfersGraduationRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
     }
-    '/(main)/achievements/teacher': {
-      id: '/(main)/achievements/teacher'
-      path: '/achievements/teacher'
-      fullPath: '/achievements/teacher'
-      preLoaderRoute: typeof mainAchievementsTeacherRouteImport
-      parentRoute: typeof mainRouteRoute
+    '/educational-process/evaluation-criteria': {
+      id: '/educational-process/evaluation-criteria'
+      path: '/evaluation-criteria'
+      fullPath: '/educational-process/evaluation-criteria'
+      preLoaderRoute: typeof EducationalProcessEvaluationCriteriaRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
     }
-    '/(main)/achievements/school-pride': {
-      id: '/(main)/achievements/school-pride'
-      path: '/achievements/school-pride'
-      fullPath: '/achievements/school-pride'
-      preLoaderRoute: typeof mainAchievementsSchoolPrideRouteImport
+    '/educational-process/instructional-methodological-recommendations': {
+      id: '/educational-process/instructional-methodological-recommendations'
+      path: '/instructional-methodological-recommendations'
+      fullPath: '/educational-process/instructional-methodological-recommendations'
+      preLoaderRoute: typeof EducationalProcessInstructionalMethodologicalRecommendationsRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/network-of-pupils': {
+      id: '/educational-process/network-of-pupils'
+      path: '/network-of-pupils'
+      fullPath: '/educational-process/network-of-pupils'
+      preLoaderRoute: typeof EducationalProcessNetworkOfPupilsRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/pupils-performance-monitoring': {
+      id: '/educational-process/pupils-performance-monitoring'
+      path: '/pupils-performance-monitoring'
+      fullPath: '/educational-process/pupils-performance-monitoring'
+      preLoaderRoute: typeof EducationalProcessPupilsPerformanceMonitoringRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/results-of-textbook-selection': {
+      id: '/educational-process/results-of-textbook-selection'
+      path: '/results-of-textbook-selection'
+      fullPath: '/educational-process/results-of-textbook-selection'
+      preLoaderRoute: typeof EducationalProcessResultsOfTextbookSelectionRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/sitemap': {
+      id: '/educational-process/sitemap'
+      path: '/sitemap'
+      fullPath: '/educational-process/sitemap'
+      preLoaderRoute: typeof EducationalProcessSitemapRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/subject-weeks': {
+      id: '/educational-process/subject-weeks'
+      path: '/subject-weeks'
+      fullPath: '/educational-process/subject-weeks'
+      preLoaderRoute: typeof EducationalProcessSubjectWeeksRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/work-plan': {
+      id: '/educational-process/work-plan'
+      path: '/work-plan'
+      fullPath: '/educational-process/work-plan'
+      preLoaderRoute: typeof EducationalProcessWorkPlanRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-work/': {
+      id: '/educational-work/'
+      path: '/'
+      fullPath: '/educational-work/'
+      preLoaderRoute: typeof EducationalWorkIndexRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/annual-summary': {
+      id: '/educational-work/annual-summary'
+      path: '/annual-summary'
+      fullPath: '/educational-work/annual-summary'
+      preLoaderRoute: typeof EducationalWorkAnnualSummaryRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/ma-class-teachers': {
+      id: '/educational-work/ma-class-teachers'
+      path: '/ma-class-teachers'
+      fullPath: '/educational-work/ma-class-teachers'
+      preLoaderRoute: typeof EducationalWorkMaClassTeachersRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/memorandum-of-cooperation': {
+      id: '/educational-work/memorandum-of-cooperation'
+      path: '/memorandum-of-cooperation'
+      fullPath: '/educational-work/memorandum-of-cooperation'
+      preLoaderRoute: typeof EducationalWorkMemorandumOfCooperationRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/parental-responsibility': {
+      id: '/educational-work/parental-responsibility'
+      path: '/parental-responsibility'
+      fullPath: '/educational-work/parental-responsibility'
+      preLoaderRoute: typeof EducationalWorkParentalResponsibilityRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/plan': {
+      id: '/educational-work/plan'
+      path: '/plan'
+      fullPath: '/educational-work/plan'
+      preLoaderRoute: typeof EducationalWorkPlanRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/rainbow': {
+      id: '/educational-work/rainbow'
+      path: '/rainbow'
+      fullPath: '/educational-work/rainbow'
+      preLoaderRoute: typeof EducationalWorkRainbowRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/regulatory-documents': {
+      id: '/educational-work/regulatory-documents'
+      path: '/regulatory-documents'
+      fullPath: '/educational-work/regulatory-documents'
+      preLoaderRoute: typeof EducationalWorkRegulatoryDocumentsRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/safe-educational-environment': {
+      id: '/educational-work/safe-educational-environment'
+      path: '/safe-educational-environment'
+      fullPath: '/educational-work/safe-educational-environment'
+      preLoaderRoute: typeof EducationalWorkSafeEducationalEnvironmentRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/safety-class': {
+      id: '/educational-work/safety-class'
+      path: '/safety-class'
+      fullPath: '/educational-work/safety-class'
+      preLoaderRoute: typeof EducationalWorkSafetyClassRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/sitemap': {
+      id: '/educational-work/sitemap'
+      path: '/sitemap'
+      fullPath: '/educational-work/sitemap'
+      preLoaderRoute: typeof EducationalWorkSitemapRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/year-of-statehood-in-key-dates': {
+      id: '/educational-work/year-of-statehood-in-key-dates'
+      path: '/year-of-statehood-in-key-dates'
+      fullPath: '/educational-work/year-of-statehood-in-key-dates'
+      preLoaderRoute: typeof EducationalWorkYearOfStatehoodInKeyDatesRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/library/': {
+      id: '/library/'
+      path: '/'
+      fullPath: '/library/'
+      preLoaderRoute: typeof LibraryIndexRouteImport
+      parentRoute: typeof LibraryRouteRoute
+    }
+    '/library/annual-plan': {
+      id: '/library/annual-plan'
+      path: '/annual-plan'
+      fullPath: '/library/annual-plan'
+      preLoaderRoute: typeof LibraryAnnualPlanRouteImport
+      parentRoute: typeof LibraryRouteRoute
+    }
+    '/library/portfolio': {
+      id: '/library/portfolio'
+      path: '/portfolio'
+      fullPath: '/library/portfolio'
+      preLoaderRoute: typeof LibraryPortfolioRouteImport
+      parentRoute: typeof LibraryRouteRoute
+    }
+    '/ma-natural-math/': {
+      id: '/ma-natural-math/'
+      path: '/'
+      fullPath: '/ma-natural-math/'
+      preLoaderRoute: typeof MaNaturalMathIndexRouteImport
+      parentRoute: typeof MaNaturalMathRouteRoute
+    }
+    '/ma-natural-math/internet-safety': {
+      id: '/ma-natural-math/internet-safety'
+      path: '/internet-safety'
+      fullPath: '/ma-natural-math/internet-safety'
+      preLoaderRoute: typeof MaNaturalMathInternetSafetyRouteImport
+      parentRoute: typeof MaNaturalMathRouteRoute
+    }
+    '/ma-natural-math/meeting-minutes': {
+      id: '/ma-natural-math/meeting-minutes'
+      path: '/meeting-minutes'
+      fullPath: '/ma-natural-math/meeting-minutes'
+      preLoaderRoute: typeof MaNaturalMathMeetingMinutesRouteImport
+      parentRoute: typeof MaNaturalMathRouteRoute
+    }
+    '/ma-natural-math/meeting-topics': {
+      id: '/ma-natural-math/meeting-topics'
+      path: '/meeting-topics'
+      fullPath: '/ma-natural-math/meeting-topics'
+      preLoaderRoute: typeof MaNaturalMathMeetingTopicsRouteImport
+      parentRoute: typeof MaNaturalMathRouteRoute
+    }
+    '/ma-natural-math/members': {
+      id: '/ma-natural-math/members'
+      path: '/members'
+      fullPath: '/ma-natural-math/members'
+      preLoaderRoute: typeof MaNaturalMathMembersRouteImport
+      parentRoute: typeof MaNaturalMathRouteRoute
+    }
+    '/ma-natural-math/work-report': {
+      id: '/ma-natural-math/work-report'
+      path: '/work-report'
+      fullPath: '/ma-natural-math/work-report'
+      preLoaderRoute: typeof MaNaturalMathWorkReportRouteImport
+      parentRoute: typeof MaNaturalMathRouteRoute
+    }
+    '/ma-primary/': {
+      id: '/ma-primary/'
+      path: '/'
+      fullPath: '/ma-primary/'
+      preLoaderRoute: typeof MaPrimaryIndexRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-primary/calendar-plan': {
+      id: '/ma-primary/calendar-plan'
+      path: '/calendar-plan'
+      fullPath: '/ma-primary/calendar-plan'
+      preLoaderRoute: typeof MaPrimaryCalendarPlanRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-primary/meeting-minutes': {
+      id: '/ma-primary/meeting-minutes'
+      path: '/meeting-minutes'
+      fullPath: '/ma-primary/meeting-minutes'
+      preLoaderRoute: typeof MaPrimaryMeetingMinutesRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-primary/meeting-topics': {
+      id: '/ma-primary/meeting-topics'
+      path: '/meeting-topics'
+      fullPath: '/ma-primary/meeting-topics'
+      preLoaderRoute: typeof MaPrimaryMeetingTopicsRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-primary/members': {
+      id: '/ma-primary/members'
+      path: '/members'
+      fullPath: '/ma-primary/members'
+      preLoaderRoute: typeof MaPrimaryMembersRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-primary/work-report': {
+      id: '/ma-primary/work-report'
+      path: '/work-report'
+      fullPath: '/ma-primary/work-report'
+      preLoaderRoute: typeof MaPrimaryWorkReportRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-social-humanitarian/': {
+      id: '/ma-social-humanitarian/'
+      path: '/'
+      fullPath: '/ma-social-humanitarian/'
+      preLoaderRoute: typeof MaSocialHumanitarianIndexRouteImport
+      parentRoute: typeof MaSocialHumanitarianRouteRoute
+    }
+    '/ma-social-humanitarian/meeting-minutes': {
+      id: '/ma-social-humanitarian/meeting-minutes'
+      path: '/meeting-minutes'
+      fullPath: '/ma-social-humanitarian/meeting-minutes'
+      preLoaderRoute: typeof MaSocialHumanitarianMeetingMinutesRouteImport
+      parentRoute: typeof MaSocialHumanitarianRouteRoute
+    }
+    '/ma-social-humanitarian/members': {
+      id: '/ma-social-humanitarian/members'
+      path: '/members'
+      fullPath: '/ma-social-humanitarian/members'
+      preLoaderRoute: typeof MaSocialHumanitarianMembersRouteImport
+      parentRoute: typeof MaSocialHumanitarianRouteRoute
+    }
+    '/ma-social-humanitarian/work-report': {
+      id: '/ma-social-humanitarian/work-report'
+      path: '/work-report'
+      fullPath: '/ma-social-humanitarian/work-report'
+      preLoaderRoute: typeof MaSocialHumanitarianWorkReportRouteImport
+      parentRoute: typeof MaSocialHumanitarianRouteRoute
+    }
+    '/methodical-office/': {
+      id: '/methodical-office/'
+      path: '/'
+      fullPath: '/methodical-office/'
+      preLoaderRoute: typeof MethodicalOfficeIndexRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/methodical-work': {
+      id: '/methodical-office/methodical-work'
+      path: '/methodical-work'
+      fullPath: '/methodical-office/methodical-work'
+      preLoaderRoute: typeof MethodicalOfficeMethodicalWorkRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/organization-of-methodical-work': {
+      id: '/methodical-office/organization-of-methodical-work'
+      path: '/organization-of-methodical-work'
+      fullPath: '/methodical-office/organization-of-methodical-work'
+      preLoaderRoute: typeof MethodicalOfficeOrganizationOfMethodicalWorkRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/recommendations': {
+      id: '/methodical-office/recommendations'
+      path: '/recommendations'
+      fullPath: '/methodical-office/recommendations'
+      preLoaderRoute: typeof MethodicalOfficeRecommendationsRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/teachers-methodological-achievements': {
+      id: '/methodical-office/teachers-methodological-achievements'
+      path: '/teachers-methodological-achievements'
+      fullPath: '/methodical-office/teachers-methodological-achievements'
+      preLoaderRoute: typeof MethodicalOfficeTeachersMethodologicalAchievementsRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/occupational-safety/': {
+      id: '/occupational-safety/'
+      path: '/'
+      fullPath: '/occupational-safety/'
+      preLoaderRoute: typeof OccupationalSafetyIndexRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/documentation': {
+      id: '/occupational-safety/documentation'
+      path: '/documentation'
+      fullPath: '/occupational-safety/documentation'
+      preLoaderRoute: typeof OccupationalSafetyDocumentationRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/health-and-hygiene-standards': {
+      id: '/occupational-safety/health-and-hygiene-standards'
+      path: '/health-and-hygiene-standards'
+      fullPath: '/occupational-safety/health-and-hygiene-standards'
+      preLoaderRoute: typeof OccupationalSafetyHealthAndHygieneStandardsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/health-and-safety-action-plan': {
+      id: '/occupational-safety/health-and-safety-action-plan'
+      path: '/health-and-safety-action-plan'
+      fullPath: '/occupational-safety/health-and-safety-action-plan'
+      preLoaderRoute: typeof OccupationalSafetyHealthAndSafetyActionPlanRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/procedure-for-educational-staff-and-participants-accident': {
+      id: '/occupational-safety/procedure-for-educational-staff-and-participants-accident'
+      path: '/procedure-for-educational-staff-and-participants-accident'
+      fullPath: '/occupational-safety/procedure-for-educational-staff-and-participants-accident'
+      preLoaderRoute: typeof OccupationalSafetyProcedureForEducationalStaffAndParticipantsAccidentRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/regulatory-documents': {
+      id: '/occupational-safety/regulatory-documents'
+      path: '/regulatory-documents'
+      fullPath: '/occupational-safety/regulatory-documents'
+      preLoaderRoute: typeof OccupationalSafetyRegulatoryDocumentsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/rules-of-conduct': {
+      id: '/occupational-safety/rules-of-conduct'
+      path: '/rules-of-conduct'
+      fullPath: '/occupational-safety/rules-of-conduct'
+      preLoaderRoute: typeof OccupationalSafetyRulesOfConductRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/safety-guide': {
+      id: '/occupational-safety/safety-guide'
+      path: '/safety-guide'
+      fullPath: '/occupational-safety/safety-guide'
+      preLoaderRoute: typeof OccupationalSafetySafetyGuideRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/sanitary-regulations': {
+      id: '/occupational-safety/sanitary-regulations'
+      path: '/sanitary-regulations'
+      fullPath: '/occupational-safety/sanitary-regulations'
+      preLoaderRoute: typeof OccupationalSafetySanitaryRegulationsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/sitemap': {
+      id: '/occupational-safety/sitemap'
+      path: '/sitemap'
+      fullPath: '/occupational-safety/sitemap'
+      preLoaderRoute: typeof OccupationalSafetySitemapRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/parent-forum/': {
+      id: '/parent-forum/'
+      path: '/'
+      fullPath: '/parent-forum/'
+      preLoaderRoute: typeof ParentForumIndexRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/50-essential-tasks-for-school-preparation': {
+      id: '/parent-forum/50-essential-tasks-for-school-preparation'
+      path: '/50-essential-tasks-for-school-preparation'
+      fullPath: '/parent-forum/50-essential-tasks-for-school-preparation'
+      preLoaderRoute: typeof ParentForum50EssentialTasksForSchoolPreparationRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/about-personal-data-protection': {
+      id: '/parent-forum/about-personal-data-protection'
+      path: '/about-personal-data-protection'
+      fullPath: '/parent-forum/about-personal-data-protection'
+      preLoaderRoute: typeof ParentForumAboutPersonalDataProtectionRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/access-control': {
+      id: '/parent-forum/access-control'
+      path: '/access-control'
+      fullPath: '/parent-forum/access-control'
+      preLoaderRoute: typeof ParentForumAccessControlRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/access-rules': {
+      id: '/parent-forum/access-rules'
+      path: '/access-rules'
+      fullPath: '/parent-forum/access-rules'
+      preLoaderRoute: typeof ParentForumAccessRulesRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/developmental-age-norms': {
+      id: '/parent-forum/developmental-age-norms'
+      path: '/developmental-age-norms'
+      fullPath: '/parent-forum/developmental-age-norms'
+      preLoaderRoute: typeof ParentForumDevelopmentalAgeNormsRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/preparing-5-year-olds-for-school': {
+      id: '/parent-forum/preparing-5-year-olds-for-school'
+      path: '/preparing-5-year-olds-for-school'
+      fullPath: '/parent-forum/preparing-5-year-olds-for-school'
+      preLoaderRoute: typeof ParentForumPreparing5YearOldsForSchoolRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/sitemap': {
+      id: '/parent-forum/sitemap'
+      path: '/sitemap'
+      fullPath: '/parent-forum/sitemap'
+      preLoaderRoute: typeof ParentForumSitemapRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/tips-for-parents': {
+      id: '/parent-forum/tips-for-parents'
+      path: '/tips-for-parents'
+      fullPath: '/parent-forum/tips-for-parents'
+      preLoaderRoute: typeof ParentForumTipsForParentsRouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/social-and-psychological-service/': {
+      id: '/social-and-psychological-service/'
+      path: '/'
+      fullPath: '/social-and-psychological-service/'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceIndexRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/sitemap': {
+      id: '/social-and-psychological-service/sitemap'
+      path: '/sitemap'
+      fullPath: '/social-and-psychological-service/sitemap'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSitemapRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/speech-therapist': {
+      id: '/social-and-psychological-service/speech-therapist'
+      path: '/speech-therapist'
+      fullPath: '/social-and-psychological-service/speech-therapist'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/(main)/achievements/pupil': {
+      id: '/(main)/achievements/pupil'
+      path: '/achievements/pupil'
+      fullPath: '/achievements/pupil'
+      preLoaderRoute: typeof mainAchievementsPupilRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/achievements/school': {
@@ -3733,18 +3194,550 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainAchievementsSchoolRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/achievements/pupil': {
-      id: '/(main)/achievements/pupil'
-      path: '/achievements/pupil'
-      fullPath: '/achievements/pupil'
-      preLoaderRoute: typeof mainAchievementsPupilRouteImport
+    '/(main)/achievements/school-pride': {
+      id: '/(main)/achievements/school-pride'
+      path: '/achievements/school-pride'
+      fullPath: '/achievements/school-pride'
+      preLoaderRoute: typeof mainAchievementsSchoolPrideRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/social-and-psychological-service/practical-psychologist/tips-for-parents/': {
-      id: '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
-      path: '/practical-psychologist/tips-for-parents'
-      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport
+    '/(main)/achievements/teacher': {
+      id: '/(main)/achievements/teacher'
+      path: '/achievements/teacher'
+      fullPath: '/achievements/teacher'
+      preLoaderRoute: typeof mainAchievementsTeacherRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/(main)/album/': {
+      id: '/(main)/album/'
+      path: '/'
+      fullPath: '/album/'
+      preLoaderRoute: typeof mainAlbumIndexRouteImport
+      parentRoute: typeof mainAlbumRoute
+    }
+    '/(main)/album/$id': {
+      id: '/(main)/album/$id'
+      path: '/$id'
+      fullPath: '/album/$id'
+      preLoaderRoute: typeof mainAlbumIdRouteImport
+      parentRoute: typeof mainAlbumRoute
+    }
+    '/(main)/posts/$type': {
+      id: '/(main)/posts/$type'
+      path: '/posts/$type'
+      fullPath: '/posts/$type'
+      preLoaderRoute: typeof mainPostsTypeRouteImport
+      parentRoute: typeof mainRouteRoute
+    }
+    '/educational-process/gifted-pupils/': {
+      id: '/educational-process/gifted-pupils/'
+      path: '/gifted-pupils'
+      fullPath: '/educational-process/gifted-pupils/'
+      preLoaderRoute: typeof EducationalProcessGiftedPupilsIndexRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/gifted-pupils/scientific-research-work': {
+      id: '/educational-process/gifted-pupils/scientific-research-work'
+      path: '/gifted-pupils/scientific-research-work'
+      fullPath: '/educational-process/gifted-pupils/scientific-research-work'
+      preLoaderRoute: typeof EducationalProcessGiftedPupilsScientificResearchWorkRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/gifted-pupils/сompetition-regulations': {
+      id: '/educational-process/gifted-pupils/сompetition-regulations'
+      path: '/gifted-pupils/сompetition-regulations'
+      fullPath: '/educational-process/gifted-pupils/сompetition-regulations'
+      preLoaderRoute: typeof EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-work/ca-primrose/': {
+      id: '/educational-work/ca-primrose/'
+      path: '/ca-primrose'
+      fullPath: '/educational-work/ca-primrose/'
+      preLoaderRoute: typeof EducationalWorkCaPrimroseIndexRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/ca-primrose/charter': {
+      id: '/educational-work/ca-primrose/charter'
+      path: '/ca-primrose/charter'
+      fullPath: '/educational-work/ca-primrose/charter'
+      preLoaderRoute: typeof EducationalWorkCaPrimroseCharterRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/ca-primrose/conditions-for-effectiveness': {
+      id: '/educational-work/ca-primrose/conditions-for-effectiveness'
+      path: '/ca-primrose/conditions-for-effectiveness'
+      fullPath: '/educational-work/ca-primrose/conditions-for-effectiveness'
+      preLoaderRoute: typeof EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/ca-primrose/directions': {
+      id: '/educational-work/ca-primrose/directions'
+      path: '/ca-primrose/directions'
+      fullPath: '/educational-work/ca-primrose/directions'
+      preLoaderRoute: typeof EducationalWorkCaPrimroseDirectionsRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/ca-primrose/rules': {
+      id: '/educational-work/ca-primrose/rules'
+      path: '/ca-primrose/rules'
+      fullPath: '/educational-work/ca-primrose/rules'
+      preLoaderRoute: typeof EducationalWorkCaPrimroseRulesRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/career-guidance-work/': {
+      id: '/educational-work/career-guidance-work/'
+      path: '/career-guidance-work'
+      fullPath: '/educational-work/career-guidance-work/'
+      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkIndexRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/career-guidance-work/announcements': {
+      id: '/educational-work/career-guidance-work/announcements'
+      path: '/career-guidance-work/announcements'
+      fullPath: '/educational-work/career-guidance-work/announcements'
+      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkAnnouncementsRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/career-guidance-work/new-challenges-and-prospects': {
+      id: '/educational-work/career-guidance-work/new-challenges-and-prospects'
+      path: '/career-guidance-work/new-challenges-and-prospects'
+      fullPath: '/educational-work/career-guidance-work/new-challenges-and-prospects'
+      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/career-guidance-work/student-career-guidance-card': {
+      id: '/educational-work/career-guidance-work/student-career-guidance-card'
+      path: '/career-guidance-work/student-career-guidance-card'
+      fullPath: '/educational-work/career-guidance-work/student-career-guidance-card'
+      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/career-guidance-work/useful-information': {
+      id: '/educational-work/career-guidance-work/useful-information'
+      path: '/career-guidance-work/useful-information'
+      fullPath: '/educational-work/career-guidance-work/useful-information'
+      preLoaderRoute: typeof EducationalWorkCareerGuidanceWorkUsefulInformationRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/falcon-squire/': {
+      id: '/educational-work/falcon-squire/'
+      path: '/falcon-squire'
+      fullPath: '/educational-work/falcon-squire/'
+      preLoaderRoute: typeof EducationalWorkFalconSquireIndexRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/falcon-squire/patrols': {
+      id: '/educational-work/falcon-squire/patrols'
+      path: '/falcon-squire/patrols'
+      fullPath: '/educational-work/falcon-squire/patrols'
+      preLoaderRoute: typeof EducationalWorkFalconSquirePatrolsRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/falcon-squire/regulation': {
+      id: '/educational-work/falcon-squire/regulation'
+      path: '/falcon-squire/regulation'
+      fullPath: '/educational-work/falcon-squire/regulation'
+      preLoaderRoute: typeof EducationalWorkFalconSquireRegulationRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/national-and-patriotic-education/': {
+      id: '/educational-work/national-and-patriotic-education/'
+      path: '/national-and-patriotic-education'
+      fullPath: '/educational-work/national-and-patriotic-education/'
+      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationIndexRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/national-and-patriotic-education/action-plans': {
+      id: '/educational-work/national-and-patriotic-education/action-plans'
+      path: '/national-and-patriotic-education/action-plans'
+      fullPath: '/educational-work/national-and-patriotic-education/action-plans'
+      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationActionPlansRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/national-and-patriotic-education/heroes-live-forever': {
+      id: '/educational-work/national-and-patriotic-education/heroes-live-forever'
+      path: '/national-and-patriotic-education/heroes-live-forever'
+      fullPath: '/educational-work/national-and-patriotic-education/heroes-live-forever'
+      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/national-and-patriotic-education/regulatory-documents': {
+      id: '/educational-work/national-and-patriotic-education/regulatory-documents'
+      path: '/national-and-patriotic-education/regulatory-documents'
+      fullPath: '/educational-work/national-and-patriotic-education/regulatory-documents'
+      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/national-and-patriotic-education/report': {
+      id: '/educational-work/national-and-patriotic-education/report'
+      path: '/national-and-patriotic-education/report'
+      fullPath: '/educational-work/national-and-patriotic-education/report'
+      preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationReportRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/ma-primary/methodological-achievements/certificates': {
+      id: '/ma-primary/methodological-achievements/certificates'
+      path: '/methodological-achievements/certificates'
+      fullPath: '/ma-primary/methodological-achievements/certificates'
+      preLoaderRoute: typeof MaPrimaryMethodologicalAchievementsCertificatesRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-primary/methodological-achievements/educational-activities': {
+      id: '/ma-primary/methodological-achievements/educational-activities'
+      path: '/methodological-achievements/educational-activities'
+      fullPath: '/ma-primary/methodological-achievements/educational-activities'
+      preLoaderRoute: typeof MaPrimaryMethodologicalAchievementsEducationalActivitiesRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/ma-primary/methodological-achievements/pupils-work': {
+      id: '/ma-primary/methodological-achievements/pupils-work'
+      path: '/methodological-achievements/pupils-work'
+      fullPath: '/ma-primary/methodological-achievements/pupils-work'
+      preLoaderRoute: typeof MaPrimaryMethodologicalAchievementsPupilsWorkRouteImport
+      parentRoute: typeof MaPrimaryRouteRoute
+    }
+    '/methodical-office/methodical-council/committee-members': {
+      id: '/methodical-office/methodical-council/committee-members'
+      path: '/methodical-council/committee-members'
+      fullPath: '/methodical-office/methodical-council/committee-members'
+      preLoaderRoute: typeof MethodicalOfficeMethodicalCouncilCommitteeMembersRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/methodical-council/regulatory-documents': {
+      id: '/methodical-office/methodical-council/regulatory-documents'
+      path: '/methodical-council/regulatory-documents'
+      fullPath: '/methodical-office/methodical-council/regulatory-documents'
+      preLoaderRoute: typeof MethodicalOfficeMethodicalCouncilRegulatoryDocumentsRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/methodical-council/work-plan': {
+      id: '/methodical-office/methodical-council/work-plan'
+      path: '/methodical-council/work-plan'
+      fullPath: '/methodical-office/methodical-council/work-plan'
+      preLoaderRoute: typeof MethodicalOfficeMethodicalCouncilWorkPlanRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/teacher-certification/indicative-professional-development-plan': {
+      id: '/methodical-office/teacher-certification/indicative-professional-development-plan'
+      path: '/teacher-certification/indicative-professional-development-plan'
+      fullPath: '/methodical-office/teacher-certification/indicative-professional-development-plan'
+      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationIndicativeProfessionalDevelopmentPlanRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/teacher-certification/lists-of-teachers-under-certification': {
+      id: '/methodical-office/teacher-certification/lists-of-teachers-under-certification'
+      path: '/teacher-certification/lists-of-teachers-under-certification'
+      fullPath: '/methodical-office/teacher-certification/lists-of-teachers-under-certification'
+      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationListsOfTeachersUnderCertificationRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/teacher-certification/long-term-plan': {
+      id: '/methodical-office/teacher-certification/long-term-plan'
+      path: '/teacher-certification/long-term-plan'
+      fullPath: '/methodical-office/teacher-certification/long-term-plan'
+      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationLongTermPlanRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff': {
+      id: '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff'
+      path: '/teacher-certification/qualitative-composition-of-teaching-staff'
+      fullPath: '/methodical-office/teacher-certification/qualitative-composition-of-teaching-staff'
+      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationQualitativeCompositionOfTeachingStaffRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/methodical-office/teacher-certification/regulatory-documents': {
+      id: '/methodical-office/teacher-certification/regulatory-documents'
+      path: '/teacher-certification/regulatory-documents'
+      fullPath: '/methodical-office/teacher-certification/regulatory-documents'
+      preLoaderRoute: typeof MethodicalOfficeTeacherCertificationRegulatoryDocumentsRouteImport
+      parentRoute: typeof MethodicalOfficeRouteRoute
+    }
+    '/occupational-safety/civil-protection/access-control': {
+      id: '/occupational-safety/civil-protection/access-control'
+      path: '/civil-protection/access-control'
+      fullPath: '/occupational-safety/civil-protection/access-control'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionAccessControlRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/access-rules': {
+      id: '/occupational-safety/civil-protection/access-rules'
+      path: '/civil-protection/access-rules'
+      fullPath: '/occupational-safety/civil-protection/access-rules'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionAccessRulesRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/evacuation': {
+      id: '/occupational-safety/civil-protection/evacuation'
+      path: '/civil-protection/evacuation'
+      fullPath: '/occupational-safety/civil-protection/evacuation'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionEvacuationRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/hostage-taking': {
+      id: '/occupational-safety/civil-protection/hostage-taking'
+      path: '/civil-protection/hostage-taking'
+      fullPath: '/occupational-safety/civil-protection/hostage-taking'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionHostageTakingRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/learn-to-survive': {
+      id: '/occupational-safety/civil-protection/learn-to-survive'
+      path: '/civil-protection/learn-to-survive'
+      fullPath: '/occupational-safety/civil-protection/learn-to-survive'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionLearnToSurviveRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/mine-safety': {
+      id: '/occupational-safety/civil-protection/mine-safety'
+      path: '/civil-protection/mine-safety'
+      fullPath: '/occupational-safety/civil-protection/mine-safety'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionMineSafetyRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/population-actions-during-evacuation': {
+      id: '/occupational-safety/civil-protection/population-actions-during-evacuation'
+      path: '/civil-protection/population-actions-during-evacuation'
+      fullPath: '/occupational-safety/civil-protection/population-actions-during-evacuation'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionPopulationActionsDuringEvacuationRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/regulatory-documents': {
+      id: '/occupational-safety/civil-protection/regulatory-documents'
+      path: '/civil-protection/regulatory-documents'
+      fullPath: '/occupational-safety/civil-protection/regulatory-documents'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionRegulatoryDocumentsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/safety-abc': {
+      id: '/occupational-safety/civil-protection/safety-abc'
+      path: '/civil-protection/safety-abc'
+      fullPath: '/occupational-safety/civil-protection/safety-abc'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionSafetyAbcRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/safety-guide': {
+      id: '/occupational-safety/civil-protection/safety-guide'
+      path: '/civil-protection/safety-guide'
+      fullPath: '/occupational-safety/civil-protection/safety-guide'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionSafetyGuideRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/civil-protection/sesu': {
+      id: '/occupational-safety/civil-protection/sesu'
+      path: '/civil-protection/sesu'
+      fullPath: '/occupational-safety/civil-protection/sesu'
+      preLoaderRoute: typeof OccupationalSafetyCivilProtectionSesuRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/covid-19/': {
+      id: '/occupational-safety/covid-19/'
+      path: '/covid-19'
+      fullPath: '/occupational-safety/covid-19/'
+      preLoaderRoute: typeof OccupationalSafetyCovid19IndexRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/covid-19/algorithm-of-actions': {
+      id: '/occupational-safety/covid-19/algorithm-of-actions'
+      path: '/covid-19/algorithm-of-actions'
+      fullPath: '/occupational-safety/covid-19/algorithm-of-actions'
+      preLoaderRoute: typeof OccupationalSafetyCovid19AlgorithmOfActionsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/covid-19/prevention': {
+      id: '/occupational-safety/covid-19/prevention'
+      path: '/covid-19/prevention'
+      fullPath: '/occupational-safety/covid-19/prevention'
+      preLoaderRoute: typeof OccupationalSafetyCovid19PreventionRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/covid-19/reminder-for-parents': {
+      id: '/occupational-safety/covid-19/reminder-for-parents'
+      path: '/covid-19/reminder-for-parents'
+      fullPath: '/occupational-safety/covid-19/reminder-for-parents'
+      preLoaderRoute: typeof OccupationalSafetyCovid19ReminderForParentsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/covid-19/reminder-for-school-staff': {
+      id: '/occupational-safety/covid-19/reminder-for-school-staff'
+      path: '/covid-19/reminder-for-school-staff'
+      fullPath: '/occupational-safety/covid-19/reminder-for-school-staff'
+      preLoaderRoute: typeof OccupationalSafetyCovid19ReminderForSchoolStaffRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/meals/': {
+      id: '/occupational-safety/meals/'
+      path: '/meals'
+      fullPath: '/occupational-safety/meals/'
+      preLoaderRoute: typeof OccupationalSafetyMealsIndexRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/meals/regulatory-documents': {
+      id: '/occupational-safety/meals/regulatory-documents'
+      path: '/meals/regulatory-documents'
+      fullPath: '/occupational-safety/meals/regulatory-documents'
+      preLoaderRoute: typeof OccupationalSafetyMealsRegulatoryDocumentsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/meals/useful-tips': {
+      id: '/occupational-safety/meals/useful-tips'
+      path: '/meals/useful-tips'
+      fullPath: '/occupational-safety/meals/useful-tips'
+      preLoaderRoute: typeof OccupationalSafetyMealsUsefulTipsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/medical-care/': {
+      id: '/occupational-safety/medical-care/'
+      path: '/medical-care'
+      fullPath: '/occupational-safety/medical-care/'
+      preLoaderRoute: typeof OccupationalSafetyMedicalCareIndexRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/medical-care/medical-examination-of-employees': {
+      id: '/occupational-safety/medical-care/medical-examination-of-employees'
+      path: '/medical-care/medical-examination-of-employees'
+      fullPath: '/occupational-safety/medical-care/medical-examination-of-employees'
+      preLoaderRoute: typeof OccupationalSafetyMedicalCareMedicalExaminationOfEmployeesRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/medical-care/tips': {
+      id: '/occupational-safety/medical-care/tips'
+      path: '/medical-care/tips'
+      fullPath: '/occupational-safety/medical-care/tips'
+      preLoaderRoute: typeof OccupationalSafetyMedicalCareTipsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/medical-care/vaccinations': {
+      id: '/occupational-safety/medical-care/vaccinations'
+      path: '/medical-care/vaccinations'
+      fullPath: '/occupational-safety/medical-care/vaccinations'
+      preLoaderRoute: typeof OccupationalSafetyMedicalCareVaccinationsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/parent-forum/admission-policy/grade-1': {
+      id: '/parent-forum/admission-policy/grade-1'
+      path: '/admission-policy/grade-1'
+      fullPath: '/parent-forum/admission-policy/grade-1'
+      preLoaderRoute: typeof ParentForumAdmissionPolicyGrade1RouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/parent-forum/admission-policy/grade-2-9': {
+      id: '/parent-forum/admission-policy/grade-2-9'
+      path: '/admission-policy/grade-2-9'
+      fullPath: '/parent-forum/admission-policy/grade-2-9'
+      preLoaderRoute: typeof ParentForumAdmissionPolicyGrade29RouteImport
+      parentRoute: typeof ParentForumRouteRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/': {
+      id: '/social-and-psychological-service/practical-psychologist/'
+      path: '/practical-psychologist'
+      fullPath: '/social-and-psychological-service/practical-psychologist/'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistIndexRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/hotline-numbers': {
+      id: '/social-and-psychological-service/practical-psychologist/hotline-numbers'
+      path: '/practical-psychologist/hotline-numbers'
+      fullPath: '/social-and-psychological-service/practical-psychologist/hotline-numbers'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistHotlineNumbersRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/regulatory-documents': {
+      id: '/social-and-psychological-service/practical-psychologist/regulatory-documents'
+      path: '/practical-psychologist/regulatory-documents'
+      fullPath: '/social-and-psychological-service/practical-psychologist/regulatory-documents'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistRegulatoryDocumentsRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/resilience-center': {
+      id: '/social-and-psychological-service/practical-psychologist/resilience-center'
+      path: '/practical-psychologist/resilience-center'
+      fullPath: '/social-and-psychological-service/practical-psychologist/resilience-center'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/tips-for-pupils': {
+      id: '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
+      path: '/practical-psychologist/tips-for-pupils'
+      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/tips-for-teachers': {
+      id: '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
+      path: '/practical-psychologist/tips-for-teachers'
+      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/': {
+      id: '/social-and-psychological-service/social-pedagogue/'
+      path: '/social-pedagogue'
+      fullPath: '/social-and-psychological-service/social-pedagogue/'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/bullying': {
+      id: '/social-and-psychological-service/social-pedagogue/bullying'
+      path: '/social-pedagogue/bullying'
+      fullPath: '/social-and-psychological-service/social-pedagogue/bullying'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/hotline-numbers': {
+      id: '/social-and-psychological-service/social-pedagogue/hotline-numbers'
+      path: '/social-pedagogue/hotline-numbers'
+      fullPath: '/social-and-psychological-service/social-pedagogue/hotline-numbers'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/information-asc': {
+      id: '/social-and-psychological-service/social-pedagogue/information-asc'
+      path: '/social-pedagogue/information-asc'
+      fullPath: '/social-and-psychological-service/social-pedagogue/information-asc'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/regulatory-documents': {
+      id: '/social-and-psychological-service/social-pedagogue/regulatory-documents'
+      path: '/social-pedagogue/regulatory-documents'
+      fullPath: '/social-and-psychological-service/social-pedagogue/regulatory-documents'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/safe-internet': {
+      id: '/social-and-psychological-service/social-pedagogue/safe-internet'
+      path: '/social-pedagogue/safe-internet'
+      fullPath: '/social-and-psychological-service/social-pedagogue/safe-internet'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueSafeInternetRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/tips-for-parents': {
+      id: '/social-and-psychological-service/social-pedagogue/tips-for-parents'
+      path: '/social-pedagogue/tips-for-parents'
+      fullPath: '/social-and-psychological-service/social-pedagogue/tips-for-parents'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForParentsRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/tips-for-teachers': {
+      id: '/social-and-psychological-service/social-pedagogue/tips-for-teachers'
+      path: '/social-pedagogue/tips-for-teachers'
+      fullPath: '/social-and-psychological-service/social-pedagogue/tips-for-teachers'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': {
+      id: '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
+      path: '/social-pedagogue/tips-for-teachers-on-working-with-families'
+      fullPath: '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': {
+      id: '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
+      path: '/social-pedagogue/work-in-the-neighborhood'
+      fullPath: '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
     '/(main)/posts/$type/': {
@@ -3754,19 +3747,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainPostsTypeIndexRouteImport
       parentRoute: typeof mainPostsTypeRoute
     }
-    '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id': {
-      id: '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
-      path: '/practical-psychologist/tips-for-parents/$id'
-      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
-      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
     '/(main)/posts/$type/$id': {
       id: '/(main)/posts/$type/$id'
       path: '/$id'
       fullPath: '/posts/$type/$id'
       preLoaderRoute: typeof mainPostsTypeIdRouteImport
       parentRoute: typeof mainPostsTypeRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/tips-for-parents/': {
+      id: '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
+      path: '/practical-psychologist/tips-for-parents'
+      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-parents/'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id': {
+      id: '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
+      path: '/practical-psychologist/tips-for-parents/$id'
+      fullPath: '/social-and-psychological-service/practical-psychologist/tips-for-parents/$id'
+      preLoaderRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIdRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
     '/api/github/sha/$repo/$sha': {
       id: '/api/github/sha/$repo/$sha'

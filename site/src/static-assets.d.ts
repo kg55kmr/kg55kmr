@@ -182,8 +182,6 @@ declare module 'virtual:static-assets' {
     "images/практичний-психолог-2.jpg" |
     "images/прапор-україни-1.jpg" |
     "images/прапор-україни-2.jpg" |
-    "images/працівники/алтинбаєва-2.jpg" |
-    "images/працівники/алтинбаєва.jpg" |
     "images/працівники/артемюк.jpg" |
     "images/працівники/балагуряк.jpg" |
     "images/працівники/гнатюк.jpg" |
@@ -192,7 +190,6 @@ declare module 'virtual:static-assets' {
     "images/працівники/гудзовський.jpg" |
     "images/працівники/давидов.jpg" |
     "images/працівники/добровольська.jpg" |
-    "images/працівники/довмат.jpg" |
     "images/працівники/дубачинська.jpg" |
     "images/працівники/загальне-фото.jpg" |
     "images/працівники/заярнюк.jpg" |

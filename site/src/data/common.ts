@@ -9,8 +9,8 @@ export const address = [
 ];
 
 export const academicYear = {
-  start: 2025,
-  end: 2026,
+  start: 2026,
+  end: 2027,
   get toSlash() {
     return `${this.start}/${this.end}`;
   },

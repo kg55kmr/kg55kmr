@@ -31,14 +31,9 @@ function RouteComponent() {
           Савченко О. Я.), затвердженою наказом МОН України від 08.10.2019 №1273
         </li>
         <li>
-          <b>для 5-8 класів</b> - за Типовою освітньою програмою для 5-9 класів
-          закладів загальної середньої освіти , затвердженою за наказом МОН
-          України від 19.02.2021 № 235
-        </li>
-        <li>
-          <b>для 9 класів</b> - за Типовою освітньою програмою закладів
-          загальної середньої освіти ІІ ступеня, затвердженою за наказом МОН
-          України від 20.04.2018 № 405
+          <b>для 5-9 класів</b> - за Типовою освітньою програмою для 5-9 класів
+          закладів загальної середньої освіти, затвердженою за наказом МОН
+          України від 17.08.2026 № 1430
         </li>
       </ul>
       <p>
@@ -69,14 +64,15 @@ function RouteComponent() {
         . Заняття проводяться за семестровою системою, орієнтовно у такі
         терміни:
       </p>
-      <table className="">
+      <table>
         <tbody>
           <tr>
             <td className="pl-5 text-right">
               <b>І семестр</b>:
             </td>
             <td className="pl-2">
-              {formatDate(semesters[0].start)} - {formatDate(semesters[0].end)}
+              {formatDate(semesters[0].start, academicYear.start)} -{" "}
+              {formatDate(semesters[0].end, academicYear.start)}
             </td>
           </tr>
           <tr>
@@ -84,7 +80,8 @@ function RouteComponent() {
               <b>ІІ семестр</b>:
             </td>
             <td className="pl-2">
-              {formatDate(semesters[1].start)} - {formatDate(semesters[1].end)}
+              {formatDate(semesters[1].start, academicYear.end)} -{" "}
+              {formatDate(semesters[1].end, academicYear.end)}
             </td>
           </tr>
         </tbody>
@@ -97,7 +94,8 @@ function RouteComponent() {
               <b>Осінні</b>:
             </td>
             <td className="pl-2">
-              {formatDate(vacation[0].start)} - {formatDate(vacation[0].end)}
+              {formatDate(vacations[0].start, academicYear.start)} -{" "}
+              {formatDate(vacations[0].end, academicYear.start)}
             </td>
           </tr>
           <tr>
@@ -105,7 +103,8 @@ function RouteComponent() {
               <b>Зимові</b>:
             </td>
             <td className="pl-2">
-              {formatDate(vacation[1].start)} - {formatDate(vacation[1].end)}
+              {formatDate(vacations[1].start, academicYear.start)} -{" "}
+              {formatDate(vacations[1].end, academicYear.end)}
             </td>
           </tr>
           <tr>
@@ -113,14 +112,15 @@ function RouteComponent() {
               <b>Весняні</b>:
             </td>
             <td className="pl-2">
-              {formatDate(vacation[2].start)} - {formatDate(vacation[2].end)}
+              {formatDate(vacations[2].start, academicYear.end)} -{" "}
+              {formatDate(vacations[2].end, academicYear.end)}
             </td>
           </tr>
         </tbody>
       </table>
       <p>
         Навчальні заняття організуються за семестровою системою. Завершуються
-        орієнтовно <b>29 травня {academicYear.end} року</b>.
+        орієнтовно <b>30 травня {academicYear.end} року</b>.
       </p>
     </div>
   );
@@ -136,21 +136,17 @@ const plans = [
     url: "https://drive.google.com/file/d/1urz9ndd4WLkljXF7MabvMdL2XM3OOzUS/view",
   },
   {
-    class: "8",
-    url: "https://drive.google.com/file/d/1__8AiTkuxwQubEn3OkPej-RDWE_l5_CW/view",
-  },
-  {
-    class: "9",
-    url: "https://drive.google.com/file/d/1x5GvwVfSwrqV_PdGcGUEnpBho198LTJI/view",
+    class: "8-9",
+    url: "https://drive.google.com/file/d/1fGqTDbLjomkFMyfNCrl06fKEziqNlGqX/view",
   },
 ];
 
 const semesters = [
-  { start: [1, 9, academicYear.start], end: [24, 12, academicYear.start] },
-  { start: [12, 1, academicYear.end], end: [29, 5, academicYear.end] },
+  { start: [1, 9], end: [25, 12] },
+  { start: [11, 1], end: [31, 5] },
 ];
 
-const vacation = [
+const vacations = [
   {
     start: [27, 10, academicYear.start],
     end: [2, 11, academicYear.start],
@@ -165,9 +161,8 @@ const vacation = [
   },
 ];
 
-function formatDate(components: number[]) {
+function formatDate(components: number[], year: number) {
   const day = components[0].toString().padStart(2, "0");
   const month = components[1].toString().padStart(2, "0");
-  const year = components[2];
   return `${day}.${month}.${year}`;
 }

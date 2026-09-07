@@ -50,18 +50,32 @@ export async function getSheetContent(opts: { id: string }): Promise<Sheet[]> {
 
         if (!rows[rowIndex]) rows[rowIndex] = [];
 
-        const userEnteredValue = row[colIndex].userEnteredValue;
+        const col = row[colIndex];
         const value =
-          userEnteredValue?.stringValue ??
-          userEnteredValue?.numberValue?.toString() ??
+          col.effectiveValue?.stringValue ??
+          col.effectiveValue?.numberValue?.toString() ??
           "";
 
-        if (!value) {
-          colIndex++;
-          continue;
-        }
+        const horizontalAligment =
+          col.effectiveFormat?.horizontalAlignment ?? undefined;
+        const verticalAligment =
+          col.effectiveFormat?.verticalAlignment ?? undefined;
 
-        rows[rowIndex][colIndex] = { value, ...spanItem };
+        const bold = col.effectiveFormat?.textFormat?.bold ? true : undefined;
+        const bg = col.effectiveFormat?.backgroundColorStyle?.rgbColor;
+
+        rows[rowIndex][colIndex] = {
+          value,
+          ...spanItem,
+          horizontalAligment,
+          verticalAligment,
+          bold,
+          bg: {
+            r: (bg?.red ?? 0) * 255,
+            g: (bg?.green ?? 0) * 255,
+            b: (bg?.blue ?? 0) * 255,
+          },
+        };
 
         if (spanItem) {
           if (spanItem.rowSpan > 1) {
@@ -92,4 +106,12 @@ export type SheetCell = {
   value: string;
   rowSpan?: number;
   colSpan?: number;
+  bold?: boolean;
+  horizontalAligment?: string;
+  verticalAligment?: string;
+  bg: {
+    r: number;
+    g: number;
+    b: number;
+  };
 };

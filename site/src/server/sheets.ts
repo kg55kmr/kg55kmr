@@ -38,7 +38,7 @@ export async function getSheetContent(opts: { id: string }): Promise<Sheet[]> {
       const row = rowData[rowIndex].values;
       if (!row) continue;
 
-      for (let colIndex = 0; colIndex < row.length; ) {
+      for (let colIndex = 0; colIndex < row.length;) {
         const skipColSpan = skip.get(`${rowIndex}${colIndex}`);
         if (skipColSpan) {
           colIndex += skipColSpan;

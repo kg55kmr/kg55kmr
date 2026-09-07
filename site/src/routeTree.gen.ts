@@ -100,6 +100,7 @@ import { Route as OccupationalSafetyRegulatoryDocumentsRouteImport } from './rou
 import { Route as OccupationalSafetyRulesOfConductRouteImport } from './routes/occupational-safety/rules-of-conduct'
 import { Route as OccupationalSafetySafetyGuideRouteImport } from './routes/occupational-safety/safety-guide'
 import { Route as OccupationalSafetySanitaryRegulationsRouteImport } from './routes/occupational-safety/sanitary-regulations'
+import { Route as OccupationalSafetyShelterRouteImport } from './routes/occupational-safety/shelter'
 import { Route as OccupationalSafetySitemapRouteImport } from './routes/occupational-safety/sitemap'
 import { Route as ParentForumIndexRouteImport } from './routes/parent-forum/index'
 import { Route as ParentForum50EssentialTasksForSchoolPreparationRouteImport } from './routes/parent-forum/50-essential-tasks-for-school-preparation'
@@ -697,6 +698,12 @@ const OccupationalSafetySanitaryRegulationsRoute =
   OccupationalSafetySanitaryRegulationsRouteImport.update({
     id: '/sanitary-regulations',
     path: '/sanitary-regulations',
+    getParentRoute: () => OccupationalSafetyRouteRoute,
+  } as any)
+const OccupationalSafetyShelterRoute =
+  OccupationalSafetyShelterRouteImport.update({
+    id: '/shelter',
+    path: '/shelter',
     getParentRoute: () => OccupationalSafetyRouteRoute,
   } as any)
 const OccupationalSafetySitemapRoute =
@@ -1394,6 +1401,7 @@ export interface FileRoutesByFullPath {
   '/occupational-safety/rules-of-conduct': typeof OccupationalSafetyRulesOfConductRoute
   '/occupational-safety/safety-guide': typeof OccupationalSafetySafetyGuideRoute
   '/occupational-safety/sanitary-regulations': typeof OccupationalSafetySanitaryRegulationsRoute
+  '/occupational-safety/shelter': typeof OccupationalSafetyShelterRoute
   '/occupational-safety/sitemap': typeof OccupationalSafetySitemapRoute
   '/parent-forum/50-essential-tasks-for-school-preparation': typeof ParentForum50EssentialTasksForSchoolPreparationRoute
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
@@ -1573,6 +1581,7 @@ export interface FileRoutesByTo {
   '/occupational-safety/rules-of-conduct': typeof OccupationalSafetyRulesOfConductRoute
   '/occupational-safety/safety-guide': typeof OccupationalSafetySafetyGuideRoute
   '/occupational-safety/sanitary-regulations': typeof OccupationalSafetySanitaryRegulationsRoute
+  '/occupational-safety/shelter': typeof OccupationalSafetyShelterRoute
   '/occupational-safety/sitemap': typeof OccupationalSafetySitemapRoute
   '/parent-forum/50-essential-tasks-for-school-preparation': typeof ParentForum50EssentialTasksForSchoolPreparationRoute
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
@@ -1764,6 +1773,7 @@ export interface FileRoutesById {
   '/occupational-safety/rules-of-conduct': typeof OccupationalSafetyRulesOfConductRoute
   '/occupational-safety/safety-guide': typeof OccupationalSafetySafetyGuideRoute
   '/occupational-safety/sanitary-regulations': typeof OccupationalSafetySanitaryRegulationsRoute
+  '/occupational-safety/shelter': typeof OccupationalSafetyShelterRoute
   '/occupational-safety/sitemap': typeof OccupationalSafetySitemapRoute
   '/parent-forum/50-essential-tasks-for-school-preparation': typeof ParentForum50EssentialTasksForSchoolPreparationRoute
   '/parent-forum/about-personal-data-protection': typeof ParentForumAboutPersonalDataProtectionRoute
@@ -1956,6 +1966,7 @@ export interface FileRouteTypes {
     | '/occupational-safety/rules-of-conduct'
     | '/occupational-safety/safety-guide'
     | '/occupational-safety/sanitary-regulations'
+    | '/occupational-safety/shelter'
     | '/occupational-safety/sitemap'
     | '/parent-forum/50-essential-tasks-for-school-preparation'
     | '/parent-forum/about-personal-data-protection'
@@ -2135,6 +2146,7 @@ export interface FileRouteTypes {
     | '/occupational-safety/rules-of-conduct'
     | '/occupational-safety/safety-guide'
     | '/occupational-safety/sanitary-regulations'
+    | '/occupational-safety/shelter'
     | '/occupational-safety/sitemap'
     | '/parent-forum/50-essential-tasks-for-school-preparation'
     | '/parent-forum/about-personal-data-protection'
@@ -2325,6 +2337,7 @@ export interface FileRouteTypes {
     | '/occupational-safety/rules-of-conduct'
     | '/occupational-safety/safety-guide'
     | '/occupational-safety/sanitary-regulations'
+    | '/occupational-safety/shelter'
     | '/occupational-safety/sitemap'
     | '/parent-forum/50-essential-tasks-for-school-preparation'
     | '/parent-forum/about-personal-data-protection'
@@ -3087,6 +3100,13 @@ declare module '@tanstack/react-router' {
       path: '/sanitary-regulations'
       fullPath: '/occupational-safety/sanitary-regulations'
       preLoaderRoute: typeof OccupationalSafetySanitaryRegulationsRouteImport
+      parentRoute: typeof OccupationalSafetyRouteRoute
+    }
+    '/occupational-safety/shelter': {
+      id: '/occupational-safety/shelter'
+      path: '/shelter'
+      fullPath: '/occupational-safety/shelter'
+      preLoaderRoute: typeof OccupationalSafetyShelterRouteImport
       parentRoute: typeof OccupationalSafetyRouteRoute
     }
     '/occupational-safety/sitemap': {
@@ -4156,6 +4176,7 @@ interface OccupationalSafetyRouteRouteChildren {
   OccupationalSafetyRulesOfConductRoute: typeof OccupationalSafetyRulesOfConductRoute
   OccupationalSafetySafetyGuideRoute: typeof OccupationalSafetySafetyGuideRoute
   OccupationalSafetySanitaryRegulationsRoute: typeof OccupationalSafetySanitaryRegulationsRoute
+  OccupationalSafetyShelterRoute: typeof OccupationalSafetyShelterRoute
   OccupationalSafetySitemapRoute: typeof OccupationalSafetySitemapRoute
   OccupationalSafetyIndexRoute: typeof OccupationalSafetyIndexRoute
   OccupationalSafetyCivilProtectionAccessControlRoute: typeof OccupationalSafetyCivilProtectionAccessControlRoute
@@ -4199,6 +4220,7 @@ const OccupationalSafetyRouteRouteChildren: OccupationalSafetyRouteRouteChildren
     OccupationalSafetySafetyGuideRoute: OccupationalSafetySafetyGuideRoute,
     OccupationalSafetySanitaryRegulationsRoute:
       OccupationalSafetySanitaryRegulationsRoute,
+    OccupationalSafetyShelterRoute: OccupationalSafetyShelterRoute,
     OccupationalSafetySitemapRoute: OccupationalSafetySitemapRoute,
     OccupationalSafetyIndexRoute: OccupationalSafetyIndexRoute,
     OccupationalSafetyCivilProtectionAccessControlRoute:

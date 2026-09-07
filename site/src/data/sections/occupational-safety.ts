@@ -20,6 +20,7 @@ import {
   Megaphone,
   NotebookPen,
   NotebookText,
+  Shield,
   ShieldAlert,
   ShieldCheck,
   ShieldPlus,
@@ -94,6 +95,10 @@ export const occupationalSafety = [
             icon: ShieldCheck,
           },
           { to: "/occupational-safety/civil-protection/sesu", icon: Siren },
+          {
+            to: "/occupational-safety/shelter",
+            icon: Shield,
+          },
           {
             to: "/occupational-safety/health-and-safety-action-plan",
             icon: ListTodo,

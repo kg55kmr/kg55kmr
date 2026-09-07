@@ -16,7 +16,7 @@
   "dependencies": {
     "@imagekit/nodejs": "^7.11.0",
     "@supercharge/promise-pool": "^3.3.0",
-    "@upstash/redis": "^1.38.3",
+    "@upstash/redis": "^1.38.4",
     "dotenv-cli": "^11.0.0",
     "fdir": "^6.5.0",
     "gray-matter": "^4.0.3",

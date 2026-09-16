@@ -20,7 +20,6 @@ export const methodologicalAssociations: methodologicalAssociations = {
         "мугак-4.jpg",
       ]),
     },
-    { teacher: "Довмат Ганна Василівна" },
     {
       teacher: "Старікова Наталя Анатоліївна",
       certificates: cert([

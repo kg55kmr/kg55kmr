@@ -1,5 +1,4 @@
 {
-  "js/ts.tsdk.path": "node_modules\\typescript\\lib",
   "tailwindCSS.classFunctions": ["cn"],
   "tailwindCSS.classAttributes": [".*class.*"],
   "editor.unicodeHighlight.allowedLocales": {
@@ -9,6 +8,5 @@
     "і": true,
     "І": true
   },
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**"],
   "better-todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**"]
 }

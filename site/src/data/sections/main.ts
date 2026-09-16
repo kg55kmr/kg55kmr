@@ -39,11 +39,6 @@ export const main = [
           { to: "/about", icon: Info },
           { to: "/history", icon: BookText },
           { to: "/graduates", icon: Users },
-          {
-            title: "Ми у прессі",
-            href: "https://www.youtube.com/playlist?list=PLRRIw-HYRJOqvwF8B4qVAviOnmN5iY3Xn",
-            icon: TvMinimalPlay,
-          },
           { to: "/feedback", icon: Mail },
           { to: "/sitemap", icon: Map },
         ],
@@ -95,6 +90,11 @@ export const main = [
             icon: Rainbow,
           },
           { to: "/album", icon: BookImage },
+          {
+            title: "Ми у прессі",
+            href: "https://www.youtube.com/playlist?list=PLRRIw-HYRJOqvwF8B4qVAviOnmN5iY3Xn",
+            icon: TvMinimalPlay,
+          },
         ],
       },
       {

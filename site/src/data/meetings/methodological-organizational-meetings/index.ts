@@ -1,4 +1,4 @@
-import type { Responsible, ChronologyGroup } from "~/components/chronology";
+import type { ChronologyGroup, Responsible } from "~/components/chronology";
 import { filenames } from "~/lib/utils";
 
 export const data = filenames(

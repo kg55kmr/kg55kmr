@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink } from "~/components/link";
+import { employees } from "~/data/employees";
 import { asset } from "~/lib/utils";
 
 export const Route = createFileRoute(
@@ -12,6 +13,7 @@ export const Route = createFileRoute(
 });
 
 function RouteComponent() {
+  const name = employees.byJob("ЗДВР")[0].name;
   return (
     <div className="content">
       <div className="grid gap-5 lg:grid-cols-2">
@@ -51,10 +53,8 @@ function RouteComponent() {
           </p>
 
           <p className="rounded-md border border-black p-2">
-            <span className="font-bold text-red-500">
-              Алтинбаєва Лариса Миколаївна
-            </span>{" "}
-            - відповідальна особа за оперативне реагування у випадку звернення
+            <span className="font-bold text-red-500">{name}</span> -
+            відповідальна особа за оперативне реагування у випадку звернення
             щодо фактів булінгу (цькуванню) в КГ №55 КМР.
             <br />
             Телефон:

@@ -1,5 +1,6 @@
 import { Accordion } from "~/components/accordion";
 import { Embed } from "~/components/embed";
+import { employees } from "~/data/employees";
 
 const items = [
   {
@@ -38,11 +39,12 @@ const items = [
 ];
 
 export function Bullying() {
+  const name = employees.byJob("ЗДВР")[0].name;
   return (
     <>
       <div className="font-roboto-condensed my-2 rounded-md border border-gray-300 bg-green-50 p-2">
-        <b>Алтинбаєва Лариса Миколаївна</b>: відповідальна особа за оперативне
-        реагування у випадку звернення щодо фактів булінгу (цькуванню)
+        <b>{name}</b>: відповідальна особа за оперативне реагування у випадку
+        звернення щодо фактів булінгу (цькуванню)
         <br />
         <b>телефон:</b> <span className="text-red-600">(096) 095-04-11</span>
       </div>

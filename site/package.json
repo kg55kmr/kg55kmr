@@ -2,7 +2,7 @@
   "name": "site",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev --open",
     "build": "vite build",
     "preview": "dotenv -e .env.local -- vite preview",
     "check": "tsc --noEmit",
@@ -65,3 +65,4 @@
     "vite-static-assets-plugin": "^3.1.1"
   }
 }
+

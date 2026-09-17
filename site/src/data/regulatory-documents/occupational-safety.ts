@@ -68,11 +68,6 @@ export const occupationalSafety: RegulatoryDocuments = [
       },
       {
         title:
-          "«Про затвердження Табеля термінових та строкових донесень Міністерства освіти і науки України з питань цивільного захисту, охорони праці та безпеки життєдіяльності» (Наказ МОН України від 11.08.2020 №1037)",
-        url: "https://mon.gov.ua/static-objects/mon/uploads/public/661/68e/3c9/66168e3c9320a905668396.pdf",
-      },
-      {
-        title:
           "Положення про навчання неповнолітніх професіям, пов'язаним з важкими роботами і роботами з шкідливими або небезпечними умовами праці (Наказ Держгірпромнагляду України від 30.12.94 N 130)",
         url: "https://zakon.rada.gov.ua/laws/show/z0014-95",
       },
@@ -119,11 +114,6 @@ export const occupationalSafety: RegulatoryDocuments = [
         title:
           "Перелік професій, виробництв та організацій, працівники яких підлягають обов'язковим профілактичним медичним оглядам",
         url: "https://zakon.rada.gov.ua/laws/show/559-2001-п",
-      },
-      {
-        title:
-          "«Про забезпечення виконання вимог охороні праці, безпеки життєдіяльності та цивільного захисту в закладах освіти м. Кривого Рогу в 2024/2025 навчальному році (наказ ДОН ВКМР №167 від 29.07.2024)",
-        url: "https://drive.google.com/file/d/1ssur6eJzLtzxMOwMQR9Wru-MAUU3b2Ab/view",
       },
     ],
   },
@@ -179,11 +169,6 @@ export const occupationalSafety: RegulatoryDocuments = [
         title:
           "Правила безпечної експлуатації електроустановок споживачів (Наказ Міністерства праці та соціальної політики 09.01.1998 №4)",
         url: "https://zakon.rada.gov.ua/laws/show/z0093-98",
-      },
-      {
-        title:
-          "Правила експлуатації електрозахисних засобів (Наказ Міністерства праці та соціальної політики України 05.06.2001 р. № 253)",
-        url: "https://dnaop.com/get/1631/",
       },
     ],
   },
@@ -266,11 +251,6 @@ export const occupationalSafety: RegulatoryDocuments = [
         url: "https://www.dnaop.com/html/32623/doc-ДБН_В.2.5-74_2013",
       },
       {
-        title:
-          "Державні будівельні норми України. Системи протипожежного захист",
-        url: "https://www.dnaop.com/html/32623/doc-%D0%94%D0%91%D0%9D_%D0%92.2.5-74_2013",
-      },
-      {
         title: "Санітарний регламент для закладів загальної середньої освіти",
         url: "https://zakon.rada.gov.ua/laws/show/z1111-20",
       },
@@ -285,7 +265,7 @@ export const occupationalSafety: RegulatoryDocuments = [
       },
       {
         title:
-          "Про дотримання Санітарного регламенту в закладі (Наказ КГ №55 КМР від 31.12.2024 №193)",
+          "Про дотримання Санітарного регламенту в закладі (наказ КГ №55 КМР від 31.12.2024 №193)",
         url: "https://drive.google.com/file/d/18Okp3QwxDKj8kItSZBSfP4FrrY2HkPwB/view",
       },
     ],
@@ -302,11 +282,6 @@ export const occupationalSafety: RegulatoryDocuments = [
         title:
           "Про організаційні заходи для запобігання поширенню короновірусу COVID-19",
         url: "https://zakon.rada.gov.ua/rada/show/v0406729-20",
-      },
-      {
-        title:
-          "Про затвердження протиепідемічних заходів у закладах освіти на період карантину у зв'язку поширенням коронавірусної хвороби (covid-19)",
-        url: "https://moz.gov.ua/golovnij-derzhavnij-sanitarnij-likar-ukraini",
       },
     ],
   },

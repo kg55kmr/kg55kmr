@@ -145,11 +145,6 @@ export const mainDocuments: RegulatoryDocuments = [
           "Рекомендації щодо запобігання академічному плагіату та його виявлення в наукових роботах (авторефератах, дисертаціях, монографіях, наукових доповідях, статтях тощо)",
         url: "https://zakon.rada.gov.ua/rada/show/v8681729-18",
       },
-      {
-        title:
-          "До питання уникнення проблем і помилок у практиках забезпечення академічної доброчесності",
-        url: "https://mon.gov.ua/npa/do-pitannya-uniknennya-problem-i-pomilok-u-praktikah-zabezpechennya-akademichnoyi-dobrochesnosti",
-      },
     ],
   },
   {
@@ -199,11 +194,6 @@ export const mainDocuments: RegulatoryDocuments = [
       {
         title: "Положення про шкільну психолого-медико-педагогічну комісію",
         url: "https://zakon.rada.gov.ua/laws/show/z0518-96",
-      },
-      {
-        title:
-          "Положення про організацію фізичного виховання і масового спорту в дошкільних, загальноосвітніх закладах",
-        url: "https://zakon.rada.gov.ua/laws/show/z0909-05",
       },
       {
         title: "Положення про психологічну службу",
@@ -263,10 +253,6 @@ export const mainDocuments: RegulatoryDocuments = [
   {
     section: "Інструктивно-методичні матеріали",
     items: [
-      {
-        title: "Типові навчальні плани початкової школи",
-        url: "https://mon.gov.ua/ua/osvita/zagalna-serednya-osvita/navchalni-programi/navchalni-programi-dlya-pochatkovoyi-shkoli",
-      },
       {
         title:
           "Типові навчальні плани загальноосвітніх навчальних закладів ІІ ступеня",
@@ -464,37 +450,8 @@ export const mainDocuments: RegulatoryDocuments = [
       },
       {
         title:
-          "Типова освітня програма, розроблена під керівництвом Савченко О. Я. (1-2 класи)",
-        url: "https://mon.gov.ua/storage/app/media/zagalna%20serednya/programy-1-4-klas/2022/08/15/Typova.osvitnya.prohrama.1-4/Typova.osvitnya.prohrama.1-2.Savchenko.pdf",
-      },
-      {
-        title:
-          "Типова освітня програма, розроблена під керівництвом Шияна Р. Б. (1-2 класи)",
-        url: "https://mon.gov.ua/storage/app/media/zagalna%20serednya/programy-1-4-klas/2022/08/15/Typova.osvitnya.prohrama.1-4/Typova.osvitnya.prohrama.1-2.Shyyan.pdf",
-      },
-      {
-        title:
-          "Типова освітня програма, розроблена під керівництвом Савченко О.Я. (3-4 класи)",
-        url: "https://mon.gov.ua/storage/app/media/zagalna%20serednya/programy-1-4-klas/2022/08/15/Typova.osvitnya.prohrama.1-4/Typova.osvitnya.prohrama.3-4.Savchenko.pdf",
-      },
-      {
-        title:
-          "Типова освітня програма, розроблена під керівництвом Шияна Р.Б. (3-4 класи)",
-        url: "https://mon.gov.ua/storage/app/media/zagalna%20serednya/programy-1-4-klas/2022/08/15/Typova.osvitnya.prohrama.1-4/Typova.osvitnya.prohrama.3-4.Shyyan.pdf",
-      },
-      {
-        title:
           "Про затвердження Змін до деяких наказів Міністерства охорони здоров’я України (щодо тривалості онлайн-уроків для школярів)",
         url: "https://zakon.rada.gov.ua/laws/show/z0932-22",
-      },
-      {
-        title:
-          "Перелік навчальних програм, підручників та навчально-методичних посібників, рекомендованих МОН України для використання у початкових класах закладів загальної середньої освіти з навчанням українською мовою",
-        url: "https://docs.google.com/spreadsheets/d/1KNxK-QSJxSFmexcGOP9irYw-ufgbWfiQbajDldiLNvQ/",
-      },
-      {
-        title: "Опис ключових змін до навчальних програм (1-4 класи)",
-        url: "https://mon.gov.ua/storage/app/media/zagalna serednya/pochatkova/opys-klyuchovyh-zmin.pdf",
       },
       {
         title:
@@ -563,11 +520,6 @@ export const mainDocuments: RegulatoryDocuments = [
         title:
           "Постанова Кабінету Міністрів України від 18 липня 2012 р. № 635 «Про внесення змін до постанов Кабінету Міністрів України від 14 квітня 1997 р. № 346 і від 14 червня 2000 р. № 963»",
         url: "https://zakon.rada.gov.ua/laws/show/635-2012-п",
-      },
-      {
-        title:
-          "Постанова Кабінету Міністрів України від 21 серпня 2013 № 607 «Про затвердження Державного стандарту початкової загальної освіти для дітей з особливими освітніми потребами»",
-        url: "https://zakon.rada.gov.ua/laws/show/607-2013-п",
       },
       {
         title:
@@ -731,23 +683,8 @@ export const mainDocuments: RegulatoryDocuments = [
       },
       {
         title:
-          "Лист Міністерства освіти і науки України від 06.02.2017 № 1/9-63 «Щодо навчальної літератури для дітей з особливими освітніми потребами»",
-        url: "https://osvita.ua/legislation/Ser_osv/54418/",
-      },
-      {
-        title:
           "Лист Міністерства освіти і науки України від 29.11.2017 № 1/9-639 «Щодо Порядку та умов надання субвенції з державного бюджету місцевим бюджетам на надання державної підтримки особам з особливими освітніми потребами»",
         url: "https://zakon.rada.gov.ua/laws/show/88-2017-%D0%BF",
-      },
-      {
-        title:
-          "Лист Міністерства освіти і науки України від 05.04.2019 № 1/9-223 «Щодо забезпечення доступності закладів освіти для осіб з особливими освітніми потребами»",
-        url: "https://osvitaboguslav.at.ua/novyny/2019/1084_vkh_1_9-223.pdf",
-      },
-      {
-        title:
-          "Лист Міністерства освіти і науки України від 04.06.2020 № 1/9-302 «Щодо надання психолого-педагогічних та корекційно-розвиткових послуг дітям з особливими освітніми потребами закладами освіти в літній період»",
-        url: "https://mon.gov.ua/ua/npa/shodo-nadannya-psihologo-pedagogichnih-ta-korekcijno-rozvitkovih-poslug-dityam-z-oop-v-litnij-period",
       },
       {
         title:
@@ -849,10 +786,6 @@ export const mainDocuments: RegulatoryDocuments = [
         url: "https://zakon.rada.gov.ua/laws/show/z0008-19",
       },
       {
-        title: "Щодо застосування державної мови в освітній галузі",
-        url: "https://drive.google.com/file/d/1WuyRXWNqS0PhykL5IJ1JonyViP0rvVBX/view",
-      },
-      {
         title:
           "Щодо середнього бала документа про повну загальну середню освіту",
         url: "https://zakon.rada.gov.ua/rada/show/v0399729-18",
@@ -875,25 +808,6 @@ export const mainDocuments: RegulatoryDocuments = [
   {
     section: "Дистанційне навчання",
     items: [
-      {
-        title:
-          'Наказ МОН № 466 від 25.04.2013р. "Про затвердження Положення про дистанційне навчання"',
-        url: "https://zakon.rada.gov.ua/laws/show/z0703-13",
-      },
-      {
-        title: "Положення про дистанційне навчання КГ №55 (зі змінами)",
-        url: "https://docs.google.com/document/d/13CMGMuk-IkHmXSylk2RcwRfSoGogGlwe/view",
-      },
-      {
-        title:
-          "Постанови КМУ від 28.07.2023 №782 «Про початок навчального року під час воєнного стану в Україні»",
-        url: "https://www.kmu.gov.ua/npas/pro-pochatok-navchalnoho-roku-pid-chas-voiennoho-stanu-v-ukraini-i280723-782",
-      },
-      {
-        title:
-          "Лист МОН від 16.08.2023 № 1/12186-23 «ПРО ОРГАНІЗАЦІЮ 2023/2024 НАВЧАЛЬНОГО РОКУ В ЗАКЛАДАХ ЗАГАЛЬНОЇ СЕРЕДНЬОЇ ОСВІТИ»",
-        url: "https://mon.gov.ua/ua/npa/pro-organizaciyu-20232024-navchalnogo-roku-v-zakladah-zagalnoyi-serednoyi-osviti",
-      },
       {
         title:
           "Наказ МОН від 24.02.2023 №201 «Про затвердження Змін до Положення про дистанційну форму здобуття повної загальної середньої освіти»",
@@ -921,18 +835,8 @@ export const mainDocuments: RegulatoryDocuments = [
       },
       {
         title:
-          "Наказ МОН №1021 від 14.11.2022 року «Про внесення зміни до наказу Міністерства освіти і науки України від 28.03.2022 № 274»",
-        url: "https://osvita.ua/legislation/Ser_osv/87878/",
-      },
-      {
-        title:
           "Наказ МОН № 274 від 28.03.2022 року «Про деякі питання організації здобуття загальної середньої освіти та освітнього процесу в умовах воєнного стану в Україні»",
         url: "https://zakon.rada.gov.ua/rada/show/v0274729-22",
-      },
-      {
-        title:
-          "Лист МОН №1/3371-22 від 06.03.2022 року «Про організацію освітнього процесу»",
-        url: "https://osvita.ua/legislation/Ser_osv/86062/",
       },
       {
         title:

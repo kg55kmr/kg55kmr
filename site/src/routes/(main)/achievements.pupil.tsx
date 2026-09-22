@@ -13,6 +13,10 @@ const tabs: SheetItem[] = [
     title: "Конкурси",
     items: [
       {
+        title: "2026-2027 н.р.",
+        sheetId: "1I9kMfaDGeWHq0TguyXVmBJiNXiaOOxXVM2mkHdhcouQ",
+      },
+      {
         title: "2025-2026 н.р.",
         sheetId: "1GvHQKoUzik74S9bAPm8SGpulrdIXs98sbRfXXI6XsSc",
       },

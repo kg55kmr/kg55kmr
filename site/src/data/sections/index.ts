@@ -1,6 +1,7 @@
 import type { Sections } from "./types";
 import { educationalProcess } from "./educational-process";
 import { educationalWork } from "./educational-work";
+import { maSocialHumanitarian } from "./ma-social-humanitarian";
 import { main } from "./main";
 import { occupationalSafety } from "./occupational-safety";
 import { parentForum } from "./parent-forum";
@@ -13,4 +14,5 @@ export const sections: Sections = {
   "/occupational-safety": occupationalSafety,
   "/social-and-psychological-service": socialAndPsychologicalService,
   "/parent-forum": parentForum,
+  "/ma-social-humanitarian": maSocialHumanitarian,
 };

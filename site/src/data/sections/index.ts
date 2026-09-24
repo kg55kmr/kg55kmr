@@ -14,5 +14,5 @@ export const sections: Sections = {
   "/occupational-safety": occupationalSafety,
   "/social-and-psychological-service": socialAndPsychologicalService,
   "/parent-forum": parentForum,
-  "/ma-social-humanitarian": maSocialHumanitarian,
+  // "/ma-social-humanitarian": maSocialHumanitarian,
 };

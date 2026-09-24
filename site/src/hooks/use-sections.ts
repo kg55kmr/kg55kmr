@@ -5,7 +5,11 @@ import type {
   SectionItem,
   SectionType,
 } from "~/data/sections/types";
-import type { FileRoutesByFullPath, FileRouteTypes } from "~/routeTree.gen";
+import type {
+  FileRoutesByFullPath,
+  FileRoutesById,
+  FileRouteTypes,
+} from "~/routeTree.gen";
 import {
   type StaticDataRouteOption,
   useChildMatches,
@@ -20,10 +24,7 @@ export function useSections() {
   const { routesById } = useRouter();
 
   return (Object.entries(sections) as [FileRouteTypes["id"], Section][])
-    .filter(([id]) => {
-      const dev = routesById[id].options.staticData?.section?.dev;
-      return import.meta.env.DEV || !dev;
-    })
+    .filter(([id]) => isShowSection(routesById, id))
     .map(([id]) => {
       const route = routesById[id];
       const section = route.options.staticData?.section;
@@ -76,16 +77,18 @@ export function useSectionMenu() {
       groups: [
         {
           groupTitle: "Розділи",
-          items: sectionsList.map((id) => {
-            const route = routesById[id];
-            const title = route.options.staticData?.title;
-            if (!(typeof title === "string"))
-              throw new Error(`No section title in: ${route.fullPath}`);
+          items: sectionsList
+            .filter((id) => isShowSection(routesById, id))
+            .map((id) => {
+              const route = routesById[id];
+              const title = route.options.staticData?.title;
+              if (!(typeof title === "string"))
+                throw new Error(`No section title in: ${route.fullPath}`);
 
-            const to = route.to;
-            if (to === "") throw new Error("BUG"); // TODO: fix empty to
-            return { to, title, icon: Globe };
-          }),
+              const to = route.to;
+              if (to === "") throw new Error("BUG"); // TODO: fix empty to
+              return { to, title, icon: Globe };
+            }),
         },
       ],
     } satisfies SectionItem,
@@ -166,6 +169,11 @@ export function useRouteTitle() {
       return title;
     },
   });
+}
+
+function isShowSection(routesById: FileRoutesById, id: FileRouteTypes["id"]) {
+  const dev = routesById[id].options.staticData?.section?.dev;
+  return import.meta.env.DEV || !dev;
 }
 
 function getTitle(opts: {

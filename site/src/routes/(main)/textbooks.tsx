@@ -475,7 +475,15 @@ const textbooks: Class[] = [
       {
         title: "Англійська мова (8-й рік навчання)",
         author: "Мітчелл Г.К.",
-        url: "https://e.issuu.com/embed.html?d=_8_2025_ac6b422578c72b&pageLayout=singlePage&u=kreidaros",
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=_8_2025_ac6b422578c72b&pageLayout=singlePage&u=kreidaros",
+          },
+          {
+            url: "https://publishing.linguist.ua/fb8-sb-audio/",
+            text: "Аудіосупровід",
+          },
+        ],
       },
       {
         title: "Історія України",
@@ -570,7 +578,13 @@ const textbooks: Class[] = [
       {
         title: "Англійська мова (9 рік навчання)",
         author: "Мітчелл Г.К.",
-        url: "https://online.flippingbook.com/view/221454671",
+        url: [
+          { url: "https://online.flippingbook.com/view/221454671" },
+          {
+            url: "https://publishing.linguist.ua/full-blast-plus-for-ukraine-9-audio-students-book/",
+            text: "Аудіосупровід",
+          },
+        ],
       },
       {
         title: "Історія України",

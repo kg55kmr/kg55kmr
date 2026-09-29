@@ -27,7 +27,7 @@ export default function Component(props: PDFProps) {
   const isRendered = previewPage != page;
 
   return (
-    <div ref={ref} className="mx-auto max-w-250">
+    <div ref={ref} className="md:200 mx-auto w-80 sm:w-150 lg:w-200">
       <Document
         file={props.src}
         suspense={false}

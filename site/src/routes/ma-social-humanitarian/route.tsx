@@ -8,6 +8,9 @@ export const Route = createFileRoute("/ma-social-humanitarian")({
     title: "МО вчителів суспільно-гуманітарного циклу",
     section: {
       id: "/ma-social-humanitarian",
+      thumbnail: asset(
+        "images/розділи/мо-вчителів-суспільно-гуманітарного-циклу-мініатюра.jpg",
+      ),
       dev: true,
     },
   },
@@ -16,8 +19,8 @@ export const Route = createFileRoute("/ma-social-humanitarian")({
 function RouteComponent() {
   return (
     <Layout
-      image={asset(
-        "images/розділи/мо-вчителів-природничо-математичного-циклу.jpg",
+      background={asset(
+        "images/розділи/мо-вчителів-суспільно-гуманітарного-циклу.jpg",
       )}
     >
       <Outlet />

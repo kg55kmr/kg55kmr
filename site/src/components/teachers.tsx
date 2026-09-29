@@ -8,6 +8,7 @@ import { useImagesSize } from "~/hooks/use-queries";
 import { Gallery } from "./gallery";
 import { ExternalLink } from "./link";
 import { Loader } from "./loader";
+import { Pdf } from "./pdf";
 import { Tabs } from "./tabs";
 
 type ItemData<TContent> = {
@@ -104,12 +105,14 @@ export function Members(props: { ma: MethodologicalAssociation }) {
   );
 }
 
-export function WorkReport(props: { data: Record<string, FC> }) {
+export function WorkReport(props: {
+  data: Record<string, { default: string }>;
+}) {
   const items = Object.entries(props.data)
     .toReversed()
-    .map(([path, Content]) => (
+    .map(([path, { default: url }]) => (
       <Tabs.Tab key={path} title={`${getTitle(path)} н.р.`} id={path}>
-        <Content />
+        <Pdf src={url} />
       </Tabs.Tab>
     ));
 

@@ -2,10 +2,10 @@ import type { Section } from "./types";
 
 export const maSocialHumanitarian = [
   {
-    title: "1",
+    title: "Загальна інформація",
     groups: [
       {
-        groupTitle: "1",
+        groupTitle: "Загальна інформація",
         items: [
           {
             to: "/ma-social-humanitarian/members",

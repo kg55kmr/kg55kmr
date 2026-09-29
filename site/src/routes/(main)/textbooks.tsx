@@ -16,32 +16,28 @@ const textbooks: Class[] = [
         author: "Пономарьова К.І.",
         url: [
           {
-            url: "https://lib.imzo.gov.ua/wa-data/public/site/books/Pidruchnuk-1kl-2018-pdf/01_Ukr_mova_Bukvar_1kl/PonomaryovaKI/Bukvar_part1_1kl.pdf",
+            url: "https://e.issuu.com/embed.html?d=bukvar-1-klas-ponomariova-2018-1&pageLayout=singlePage&u=kreidaros",
             text: "Частина 1",
           },
           {
-            url: "https://lib.imzo.gov.ua/wa-data/public/site/books/Pidruchnuk-1kl-2018-pdf/01_Ukr_mova_Bukvar_1kl/PonomaryovaKI/Bukbar_part2_1kl.pdf",
+            url: "https://e.issuu.com/embed.html?d=bukvar-1-klas-ponomariova-2018-2&pageLayout=singlePage&u=kreidaros",
             text: "Частина 2",
           },
         ],
-      },
-      {
-        title: "Англійська мова",
-        author: "Будна Т.Б.",
-        url: [
-          {
-            url: "https://pidruchnyk.com.ua/2715-angliiska-mova-1-klas-budna-2023.html",
-          },
-          {
-            url: "https://lib.imzo.gov.ua/wa-data/public/site/books/Pidruchnuk-1kl-2018-pdf/03_Inozemnamova_english_1kl/BelyayevaTY/ENGLISH%201kl_Belyayeva.rar",
-            text: "Аудіосупровід",
-          },
-        ],
-      },
+      }, // TODO: find book
+      // {
+      //   title: "Англійська мова",
+      //   author: "Будна Т.Б.",
+      //   url: [
+      //     {
+      //       url: "https://e.issuu.com/embed.html?d=anglijska-mova-1-klas-budna-2018&pageLayout=singlePage&u=kreidaros",
+      //     },
+      //   ],
+      // },
       {
         title: "Математика",
         author: "Скворцова С.О.",
-        url: "https://lib.imzo.gov.ua/wa-data/public/site/books/Pidruchnuk-1kl-2018-pdf/07_Matematyka_1kl/Matematyka_pidruchnyk%20dlia%201%20klasu%20ZZSO%20(Skvortsova%20S.%20O.,%20Onopriienko%20O.%20V.)%20.pdf",
+        url: "https://e.issuu.com/embed.html?d=matematyka-1-klas-skvorcova-2018&pageLayout=singlePage&u=kreidaros",
       },
       {
         title: "Я досліджую світ (у 2-х частинах)",
@@ -61,27 +57,45 @@ const textbooks: Class[] = [
       {
         title: "Українська мова та читання (у 2-х частинах)",
         author: "Пономарьова К.І.; Савченко О. Я.",
-        url: "https://lib.imzo.gov.ua/yelektronn-vers-pdruchnikv/2-klas/ukranska-mova-ta-chitannya-2-klas-/ukranska-mova-ta-chitannya-pdruchnik-dlya-2-klasu-zakladv-zagalno-seredno-osvti-u-2-kh-chastinakh-ponomarova-k-chastina-1-savchenko-o-ya-chastina-2/",
-      },
-      {
-        title: "Англійська мова",
-        author: "Будна Т.Б.",
-        url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-2-klas-2019/03-inozemna-mova-angliyska-mova-2-klas/angliyska-2-kl-budna-bogdan/angliyska-mova-2-kl-budna-tb.pdf",
-      },
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=ukrajinska-mova-2-klas-ponomarova-2019-1&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 1",
+          },
+          {
+            url: "https://e.issuu.com/embed.html?d=ukrajinska-mova-2-klas-savchenko-2019-2&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 2",
+          },
+        ],
+      }, // TODO: find book
+      // {
+      //   title: "Англійська мова",
+      //   author: "Будна Т.Б.",
+      //   url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-2-klas-2019/03-inozemna-mova-angliyska-mova-2-klas/angliyska-2-kl-budna-bogdan/angliyska-mova-2-kl-budna-tb.pdf",
+      // },
       {
         title: "Математика",
         author: "Лишенко Г.П.",
-        url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-2-klas-2019/07-matematyka-2-klas/lyshenko-mat-p-2ukr-086-18-s.pdf",
+        url: "https://e.issuu.com/embed.html?d=matematika-2-klas-lyshenko-2019&pageLayout=singlePage&u=kreidaros",
       },
       {
         title: "Я досліджую світ (у 2-х частинах)",
         author: "Гільберг Т.Г.",
-        url: "https://pidruchnyk.com.ua/1285-ya-doslidzhuyu-svit-2-klas-glberg.html",
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=ya-doslidzhuju-svit-2-klas-hilberh-2024-1&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 1",
+          },
+          {
+            url: "https://e.issuu.com/embed.html?d=ya-doslidzhuju-svit-2-klas-hilberh-2024-2&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 2",
+          },
+        ],
       },
       {
         title: "Мистецтво",
         author: "Масол Л.М.",
-        url: "https://pidruchnyk.com.ua/71-mistectvo-masol-gaydamaka-ocheretyana-kolotilo-2-klas.html",
+        url: "https://e.issuu.com/embed.html?d=mystetstvo-2-klas-masol-2024&pageLayout=singlePage&u=kreidaros",
       },
     ],
   },
@@ -91,28 +105,46 @@ const textbooks: Class[] = [
       {
         title: "Українська мова та читання (у 2-х частинах)",
         author: "Пономарьова К.І.; Савченко О.Я.",
-        url: "https://lib.imzo.gov.ua/yelektronn-vers-pdruchnikv/3-klas/ukranska-mova-ta-chitannya-pdruchnik-dlya-3-klasu-zakladv-zagalno-seredno-osvti-u-2-kh-chastinakh/ukranska-mova-ta-chitannya-pdruchnik-dlya-3-klasu-zakladv-zagalno-seredno-osvti-u-2-kh-chastinakh-chastina-1---ponomarova-k--gayova-l-a-chastina-2---savchenko-o-ya/",
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=ukrajinska-mova-3-klas-ponomariova-2020-1&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 1",
+          },
+          {
+            url: "https://e.issuu.com/embed.html?d=ukrajinska-mova-3-klas-savchenko-2020-2&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 2",
+          },
+        ],
       },
       {
         title: "Англійська мова",
         author: "Будна Т.Б.",
-        url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-3-klas-2020/3-English-3kl/English-3kl-Budna/english-3kl-budna-bohdan.pdf",
+        url: "https://e.issuu.com/embed.html?d=anhlijska-mova-3-klas-budna-2020&pageLayout=singlePage&u=kreidaros",
       },
       {
         title: "Математика (у 2-х частинах)",
         author: "Лишенко Г.П.",
-        url: "https://lib.imzo.gov.ua/yelektronn-vers-pdruchnikv/3-klas/matematika-3-klas/matematika-pdruchnik-dlya-3-klasu-zakladv-zagalno-seredno-osvti-u-2-kh-chastinakh-lishenko-gp/",
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=matematyka-3-klas-lyshenko-2020-1&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 1",
+          },
+          {
+            url: "https://e.issuu.com/embed.html?d=matematyka-3-klas-lyshenko-2020-2&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 2",
+          },
+        ],
       },
       {
         title: "Я досліджую світ (у 2-х частинах)",
         author: "Гільберг Т.Г",
         url: [
           {
-            url: "https://pidruchnyk.com.ua/uploads/book/3-klas-ya-doslidzhuiu-svit-hilberh-2020-1.pdf",
+            url: "https://e.issuu.com/embed.html?d=ja-doslidzhuju-svit-3-klas-hilberh-2020-1&pageLayout=singlePage&u=kreidaros",
             text: "Частина 1",
           },
           {
-            url: "https://pidruchnyk.com.ua/uploads/book/3-klas-ya-doslidzhuiu-svit-hilberh-2020-2.pdf",
+            url: "https://e.issuu.com/embed.html?d=ja-doslidzhuju-svit-3-klas-hilberh-2020-2&pageLayout=singlePage&u=kreidaros",
             text: "Частина 2",
           },
         ],
@@ -120,7 +152,7 @@ const textbooks: Class[] = [
       {
         title: "Мистецтво",
         author: "Масол Л.М.",
-        url: "https://files.pidruchnyk.com.ua/uploads/book/3-klas-mystetstvo-masol-2020.pdf",
+        url: "https://e.issuu.com/embed.html?d=mystetstvo-3-klas-masol-2020&pageLayout=singlePage&u=kreidaros",
       },
     ],
   },
@@ -130,40 +162,56 @@ const textbooks: Class[] = [
       {
         title: "Українська мова та читання (у 2-х частинах)",
         author: "Пономарьова К.І.",
-        url: "https://lib.imzo.gov.ua/yelektronn-vers-pdruchnikv/4-klas/1ukranska-mova-ta-chitannya-4-klas/7ukranska-mova-ta-chitannya-pdruchnik-dlya-4-klasu-zakladv-zagalno-seredno-osvti-u-2-kh-chastinakh/",
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=ukr-mova-ta-chytannya-4-klas-ponomariova-2021-1&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 1",
+          },
+          // TODO: find book part 2
+        ],
       },
       {
         title: "Англійська",
         author: "Будна Т.В.",
-        url: [
-          {
-            url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-4-klas-2021/10-English-4kl/English-4kl-Budna/Budna-English-4kl.pdf",
-          },
-          {
-            url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-4-klas-2021/10-English-4kl/English-4kl-Budna/Audiosuprovid-English-4%20kl-Budna.zip",
-            text: "Аудіосупровід",
-          },
-        ],
+        url: "https://e.issuu.com/embed.html?d=anhliiska-mova-4-klas-budna-2021&pageLayout=singlePage&u=kreidaros",
       },
       {
         title: "Математика (у 2-х частинах)",
         author: "Лишенко Г.П.",
-        url: "https://lib.imzo.gov.ua/yelektronn-vers-pdruchnikv/4-klas/7matematika/8matematika-pdruchnik-dlya-4-klasu-zakladv-zagalno-seredno-osvti-u-2-kh-chastinakh/",
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=matematyka-4-klas-lushenko-2021-1&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 1",
+          },
+          {
+            url: "https://e.issuu.com/embed.html?d=matematyka-4-klas-lushenko-2021-2&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 2",
+          },
+        ],
       },
       {
         title: "Я досліджую світ (у 2-х частинах)",
         author: "Гільберг Т.Г.",
-        url: "https://lib.imzo.gov.ua/yelektronn-vers-pdruchnikv/4-klas/8ya-dosldzhuyu-svt-4-klas/3ya-dosldzhuyu-svt-pdruchnik-dlya-4-klasu-zakladv-zagalno-seredno-osvti-u-2-kh-chastinakh/",
+        url: [
+          {
+            url: "https://e.issuu.com/embed.html?d=ya-doslidzhuyu-svit-4-klas-hilberh-2021-1&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 1",
+          },
+          {
+            url: "https://e.issuu.com/embed.html?d=ya-doslidzhuyu-svit-4-klas-hilberh-2021-2&pageLayout=singlePage&u=kreidaros",
+            text: "Частина 2",
+          },
+        ],
       },
       {
         title: "Інформатика",
         author: "Коршунова О.В.",
-        url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-4-klas-2021/16-Informatyka-4kl/4kl-Informatyka-Korshunova.pdf",
+        url: "https://e.issuu.com/embed.html?d=informatyka-4-klas-korshynova-2021&pageLayout=singlePage&u=kreidaros",
       },
       {
         title: "Мистецтво",
         author: "Масол Л.М.",
-        url: "https://lib.imzo.gov.ua/wa-data/public/site/books2/pidruchnyky-4-klas-2021/17-Mystetstvo-4kl/Masol-Mystetstvo-4kl.pdf",
+        url: "https://e.issuu.com/embed.html?d=mystetstvo-4-klas-masol-2021&pageLayout=singlePage&u=kreidaros",
       },
     ],
   },

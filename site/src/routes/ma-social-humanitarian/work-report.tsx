@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { WorkReport } from "~/components/teachers";
 
@@ -9,9 +8,8 @@ export const Route = createFileRoute("/ma-social-humanitarian/work-report")({
   },
 });
 
-const data = import.meta.glob<FC>("./-work-report/*.tsx", {
+const data = import.meta.glob<{ default: string }>("./-work-report/*.pdf", {
   eager: true,
-  import: "Content",
 });
 
 function RouteComponent() {

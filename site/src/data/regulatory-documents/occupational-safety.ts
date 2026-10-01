@@ -264,9 +264,8 @@ export const occupationalSafety: RegulatoryDocuments = [
         url: "https://zakon.rada.gov.ua/laws/show/305-2021-%D0%BF",
       },
       {
-        title:
-          "Про дотримання Санітарного регламенту в закладі (наказ КГ №55 КМР від 31.12.2024 №193)",
-        url: "https://drive.google.com/file/d/18Okp3QwxDKj8kItSZBSfP4FrrY2HkPwB/view",
+        title: "Про дотримання Санітарного регламенту в закладі",
+        url: "https://drive.google.com/file/d/1tbkQJ5yID4FZdjrDxntMedXMLfq9J24i/view",
       },
     ],
   },

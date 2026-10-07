@@ -26,7 +26,7 @@ const components: MarkdownToJSX.Overrides = {
   Pdf: PdfWrapper,
   Embed,
   Gallery: withSuspense(GalleryWrapper),
-  FBVideo: FBVideo,
+  FBVideo,
 
   a: Link,
   img: Image,

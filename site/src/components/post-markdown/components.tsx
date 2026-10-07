@@ -27,22 +27,30 @@ export function YouTubeWrapper(props: { id: string }) {
 
 type FBVideoProps = {
   id: string;
-  aspectRatio?: string;
-  vertical?: boolean;
+  ar?: string;
 };
 
-// TODO: replace aspectRatio to orientation prop
 export function FBVideo(props: FBVideoProps) {
-  let aspectRatio = props.aspectRatio ?? "16/9";
-  if (props.vertical === true) aspectRatio = "9/16";
-  const src = `https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/SecondarySchool55/videos/${props.id}/&show_text=false&t=0`;
+  const ids = props.id.split(",").map((v) => v.trim());
+  const ar = props.ar ? props.ar : "9:16";
+  const [w, h] = ar.split(":").map(Number);
+  const wider = w >= h;
 
   return (
-    <iframe
-      src={src}
-      style={{ aspectRatio }}
-      className="mx-auto max-h-150 max-w-200 p-2"
-    />
+    <div className="flex w-full flex-wrap justify-center gap-2 p-1">
+      {ids.map((id) => {
+        const src = `https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/SecondarySchool55/videos/${id}/&show_text=false&t=0`;
+
+        return (
+          <iframe
+            key={id}
+            src={src}
+            style={{ aspectRatio: `${w}/${h}` }}
+            className={wider ? "max-w-200" : "max-h-200"}
+          />
+        );
+      })}
+    </div>
   );
 }
 

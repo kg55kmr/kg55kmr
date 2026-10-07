@@ -1,5 +1,5 @@
 export { getPosts } from './dev.js';
-import './root-CXgI_lXG.js';
+import './root-BIb2fvRe.js';
 import 'fs/promises';
 import 'path';
 import 'fdir';

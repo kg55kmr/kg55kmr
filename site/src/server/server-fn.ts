@@ -4,14 +4,14 @@ import z from "zod";
 import { setCacheHeader } from "./headers";
 import { getImageKitImages, getPostImageKitImages } from "./imagekit";
 import { getLocalPosts, getPostFromJSON } from "./posts";
-import { getFromRedis } from "./redis";
+import * as redis from "./redis";
 import { getSheetContent } from "./sheets";
 import { requestPlaylist } from "./youtube";
 
 export const getPostsList = createServerFn().handler(async () => {
   if (import.meta.env.DEV) return getLocalPosts("postsList");
 
-  const result = await getFromRedis<PostsList>({
+  const result = await redis.get<PostsList>({
     key: "posts-list",
   });
   setCacheHeader(5);
@@ -21,7 +21,7 @@ export const getPostsList = createServerFn().handler(async () => {
 export const getLatestPosts = createServerFn().handler(async () => {
   if (import.meta.env.DEV) return getLocalPosts("latestPosts");
 
-  const result = await getFromRedis<PostsList>({ key: "latest-posts" });
+  const result = await redis.get<PostsList>({ key: "latest-posts" });
   setCacheHeader(5);
   return result;
 });
@@ -29,7 +29,7 @@ export const getLatestPosts = createServerFn().handler(async () => {
 export const getAlbum = createServerFn().handler(async () => {
   if (import.meta.env.DEV) return getLocalPosts("album");
 
-  const result = await getFromRedis<AlbumPosts>({ key: "album" });
+  const result = await redis.get<AlbumPosts>({ key: "album" });
   setCacheHeader(5);
   return result;
 });
@@ -40,7 +40,7 @@ export const getAlbumPost = createServerFn()
     const path = `$["${data.id}"]`;
     if (import.meta.env.DEV) return getPostFromJSON<AlbumPost>("album", path);
 
-    const result = await getFromRedis<AlbumPost>({ key: "album", path });
+    const result = await redis.get<AlbumPost>({ key: "album", path });
     setCacheHeader(5);
     return result;
   });
@@ -51,7 +51,7 @@ export const getPost = createServerFn()
     const path = `$.${data.type}["${data.id}"]`;
     if (import.meta.env.DEV) return getPostFromJSON<Post>("posts", path);
 
-    const result = await getFromRedis<Post>({ key: "posts", path: path });
+    const result = await redis.get<Post>({ key: "posts", path: path });
     setCacheHeader(5);
     return result;
   });

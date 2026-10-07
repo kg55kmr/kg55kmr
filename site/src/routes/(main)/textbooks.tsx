@@ -56,7 +56,7 @@ const textbooks: Class[] = [
     textbooks: [
       {
         title: "Українська мова та читання (у 2-х частинах)",
-        author: "Пономарьова К.І.; Савченко О. Я.",
+        author: "Пономарьова К.І.; Савченко О.Я.",
         url: [
           {
             url: "https://e.issuu.com/embed.html?d=ukrajinska-mova-2-klas-ponomarova-2019-1&pageLayout=singlePage&u=kreidaros",

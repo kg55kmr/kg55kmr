@@ -125,6 +125,7 @@ function findPostsWithImageKitRef(kind: string, id: string, content: string) {
 const allowedTags = new Set([
   "Carousel",
   "Gallery",
+  "Group",
   "YouTube",
   "FBVideo",
   "Pdf",

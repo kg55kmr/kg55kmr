@@ -362,7 +362,7 @@ function Subjects(props: {
   subjects: Subject[];
 }) {
   return (
-    <StructuredContent TOCTitle="Предмети" className="grid-cols-[1fr_20%]">
+    <StructuredContent TOCTitle="Предмети">
       {props.subjects.map(({ name, lessons }, i) => (
         <StructuredContent.Section
           key={name}

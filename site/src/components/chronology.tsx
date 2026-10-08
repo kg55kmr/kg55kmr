@@ -26,17 +26,12 @@ export function Chronology<T extends object>(
 ) {
   const items = props.items.toReversed();
   return (
-    <Tabs
-      orientation="vertical"
-      defaultValue={items[0].date}
-      listClassName="grid grid-cols-[repeat(var(--cols-count),auto)] self-start"
-    >
+    <Tabs orientation="vertical" defaultValue={items[0].date}>
       {items.map((item) => (
         <Tabs.Tab
           key={item.date}
           title={<props.titleComponent date={item.date} />}
           id={item.date}
-          className="col-span-full grid grid-cols-subgrid gap-5"
         >
           <props.itemsComponent items={item.items} />
         </Tabs.Tab>
@@ -47,14 +42,9 @@ export function Chronology<T extends object>(
 
 export type Responsible = { responsible?: string };
 
-export function MeetingsChronology(
-  props: Props<Responsible> & { itemComponents?: number },
-) {
+export function MeetingsChronology(props: Props<Responsible>) {
   return (
-    <div
-      style={{ "--cols-count": props.itemComponents ?? 3 }}
-      className="contents"
-    >
+    <div className="contents">
       <Chronology
         {...props}
         titleComponent={MeetingsTitle}
@@ -67,21 +57,23 @@ export function MeetingsChronology(
 function MeetingsTitle(props: { date: string }) {
   const [day, month, year] = props.date.split(".").map(Number);
 
+  let c = (
+    <>
+      <div className="w-8">{day}</div>
+      <div className="w-24">{monthsGenitive[month - 1]}</div>
+      <div className="w-8">{year}</div>
+    </>
+  );
+
   if (year === undefined)
-    return (
+    c = (
       <>
         <div>{monthsNominative[day - 1]}</div>
         <div>{month}</div>
       </>
     );
 
-  return (
-    <>
-      <div className="text-right">{day}</div>
-      <div>{monthsGenitive[month - 1]}</div>
-      {year && <div>{year}</div>}
-    </>
-  );
+  return <div className="flex gap-1">{c}</div>;
 }
 
 function MeetingsItems(props: { items: ChronologyEntry<Responsible>[] }) {

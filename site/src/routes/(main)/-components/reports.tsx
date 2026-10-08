@@ -11,11 +11,7 @@ type Props = {
 
 export function Reports(props: Props) {
   return (
-    <Tabs
-      orientation="vertical"
-      defaultValue={props.defaultId}
-      className="grid-cols-[30%_auto]"
-    >
+    <Tabs orientation="vertical" defaultValue={props.defaultId}>
       {props.data.map((item) => (
         <Tabs.Tab
           key={item.title}

@@ -15,8 +15,6 @@ type TabsProps = {
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string) => void;
-  className?: string;
-  listClassName?: string;
   children: ReactNode;
 };
 
@@ -24,7 +22,6 @@ type TabProps = {
   title: ReactNode;
   id: string;
   children: ReactNode;
-  className?: string;
 };
 
 type Orientation = "horizontal" | "vertical";
@@ -65,8 +62,8 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
       value={props.value}
       onValueChange={(v) => props.onValueChange?.(v)}
       className={cn(
-        props.orientation === "vertical" && "grid grid-cols-[auto_1fr] gap-4",
-        props.className,
+        props.orientation === "vertical" &&
+          "grid grid-cols-[fit-content(25%)_1fr] gap-4",
       )}
     >
       <TabsPrimitive.List
@@ -74,8 +71,7 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
         className={cn(
           props.orientation === "horizontal" && "flex flex-wrap gap-x-1 py-2",
           props.orientation === "vertical" &&
-            "sticky flex flex-col content-start gap-y-1 overflow-y-auto",
-          props.listClassName,
+            "sticky flex flex-col gap-1 overflow-y-auto",
         )}
       >
         {props.items.map((item) => (
@@ -83,9 +79,8 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
             key={item.id}
             value={item.id}
             className={cn(
-              "flex cursor-pointer rounded-md border border-transparent bg-transparent px-4 py-1 text-left select-none",
+              "block cursor-pointer rounded-md border border-transparent bg-transparent px-4 py-1 text-left select-none",
               "hover:border-slate-500 hover:bg-slate-200 data-active:border-blue-500 data-active:bg-blue-200",
-              item.className,
             )}
           >
             {item.title}

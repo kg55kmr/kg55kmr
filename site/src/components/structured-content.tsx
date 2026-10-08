@@ -18,7 +18,6 @@ import { Link } from "./link";
 import { Responsive } from "./responsive";
 
 type StructuredContentProps = {
-  className?: string;
   TOCTitle?: string;
   children: ReactElement<SectionProps, typeof Section>[];
 };
@@ -105,10 +104,7 @@ function Desktop(props: DesktopProps) {
   return (
     <div
       ref={rootRef}
-      className={cn(
-        "items grid grid-cols-[1fr_auto] items-start gap-5",
-        props.className,
-      )}
+      className="items grid grid-cols-[1fr_auto] items-start gap-5"
     >
       <div>{props.children}</div>
       <TOC items={props.itemsData} inView={props.inView} TOCTitle={TOCTitle} />

@@ -6,8 +6,8 @@ export const educationalWork: RegulatoryDocuments = [
     items: [
       {
         title:
-          "Про організацію 2025/2026 навчального року в закладах загальної середньої освіти",
-        url: "https://osvita.ua/doc/files/news/953/95314/Lyst_MON_22.08.2025_1_17526-25.pdf",
+          "Про організаваний початок 2026/2027 навчального року в закладах загальної середньої освіти",
+        url: "https://drive.google.com/file/d/1bbOvZQzFj7r3uu7j6zWTJ7SNNUI79PtF/preview",
       },
       {
         title:
@@ -235,11 +235,6 @@ export const educationalWork: RegulatoryDocuments = [
           "Про затвердження плану заходів щодо посилення національно-патріотичного виховання дітей та учнівської молоді від 27.10.2014 № 1232",
         url: "https://zakon.rada.gov.ua/rada/show/v1232729-14",
       },
-      {
-        title:
-          "Про затвердження Положення про Єдину державну електронну базу з питань освіти від 08.06.2018 № 620",
-        url: "https://zakon.rada.gov.ua/laws/show/z1132-18",
-      },
     ],
   },
   {
@@ -259,15 +254,6 @@ export const educationalWork: RegulatoryDocuments = [
         title:
           "Про збереження системи позашкільної освіти в умовах обмеженого фінансування від 19.03.2014 № 1/9-151",
         url: "https://zakon.rada.gov.ua/rada/show/v-151729-14",
-      },
-    ],
-  },
-  {
-    section: "КГ №55 КМР",
-    items: [
-      {
-        title: "Положення про класного керівника",
-        url: 'dataFile("regulations-class-teacher")',
       },
     ],
   },

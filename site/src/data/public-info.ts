@@ -136,6 +136,10 @@ export const publicInfo: ReportItemWithItems[] = [
     title: "Річний план роботи закладу освіти",
     items: [
       {
+        title: "на 2025-2026 н.р.",
+        href: "https://drive.google.com/file/d/15ml3HvF65pKyhCsvQd8eNGLBC7CwqNXI/preview",
+      },
+      {
         title: "на 2024-2025 н.р.",
         href: "https://drive.google.com/file/d/12-PD2xfi7YBT7F6qwq6pN_cD1V91aVGX/preview",
       },

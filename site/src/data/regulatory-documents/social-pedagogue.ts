@@ -49,16 +49,6 @@ export const socialPedagogue: RegulatoryDocumentSection[] = [
       },
       {
         title:
-          "Наказ МОН від 02.10.2018 No 1047 «Про затвердження Методичних рекомендацій щодо виявлення, реагування на випадки домашнього насильства і взаємодії педагогічних працівників із іншими органами і службами»",
-        url: "https://drive.google.com/open?id=1yZ13CyWhLeZjk5RsMZitmuFmp7UD2sZI",
-      },
-      {
-        title:
-          "Лист МОН України від 24.07.2019 No1/9-477 «Про типову документацію працівників психологічної служби у системі освіти України»",
-        url: "https://drive.google.com/open?id=1UY_xe_kXCqYFOKgjZjd5xA4-KbSBzIef-qWQoEWugPs",
-      },
-      {
-        title:
           "Лист МОН України від 30.10.2018 No 1/9-656 «Про перелік діагностичних методик щодо виявлення та протидії домашньому насильству відносно дітей»",
         url: "https://zakon.rada.gov.ua/rada/show/v0656729-18",
       },
@@ -66,16 +56,6 @@ export const socialPedagogue: RegulatoryDocumentSection[] = [
         title:
           "Про Національну стратегію розбудови безпечного і здорового освітнього середовища у новій українській школі",
         url: "https://zakon.rada.gov.ua/laws/show/195/2020",
-      },
-      {
-        title:
-          "Лист МОН України №1/12492-23 від 21.08.2023 «Про пріоритетні напрями роботи психологічної служби у системі освіти у 2023-2024 н.р.»",
-        url: "https://drive.google.com/file/d/1ZMrGsMG5Py_6291KnS_ZD0ouS9nwnY99/view",
-      },
-      {
-        title:
-          "Лист МОН України №1/11479-23 від 03.08.2023 «Про методичні рекомендації: Безпечне освітнє середовище. Надання індивідуальної підтримки учням з особливими освітніми потребами під час підготовки до реагування на надзвичайні ситуації»",
-        url: "https://mon.gov.ua/storage/app/media/inkluzyvne-navchannya/2023/08/04/Lyst.MON-1.11479-23.vid.03.08.2023-1.pdf",
       },
       {
         title:
@@ -334,10 +314,6 @@ export const socialPedagogue: RegulatoryDocumentSection[] = [
         url: "https://zakon.rada.gov.ua/laws/show/2947-14",
       },
       {
-        title: "Житловий кодекс України",
-        url: "https://zakon.rada.gov.ua/laws/show/5464-10",
-      },
-      {
         title: 'Закон України "Про охорону дитинства"',
         url: "https://zakon.rada.gov.ua/laws/show/2402-14",
       },
@@ -362,17 +338,6 @@ export const socialPedagogue: RegulatoryDocumentSection[] = [
         title:
           'Наказ Міністерство соціальної політики України від 18.05.2021 № 253 "Про затвердження форми заяви для оформлення посвідчення батьків багатодітної сім’ї та посвідчення дитини з багатодітної сім’ї"',
         url: "https://zakon.rada.gov.ua/laws/show/z1041-21",
-      },
-    ],
-  },
-  {
-    section:
-      "Учні 5-11 класів закладів загальної середньої освіти з багатодітних сімей, які опинилися у складних життєвих обставинах",
-    items: [
-      {
-        title:
-          "Рішення Криворізької міської ради від 19.01.2022 № 22 «Про затвердження порядку надання безкоштовного харчування учням 5 – 11(12) класів закладів загальної середньої освіти з числа багатодітних сімей, які опинилися в складних життєвих обставинах»",
-        url: "https://kr.gov.ua/documents/rishennya-vikonkomu-krivorizkoyi-miskoyi-radi/zasidannya-vikonkomu-za-19-01-2022/118607-pro-zatverdzhennya-por",
       },
     ],
   },

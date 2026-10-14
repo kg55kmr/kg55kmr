@@ -47,18 +47,20 @@ const data = [
 
 function RouteComponent() {
   return (
-    <Tabs>
-      {data.map((v) => (
-        <Tabs.Tab key={v.date} title={`на ${v.date}`} id={v.date}>
-          <div className="content">
-            <ul>
-              {v.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </Tabs.Tab>
-      ))}
-    </Tabs>
+    <div>
+      <Tabs>
+        {data.map((v) => (
+          <Tabs.Tab key={v.date} title={`на ${v.date}`} id={v.date}>
+            <div className="content">
+              <ul>
+                {v.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </Tabs.Tab>
+        ))}
+      </Tabs>
+    </div>
   );
 }

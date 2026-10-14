@@ -31,13 +31,7 @@ export default defineConfig(({ mode }) => {
       tailwindcss(),
       staticAssets(),
       tanstackStart(),
-      nitro({
-        devProxy: {
-          "/src/routes/**/*.jpg": "http://localhost:3000/@fs",
-          "/src/routes/**/*.png": "http://localhost:3000/@fs",
-          "/src/routes/**/*.pdf": "http://localhost:3000/@fs",
-        },
-      }),
+      nitro(),
       react(),
       babel({ presets: [reactCompilerPreset()] }),
     ],

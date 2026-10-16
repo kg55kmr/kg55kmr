@@ -3,7 +3,7 @@
   "tasks": [
     {
       "type": "shell",
-      "command": "pnpm turbo dev --filter site",
+      "command": "pnpm --filter site dev",
       "label": "dev",
       "presentation": {
         "reveal": "always",
@@ -13,7 +13,7 @@
     },
     {
       "type": "shell",
-      "command": "pnpm turbo check --filter site",
+      "command": "pnpm --filter site check",
       "label": "check",
       "presentation": {
         "reveal": "always",
@@ -28,31 +28,6 @@
         "reveal": "always",
         "close": true
       },
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
-      "command": "pnpm build",
-      "label": "build packages",
-      "presentation": {
-        "reveal": "always",
-        "close": true
-      },
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
-      "command": "pull.cmd",
-      "label": "git pull",
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
-      "command": "posts.cmd",
-      "label": "Оновити публікації",
       "problemMatcher": []
     }
   ]

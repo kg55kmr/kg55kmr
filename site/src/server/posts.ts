@@ -1,8 +1,9 @@
 import { JSONPath } from "jsonpath-plus";
 import { type Posts, getPosts } from "posts";
 
-export function getLocalPosts<K extends keyof Posts>(key: K) {
-  return getPosts().then((r) => r[key]);
+export async function getLocalPosts<K extends keyof Posts>(key: K) {
+  const posts = await getPosts();
+  return posts[key];
 }
 
 export async function getPostFromJSON<T, K extends keyof Posts = keyof Posts>(

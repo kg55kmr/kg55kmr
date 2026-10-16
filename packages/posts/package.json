@@ -2,22 +2,19 @@
   "name": "posts",
   "version": "1.0.0",
   "type": "module",
-  "types": "./dist/index.d.ts",
   "exports": [
-    "./dist/index.js",
-    "./dist/main.js",
-    "./dist/dev.js"
+    "./src/index.ts",
+    "./src/main.ts",
+    "./src/dev.ts"
   ],
   "scripts": {
-    "build": "pkgroll --clean-dist",
-    "posts": "dotenv -e ../../site/.env.local node ./dist/main",
+    "build": "tsx --env-file=../../site/.env.local ./src/main",
     "format": "prettier -w ../../../posts/**/*.md"
   },
   "dependencies": {
     "@imagekit/nodejs": "^7.12.1",
     "@supercharge/promise-pool": "^3.3.0",
     "@upstash/redis": "^1.39.0",
-    "dotenv-cli": "^11.0.0",
     "fdir": "^6.5.0",
     "gray-matter": "^4.0.3",
     "workspace-root": "^3.3.1"

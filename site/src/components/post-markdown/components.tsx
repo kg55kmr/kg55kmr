@@ -39,7 +39,7 @@ export function FBVideo(props: FBVideoProps) {
   return (
     <div className="flex w-full flex-wrap justify-center gap-2 p-1">
       {ids.map((id) => {
-        const src = `https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/SecondarySchool55/videos/${id}/&show_text=false&t=0`;
+        const src = `https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/${id}`;
 
         return (
           <iframe

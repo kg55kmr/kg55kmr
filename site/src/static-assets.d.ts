@@ -196,6 +196,7 @@ declare module 'virtual:static-assets' {
     "images/працівники/капуста.jpg" |
     "images/працівники/кмітевич.jpg" |
     "images/працівники/кузьменко.jpg" |
+    "images/працівники/лащук.jpg" |
     "images/працівники/лисенко.jpg" |
     "images/працівники/лопатін.jpg" |
     "images/працівники/лівак-і.jpg" |
@@ -212,6 +213,7 @@ declare module 'virtual:static-assets' {
     "images/працівники/продан.jpg" |
     "images/працівники/рзаєва.jpg" |
     "images/працівники/рябоконь.jpg" |
+    "images/працівники/скрипченко.jpg" |
     "images/працівники/старікова.jpg" |
     "images/працівники/стрембицька.jpg" |
     "images/працівники/таран.jpg" |

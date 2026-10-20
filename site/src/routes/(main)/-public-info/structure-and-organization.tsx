@@ -14,8 +14,8 @@ export function StructureAndOrganization() {
       </h1>
       <Accordion className="mb-5">
         {structureAndOrganization.flatMap((v) => {
-          const employeesList = employees.byJob(v.id);
-          return employeesList.map((e) => (
+          const list = employees.byPost(v.id);
+          return list.map((e) => (
             <Accordion.Item
               key={e.name}
               title={e.name}
@@ -25,7 +25,7 @@ export function StructureAndOrganization() {
                 <img src={e.image} className="float-left mr-4 w-52" />
               </div>
               <div>
-                <div className="font-bold">{e.post}</div>
+                <div className="font-bold">{e.postPrint}</div>
                 <div className="font-bold text-[#a716a7]">{e.name}</div>
                 <div className="mt-7">
                   Контактна інформація:

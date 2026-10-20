@@ -1,9 +1,9 @@
-import type { Employee } from "~/data/employees";
+import type { EmployeeFinal } from "~/data/employees/utils";
 import { ExternalLink as EL } from "lucide-react";
 import { ExternalLink } from "~/components/link";
 
 type Props = {
-  employee: Employee;
+  employee: EmployeeFinal;
   workingHours: WorkingHours[];
 };
 

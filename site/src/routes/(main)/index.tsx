@@ -24,7 +24,7 @@ export const Route = createFileRoute("/(main)/")({
 });
 
 function RouteComponent() {
-  const director = employees.director();
+  const director = employees.director;
   return (
     <>
       <div className="grid sm:grid-cols-4">

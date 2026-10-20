@@ -1,4 +1,4 @@
-import type { EmployeeJob } from "./employees";
+import type { Post } from "./employees/utils";
 
 export const structureAndOrganization: Type[] = [
   {
@@ -77,7 +77,7 @@ export const structureAndOrganization: Type[] = [
     ],
   },
   {
-    id: "ЗДНВР",
+    id: "заступник директора з навчально-виховної роботи",
     duty: [
       {
         title: "Відповідає за",
@@ -203,7 +203,7 @@ export const structureAndOrganization: Type[] = [
     ],
   },
   {
-    id: "ЗДВР",
+    id: "заступник директора з виховної роботи",
     duty: [
       {
         title: "Відповідає за",
@@ -356,7 +356,7 @@ export const structureAndOrganization: Type[] = [
     ],
   },
   {
-    id: "завідувач-господарством",
+    id: "завідувач господарством",
     duty: [
       {
         title: "Відповідає за",
@@ -523,7 +523,7 @@ export const structureAndOrganization: Type[] = [
     ],
   },
   {
-    id: "соціальний-педагог",
+    id: "соціальний педагог",
     duty: [
       {
         title: "Відповідає за",
@@ -581,7 +581,7 @@ export const structureAndOrganization: Type[] = [
     ],
   },
   {
-    id: "практичний-психолог",
+    id: "практичний психолог",
     duty: [
       {
         title: "Відповідає за",
@@ -696,7 +696,7 @@ export const structureAndOrganization: Type[] = [
 ];
 
 type Type = {
-  id: EmployeeJob;
+  id: Post;
   duty: Duty[];
 };
 

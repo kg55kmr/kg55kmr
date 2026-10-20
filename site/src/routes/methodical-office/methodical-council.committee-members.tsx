@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { type Employee, employees } from "~/data/employees";
+import { employees } from "~/data/employees";
+import { type EmployeeFinal } from "~/data/employees/utils";
 
 export const Route = createFileRoute(
   "/methodical-office/methodical-council/committee-members",
@@ -10,10 +11,10 @@ export const Route = createFileRoute(
   },
 });
 
-const head = employees.director();
+const head = employees.director;
 const members = [
-  ...employees.byJob("ЗДНВР"),
-  ...employees.byJob("ЗДВР"),
+  ...employees.byPost("ЗДНВР"),
+  ...employees.byPost("ЗДВР"),
   {
     ...employees.byName("Артемюк Наталія Анатоліївна"),
     post: "керівник МО предметів природничо-математичного циклу",
@@ -45,7 +46,7 @@ function Header(props: { text: string }) {
   );
 }
 
-function Member({ employee }: { employee: Employee }) {
+function Member({ employee }: { employee: EmployeeFinal }) {
   return (
     <>
       <img src={employee.image} className="w-50" />

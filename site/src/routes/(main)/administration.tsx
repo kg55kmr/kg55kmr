@@ -12,7 +12,7 @@ export const Route = createFileRoute("/(main)/administration")({
 function RouteComponent() {
   return (
     <div className="font-roboto-condensed grid justify-items-center gap-y-15 md:grid-cols-2">
-      {employees.admin().map((e) => (
+      {employees.admin.map((e) => (
         <div key={e.image} className="w-55 text-center">
           <img src={e.image} className="w-full" />
           <div className="font-bold text-blue-700">{e.name}</div>

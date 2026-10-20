@@ -13,7 +13,7 @@ export const Route = createFileRoute(
 });
 
 function RouteComponent() {
-  const name = employees.byJob("ЗДВР")[0].name;
+  const name = employees.byPost("ЗДВР")[0].name;
   return (
     <div className="content">
       <div className="grid gap-5 lg:grid-cols-2">

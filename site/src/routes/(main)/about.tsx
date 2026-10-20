@@ -9,7 +9,7 @@ export const Route = createFileRoute("/(main)/about")({
 });
 
 function RouteComponent() {
-  const director = employees.director();
+  const director = employees.director;
   return (
     <>
       <div className="grid md:grid-cols-3">

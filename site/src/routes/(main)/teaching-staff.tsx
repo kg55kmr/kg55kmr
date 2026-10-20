@@ -28,11 +28,11 @@ function RouteComponent() {
         </p>
       </div>
       <div className="grid md:grid-cols-2">
-        {employees.teachingStaff().map((v) => (
+        {employees.teachingStaff.map((v) => (
           <div key={v.name} className="flex flex-col items-center pb-9">
             <img src={v.image} className="w-48" />
             <div className="font-bold">{v.name}</div>
-            <div>{v.post}</div>
+            <div>{v.postPrint}</div>
             {v.rank && <div>{v.rank}</div>}
             {v.blog && (
               <ExternalLink href={v.blog}>

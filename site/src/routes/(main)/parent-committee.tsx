@@ -12,8 +12,6 @@ export const Route = createFileRoute("/(main)/parent-committee")({
 
 function RouteComponent() {
   return (
-    <Archive items={data}>
-      {(v) => <MeetingsChronology items={v} itemComponents={2} />}
-    </Archive>
+    <Archive items={data}>{(v) => <MeetingsChronology items={v} />}</Archive>
   );
 }

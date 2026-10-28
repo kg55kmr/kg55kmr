@@ -1,4 +1,4 @@
-import type { Post } from "./employees/utils";
+import type { Position } from "./employees/staff";
 
 export const structureAndOrganization: Type[] = [
   {
@@ -696,7 +696,7 @@ export const structureAndOrganization: Type[] = [
 ];
 
 type Type = {
-  id: Post;
+  id: Position;
   duty: Duty[];
 };
 

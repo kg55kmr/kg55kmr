@@ -10,7 +10,7 @@ export const Route = createFileRoute("/educational-work/")({
 });
 
 function RouteComponent() {
-  const e = employees.byPost("ЗДВР")[0];
+  const e = employees.byPosition("заступник директора з виховної роботи")[0];
   return (
     <div className="content">
       <p className="font-lobster text-right text-2xl text-blue-800">

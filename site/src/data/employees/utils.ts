@@ -1,30 +1,43 @@
 import * as R from "rambda";
 import { type InferFilename, dirAsset } from "~/lib/utils";
+import {
+  type Category,
+  type Position,
+  type Title,
+  administration,
+} from "./staff";
+import { staff } from "./staff";
 
 const photoAsset = dirAsset("images/працівники/");
 
-export function define<TPost extends Post>(baseItems: Employee<TPost>[]) {
+export function define<TPos extends Position>(baseItems: Employee<TPos>[]) {
   const items2 = baseItems.map(transform);
   const byPost = R.pipe(
     items2,
-    R.filter((v) => v.post !== undefined),
-    R.groupBy((v) => v.post as Post),
+    R.filter((v) => v.position !== undefined),
+    R.groupBy((v) => v.position as Position),
   );
 
-  const byPostFn = (post: Post): Employee2<TPost>[] => byPost[post] ?? [];
-  const admin = employeesList.адміністрація.flatMap((v) => byPostFn(v));
+  const byPositionFn = (post: Position): Employee2<TPos>[] =>
+    byPost[post] ?? [];
+  const ts = staff.map((e) => ({
+    name: e.name,
+    positions: Array.isArray(e.position)
+      ? e.position.flatMap(byPositionFn)
+      : byPositionFn(e.position),
+  }));
 
   return {
-    byPost: byPostFn,
-    teachingStaff: items2.filter((e) => e.post !== "завідувач господарством"),
-    admin,
-    director: byPostFn("директор")[0],
+    byPosition: byPositionFn,
+    teachingStaff: ts,
+    admin: administration.flatMap(byPositionFn),
+    director: byPositionFn("директор")[0],
   };
 }
 
-function transform<TPost extends Post>(e: Employee<TPost>): Employee2<TPost> {
+function transform<TPos extends Position>(e: Employee<TPos>): Employee2<TPos> {
   const [surname, firstName, patronymic] = e.name.split(" ");
-  const postPrint = e.post[0].toUpperCase() + e.post.slice(1);
+  const postPrint = e.position[0].toUpperCase() + e.position.slice(1);
 
   return {
     ...e,
@@ -35,31 +48,18 @@ function transform<TPost extends Post>(e: Employee<TPost>): Employee2<TPost> {
   };
 }
 
-const employeesList: Record<Posts, Post[]> = {
-  адміністрація: [
-    "директор",
-    "заступник директора з навчально-виховної роботи",
-    "заступник директора з виховної роботи",
-    "завідувач господарством",
-    "соціальний педагог",
-    "практичний психолог",
-    "учитель-логопед",
-    "педагог-організатор",
-  ],
-  "початкові класи": ["учитель початкових класів"],
-};
-
-type Employee<TPost extends Post> = {
+type Employee<TPos extends Position> = {
   name: string;
-  post: TPost;
-  rank?: string;
+  position: TPos;
+  category?: Category;
+  title?: Title;
   image: InferFilename<typeof photoAsset>;
   image2?: InferFilename<typeof photoAsset>;
   blog?: string;
 };
 
-type Employee2<TPost extends Post> = Omit<
-  Employee<TPost>,
+export type Employee2<TPos extends Position = Position> = Omit<
+  Employee<TPos>,
   "image" | "image2"
 > & {
   initials: string;
@@ -68,28 +68,7 @@ type Employee2<TPost extends Post> = Omit<
   postPrint: string;
 };
 
-export type Posts = "адміністрація" | "початкові класи";
-
-export type Post =
-  | "директор"
-  | "заступник директора з навчально-виховної роботи"
-  | "заступник директора з виховної роботи"
-  | "завідувач господарством"
-  | "бібліотекар"
-  | "практичний психолог"
-  | "соціальний педагог"
-  | "педагог-організатор"
-  | "учитель початкових класів"
-  | "учитель української мови та літератури"
-  | "учитель трудового навчання"
-  | "учитель англійської мови"
-  | "учитель інформатики"
-  | "учитель математики"
-  | "учитель фізики"
-  | "учитель географії та біології"
-  | "учитель зарубіжної літератури"
-  | "учитель музичного мистецтва"
-  | "учитель фізичної культури"
-  | "учитель-логопед"
-  | "учитель історії"
-  | "асистент вчителя";
+export type Staff = {
+  name: string;
+  position: Position | Position[];
+};

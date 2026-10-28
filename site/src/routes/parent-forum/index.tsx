@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { academicYear, nextAcademicYear } from "~/data/common";
-import { type EmployeeName, employees } from "~/data/employees";
 import { asset } from "~/lib/utils";
 
 export const Route = createFileRoute("/parent-forum/")({
@@ -10,9 +9,10 @@ export const Route = createFileRoute("/parent-forum/")({
   },
 });
 
-const teachers: [EmployeeName, EmployeeName] = [
-  "Чудна Наталія Володимирівна",
-  "Мугак Ніна Іванівна",
+// TODO: replace with string literal
+const teachers: [string, string] = [
+  "Неплях Віталіна Валеріївна",
+  "Лисенко Олена Борисівна",
 ];
 
 function RouteComponent() {
@@ -62,15 +62,9 @@ function RouteComponent() {
       </p>
       <p>
         Досвідчені, розумні, привітні вчителі
-        <span className="font-bold text-blue-700">
-          {" "}
-          {employees.byName(teachers[0]).name}{" "}
-        </span>
+        <span className="font-bold text-blue-700"> {teachers[0]} </span>
         та
-        <span className="font-bold text-blue-700">
-          {" "}
-          {employees.byName(teachers[1]).name}{" "}
-        </span>
+        <span className="font-bold text-blue-700"> {teachers[1]} </span>
         навчатимуть майбутніх першачків.
       </p>
 

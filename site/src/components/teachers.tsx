@@ -1,5 +1,5 @@
 import { type FC, Fragment, Suspense } from "react";
-import { type EmployeeName, employees } from "~/data/employees";
+import { employees } from "~/data/employees";
 import {
   type MethodologicalAssociation,
   methodologicalAssociations,

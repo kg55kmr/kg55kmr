@@ -209,6 +209,7 @@ declare module 'virtual:static-assets' {
     "images/працівники/мо-вчителів-суспільно-гуманітарного-циклу.jpg" |
     "images/працівники/мугак.jpg" |
     "images/працівники/неплях-в.jpg" |
+    "images/працівники/неплях-є.jpg" |
     "images/працівники/половинкина.jpg" |
     "images/працівники/продан.jpg" |
     "images/працівники/рзаєва.jpg" |

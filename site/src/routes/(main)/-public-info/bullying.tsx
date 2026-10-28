@@ -39,7 +39,7 @@ const items = [
 ];
 
 export function Bullying() {
-  const name = employees.byPost("заступник директора з виховної роботи")[0]
+  const name = employees.byPosition("заступник директора з виховної роботи")[0]
     .name;
   return (
     <>

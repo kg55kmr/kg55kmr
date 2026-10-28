@@ -24,8 +24,8 @@ import {
   Trophy,
   TvMinimalPlay,
   Users,
-  UsersRound,
 } from "lucide-react";
+import { staffSections } from "../employees/staff";
 import { type Section } from "./types";
 
 export const main = [
@@ -45,10 +45,12 @@ export const main = [
       },
       {
         groupTitle: "Колектив",
-        items: [
-          { to: "/administration", icon: UsersRound },
-          { to: "/teaching-staff", icon: Users },
-        ],
+        items: staffSections.map((section) => ({
+          to: "/staff",
+          search: { section: section.id },
+          title: section.name,
+          icon: Users,
+        })),
       },
       {
         groupTitle: "Управління",

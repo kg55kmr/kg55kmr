@@ -23,7 +23,6 @@ import { Route as ProjectActivityRouteRouteImport } from './routes/project-activ
 import { Route as SocialAndPsychologicalServiceRouteRouteImport } from './routes/social-and-psychological-service/route'
 import { Route as mainIndexRouteImport } from './routes/(main)/index'
 import { Route as mainAboutRouteImport } from './routes/(main)/about'
-import { Route as mainAdministrationRouteImport } from './routes/(main)/administration'
 import { Route as mainAlbumRouteImport } from './routes/(main)/album'
 import { Route as mainBudgetFundsRouteImport } from './routes/(main)/budget-funds'
 import { Route as mainDistanceLearningRouteImport } from './routes/(main)/distance-learning'
@@ -41,7 +40,7 @@ import { Route as mainPedagogicalCouncilsRouteImport } from './routes/(main)/ped
 import { Route as mainPublicInfoRouteImport } from './routes/(main)/public-info'
 import { Route as mainRegulatoryDocumentsRouteImport } from './routes/(main)/regulatory-documents'
 import { Route as mainSitemapRouteImport } from './routes/(main)/sitemap'
-import { Route as mainTeachingStaffRouteImport } from './routes/(main)/teaching-staff'
+import { Route as mainStaffRouteImport } from './routes/(main)/staff'
 import { Route as mainTextbooksRouteImport } from './routes/(main)/textbooks'
 import { Route as EducationalProcessIndexRouteImport } from './routes/educational-process/index'
 import { Route as EducationalProcessClassPeriodRouteImport } from './routes/educational-process/class-period'
@@ -271,11 +270,6 @@ const mainAboutRoute = mainAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainAdministrationRoute = mainAdministrationRouteImport.update({
-  id: '/administration',
-  path: '/administration',
-  getParentRoute: () => mainRouteRoute,
-} as any)
 const mainAlbumRoute = mainAlbumRouteImport.update({
   id: '/album',
   path: '/album',
@@ -363,9 +357,9 @@ const mainSitemapRoute = mainSitemapRouteImport.update({
   path: '/sitemap',
   getParentRoute: () => mainRouteRoute,
 } as any)
-const mainTeachingStaffRoute = mainTeachingStaffRouteImport.update({
-  id: '/teaching-staff',
-  path: '/teaching-staff',
+const mainStaffRoute = mainStaffRouteImport.update({
+  id: '/staff',
+  path: '/staff',
   getParentRoute: () => mainRouteRoute,
 } as any)
 const mainTextbooksRoute = mainTextbooksRouteImport.update({
@@ -1332,7 +1326,6 @@ export interface FileRoutesByFullPath {
   '/project-activity': typeof ProjectActivityRouteRoute
   '/social-and-psychological-service': typeof SocialAndPsychologicalServiceRouteRouteWithChildren
   '/about': typeof mainAboutRoute
-  '/administration': typeof mainAdministrationRoute
   '/album': typeof mainAlbumRouteWithChildren
   '/budget-funds': typeof mainBudgetFundsRoute
   '/distance-learning': typeof mainDistanceLearningRoute
@@ -1350,7 +1343,7 @@ export interface FileRoutesByFullPath {
   '/public-info': typeof mainPublicInfoRoute
   '/regulatory-documents': typeof mainRegulatoryDocumentsRoute
   '/sitemap': typeof mainSitemapRoute
-  '/teaching-staff': typeof mainTeachingStaffRoute
+  '/staff': typeof mainStaffRoute
   '/textbooks': typeof mainTextbooksRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
@@ -1513,7 +1506,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/project-activity': typeof ProjectActivityRouteRoute
   '/about': typeof mainAboutRoute
-  '/administration': typeof mainAdministrationRoute
   '/budget-funds': typeof mainBudgetFundsRoute
   '/distance-learning': typeof mainDistanceLearningRoute
   '/energy-efficiency': typeof mainEnergyEfficiencyRoute
@@ -1530,7 +1522,7 @@ export interface FileRoutesByTo {
   '/public-info': typeof mainPublicInfoRoute
   '/regulatory-documents': typeof mainRegulatoryDocumentsRoute
   '/sitemap': typeof mainSitemapRoute
-  '/teaching-staff': typeof mainTeachingStaffRoute
+  '/staff': typeof mainStaffRoute
   '/textbooks': typeof mainTextbooksRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
@@ -1704,7 +1696,6 @@ export interface FileRoutesById {
   '/project-activity': typeof ProjectActivityRouteRoute
   '/social-and-psychological-service': typeof SocialAndPsychologicalServiceRouteRouteWithChildren
   '/(main)/about': typeof mainAboutRoute
-  '/(main)/administration': typeof mainAdministrationRoute
   '/(main)/album': typeof mainAlbumRouteWithChildren
   '/(main)/budget-funds': typeof mainBudgetFundsRoute
   '/(main)/distance-learning': typeof mainDistanceLearningRoute
@@ -1722,7 +1713,7 @@ export interface FileRoutesById {
   '/(main)/public-info': typeof mainPublicInfoRoute
   '/(main)/regulatory-documents': typeof mainRegulatoryDocumentsRoute
   '/(main)/sitemap': typeof mainSitemapRoute
-  '/(main)/teaching-staff': typeof mainTeachingStaffRoute
+  '/(main)/staff': typeof mainStaffRoute
   '/(main)/textbooks': typeof mainTextbooksRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
@@ -1897,7 +1888,6 @@ export interface FileRouteTypes {
     | '/project-activity'
     | '/social-and-psychological-service'
     | '/about'
-    | '/administration'
     | '/album'
     | '/budget-funds'
     | '/distance-learning'
@@ -1915,7 +1905,7 @@ export interface FileRouteTypes {
     | '/public-info'
     | '/regulatory-documents'
     | '/sitemap'
-    | '/teaching-staff'
+    | '/staff'
     | '/textbooks'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
@@ -2078,7 +2068,6 @@ export interface FileRouteTypes {
   to:
     | '/project-activity'
     | '/about'
-    | '/administration'
     | '/budget-funds'
     | '/distance-learning'
     | '/energy-efficiency'
@@ -2095,7 +2084,7 @@ export interface FileRouteTypes {
     | '/public-info'
     | '/regulatory-documents'
     | '/sitemap'
-    | '/teaching-staff'
+    | '/staff'
     | '/textbooks'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
@@ -2268,7 +2257,6 @@ export interface FileRouteTypes {
     | '/project-activity'
     | '/social-and-psychological-service'
     | '/(main)/about'
-    | '/(main)/administration'
     | '/(main)/album'
     | '/(main)/budget-funds'
     | '/(main)/distance-learning'
@@ -2286,7 +2274,7 @@ export interface FileRouteTypes {
     | '/(main)/public-info'
     | '/(main)/regulatory-documents'
     | '/(main)/sitemap'
-    | '/(main)/teaching-staff'
+    | '/(main)/staff'
     | '/(main)/textbooks'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
@@ -2563,13 +2551,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainAboutRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/administration': {
-      id: '/(main)/administration'
-      path: '/administration'
-      fullPath: '/administration'
-      preLoaderRoute: typeof mainAdministrationRouteImport
-      parentRoute: typeof mainRouteRoute
-    }
     '/(main)/album': {
       id: '/(main)/album'
       path: '/album'
@@ -2689,11 +2670,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof mainSitemapRouteImport
       parentRoute: typeof mainRouteRoute
     }
-    '/(main)/teaching-staff': {
-      id: '/(main)/teaching-staff'
-      path: '/teaching-staff'
-      fullPath: '/teaching-staff'
-      preLoaderRoute: typeof mainTeachingStaffRouteImport
+    '/(main)/staff': {
+      id: '/(main)/staff'
+      path: '/staff'
+      fullPath: '/staff'
+      preLoaderRoute: typeof mainStaffRouteImport
       parentRoute: typeof mainRouteRoute
     }
     '/(main)/textbooks': {
@@ -3828,7 +3809,6 @@ const mainPostsTypeRouteWithChildren = mainPostsTypeRoute._addFileChildren(
 
 interface mainRouteRouteChildren {
   mainAboutRoute: typeof mainAboutRoute
-  mainAdministrationRoute: typeof mainAdministrationRoute
   mainAlbumRoute: typeof mainAlbumRouteWithChildren
   mainBudgetFundsRoute: typeof mainBudgetFundsRoute
   mainDistanceLearningRoute: typeof mainDistanceLearningRoute
@@ -3846,7 +3826,7 @@ interface mainRouteRouteChildren {
   mainPublicInfoRoute: typeof mainPublicInfoRoute
   mainRegulatoryDocumentsRoute: typeof mainRegulatoryDocumentsRoute
   mainSitemapRoute: typeof mainSitemapRoute
-  mainTeachingStaffRoute: typeof mainTeachingStaffRoute
+  mainStaffRoute: typeof mainStaffRoute
   mainTextbooksRoute: typeof mainTextbooksRoute
   mainIndexRoute: typeof mainIndexRoute
   mainAchievementsPupilRoute: typeof mainAchievementsPupilRoute
@@ -3858,7 +3838,6 @@ interface mainRouteRouteChildren {
 
 const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainAboutRoute: mainAboutRoute,
-  mainAdministrationRoute: mainAdministrationRoute,
   mainAlbumRoute: mainAlbumRouteWithChildren,
   mainBudgetFundsRoute: mainBudgetFundsRoute,
   mainDistanceLearningRoute: mainDistanceLearningRoute,
@@ -3877,7 +3856,7 @@ const mainRouteRouteChildren: mainRouteRouteChildren = {
   mainPublicInfoRoute: mainPublicInfoRoute,
   mainRegulatoryDocumentsRoute: mainRegulatoryDocumentsRoute,
   mainSitemapRoute: mainSitemapRoute,
-  mainTeachingStaffRoute: mainTeachingStaffRoute,
+  mainStaffRoute: mainStaffRoute,
   mainTextbooksRoute: mainTextbooksRoute,
   mainIndexRoute: mainIndexRoute,
   mainAchievementsPupilRoute: mainAchievementsPupilRoute,

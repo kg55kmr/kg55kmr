@@ -13,8 +13,8 @@ export const Route = createFileRoute(
 
 const head = employees.director;
 const members = [
-  ...employees.byPost("ЗДНВР"),
-  ...employees.byPost("ЗДВР"),
+  ...employees.byPosition("ЗДНВР"),
+  ...employees.byPosition("ЗДВР"),
   {
     ...employees.byName("Артемюк Наталія Анатоліївна"),
     post: "керівник МО предметів природничо-математичного циклу",

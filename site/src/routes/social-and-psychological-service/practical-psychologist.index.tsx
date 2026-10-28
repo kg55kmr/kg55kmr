@@ -19,7 +19,7 @@ function RouteComponent() {
   return (
     <div className="content">
       <EmployeeInfo
-        employee={employees.byPost("практичний-психолог")[0]}
+        employee={employees.byPosition("практичний психолог")[0]}
         workingHours={[
           ["08:30", "14:30"],
           ["08:30", "14:30"],

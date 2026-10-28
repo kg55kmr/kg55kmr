@@ -1,9 +1,9 @@
-import type { EmployeeFinal } from "~/data/employees/utils";
+import type { Employee2 } from "~/data/employees";
 import { ExternalLink as EL } from "lucide-react";
 import { ExternalLink } from "~/components/link";
 
 type Props = {
-  employee: EmployeeFinal;
+  employee: Employee2;
   workingHours: WorkingHours[];
 };
 
@@ -26,7 +26,7 @@ export function EmployeeInfo(props: Props) {
       <div className="text-center">
         <div className="font-bold">
           <div className="text-2xl text-violet-700">{e.name}</div>
-          <div className="text-xl text-red-700">{e.post}</div>
+          <div className="text-xl text-red-700">{e.position}</div>
         </div>
         <p className="font-bold">Графік роботи</p>
         <table className="table-border mx-auto text-left">

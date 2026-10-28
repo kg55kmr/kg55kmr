@@ -9,12 +9,9 @@ import { asset } from "~/lib/utils";
 export function StructureAndOrganization() {
   return (
     <>
-      <h1 className="mb-5 text-center text-2xl font-bold">
-        Адміністрація закладу
-      </h1>
       <Accordion className="mb-5">
         {structureAndOrganization.flatMap((v) => {
-          const list = employees.byPost(v.id);
+          const list = employees.byPosition(v.id);
           return list.map((e) => (
             <Accordion.Item
               key={e.name}

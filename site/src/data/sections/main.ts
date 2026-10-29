@@ -25,7 +25,7 @@ import {
   TvMinimalPlay,
   Users,
 } from "lucide-react";
-import { staffSections } from "../employees/staff";
+import { employees } from "../employees";
 import { type Section } from "./types";
 
 export const main = [
@@ -45,12 +45,17 @@ export const main = [
       },
       {
         groupTitle: "Колектив",
-        items: staffSections.map((section) => ({
-          to: "/staff",
-          search: { section: section.id },
-          title: section.name,
-          icon: Users,
-        })),
+        items: employees.teachingStaff
+          .map(
+            (s) =>
+              ({
+                to: "/staff",
+                hash: s.anchor?.id,
+                title: s.anchor?.name ?? s.name,
+                icon: Users,
+              }) as const,
+          )
+          .filter((s) => s.hash),
       },
       {
         groupTitle: "Управління",
@@ -123,7 +128,7 @@ export const main = [
     ],
   },
   {
-    title: "Звітність",
+    title: "Публічна інформація",
     groups: [
       {
         groupTitle: "Публічна інформація",

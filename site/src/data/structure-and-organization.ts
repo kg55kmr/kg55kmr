@@ -1,4 +1,4 @@
-import type { Position } from "./employees/staff";
+import type { Position } from "./employees/types";
 
 export const structureAndOrganization: Type[] = [
   {

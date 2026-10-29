@@ -1,20 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
-import z from "zod";
 import { employees } from "~/data/employees";
-import { staffSections } from "~/data/employees/staff";
+import { useStickyOffset } from "~/hooks/use-sticky";
 import { asset } from "~/lib/utils";
 
 export const Route = createFileRoute("/(main)/staff")({
   component: RouteComponent,
-  validateSearch: z.object({
-    section: z.enum(staffSections.map((s) => s.id)).default("administration"),
-  }),
   staticData: {
     title: "Колектив гімназії",
   },
 });
 
 function RouteComponent() {
+  const offset = useStickyOffset();
   return (
     <>
       <div className="content mb-10">
@@ -32,7 +29,11 @@ function RouteComponent() {
       </div>
       <div className="flex flex-col gap-10">
         {employees.teachingStaff.map((c) => (
-          <div key={c.name}>
+          <div
+            key={c.name}
+            id={c.anchor?.id}
+            style={{ scrollMarginTop: `${offset}px` }}
+          >
             <h1 className="font-philosopher -mx-(--main-offset) mb-4 border-y border-slate-500 bg-slate-100 py-1 text-center text-4xl">
               {c.name}
             </h1>

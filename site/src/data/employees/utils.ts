@@ -1,14 +1,11 @@
+import type { Employee, Employee2 } from "./types";
 import * as R from "rambda";
-import { type InferFilename, dirAsset } from "~/lib/utils";
-import {
-  type Category,
-  type Position,
-  type Title,
-  administration,
-} from "./staff";
+import { dirAsset } from "~/lib/utils";
+import { administration } from "./staff";
 import { staff } from "./staff";
+import { type Position } from "./types";
 
-const photoAsset = dirAsset("images/працівники/");
+export const photoAsset = dirAsset("images/працівники/");
 
 export function define<TPos extends Position>(baseItems: Employee<TPos>[]) {
   const items2 = baseItems.map(transform);
@@ -20,12 +17,15 @@ export function define<TPos extends Position>(baseItems: Employee<TPos>[]) {
 
   const byPositionFn = (post: Position): Employee2<TPos>[] =>
     byPost[post] ?? [];
-  const ts = staff.map((e) => ({
-    name: e.name,
-    positions: Array.isArray(e.position)
+  const ts = staff.map((e) => {
+    const positions = Array.isArray(e.position)
       ? e.position.flatMap(byPositionFn)
-      : byPositionFn(e.position),
-  }));
+      : byPositionFn(e.position);
+    return {
+      ...e,
+      positions,
+    };
+  });
 
   return {
     byPosition: byPositionFn,
@@ -47,28 +47,3 @@ function transform<TPos extends Position>(e: Employee<TPos>): Employee2<TPos> {
     postPrint,
   };
 }
-
-type Employee<TPos extends Position> = {
-  name: string;
-  position: TPos;
-  category?: Category;
-  title?: Title;
-  image: InferFilename<typeof photoAsset>;
-  image2?: InferFilename<typeof photoAsset>;
-  blog?: string;
-};
-
-export type Employee2<TPos extends Position = Position> = Omit<
-  Employee<TPos>,
-  "image" | "image2"
-> & {
-  initials: string;
-  image: string;
-  image2: string | undefined;
-  postPrint: string;
-};
-
-export type Staff = {
-  name: string;
-  position: Position | Position[];
-};

@@ -1,5 +1,5 @@
 import { define } from "./utils";
-export type { Employee2 } from "./utils";
+export type * from "./types";
 
 export const employees = define([
   {

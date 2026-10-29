@@ -1,4 +1,4 @@
-import type { Staff } from "./utils";
+import type { Position, Staff } from "./types";
 
 export const administration: Position[] = [
   "директор",
@@ -7,18 +7,32 @@ export const administration: Position[] = [
   "завідувач господарством",
 ];
 
-export const staff = [
+export const staff: Staff[] = [
   {
     name: "Адміністрація",
     position: administration,
+    anchor: { id: "administration" },
   },
   {
     name: "Соціально-психологічна служба",
     position: ["соціальний педагог", "практичний психолог"],
+    anchor: { id: "social-and-psychological-service" },
   },
-  { name: "Учитель-логопед", position: "учитель-логопед" },
-  { name: "Педагог-організатор", position: "педагог-організатор" },
-  { name: "Початкова школа", position: "учитель початкових класів" },
+  {
+    name: "Учитель-логопед",
+    position: "учитель-логопед",
+    anchor: { id: "speech-therapist" },
+  },
+  {
+    name: "Педагог-організатор",
+    position: "педагог-організатор",
+    anchor: { id: "activity-coordinator" },
+  },
+  {
+    name: "Початкова школа",
+    position: "учитель початкових класів",
+    anchor: { id: "teachers", name: "Викладачі" },
+  },
   {
     name: "Українська мова та література",
     position: "учитель української мови та літератури",
@@ -66,50 +80,6 @@ export const staff = [
   {
     name: "Асистент учителя",
     position: "асистент учителя",
+    anchor: { id: "teaching-assistant" },
   },
-] as const satisfies Staff[];
-
-export const staffSections = [
-  { name: "Адміністрація", id: "administration" },
-  {
-    name: "Соціально-психологічна служба",
-    id: "social-and-psychological-service",
-  },
-  { name: "Учитель-логопед", id: "speech-therapist" },
-  { name: "Асистент вчителя", id: "teaching-assistant" },
-  { name: "Викладачі", id: "teaching-assistant" },
 ] as const;
-
-export type Position =
-  | "директор"
-  | "заступник директора з навчально-виховної роботи"
-  | "заступник директора з виховної роботи"
-  | "завідувач господарством"
-  | "бібліотекар"
-  | "практичний психолог"
-  | "соціальний педагог"
-  | "педагог-організатор"
-  | "учитель початкових класів"
-  | "учитель української мови та літератури"
-  | "учитель трудового навчання"
-  | "учитель англійської мови"
-  | "учитель інформатики"
-  | "учитель математики"
-  | "учитель фізики"
-  | "учитель географії та біології"
-  | "учитель зарубіжної літератури"
-  | "учитель музичного мистецтва"
-  | "учитель фізичної культури"
-  | "учитель-логопед"
-  | "учитель історії"
-  | "асистент учителя";
-
-export type Category =
-  | "спеціаліст вищої категорії"
-  | "спеціаліст другої категорії"
-  | "спеціаліст першої категорії"
-  | "спеціаліст"
-  | "10 тарифний розряд"
-  | "11 тарифний розряд";
-
-export type Title = "учитель-методист" | "старший учитель";

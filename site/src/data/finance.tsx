@@ -262,6 +262,10 @@ export const finance: Finance = {
       title: "Кошторис",
       items: [
         {
+          title: "2026 рік",
+          href: "https://drive.google.com/file/d/1pEqwBn-sOcU1lRuQnGXgq8soKiJMz73A/preview",
+        },
+        {
           title: "2025 рік",
           href: "https://drive.google.com/file/d/1KcFzByXz4ck_yZJEojyfN9UqVQnG7AEy/preview",
         },

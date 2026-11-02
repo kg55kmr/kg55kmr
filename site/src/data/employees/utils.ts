@@ -1,7 +1,6 @@
 import type { Employee, Employee2 } from "./types";
 import * as R from "rambda";
 import { dirAsset } from "~/lib/utils";
-import { administration } from "./staff";
 import { staff } from "./staff";
 import { type Position } from "./types";
 
@@ -29,9 +28,8 @@ export function define<TPos extends Position>(baseItems: Employee<TPos>[]) {
 
   return {
     byPosition: byPositionFn,
-    teachingStaff: ts,
-    admin: administration.flatMap(byPositionFn),
     director: byPositionFn("директор")[0],
+    teachingStaff: ts,
   };
 }
 

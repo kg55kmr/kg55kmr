@@ -26,7 +26,18 @@ import {
   Users,
 } from "lucide-react";
 import { employees } from "../employees";
+import { publicInfo } from "../public-info";
 import { type Section } from "./types";
+
+const staff = employees.teachingStaff.map(
+  (s, i) =>
+    ({
+      to: "/staff",
+      hash: (i + 1).toString(),
+      title: s.name,
+      icon: Users,
+    }) as const,
+);
 
 export const main = [
   {
@@ -44,18 +55,12 @@ export const main = [
         ],
       },
       {
-        groupTitle: "Колектив",
-        items: employees.teachingStaff
-          .map(
-            (s) =>
-              ({
-                to: "/staff",
-                hash: s.anchor?.id,
-                title: s.anchor?.name ?? s.name,
-                icon: Users,
-              }) as const,
-          )
-          .filter((s) => s.hash),
+        groupTitle: "Адміністрація та фахівці",
+        items: staff.slice(0, 6),
+      },
+      {
+        groupTitle: "Викладачі за предметами",
+        items: staff.slice(6),
       },
       {
         groupTitle: "Управління",
@@ -98,7 +103,7 @@ export const main = [
           },
           { to: "/album", icon: BookImage },
           {
-            title: "Ми у прессі",
+            title: "Ми у пресі",
             href: "https://www.youtube.com/playlist?list=PLRRIw-HYRJOqvwF8B4qVAviOnmN5iY3Xn",
             icon: TvMinimalPlay,
           },
@@ -131,8 +136,15 @@ export const main = [
     title: "Публічна інформація",
     groups: [
       {
-        groupTitle: "Публічна інформація",
-        items: [{ to: "/public-info", icon: FileText }],
+        groupTitle: "Прозорість та інформаційна відкритість",
+        items: publicInfo.map((v) => {
+          return {
+            to: "/public-info",
+            search: { id: Number(v.value) },
+            title: v.title,
+            icon: FileText,
+          } as const;
+        }),
       },
       {
         groupTitle: "Фінансова звітність",

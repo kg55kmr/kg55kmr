@@ -9,7 +9,7 @@ export function Archive<T>(props: YearsProps<T>) {
   return (
     <Tabs defaultValue={props.items[0].k}>
       {props.items.map(({ k, v }) => (
-        <Tabs.Tab key={k} title={k} id={k}>
+        <Tabs.Tab key={k} title={k} value={k}>
           {props.children(v)}
         </Tabs.Tab>
       ))}

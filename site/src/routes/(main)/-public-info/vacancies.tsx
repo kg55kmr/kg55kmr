@@ -9,7 +9,6 @@ const teachingStaff: Vacancy[] = [
   { name: "вчитель математики", rate: "18 год" },
   { name: "вчитель української мови та літератури", rate: "18 год" },
   { name: "вчитель англійської мови", rate: "18 год" },
-  { name: "завідувач бібліотеки", rate: "1 ст" },
 ];
 
 const technicalStaff: Vacancy[] = [

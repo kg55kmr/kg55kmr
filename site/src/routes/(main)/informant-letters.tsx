@@ -22,7 +22,7 @@ function RouteComponent() {
   return (
     <Tabs value={year.toString()} onValueChange={(v) => setYear(Number(v))}>
       {years.map((year) => (
-        <Tabs.Tab key={year} title={year.toString()} id={year.toString()}>
+        <Tabs.Tab key={year} title={year.toString()} value={year.toString()}>
           <div className="grid gap-20 lg:grid-cols-2">
             <Suspense fallback={<Loader className="min-h-120" />}>
               <Section title="Відділ освіти" id="ternvo" year={year} />

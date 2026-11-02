@@ -16,7 +16,7 @@ export type NavigationItem = (LocalItem | ExternalItem) & {
 };
 
 export type LocalItem = SetRequired<
-  Pick<LinkOptions, "to" | "params" | "search" | "hash">,
+  Pick<LinkOptions, "to" | "params" | "search" | "hash" | "state">,
   "to"
 > & { title?: string; isSection?: boolean };
 

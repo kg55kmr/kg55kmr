@@ -16,7 +16,7 @@ function RouteComponent() {
   return (
     <Tabs defaultValue={qualityOfEducation[0].title}>
       {qualityOfEducation.map((v) => (
-        <Tabs.Tab key={v.title} id={v.title} title={v.title}>
+        <Tabs.Tab key={v.title} value={v.title} title={v.title}>
           <Embed src={v.href} />
         </Tabs.Tab>
       ))}

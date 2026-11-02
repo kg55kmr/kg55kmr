@@ -6,16 +6,23 @@ import { Tabs } from "~/components/tabs";
 
 type Props = {
   data: ReportItemWithItems[];
-  defaultId?: string;
+  defaultValue?: string;
+  value?: string;
+  onValueChange?: (value: string) => void;
 };
 
 export function Reports(props: Props) {
   return (
-    <Tabs orientation="vertical" defaultValue={props.defaultId}>
+    <Tabs
+      orientation="vertical"
+      defaultValue={props.defaultValue}
+      value={props.value}
+      onValueChange={props.onValueChange}
+    >
       {props.data.map((item) => (
         <Tabs.Tab
           key={item.title}
-          id={item.id ?? item.title}
+          value={item.value ?? item.title}
           title={item.title}
         >
           <Content {...item} />
@@ -25,9 +32,9 @@ export function Reports(props: Props) {
   );
 }
 
-function Content(
-  props: Pick<ReportItemWithItems, "href" | "items" | "component">,
-) {
+type ContentProps = Pick<ReportItemWithItems, "href" | "items" | "component">;
+
+function Content(props: ContentProps) {
   if (props.href) return <Preview {...props} />;
   if (props.component && !props.items) return <props.component />;
   if (!props.items) return;

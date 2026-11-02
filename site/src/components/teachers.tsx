@@ -30,7 +30,7 @@ export function TeachersContent<TItem extends ItemData<TContent>, TContent>(
         <Tabs.Tab
           key={person.name}
           title={employees.byName(person.name).initials}
-          id={person.name}
+          value={person.name}
         >
           <props.render item={person} />
         </Tabs.Tab>
@@ -111,7 +111,7 @@ export function WorkReport(props: {
   const items = Object.entries(props.data)
     .toReversed()
     .map(([path, { default: url }]) => (
-      <Tabs.Tab key={path} title={`${getTitle(path)} н.р.`} id={path}>
+      <Tabs.Tab key={path} title={`${getTitle(path)} н.р.`} value={path}>
         <Pdf src={url} />
       </Tabs.Tab>
     ));

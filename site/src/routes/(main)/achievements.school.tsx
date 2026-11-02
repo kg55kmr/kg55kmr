@@ -13,7 +13,7 @@ function RouteComponent() {
   return (
     <Tabs defaultValue={data[0].title}>
       {data.map((v) => (
-        <Tabs.Tab key={v.title} title={v.title} id={v.title}>
+        <Tabs.Tab key={v.title} title={v.title} value={v.title}>
           <ul className="ml-4 list-disc">
             {v.items.map((item, i) => (
               <li key={i}>{item}</li>

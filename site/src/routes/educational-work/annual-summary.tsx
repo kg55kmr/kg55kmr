@@ -40,7 +40,7 @@ function RouteComponent() {
   return (
     <Tabs orientation="vertical" defaultValue={data[0].years}>
       {data.map((v) => (
-        <Tabs.Tab key={v.years} title={v.years} id={v.years}>
+        <Tabs.Tab key={v.years} title={v.years} value={v.years}>
           <Embed src={v.url} />
         </Tabs.Tab>
       ))}

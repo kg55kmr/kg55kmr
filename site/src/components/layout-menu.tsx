@@ -127,7 +127,7 @@ function SectionMenuItem(props: { item: SectionItem }) {
       <NavigationMenu.Content
         className={
           "rounded-md border-2 border-white bg-blue-950 p-2 shadow-[0_0_5px] shadow-black " +
-          "flex max-h-[calc(var(--available-height)-0.5rem)] flex-wrap gap-5 overflow-y-auto"
+          "flex max-h-[calc(var(--available-height)-0.5rem)] max-w-(--available-width) flex-wrap gap-5 overflow-y-auto"
         }
       >
         <Groups items={item.groups} sectionItemTitle={item.title} />
@@ -145,6 +145,7 @@ function Groups(props: {
     return (
       <Group
         group={props.items[0]}
+        singleGroup
         sectionItemTitle={props.sectionItemTitle}
         showGroupTitle={props.isMobile === true}
         isMobile={props.isMobile}
@@ -164,6 +165,7 @@ function Groups(props: {
 
 function Group(props: {
   group: GroupItem;
+  singleGroup?: boolean;
   sectionItemTitle: string;
   showGroupTitle: boolean;
   isMobile?: boolean;
@@ -177,7 +179,7 @@ function Group(props: {
   );
   return (
     <>
-      <div className="flex flex-col">
+      <div className={cn("flex flex-col", !props.singleGroup && "max-w-100")}>
         {props.showGroupTitle && (
           <div className={cn("font-philosopher text-xl", groupClassName)}>
             {groupTitle}
@@ -185,7 +187,7 @@ function Group(props: {
         )}
         {props.group.items.map((item, i) => (
           <MenuItem
-            key={getPathFromItem(item) + i}
+            key={`${getPathFromItem(item)}-${i}`}
             item={item}
             groupClassName={groupClassName}
           />

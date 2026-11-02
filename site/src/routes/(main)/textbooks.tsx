@@ -684,7 +684,7 @@ function RouteComponent() {
     <Tabs defaultValue="1 клас">
       {textbooks.map(({ className, textbooks }) => {
         return (
-          <Tabs.Tab key={className} title={className} id={className}>
+          <Tabs.Tab key={className} title={className} value={className}>
             <table className="table-responsive text-left">
               <colgroup>
                 <col />

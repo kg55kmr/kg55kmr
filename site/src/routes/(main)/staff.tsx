@@ -28,10 +28,10 @@ function RouteComponent() {
         </p>
       </div>
       <div className="flex flex-col gap-10">
-        {employees.teachingStaff.map((c) => (
+        {employees.teachingStaff.map((c, i) => (
           <div
             key={c.name}
-            id={c.anchor?.id}
+            id={(i + 1).toString()}
             style={{ scrollMarginTop: `${offset}px` }}
           >
             <h1 className="font-philosopher -mx-(--main-offset) mb-4 border-y border-slate-500 bg-slate-100 py-1 text-center text-4xl">

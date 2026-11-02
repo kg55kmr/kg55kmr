@@ -15,7 +15,7 @@ export const Route = createFileRoute("/ma-social-humanitarian/meeting-minutes")(
 function RouteComponent() {
   return (
     <Tabs>
-      <Tabs.Tab title="2023-2024" id="2023-2024">
+      <Tabs.Tab title="2023-2024" value="2023-2024">
         1
       </Tabs.Tab>
     </Tabs>

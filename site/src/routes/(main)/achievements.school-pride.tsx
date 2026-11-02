@@ -15,7 +15,7 @@ function RouteComponent() {
   return (
     <Tabs defaultValue={category[0].title}>
       {category.map((c) => (
-        <Tabs.Tab key={c.title} title={c.title} id={c.title}>
+        <Tabs.Tab key={c.title} title={c.title} value={c.title}>
           {c.component}
         </Tabs.Tab>
       ))}
@@ -27,10 +27,10 @@ function Honor() {
   return (
     <Tabs defaultValue={honor[0].k}>
       {honor.map((years) => (
-        <Tabs.Tab key={years.k} title={years.k} id={years.k}>
+        <Tabs.Tab key={years.k} title={years.k} value={years.k}>
           <Tabs defaultValue={years.v.items[0].title}>
             {years.v.items.map((item) => (
-              <Tabs.Tab key={item.title} title={item.title} id={item.title}>
+              <Tabs.Tab key={item.title} title={item.title} value={item.title}>
                 <ul className="ml-4 list-disc">
                   {item.items.map((v) => (
                     <li key={v}>{v}</li>
@@ -52,7 +52,7 @@ function Medalists() {
         <Tabs.Tab
           key={year.title}
           title={year.title}
-          id={year.title.toString()}
+          value={year.title.toString()}
         >
           {year.items.map((item) => (
             <Fragment key={item.title}>

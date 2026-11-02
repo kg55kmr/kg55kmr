@@ -35,7 +35,7 @@ function RouteComponent() {
         }
       >
         {yearsList.map((years) => (
-          <Tabs.Tab key={years} id={years} title={`${years} н.р.`}>
+          <Tabs.Tab key={years} value={years} title={`${years} н.р.`}>
             <Suspense fallback={<Loader />}>
               <DistanceLearning
                 activeTab={className}

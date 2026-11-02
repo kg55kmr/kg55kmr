@@ -14,7 +14,7 @@ function RouteComponent() {
   return (
     <Tabs defaultValue={data[0].title} orientation="vertical">
       {data.map((v) => (
-        <Tabs.Tab key={v.title} id={v.title} title={v.title}>
+        <Tabs.Tab key={v.title} value={v.title} title={v.title}>
           <ol className="ml-6 list-decimal">
             {v.items.map((item) => (
               <li key={item}>{item}</li>

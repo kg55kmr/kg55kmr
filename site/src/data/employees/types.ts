@@ -24,7 +24,6 @@ export type Employee2<TPos extends Position = Position> = Omit<
 export type Staff = {
   name: string;
   position: Position | Position[];
-  anchor?: { name?: string; id: string };
 };
 
 export type Position =
@@ -32,7 +31,7 @@ export type Position =
   | "заступник директора з навчально-виховної роботи"
   | "заступник директора з виховної роботи"
   | "завідувач господарством"
-  | "бібліотекар"
+  | "завідувач бібліотеки"
   | "практичний психолог"
   | "соціальний педагог"
   | "педагог-організатор"

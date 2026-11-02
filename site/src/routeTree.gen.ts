@@ -43,17 +43,18 @@ import { Route as mainSitemapRouteImport } from './routes/(main)/sitemap'
 import { Route as mainStaffRouteImport } from './routes/(main)/staff'
 import { Route as mainTextbooksRouteImport } from './routes/(main)/textbooks'
 import { Route as EducationalProcessIndexRouteImport } from './routes/educational-process/index'
+import { Route as EducationalProcessClassDistributionRouteImport } from './routes/educational-process/class-distribution'
 import { Route as EducationalProcessClassPeriodRouteImport } from './routes/educational-process/class-period'
 import { Route as EducationalProcessEducationalProgramsRouteImport } from './routes/educational-process/educational-programs'
 import { Route as EducationalProcessEnrollmentTransfersGraduationRouteImport } from './routes/educational-process/enrollment-transfers-graduation'
 import { Route as EducationalProcessEvaluationCriteriaRouteImport } from './routes/educational-process/evaluation-criteria'
 import { Route as EducationalProcessInstructionalMethodologicalRecommendationsRouteImport } from './routes/educational-process/instructional-methodological-recommendations'
-import { Route as EducationalProcessNetworkOfPupilsRouteImport } from './routes/educational-process/network-of-pupils'
 import { Route as EducationalProcessPupilsPerformanceMonitoringRouteImport } from './routes/educational-process/pupils-performance-monitoring'
 import { Route as EducationalProcessResultsOfTextbookSelectionRouteImport } from './routes/educational-process/results-of-textbook-selection'
 import { Route as EducationalProcessSitemapRouteImport } from './routes/educational-process/sitemap'
 import { Route as EducationalProcessSubjectWeeksRouteImport } from './routes/educational-process/subject-weeks'
 import { Route as EducationalProcessWorkPlanRouteImport } from './routes/educational-process/work-plan'
+import { Route as EducationalProcessChar1057ompetitionRegulationsRouteImport } from './routes/educational-process/сompetition-regulations'
 import { Route as EducationalWorkIndexRouteImport } from './routes/educational-work/index'
 import { Route as EducationalWorkAnnualSummaryRouteImport } from './routes/educational-work/annual-summary'
 import { Route as EducationalWorkMaClassTeachersRouteImport } from './routes/educational-work/ma-class-teachers'
@@ -122,7 +123,6 @@ import { Route as mainAlbumIdRouteImport } from './routes/(main)/album.$id'
 import { Route as mainPostsTypeRouteImport } from './routes/(main)/posts.$type'
 import { Route as EducationalProcessGiftedPupilsIndexRouteImport } from './routes/educational-process/gifted-pupils.index'
 import { Route as EducationalProcessGiftedPupilsScientificResearchWorkRouteImport } from './routes/educational-process/gifted-pupils.scientific-research-work'
-import { Route as EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport } from './routes/educational-process/gifted-pupils.сompetition-regulations'
 import { Route as EducationalWorkCaPrimroseIndexRouteImport } from './routes/educational-work/ca-primrose.index'
 import { Route as EducationalWorkCaPrimroseCharterRouteImport } from './routes/educational-work/ca-primrose.charter'
 import { Route as EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport } from './routes/educational-work/ca-primrose.conditions-for-effectiveness'
@@ -372,6 +372,12 @@ const EducationalProcessIndexRoute = EducationalProcessIndexRouteImport.update({
   path: '/',
   getParentRoute: () => EducationalProcessRouteRoute,
 } as any)
+const EducationalProcessClassDistributionRoute =
+  EducationalProcessClassDistributionRouteImport.update({
+    id: '/class-distribution',
+    path: '/class-distribution',
+    getParentRoute: () => EducationalProcessRouteRoute,
+  } as any)
 const EducationalProcessClassPeriodRoute =
   EducationalProcessClassPeriodRouteImport.update({
     id: '/class-period',
@@ -404,12 +410,6 @@ const EducationalProcessInstructionalMethodologicalRecommendationsRoute =
       getParentRoute: () => EducationalProcessRouteRoute,
     } as any,
   )
-const EducationalProcessNetworkOfPupilsRoute =
-  EducationalProcessNetworkOfPupilsRouteImport.update({
-    id: '/network-of-pupils',
-    path: '/network-of-pupils',
-    getParentRoute: () => EducationalProcessRouteRoute,
-  } as any)
 const EducationalProcessPupilsPerformanceMonitoringRoute =
   EducationalProcessPupilsPerformanceMonitoringRouteImport.update({
     id: '/pupils-performance-monitoring',
@@ -438,6 +438,12 @@ const EducationalProcessWorkPlanRoute =
   EducationalProcessWorkPlanRouteImport.update({
     id: '/work-plan',
     path: '/work-plan',
+    getParentRoute: () => EducationalProcessRouteRoute,
+  } as any)
+const EducationalProcessChar1057ompetitionRegulationsRoute =
+  EducationalProcessChar1057ompetitionRegulationsRouteImport.update({
+    id: '/сompetition-regulations',
+    path: '/сompetition-regulations',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
 const EducationalWorkIndexRoute = EducationalWorkIndexRouteImport.update({
@@ -823,14 +829,6 @@ const EducationalProcessGiftedPupilsScientificResearchWorkRoute =
     path: '/gifted-pupils/scientific-research-work',
     getParentRoute: () => EducationalProcessRouteRoute,
   } as any)
-const EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute =
-  EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport.update(
-    {
-      id: '/gifted-pupils/сompetition-regulations',
-      path: '/gifted-pupils/сompetition-regulations',
-      getParentRoute: () => EducationalProcessRouteRoute,
-    } as any,
-  )
 const EducationalWorkCaPrimroseIndexRoute =
   EducationalWorkCaPrimroseIndexRouteImport.update({
     id: '/ca-primrose/',
@@ -1345,17 +1343,18 @@ export interface FileRoutesByFullPath {
   '/sitemap': typeof mainSitemapRoute
   '/staff': typeof mainStaffRoute
   '/textbooks': typeof mainTextbooksRoute
+  '/educational-process/class-distribution': typeof EducationalProcessClassDistributionRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
   '/educational-process/enrollment-transfers-graduation': typeof EducationalProcessEnrollmentTransfersGraduationRoute
   '/educational-process/evaluation-criteria': typeof EducationalProcessEvaluationCriteriaRoute
   '/educational-process/instructional-methodological-recommendations': typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
-  '/educational-process/network-of-pupils': typeof EducationalProcessNetworkOfPupilsRoute
   '/educational-process/pupils-performance-monitoring': typeof EducationalProcessPupilsPerformanceMonitoringRoute
   '/educational-process/results-of-textbook-selection': typeof EducationalProcessResultsOfTextbookSelectionRoute
   '/educational-process/sitemap': typeof EducationalProcessSitemapRoute
   '/educational-process/subject-weeks': typeof EducationalProcessSubjectWeeksRoute
   '/educational-process/work-plan': typeof EducationalProcessWorkPlanRoute
+  '/educational-process/сompetition-regulations': typeof EducationalProcessChar1057ompetitionRegulationsRoute
   '/educational-work/annual-summary': typeof EducationalWorkAnnualSummaryRoute
   '/educational-work/ma-class-teachers': typeof EducationalWorkMaClassTeachersRoute
   '/educational-work/memorandum-of-cooperation': typeof EducationalWorkMemorandumOfCooperationRoute
@@ -1424,7 +1423,6 @@ export interface FileRoutesByFullPath {
   '/album/$id': typeof mainAlbumIdRoute
   '/posts/$type': typeof mainPostsTypeRouteWithChildren
   '/educational-process/gifted-pupils/scientific-research-work': typeof EducationalProcessGiftedPupilsScientificResearchWorkRoute
-  '/educational-process/gifted-pupils/сompetition-regulations': typeof EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute
   '/educational-work/ca-primrose/charter': typeof EducationalWorkCaPrimroseCharterRoute
   '/educational-work/ca-primrose/conditions-for-effectiveness': typeof EducationalWorkCaPrimroseConditionsForEffectivenessRoute
   '/educational-work/ca-primrose/directions': typeof EducationalWorkCaPrimroseDirectionsRoute
@@ -1524,17 +1522,18 @@ export interface FileRoutesByTo {
   '/sitemap': typeof mainSitemapRoute
   '/staff': typeof mainStaffRoute
   '/textbooks': typeof mainTextbooksRoute
+  '/educational-process/class-distribution': typeof EducationalProcessClassDistributionRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
   '/educational-process/enrollment-transfers-graduation': typeof EducationalProcessEnrollmentTransfersGraduationRoute
   '/educational-process/evaluation-criteria': typeof EducationalProcessEvaluationCriteriaRoute
   '/educational-process/instructional-methodological-recommendations': typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
-  '/educational-process/network-of-pupils': typeof EducationalProcessNetworkOfPupilsRoute
   '/educational-process/pupils-performance-monitoring': typeof EducationalProcessPupilsPerformanceMonitoringRoute
   '/educational-process/results-of-textbook-selection': typeof EducationalProcessResultsOfTextbookSelectionRoute
   '/educational-process/sitemap': typeof EducationalProcessSitemapRoute
   '/educational-process/subject-weeks': typeof EducationalProcessSubjectWeeksRoute
   '/educational-process/work-plan': typeof EducationalProcessWorkPlanRoute
+  '/educational-process/сompetition-regulations': typeof EducationalProcessChar1057ompetitionRegulationsRoute
   '/educational-work/annual-summary': typeof EducationalWorkAnnualSummaryRoute
   '/educational-work/ma-class-teachers': typeof EducationalWorkMaClassTeachersRoute
   '/educational-work/memorandum-of-cooperation': typeof EducationalWorkMemorandumOfCooperationRoute
@@ -1602,7 +1601,6 @@ export interface FileRoutesByTo {
   '/achievements/teacher': typeof mainAchievementsTeacherRoute
   '/album/$id': typeof mainAlbumIdRoute
   '/educational-process/gifted-pupils/scientific-research-work': typeof EducationalProcessGiftedPupilsScientificResearchWorkRoute
-  '/educational-process/gifted-pupils/сompetition-regulations': typeof EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute
   '/educational-work/ca-primrose/charter': typeof EducationalWorkCaPrimroseCharterRoute
   '/educational-work/ca-primrose/conditions-for-effectiveness': typeof EducationalWorkCaPrimroseConditionsForEffectivenessRoute
   '/educational-work/ca-primrose/directions': typeof EducationalWorkCaPrimroseDirectionsRoute
@@ -1715,17 +1713,18 @@ export interface FileRoutesById {
   '/(main)/sitemap': typeof mainSitemapRoute
   '/(main)/staff': typeof mainStaffRoute
   '/(main)/textbooks': typeof mainTextbooksRoute
+  '/educational-process/class-distribution': typeof EducationalProcessClassDistributionRoute
   '/educational-process/class-period': typeof EducationalProcessClassPeriodRoute
   '/educational-process/educational-programs': typeof EducationalProcessEducationalProgramsRoute
   '/educational-process/enrollment-transfers-graduation': typeof EducationalProcessEnrollmentTransfersGraduationRoute
   '/educational-process/evaluation-criteria': typeof EducationalProcessEvaluationCriteriaRoute
   '/educational-process/instructional-methodological-recommendations': typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
-  '/educational-process/network-of-pupils': typeof EducationalProcessNetworkOfPupilsRoute
   '/educational-process/pupils-performance-monitoring': typeof EducationalProcessPupilsPerformanceMonitoringRoute
   '/educational-process/results-of-textbook-selection': typeof EducationalProcessResultsOfTextbookSelectionRoute
   '/educational-process/sitemap': typeof EducationalProcessSitemapRoute
   '/educational-process/subject-weeks': typeof EducationalProcessSubjectWeeksRoute
   '/educational-process/work-plan': typeof EducationalProcessWorkPlanRoute
+  '/educational-process/сompetition-regulations': typeof EducationalProcessChar1057ompetitionRegulationsRoute
   '/educational-work/annual-summary': typeof EducationalWorkAnnualSummaryRoute
   '/educational-work/ma-class-teachers': typeof EducationalWorkMaClassTeachersRoute
   '/educational-work/memorandum-of-cooperation': typeof EducationalWorkMemorandumOfCooperationRoute
@@ -1794,7 +1793,6 @@ export interface FileRoutesById {
   '/(main)/album/$id': typeof mainAlbumIdRoute
   '/(main)/posts/$type': typeof mainPostsTypeRouteWithChildren
   '/educational-process/gifted-pupils/scientific-research-work': typeof EducationalProcessGiftedPupilsScientificResearchWorkRoute
-  '/educational-process/gifted-pupils/сompetition-regulations': typeof EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute
   '/educational-work/ca-primrose/charter': typeof EducationalWorkCaPrimroseCharterRoute
   '/educational-work/ca-primrose/conditions-for-effectiveness': typeof EducationalWorkCaPrimroseConditionsForEffectivenessRoute
   '/educational-work/ca-primrose/directions': typeof EducationalWorkCaPrimroseDirectionsRoute
@@ -1907,17 +1905,18 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/staff'
     | '/textbooks'
+    | '/educational-process/class-distribution'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
     | '/educational-process/enrollment-transfers-graduation'
     | '/educational-process/evaluation-criteria'
     | '/educational-process/instructional-methodological-recommendations'
-    | '/educational-process/network-of-pupils'
     | '/educational-process/pupils-performance-monitoring'
     | '/educational-process/results-of-textbook-selection'
     | '/educational-process/sitemap'
     | '/educational-process/subject-weeks'
     | '/educational-process/work-plan'
+    | '/educational-process/сompetition-regulations'
     | '/educational-work/annual-summary'
     | '/educational-work/ma-class-teachers'
     | '/educational-work/memorandum-of-cooperation'
@@ -1986,7 +1985,6 @@ export interface FileRouteTypes {
     | '/album/$id'
     | '/posts/$type'
     | '/educational-process/gifted-pupils/scientific-research-work'
-    | '/educational-process/gifted-pupils/сompetition-regulations'
     | '/educational-work/ca-primrose/charter'
     | '/educational-work/ca-primrose/conditions-for-effectiveness'
     | '/educational-work/ca-primrose/directions'
@@ -2086,17 +2084,18 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/staff'
     | '/textbooks'
+    | '/educational-process/class-distribution'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
     | '/educational-process/enrollment-transfers-graduation'
     | '/educational-process/evaluation-criteria'
     | '/educational-process/instructional-methodological-recommendations'
-    | '/educational-process/network-of-pupils'
     | '/educational-process/pupils-performance-monitoring'
     | '/educational-process/results-of-textbook-selection'
     | '/educational-process/sitemap'
     | '/educational-process/subject-weeks'
     | '/educational-process/work-plan'
+    | '/educational-process/сompetition-regulations'
     | '/educational-work/annual-summary'
     | '/educational-work/ma-class-teachers'
     | '/educational-work/memorandum-of-cooperation'
@@ -2164,7 +2163,6 @@ export interface FileRouteTypes {
     | '/achievements/teacher'
     | '/album/$id'
     | '/educational-process/gifted-pupils/scientific-research-work'
-    | '/educational-process/gifted-pupils/сompetition-regulations'
     | '/educational-work/ca-primrose/charter'
     | '/educational-work/ca-primrose/conditions-for-effectiveness'
     | '/educational-work/ca-primrose/directions'
@@ -2276,17 +2274,18 @@ export interface FileRouteTypes {
     | '/(main)/sitemap'
     | '/(main)/staff'
     | '/(main)/textbooks'
+    | '/educational-process/class-distribution'
     | '/educational-process/class-period'
     | '/educational-process/educational-programs'
     | '/educational-process/enrollment-transfers-graduation'
     | '/educational-process/evaluation-criteria'
     | '/educational-process/instructional-methodological-recommendations'
-    | '/educational-process/network-of-pupils'
     | '/educational-process/pupils-performance-monitoring'
     | '/educational-process/results-of-textbook-selection'
     | '/educational-process/sitemap'
     | '/educational-process/subject-weeks'
     | '/educational-process/work-plan'
+    | '/educational-process/сompetition-regulations'
     | '/educational-work/annual-summary'
     | '/educational-work/ma-class-teachers'
     | '/educational-work/memorandum-of-cooperation'
@@ -2355,7 +2354,6 @@ export interface FileRouteTypes {
     | '/(main)/album/$id'
     | '/(main)/posts/$type'
     | '/educational-process/gifted-pupils/scientific-research-work'
-    | '/educational-process/gifted-pupils/сompetition-regulations'
     | '/educational-work/ca-primrose/charter'
     | '/educational-work/ca-primrose/conditions-for-effectiveness'
     | '/educational-work/ca-primrose/directions'
@@ -2691,6 +2689,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationalProcessIndexRouteImport
       parentRoute: typeof EducationalProcessRouteRoute
     }
+    '/educational-process/class-distribution': {
+      id: '/educational-process/class-distribution'
+      path: '/class-distribution'
+      fullPath: '/educational-process/class-distribution'
+      preLoaderRoute: typeof EducationalProcessClassDistributionRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
     '/educational-process/class-period': {
       id: '/educational-process/class-period'
       path: '/class-period'
@@ -2726,13 +2731,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationalProcessInstructionalMethodologicalRecommendationsRouteImport
       parentRoute: typeof EducationalProcessRouteRoute
     }
-    '/educational-process/network-of-pupils': {
-      id: '/educational-process/network-of-pupils'
-      path: '/network-of-pupils'
-      fullPath: '/educational-process/network-of-pupils'
-      preLoaderRoute: typeof EducationalProcessNetworkOfPupilsRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
     '/educational-process/pupils-performance-monitoring': {
       id: '/educational-process/pupils-performance-monitoring'
       path: '/pupils-performance-monitoring'
@@ -2766,6 +2764,13 @@ declare module '@tanstack/react-router' {
       path: '/work-plan'
       fullPath: '/educational-process/work-plan'
       preLoaderRoute: typeof EducationalProcessWorkPlanRouteImport
+      parentRoute: typeof EducationalProcessRouteRoute
+    }
+    '/educational-process/сompetition-regulations': {
+      id: '/educational-process/сompetition-regulations'
+      path: '/сompetition-regulations'
+      fullPath: '/educational-process/сompetition-regulations'
+      preLoaderRoute: typeof EducationalProcessChar1057ompetitionRegulationsRouteImport
       parentRoute: typeof EducationalProcessRouteRoute
     }
     '/educational-work/': {
@@ -3242,13 +3247,6 @@ declare module '@tanstack/react-router' {
       path: '/gifted-pupils/scientific-research-work'
       fullPath: '/educational-process/gifted-pupils/scientific-research-work'
       preLoaderRoute: typeof EducationalProcessGiftedPupilsScientificResearchWorkRouteImport
-      parentRoute: typeof EducationalProcessRouteRoute
-    }
-    '/educational-process/gifted-pupils/сompetition-regulations': {
-      id: '/educational-process/gifted-pupils/сompetition-regulations'
-      path: '/gifted-pupils/сompetition-regulations'
-      fullPath: '/educational-process/gifted-pupils/сompetition-regulations'
-      preLoaderRoute: typeof EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRouteImport
       parentRoute: typeof EducationalProcessRouteRoute
     }
     '/educational-work/ca-primrose/': {
@@ -3871,25 +3869,27 @@ const mainRouteRouteWithChildren = mainRouteRoute._addFileChildren(
 )
 
 interface EducationalProcessRouteRouteChildren {
+  EducationalProcessClassDistributionRoute: typeof EducationalProcessClassDistributionRoute
   EducationalProcessClassPeriodRoute: typeof EducationalProcessClassPeriodRoute
   EducationalProcessEducationalProgramsRoute: typeof EducationalProcessEducationalProgramsRoute
   EducationalProcessEnrollmentTransfersGraduationRoute: typeof EducationalProcessEnrollmentTransfersGraduationRoute
   EducationalProcessEvaluationCriteriaRoute: typeof EducationalProcessEvaluationCriteriaRoute
   EducationalProcessInstructionalMethodologicalRecommendationsRoute: typeof EducationalProcessInstructionalMethodologicalRecommendationsRoute
-  EducationalProcessNetworkOfPupilsRoute: typeof EducationalProcessNetworkOfPupilsRoute
   EducationalProcessPupilsPerformanceMonitoringRoute: typeof EducationalProcessPupilsPerformanceMonitoringRoute
   EducationalProcessResultsOfTextbookSelectionRoute: typeof EducationalProcessResultsOfTextbookSelectionRoute
   EducationalProcessSitemapRoute: typeof EducationalProcessSitemapRoute
   EducationalProcessSubjectWeeksRoute: typeof EducationalProcessSubjectWeeksRoute
   EducationalProcessWorkPlanRoute: typeof EducationalProcessWorkPlanRoute
+  EducationalProcessChar1057ompetitionRegulationsRoute: typeof EducationalProcessChar1057ompetitionRegulationsRoute
   EducationalProcessIndexRoute: typeof EducationalProcessIndexRoute
   EducationalProcessGiftedPupilsScientificResearchWorkRoute: typeof EducationalProcessGiftedPupilsScientificResearchWorkRoute
-  EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute: typeof EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute
   EducationalProcessGiftedPupilsIndexRoute: typeof EducationalProcessGiftedPupilsIndexRoute
 }
 
 const EducationalProcessRouteRouteChildren: EducationalProcessRouteRouteChildren =
   {
+    EducationalProcessClassDistributionRoute:
+      EducationalProcessClassDistributionRoute,
     EducationalProcessClassPeriodRoute: EducationalProcessClassPeriodRoute,
     EducationalProcessEducationalProgramsRoute:
       EducationalProcessEducationalProgramsRoute,
@@ -3899,8 +3899,6 @@ const EducationalProcessRouteRouteChildren: EducationalProcessRouteRouteChildren
       EducationalProcessEvaluationCriteriaRoute,
     EducationalProcessInstructionalMethodologicalRecommendationsRoute:
       EducationalProcessInstructionalMethodologicalRecommendationsRoute,
-    EducationalProcessNetworkOfPupilsRoute:
-      EducationalProcessNetworkOfPupilsRoute,
     EducationalProcessPupilsPerformanceMonitoringRoute:
       EducationalProcessPupilsPerformanceMonitoringRoute,
     EducationalProcessResultsOfTextbookSelectionRoute:
@@ -3908,11 +3906,11 @@ const EducationalProcessRouteRouteChildren: EducationalProcessRouteRouteChildren
     EducationalProcessSitemapRoute: EducationalProcessSitemapRoute,
     EducationalProcessSubjectWeeksRoute: EducationalProcessSubjectWeeksRoute,
     EducationalProcessWorkPlanRoute: EducationalProcessWorkPlanRoute,
+    EducationalProcessChar1057ompetitionRegulationsRoute:
+      EducationalProcessChar1057ompetitionRegulationsRoute,
     EducationalProcessIndexRoute: EducationalProcessIndexRoute,
     EducationalProcessGiftedPupilsScientificResearchWorkRoute:
       EducationalProcessGiftedPupilsScientificResearchWorkRoute,
-    EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute:
-      EducationalProcessGiftedPupilsChar1057ompetitionRegulationsRoute,
     EducationalProcessGiftedPupilsIndexRoute:
       EducationalProcessGiftedPupilsIndexRoute,
   }

@@ -221,6 +221,7 @@ declare module 'virtual:static-assets' {
     "images/працівники/тельвак.jpg" |
     "images/працівники/тимофієва.jpg" |
     "images/працівники/фербей.jpg" |
+    "images/працівники/цинцирук.jpg" |
     "images/працівники/чудна.jpg" |
     "images/працівники/шуть.jpg" |
     "images/предметні-тижні.jpg" |

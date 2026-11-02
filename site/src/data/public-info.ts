@@ -11,7 +11,7 @@ import { StructureAndOrganization } from "~/routes/(main)/-public-info/structure
 import { Vacancies } from "~/routes/(main)/-public-info/vacancies";
 import { qualityOfEducation } from "./quality-of-education";
 
-export const publicInfo: ReportItemWithItems[] = [
+const items: ReportItemWithItems[] = [
   {
     title: "Статут закладу освіти",
     href: "https://drive.google.com/file/d/19_0NVsaaXaTVWaR43qsApN3YQindMYwz/preview",
@@ -121,7 +121,6 @@ export const publicInfo: ReportItemWithItems[] = [
     title:
       "Територія обслуговування, закріплена за закладом освіти його засновником",
     component: Neighborhood,
-    id: "catchment-area",
   },
   {
     title:
@@ -158,7 +157,7 @@ export const publicInfo: ReportItemWithItems[] = [
     ],
   },
   {
-    title: "Річний звіт про діяльність закладу освіти",
+    title: "Річний звіт директора про діяльність закладу освіти",
     items: [
       {
         title: "2025-2026 н.р.",
@@ -342,7 +341,6 @@ export const publicInfo: ReportItemWithItems[] = [
   },
   {
     title: "Установчі документи",
-    id: "constituent-documents",
     items: [
       {
         title: "Свідотство про державну реєстрацію юридичної особи",
@@ -364,3 +362,8 @@ export const publicInfo: ReportItemWithItems[] = [
     ],
   },
 ];
+
+export const publicInfo = items.map((v, i) => ({
+  ...v,
+  value: (i + 1).toString(),
+}));

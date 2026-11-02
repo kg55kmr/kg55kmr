@@ -14,10 +14,10 @@ export const Route = createFileRoute("/ma-natural-math/meeting-topics")({
 function RouteComponent() {
   return (
     <Tabs>
-      <Tabs.Tab title="2024-2025" id="2024-2025">
+      <Tabs.Tab title="2024-2025" value="2024-2025">
         <Embed src="https://drive.google.com/file/d/1JrbaYi34uSZX_X2rJ5V1qMwK72pCJrPY/preview" />
       </Tabs.Tab>
-      <Tabs.Tab title="2023-2024" id="2023-2024">
+      <Tabs.Tab title="2023-2024" value="2023-2024">
         <Embed src="https://drive.google.com/file/d/1JAkL-zoilQ7iBsTWntqfUgWaQ51H4gGj/preview" />
       </Tabs.Tab>
     </Tabs>

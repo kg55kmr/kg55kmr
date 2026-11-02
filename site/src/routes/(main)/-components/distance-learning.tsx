@@ -48,7 +48,7 @@ function Classes(props: {
       {props.classes.map(({ name: className, subjects }) => (
         <Tabs.Tab
           key={className}
-          id={className}
+          value={className}
           title={formatClass(className, props.years)}
         >
           <Subjects
@@ -65,12 +65,12 @@ function Classes(props: {
 
 function OtherTabs() {
   return [
-    <Tabs.Tab key="contacts" id="contacts" title="Зворотній зв'язок">
+    <Tabs.Tab key="contacts" value="contacts" title="Зворотній зв'язок">
       <Pdf src={asset("documents/emails.pdf")} />
     </Tabs.Tab>,
     <Tabs.Tab
       key="consultation"
-      id="consultation"
+      value="consultation"
       title="Графік онлайн/офлайн консультацій"
     >
       <Pdf
@@ -79,19 +79,27 @@ function OtherTabs() {
         )}
       />
     </Tabs.Tab>,
-    <Tabs.Tab key="human" id="human" title="Освітня платформа Human">
+    <Tabs.Tab key="human" value="human" title="Освітня платформа Human">
       <Human />
     </Tabs.Tab>,
 
-    <Tabs.Tab key="pupil-help" id="pupil-help" title="На допомогу учням">
+    <Tabs.Tab key="pupil-help" value="pupil-help" title="На допомогу учням">
       <PupilHelp />
     </Tabs.Tab>,
 
-    <Tabs.Tab key="teacher-help" id="teacher-help" title="На допомогу вчителю">
+    <Tabs.Tab
+      key="teacher-help"
+      value="teacher-help"
+      title="На допомогу вчителю"
+    >
       <TeacherHelp />
     </Tabs.Tab>,
 
-    <Tabs.Tab key="parents-help" id="parents-help" title="На допомогу батькам">
+    <Tabs.Tab
+      key="parents-help"
+      value="parents-help"
+      title="На допомогу батькам"
+    >
       <ParentsHelp />
     </Tabs.Tab>,
   ];

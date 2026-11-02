@@ -56,7 +56,7 @@ function RouteComponent() {
         військових нашивок, емблем, знаків розпізнавання).
       </p>
       <Tabs>
-        <Tabs.Tab title="Рій «Крокус»" id="1">
+        <Tabs.Tab title="Рій «Крокус»" value="1">
           <Common />
           <p>
             <span className="font-bold">Вікова категорія:</span> Середня (11-14
@@ -118,7 +118,7 @@ function RouteComponent() {
             </tbody>
           </table>
         </Tabs.Tab>
-        <Tabs.Tab title="Рій «Сапсан»" id="2">
+        <Tabs.Tab title="Рій «Сапсан»" value="2">
           <Common />
           <table className="table-responsive table-border table-th:bg-blue-50">
             <thead>

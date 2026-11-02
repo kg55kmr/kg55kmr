@@ -14,16 +14,16 @@ export const Route = createFileRoute(
 function RouteComponent() {
   return (
     <Tabs>
-      <Tabs.Tab id="1" title="Про зарахування до 1 класу">
+      <Tabs.Tab value="1" title="Про зарахування до 1 класу">
         <Embed src="https://drive.google.com/file/d/1RaPDoG_5bID0bqUyl3dUece-iu_mOq-3/preview" />
       </Tabs.Tab>
-      <Tabs.Tab id="1-4" title="Про переведення учнів 1-4 класів">
+      <Tabs.Tab value="1-4" title="Про переведення учнів 1-4 класів">
         <Embed src="https://drive.google.com/file/d/1Slm3d9nlv1qII8rtEfbDsjQStN-qHqtg/preview" />
       </Tabs.Tab>
-      <Tabs.Tab id="5-8" title="Про переведення учнів 5-8 класів">
+      <Tabs.Tab value="5-8" title="Про переведення учнів 5-8 класів">
         <Embed src="https://drive.google.com/file/d/1Z01pRdUJMrGMVBZjQwWRRV6kVPE58OEt/preview" />
       </Tabs.Tab>
-      <Tabs.Tab id="9" title="Про випуск учнів 9 класів">
+      <Tabs.Tab value="9" title="Про випуск учнів 9 класів">
         <Embed src="https://drive.google.com/file/d/15ShexHVtCJ-9HHv5MIUH8kUkYkAqaCo0/preview" />
       </Tabs.Tab>
     </Tabs>

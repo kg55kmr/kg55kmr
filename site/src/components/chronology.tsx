@@ -31,7 +31,7 @@ export function Chronology<T extends object>(
         <Tabs.Tab
           key={item.date}
           title={<props.titleComponent date={item.date} />}
-          id={item.date}
+          value={item.date}
         >
           <props.itemsComponent items={item.items} />
         </Tabs.Tab>

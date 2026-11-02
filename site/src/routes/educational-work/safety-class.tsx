@@ -36,7 +36,7 @@ function RouteComponent() {
       }
     >
       {Object.entries(data).map(([k, v]) => (
-        <Tabs.Tab key={k} title={v.title} id={k}>
+        <Tabs.Tab key={k} title={v.title} value={k}>
           {v.component}
         </Tabs.Tab>
       ))}

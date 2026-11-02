@@ -29,7 +29,7 @@ export const educationalProcess = [
             to: "/educational-process/enrollment-transfers-graduation",
             icon: Backpack,
           },
-          { to: "/educational-process/network-of-pupils", icon: Table2 },
+          { to: "/educational-process/class-distribution", icon: Table2 },
           { to: "/educational-process/educational-programs", icon: Layers },
           {
             to: "/educational-process/instructional-methodological-recommendations",
@@ -37,7 +37,7 @@ export const educationalProcess = [
           },
           { to: "/educational-process/subject-weeks", icon: CalendarDays },
           {
-            to: "/educational-process/gifted-pupils/сompetition-regulations",
+            to: "/educational-process/сompetition-regulations",
             icon: Scroll,
           },
           { to: "/educational-process/sitemap", icon: Map },

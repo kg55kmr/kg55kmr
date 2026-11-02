@@ -231,7 +231,7 @@ function RouteComponent() {
         <Tabs.Tab
           key={classData.class}
           title={classData.class}
-          id={classData.class}
+          value={classData.class}
         >
           <ul className="ml-4 list-disc">
             {classData.items

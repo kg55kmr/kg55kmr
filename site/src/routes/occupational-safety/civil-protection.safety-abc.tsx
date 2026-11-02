@@ -32,7 +32,7 @@ function RouteComponent() {
   return (
     <Tabs defaultValue={items[0].id}>
       {items.map((v) => (
-        <Tabs.Tab key={v.id} title={v.title} id={v.id}>
+        <Tabs.Tab key={v.id} title={v.title} value={v.id}>
           <v.Content />
         </Tabs.Tab>
       ))}

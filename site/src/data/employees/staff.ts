@@ -1,6 +1,6 @@
 import type { Position, Staff } from "./types";
 
-export const administration: Position[] = [
+const administration: Position[] = [
   "директор",
   "заступник директора з навчально-виховної роботи",
   "заступник директора з виховної роботи",
@@ -11,27 +11,30 @@ export const staff: Staff[] = [
   {
     name: "Адміністрація",
     position: administration,
-    anchor: { id: "administration" },
   },
   {
     name: "Соціально-психологічна служба",
     position: ["соціальний педагог", "практичний психолог"],
-    anchor: { id: "social-and-psychological-service" },
   },
   {
     name: "Учитель-логопед",
     position: "учитель-логопед",
-    anchor: { id: "speech-therapist" },
   },
   {
     name: "Педагог-організатор",
     position: "педагог-організатор",
-    anchor: { id: "activity-coordinator" },
+  },
+  {
+    name: "Завідувач бібліотеки",
+    position: "завідувач бібліотеки",
+  },
+  {
+    name: "Асистент учителя",
+    position: "асистент учителя",
   },
   {
     name: "Початкова школа",
     position: "учитель початкових класів",
-    anchor: { id: "teachers", name: "Викладачі" },
   },
   {
     name: "Українська мова та література",
@@ -76,10 +79,5 @@ export const staff: Staff[] = [
   {
     name: "Фізична культура",
     position: "учитель фізичної культури",
-  },
-  {
-    name: "Асистент учителя",
-    position: "асистент учителя",
-    anchor: { id: "teaching-assistant" },
   },
 ] as const;

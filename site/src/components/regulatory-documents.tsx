@@ -18,7 +18,7 @@ export function RegulatoryDocuments(props: { items: RegulatoryDocumentsType }) {
         <Tabs.Tab
           key={section.section}
           title={section.section}
-          id={section.section}
+          value={section.section}
         >
           <Items section={section} />
         </Tabs.Tab>

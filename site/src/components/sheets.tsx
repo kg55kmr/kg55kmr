@@ -14,11 +14,13 @@ export type SheetItem =
 
 export function Sheet(props: { sheetId: string }) {
   const data = useGoogleSheets(props.sheetId);
+
+  if (data.length === 1) return <SheetTable rows={data[0].rows} />;
   return (
     <Tabs defaultValue={data[0].title}>
       {data.map((sheet) => {
         return (
-          <Tabs.Tab key={sheet.title} title={sheet.title} id={sheet.title}>
+          <Tabs.Tab key={sheet.title} title={sheet.title} value={sheet.title}>
             <SheetTable rows={sheet.rows} />
           </Tabs.Tab>
         );
@@ -31,7 +33,7 @@ export function Sheets(props: { items: SheetItem[] }) {
   return (
     <Tabs defaultValue={props.items[0].title}>
       {props.items.map((v) => (
-        <Tabs.Tab key={v.title} id={v.title} title={v.title}>
+        <Tabs.Tab key={v.title} value={v.title} title={v.title}>
           {"sheetId" in v ? (
             <Suspense fallback={<Loader />}>
               <Sheet sheetId={v.sheetId} />

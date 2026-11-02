@@ -4,6 +4,8 @@ import {
   type ReactNode,
   Children,
   isValidElement,
+  useEffect,
+  useRef,
 } from "react";
 import { useStickyOffset } from "~/hooks/use-sticky";
 import { cn } from "~/lib/utils";
@@ -20,7 +22,7 @@ type TabsProps = {
 
 type TabProps = {
   title: ReactNode;
-  id: string;
+  value: string;
   children: ReactNode;
 };
 
@@ -38,7 +40,7 @@ function Tabs(props: TabsProps) {
 
   return (
     <Responsive
-      when="sm"
+      when="md"
       render={<Desktop {...props} items={items} orientation={orientation} />}
       fallback={<Mobile {...props} items={items} />}
     />
@@ -54,6 +56,7 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
         ? `calc(100vh - ${offset}px)`
         : undefined,
   } satisfies CSSProperties;
+  const listRef = useScrollIntoView(props.value);
 
   return (
     <TabsPrimitive.Root
@@ -67,6 +70,7 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
       )}
     >
       <TabsPrimitive.List
+        ref={listRef}
         style={verticalStyle}
         className={cn(
           props.orientation === "horizontal" && "flex flex-wrap gap-x-1 py-2",
@@ -76,8 +80,8 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
       >
         {props.items.map((item) => (
           <TabsPrimitive.Tab
-            key={item.id}
-            value={item.id}
+            key={item.value}
+            value={item.value}
             className={cn(
               "block cursor-pointer rounded-md border border-transparent bg-transparent px-4 py-1 text-left select-none",
               "hover:border-slate-500 hover:bg-slate-200 data-active:border-blue-500 data-active:bg-blue-200",
@@ -89,8 +93,8 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
       </TabsPrimitive.List>
       {props.items.map((item) => (
         <TabsPrimitive.Panel
-          key={item.id}
-          value={item.id}
+          key={item.value}
+          value={item.value}
           className="w-full rounded-sm border border-slate-300 p-4"
         >
           {item.children}
@@ -101,6 +105,7 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
 }
 
 // TODO: add controlled component support
+// TODO: add scrollIntoView support
 
 function Mobile(props: TabsProps & { items: TabProps[] }) {
   return (
@@ -110,7 +115,7 @@ function Mobile(props: TabsProps & { items: TabProps[] }) {
       onValueChange={(v) => props.onValueChange?.(v)}
     >
       {props.items.map((item) => (
-        <Accordion.Item key={item.id} title={item.title} id={item.id}>
+        <Accordion.Item key={item.value} title={item.title} id={item.value}>
           {item.children}
         </Accordion.Item>
       ))}
@@ -123,5 +128,26 @@ function Tab(props: TabProps) {
 }
 
 Tabs.Tab = Tab;
+
+function useScrollIntoView(value?: string) {
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!listRef.current) return;
+
+    const activeTab = listRef.current.querySelector(
+      "[data-active]",
+    ) as HTMLElement;
+
+    if (activeTab) {
+      activeTab.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "nearest",
+      });
+    }
+  }, [value]);
+  return listRef;
+}
 
 export { Tabs };

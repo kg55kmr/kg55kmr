@@ -621,7 +621,7 @@ export const structureAndOrganization: Type[] = [
     ],
   },
   {
-    id: "бібліотекар",
+    id: "завідувач бібліотеки",
     duty: [
       {
         title: "Відповідає за",

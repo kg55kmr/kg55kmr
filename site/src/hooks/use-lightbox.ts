@@ -32,15 +32,21 @@ export function useLightbox(opts: {
           outlineID: "pswp__icn-download",
         },
         onInit: (el, ps) => {
-          el.setAttribute("download", "");
-          el.style.display = "flex";
-          el.style.alignItems = "center";
-          el.style.justifyContent = "center";
+          const e = el as HTMLAnchorElement;
+          e.rel = "noreferrer";
+          e.target = "_blank";
+
+          e.style.display = "flex";
+          e.style.alignItems = "center";
+          e.style.justifyContent = "center";
+
+          e.setAttribute("download", "");
+
           ps.on("change", () => {
             const downloadUrl =
               ps.currSlide?.data.element?.dataset["downloadUrl"];
             if (!downloadUrl) return;
-            (el as HTMLAnchorElement).href = downloadUrl;
+            e.href = downloadUrl;
           });
         },
       });

@@ -11,7 +11,8 @@ export type Image = {
   width: number;
   height: number;
   src: string;
-  previewSrc: string;
+  previewUrl: string;
+  downloadUrl: string;
 };
 
 type Props = {
@@ -39,9 +40,10 @@ export function Gallery(props: Props) {
             data-pswp-width={data.photo.width}
             data-pswp-height={data.photo.height}
             data-image
+            data-download-url={data.photo.downloadUrl}
           />
         ),
-        image: (props, data) => <img {...props} src={data.photo.previewSrc} />,
+        image: (props, data) => <img {...props} src={data.photo.previewUrl} />,
       }}
       photos={images}
       rowConstraints={props.rowContraints}

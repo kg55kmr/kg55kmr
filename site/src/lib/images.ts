@@ -6,8 +6,9 @@ export function toGalleryImage(image: ImageKitImage): Image {
   return {
     width: image.width,
     height: image.height,
-    previewSrc: image.previewUrl,
+    previewUrl: image.previewUrl,
     src: image.url,
+    downloadUrl: image.downloadUrl,
   };
 }
 
@@ -18,8 +19,9 @@ export function getImagesSize(images: string[]) {
       const data = await fetch(url).then((r) => r.bytes());
       const size = imageSize(data);
       return {
-        src,
-        previewSrc: src,
+        src: src,
+        previewUrl: src,
+        downloadUrl: src,
         width: size.width,
         height: size.height,
       } satisfies Image;

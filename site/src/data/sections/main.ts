@@ -59,7 +59,7 @@ export const main = [
         items: staff.slice(0, 6),
       },
       {
-        groupTitle: "Викладачі за предметами",
+        groupTitle: "Викладачі",
         items: staff.slice(6),
       },
       {

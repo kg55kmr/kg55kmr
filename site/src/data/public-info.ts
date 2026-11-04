@@ -75,6 +75,14 @@ const items: ReportItemWithItems[] = [
     title: "Освітня програма",
     items: [
       {
+        title: "на 2026-2027 н.р.",
+        href: "https://drive.google.com/file/d/1QG8mUUvy1C8gUcb7TPLr6OZ7Bbw6CRFQ/preview",
+      },
+      {
+        title: "на 2025-2026 н.р.",
+        href: "https://drive.google.com/file/d/1bfcu5RBQwsJGtHy-GHxT8je4rCKfr4Pa/preview",
+      },
+      {
         title: "на 2024-2025 н.р.",
         href: "https://drive.google.com/file/d/1Ug31EW_Aq8Aw81Q3Ekct8Ztd9KEngvJj/preview",
       },

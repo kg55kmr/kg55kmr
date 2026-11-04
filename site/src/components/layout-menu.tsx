@@ -179,7 +179,7 @@ function Group(props: {
   );
   return (
     <>
-      <div className={cn("flex flex-col", !props.singleGroup && "max-w-100")}>
+      <div className={cn(!props.singleGroup && "max-w-100")}>
         {props.showGroupTitle && (
           <div className={cn("font-philosopher text-xl", groupClassName)}>
             {groupTitle}

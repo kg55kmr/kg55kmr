@@ -18,7 +18,8 @@
       "presentation": {
         "reveal": "always",
         "close": true
-      }
+      },
+      "problemMatcher": ["$tsc"]
     },
     {
       "type": "shell",

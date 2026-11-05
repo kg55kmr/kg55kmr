@@ -9,7 +9,7 @@ export async function getLocalPosts<K extends keyof Posts>(key: K) {
 export async function getPostFromJSON<T, K extends keyof Posts = keyof Posts>(
   key: K,
   path: string,
-): Promise<T> {
+) {
   const json = await getLocalPosts(key);
-  return JSONPath({ path, json, wrap: false });
+  return JSONPath({ path, json, wrap: false }) as T;
 }

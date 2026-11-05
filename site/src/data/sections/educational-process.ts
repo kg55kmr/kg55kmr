@@ -10,7 +10,6 @@ import {
   LibraryBig,
   Map,
   Palette,
-  Scroll,
   Sparkles,
   Table2,
   TrendingUp,
@@ -36,10 +35,10 @@ export const educationalProcess = [
             icon: BookType,
           },
           { to: "/educational-process/subject-weeks", icon: CalendarDays },
-          {
-            to: "/educational-process/сompetition-regulations",
-            icon: Scroll,
-          },
+          // {
+          //   to: "/educational-process/сompetition-regulations",
+          //   icon: Scroll,
+          // },
           { to: "/educational-process/sitemap", icon: Map },
         ],
       },

@@ -119,20 +119,24 @@ const items: ReportItemWithItems[] = [
   {
     title:
       "Положення про академічну доброчесність учасників освітнього процесу",
+    shortTitle: "Положення про академічну доброчесність",
     href: "https://drive.google.com/file/d/19bU3m8RkEaAufmTVsj9HOr5-ZDFIOyB6/preview",
   },
   {
     title: "Положення про внутрішню систему забезпечення якості освіти",
+    shortTitle: "Положення про внутрішню систему",
     href: "https://drive.google.com/file/d/1ZH22yA3RhauI10UuJRXA3kBTnWlFjSmz/preview",
   },
   {
     title:
       "Територія обслуговування, закріплена за закладом освіти його засновником",
+    shortTitle: "Територія обслуговування",
     component: Neighborhood,
   },
   {
     title:
       "Наявність вакантних посад, порядок і умови проведення конкурсу на їх заміщення",
+    shortTitle: "Наявність вакантних посад",
     component: Vacancies,
   },
   {
@@ -328,11 +332,13 @@ const items: ReportItemWithItems[] = [
   },
   {
     title: "Положення про організацію пропускного режиму у закладі",
+    shortTitle: "Пропускний режим у закладі",
     href: "https://drive.google.com/file/d/1pxymNzHtjIa3U3C_HSv4ZNGdPDlKVjW6/preview",
   },
   {
     title:
       "Умови доступності закладу освіти для навчання осіб з особливими освітніми потребами",
+    shortTitle: "Умови доступності",
     component: СonditionsOfAvailability,
   },
   {

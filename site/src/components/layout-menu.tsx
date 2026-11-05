@@ -145,7 +145,6 @@ function Groups(props: {
     return (
       <Group
         group={props.items[0]}
-        singleGroup
         sectionItemTitle={props.sectionItemTitle}
         showGroupTitle={props.isMobile === true}
         isMobile={props.isMobile}
@@ -165,7 +164,6 @@ function Groups(props: {
 
 function Group(props: {
   group: GroupItem;
-  singleGroup?: boolean;
   sectionItemTitle: string;
   showGroupTitle: boolean;
   isMobile?: boolean;
@@ -179,19 +177,21 @@ function Group(props: {
   );
   return (
     <>
-      <div className={cn(!props.singleGroup && "max-w-100")}>
+      <div className={cn()}>
         {props.showGroupTitle && (
-          <div className={cn("font-philosopher text-xl", groupClassName)}>
+          <div className={cn("font-philosopher mb-1 text-xl", groupClassName)}>
             {groupTitle}
           </div>
         )}
-        {props.group.items.map((item, i) => (
-          <MenuItem
-            key={`${getPathFromItem(item)}-${i}`}
-            item={item}
-            groupClassName={groupClassName}
-          />
-        ))}
+        <ul className="flex flex-col gap-1">
+          {props.group.items.map((item, i) => (
+            <MenuItem
+              key={`${getPathFromItem(item)}-${i}`}
+              item={item}
+              groupClassName={groupClassName}
+            />
+          ))}
+        </ul>
       </div>
     </>
   );
@@ -207,23 +207,26 @@ function MenuItem(props: { item: NavigationItem; groupClassName?: string }) {
   );
 
   return (
-    <NavigationMenu.Link
-      render={link}
-      closeOnClick
-      className="group -mx-2 flex gap-1 px-2 hover:bg-white"
-    >
-      {item.icon && (
-        <item.icon
-          className={cn(
-            "text-border size-5 shrink-0 translate-y-1 group-hover:text-black",
-            props.groupClassName,
-          )}
-        />
-      )}
-      <div className="font-philosopher text-xl text-white group-hover:text-black">
-        {title}
-      </div>
-    </NavigationMenu.Link>
+    <li className="group relative isolate">
+      <div className="absolute -inset-x-2 -inset-y-1 -z-1 group-hover:bg-white" />
+      <NavigationMenu.Link
+        render={link}
+        closeOnClick
+        className="relative flex items-center gap-x-1"
+      >
+        {item.icon && (
+          <item.icon
+            className={cn(
+              "text-border size-5 shrink-0 group-hover:text-black",
+              props.groupClassName,
+            )}
+          />
+        )}
+        <span className="font-philosopher text-xl leading-5 text-white group-hover:text-black">
+          {title}
+        </span>
+      </NavigationMenu.Link>
+    </li>
   );
 }
 

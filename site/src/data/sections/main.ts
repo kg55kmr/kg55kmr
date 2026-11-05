@@ -141,7 +141,7 @@ export const main = [
           return {
             to: "/public-info",
             search: { id: Number(v.value) },
-            title: v.title,
+            title: v.shortTitle ?? v.title,
             icon: FileText,
           } as const;
         }),

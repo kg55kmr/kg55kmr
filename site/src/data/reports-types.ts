@@ -6,6 +6,7 @@ export type ReportItemWithItems = ReportItem & {
 
 export type ReportItem = {
   title: string;
+  shortTitle?: string;
   value?: string;
   href?: string;
   component?: FC;

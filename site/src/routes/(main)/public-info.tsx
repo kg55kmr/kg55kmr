@@ -18,6 +18,7 @@ function RouteComponent() {
   return (
     <Reports
       data={publicInfo}
+      scrollIntoView
       value={id.toString()}
       onValueChange={(v) => {
         navigate({

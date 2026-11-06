@@ -17,6 +17,7 @@ type TabsProps = {
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string) => void;
+  scrollIntoView?: boolean;
   children: ReactNode;
 };
 
@@ -56,7 +57,10 @@ function Desktop(props: TabsProps & { items: TabProps[] }) {
         ? `calc(100vh - ${offset}px)`
         : undefined,
   } satisfies CSSProperties;
-  const listRef = useScrollIntoView(props.value);
+  const listRef = useScrollIntoView({
+    enabled: props.scrollIntoView,
+    value: props.value,
+  });
 
   return (
     <TabsPrimitive.Root
@@ -129,11 +133,12 @@ function Tab(props: TabProps) {
 
 Tabs.Tab = Tab;
 
-function useScrollIntoView(value?: string) {
+function useScrollIntoView(opts: { value?: string; enabled?: boolean }) {
   const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!listRef.current) return;
+    if (!opts.enabled) return;
 
     const activeTab = listRef.current.querySelector(
       "[data-active]",
@@ -146,7 +151,7 @@ function useScrollIntoView(value?: string) {
         inline: "nearest",
       });
     }
-  }, [value]);
+  }, [opts.enabled, opts.value]);
   return listRef;
 }
 

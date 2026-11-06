@@ -9,17 +9,14 @@ type Props = {
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string) => void;
+  scrollIntoView?: boolean;
 };
 
 export function Reports(props: Props) {
+  const { data, ...rest } = props;
   return (
-    <Tabs
-      orientation="vertical"
-      defaultValue={props.defaultValue}
-      value={props.value}
-      onValueChange={props.onValueChange}
-    >
-      {props.data.map((item) => (
+    <Tabs orientation="vertical" {...rest}>
+      {data.map((item) => (
         <Tabs.Tab
           key={item.title}
           value={item.value ?? item.title}

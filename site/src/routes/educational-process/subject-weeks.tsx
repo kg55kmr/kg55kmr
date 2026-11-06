@@ -65,39 +65,43 @@ function RouteComponent() {
 
 const data = [
   {
+    academicYear: "2026-2027",
+    url: "https://drive.google.com/file/d/16Gri2Sgxzhlxlfmtl0yDWfMQENkwHASB/preview",
+  },
+  {
     academicYear: "2025-2026",
-    url: "https://docs.google.com/document/d/1SsiY_Bei7EZ5UkvmD9xXQ7tbrVHXDF6D/view",
+    url: "https://drive.google.com/file/d/1wpE2g0wW18w4lprCBrP2_21-7IA04V8X/preview",
   },
   {
     academicYear: "2024-2025",
-    url: "https://docs.google.com/document/d/1Br8KRdKH_5ZNdOSgSV6EAz3mheflaQSO/view",
+    url: "https://drive.google.com/file/d/1VWtvfZ0Xw_qA3nioz6NCRLAnMBN1MGLf/preview",
   },
   {
     academicYear: "2023-2024",
-    url: "https://docs.google.com/document/d/15WuvWrkNC3EkU42k8Tq9_8iBPP2VS0GW/view",
+    url: "https://drive.google.com/file/d/16q_VMrZ4knKLgMxIBIPxLRiILTcpQAaf/preview",
   },
   {
     academicYear: "2022-2023",
-    url: "https://docs.google.com/document/d/111S9T2kUOiEbAKhVtqAFnD6i5PhEUMRZ/view",
+    url: "https://drive.google.com/file/d/19ireft87eCpEKFQ-8OiBdhlnVPrK5_jV/preview",
   },
   {
     academicYear: "2020-2021",
-    url: "https://docs.google.com/document/d/15yYYSDBzZfA-ly1sDCcU6S5TD1wlZhKF/view",
+    url: "https://drive.google.com/file/d/1sQtTZ0hHAfmGwxqXsJ03UOJviKG1KjT4/preview",
   },
   {
     academicYear: "2019-2020",
-    url: "https://docs.google.com/document/d/1XhSJGRNpHX-RzvSvM2SOIQelUbUAPOl8/view",
+    url: "https://drive.google.com/file/d/1-Zorni8ZXvxd4JOpBNA6FWlfMu1whf4H/preview",
   },
   {
     academicYear: "2018-2019",
-    url: "https://docs.google.com/document/d/1skDwKKqTdr9CJyLzXSHwZS5Y5EGcm841/view",
+    url: "https://drive.google.com/file/d/1Lv80oUqqMtJRG9albnR8zZaUbj9k43Zp/preview",
   },
   {
     academicYear: "2017-2018",
-    url: "https://docs.google.com/document/d/1MmjxBYBAM7whiivOybFujOObL2tQiR64/view",
+    url: "https://drive.google.com/file/d/1TBI_TWW-HHBG0bdFM2rPFKKoi-wpZggQ/preview",
   },
   {
     academicYear: "2016-2017",
-    url: "https://docs.google.com/document/d/1xqJDod-ViV4wFDt_fOtsjpjKZvJ1zC84/view",
+    url: "https://drive.google.com/file/d/1CDpeQ7nHc5b1vxmhNQqyrqmTpsSzvdVg/preview",
   },
 ];

@@ -120,7 +120,7 @@ const items: ReportItemWithItems[] = [
     title:
       "Положення про академічну доброчесність учасників освітнього процесу",
     shortTitle: "Положення про академічну доброчесність",
-    href: "https://drive.google.com/file/d/19bU3m8RkEaAufmTVsj9HOr5-ZDFIOyB6/preview",
+    href: "https://drive.google.com/file/d/1PKTLRnWzStFoJKcP9tiaU2RLCfhL8b1l/preview",
   },
   {
     title: "Положення про внутрішню систему забезпечення якості освіти",

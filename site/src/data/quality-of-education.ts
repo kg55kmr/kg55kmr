@@ -1,5 +1,13 @@
 export const qualityOfEducation = [
   {
+    title: "2025-2026 н.р.",
+    href: "https://drive.google.com/file/d/1OjakI3lfzEYdx7ygOuiWfmyRoBZHG8B1/preview",
+  },
+  {
+    title: "2024-2025 н.р.",
+    href: "https://drive.google.com/file/d/1DHA5Oo2E_pu2FaJOrPntTexlXw_RBW9m/preview",
+  },
+  {
     title: "2023-2024 н.р.",
     href: "https://drive.google.com/file/d/1g3tiJoh5KNKDya0Bw4sUZMWbu-HKjRwi/preview",
   },

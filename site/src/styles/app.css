@@ -51,40 +51,28 @@
   }
 }
 
-@utility table-responsive {
+@utility table-default {
   @layer base {
     @apply w-full text-left;
 
-    colgroup col:not(:last-child) {
-      @apply w-0;
+    tr {
+      @apply align-text-top;
     }
+  }
+}
 
-    thead {
-      @apply hidden md:table-header-group;
-
-      tr th {
-        @apply px-2 pb-3;
-      }
+@utility table-data-p-* {
+  @layer base {
+    td {
+      padding: --value(--spacing);
     }
+  }
+}
 
-    tbody {
-      @apply flex flex-col md:table-row-group;
-
-      tr {
-        @apply block py-4 md:table-row;
-
-        &:first-child {
-          @apply pt-0;
-        }
-
-        &:last-child {
-          @apply pb-0;
-        }
-
-        td {
-          @apply block md:table-cell md:px-2 md:py-0.5;
-        }
-      }
+@utility table-header-bg-* {
+  @layer base {
+    th {
+      background-color: --value(--color- *);
     }
   }
 }

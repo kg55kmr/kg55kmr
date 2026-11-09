@@ -6,7 +6,9 @@ import { type Position } from "./types";
 
 export const photoAsset = dirAsset("images/працівники/");
 
-export function define<TPos extends Position>(baseItems: Employee<TPos>[]) {
+export function define<TName extends string, TPos extends Position>(
+  baseItems: Employee<TName, TPos>[],
+) {
   const items2 = baseItems.map(transform);
   const byPost = R.pipe(
     items2,
@@ -14,9 +16,11 @@ export function define<TPos extends Position>(baseItems: Employee<TPos>[]) {
     R.groupBy((v) => v.position as Position),
   );
 
-  const byPositionFn = (post: Position): Employee2<TPos>[] =>
+  const byName = R.pipe(items2, R.indexBy("name"));
+
+  const byPositionFn = (post: Position): Employee2<TName, TPos>[] =>
     byPost[post] ?? [];
-  const ts = staff.map((e) => {
+  const teachers = staff.map((e) => {
     const positions = Array.isArray(e.position)
       ? e.position.flatMap(byPositionFn)
       : byPositionFn(e.position);
@@ -28,12 +32,15 @@ export function define<TPos extends Position>(baseItems: Employee<TPos>[]) {
 
   return {
     byPosition: byPositionFn,
+    byName: (name: TName) => byName[name],
     director: byPositionFn("директор")[0],
-    teachingStaff: ts,
+    teachingStaff: teachers,
   };
 }
 
-function transform<TPos extends Position>(e: Employee<TPos>): Employee2<TPos> {
+function transform<TName extends string, TPos extends Position>(
+  e: Employee<TName, TPos>,
+): Employee2<TName, TPos> {
   const [surname, firstName, patronymic] = e.name.split(" ");
   const postPrint = e.position[0].toUpperCase() + e.position.slice(1);
 

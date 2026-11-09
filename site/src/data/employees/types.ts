@@ -1,8 +1,8 @@
 import type { photoAsset } from "./utils";
 import type { InferFilename } from "~/lib/utils";
 
-export type Employee<TPos extends Position> = {
-  name: string;
+export type Employee<TName extends string, TPos extends Position> = {
+  name: TName;
   position: TPos;
   category?: Category;
   title?: Title;
@@ -11,10 +11,10 @@ export type Employee<TPos extends Position> = {
   blog?: string;
 };
 
-export type Employee2<TPos extends Position = Position> = Omit<
-  Employee<TPos>,
-  "image" | "image2"
-> & {
+export type Employee2<
+  TName extends string,
+  TPos extends Position = Position,
+> = Omit<Employee<TName, TPos>, "image" | "image2"> & {
   initials: string;
   image: string;
   image2: string | undefined;

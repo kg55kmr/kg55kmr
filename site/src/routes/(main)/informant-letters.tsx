@@ -4,7 +4,6 @@ import { Suspense, useState } from "react";
 import z from "zod";
 import { ExternalLink } from "~/components/link";
 import { Loader } from "~/components/loader";
-import { Responsive } from "~/components/responsive";
 import { Tabs } from "~/components/tabs";
 
 export const Route = createFileRoute("/(main)/informant-letters")({
@@ -51,11 +50,11 @@ function Section(props: { title: string; id: type; year: number }) {
   });
 
   return (
-    <div>
+    <div className="overflow-x-auto">
       <h1 className="mb-4 border border-green-500 bg-green-200 py-2 text-center text-2xl font-bold">
         {props.title}
       </h1>
-      <table className="table-responsive">
+      <table className="table-default">
         <thead>
           <tr className="text-center">
             <th>Номер</th>
@@ -71,21 +70,13 @@ function Section(props: { title: string; id: type; year: number }) {
               <td>{item.date}</td>
               <td>
                 <ExternalLink href={item.letter.sharedLink}>
-                  <Responsive
-                    when="sm"
-                    render="посилання"
-                    fallback={"лист-інформатор"}
-                  />
+                  посилання
                 </ExternalLink>
               </td>
               <td>
                 {item.apps && (
                   <ExternalLink href={item.apps.sharedLink}>
-                    <Responsive
-                      when="sm"
-                      render="посилання"
-                      fallback={"додатки"}
-                    />
+                    посилання
                   </ExternalLink>
                 )}
               </td>

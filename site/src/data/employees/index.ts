@@ -42,7 +42,6 @@ export const employees = define([
   {
     name: "Гудзовський Ігор Русланович",
     position: "педагог-організатор",
-    // category: "10 тарифний розряд",
     image: "гудзовський.jpg",
   },
   // {

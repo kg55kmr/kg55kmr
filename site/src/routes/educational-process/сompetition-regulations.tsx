@@ -10,6 +10,7 @@ export const Route = createFileRoute(
     title: "Положення конкурсів",
   },
 });
+// TODO: додати конкурси
 
 function RouteComponent() {
   return (

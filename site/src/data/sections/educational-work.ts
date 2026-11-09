@@ -124,9 +124,9 @@ export const educationalWork = [
       {
         groupTitle: "«Сокіл» («Джура»)",
         items: [
-          { to: "/educational-work/falcon-squire", icon: ShieldHalf },
-          { to: "/educational-work/falcon-squire/regulation", icon: Scroll },
-          { to: "/educational-work/falcon-squire/patrols", icon: Users },
+          { to: "/educational-work/falcon-dzhura", icon: ShieldHalf },
+          { to: "/educational-work/falcon-dzhura/regulation", icon: Scroll },
+          { to: "/educational-work/falcon-dzhura/patrols", icon: Users },
         ],
       },
       {

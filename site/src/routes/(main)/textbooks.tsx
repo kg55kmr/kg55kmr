@@ -56,7 +56,7 @@ const textbooks: Class[] = [
     textbooks: [
       {
         title: "Українська мова та читання (у 2-х частинах)",
-        author: "Пономарьова К.І.; Савченко О.Я.",
+        author: "Пономарьова К.І., Савченко О.Я.",
         url: [
           {
             url: "https://e.issuu.com/embed.html?d=ukrajinska-mova-2-klas-ponomarova-2019-1&pageLayout=singlePage&u=kreidaros",
@@ -104,7 +104,7 @@ const textbooks: Class[] = [
     textbooks: [
       {
         title: "Українська мова та читання (у 2-х частинах)",
-        author: "Пономарьова К.І.; Савченко О.Я.",
+        author: "Пономарьова К.І., Савченко О.Я.",
         url: [
           {
             url: "https://e.issuu.com/embed.html?d=ukrajinska-mova-3-klas-ponomariova-2020-1&pageLayout=singlePage&u=kreidaros",
@@ -685,46 +685,47 @@ function RouteComponent() {
       {textbooks.map(({ className, textbooks }) => {
         return (
           <Tabs.Tab key={className} title={className} value={className}>
-            <table className="table-responsive text-left">
-              <colgroup>
-                <col />
-                <col />
-                <col />
-              </colgroup>
-              <thead>
-                <tr className="border-b border-slate-300">
-                  <th>Назва підручника</th>
-                  <th>Автор(и)</th>
-                  <th>Посилання</th>
-                </tr>
-              </thead>
-              <tbody>
-                {sort(textbooks).map((b) => (
-                  <tr key={b.title} className="align-top">
-                    <td className="font-bold whitespace-nowrap md:font-normal">
-                      {b.title}
-                    </td>
-                    <td className="whitespace-nowrap">
-                      {Array.isArray(b.author)
-                        ? b.author.map((a) => <div key={a}>{a}</div>)
-                        : b.author}
-                    </td>
-                    <td>
-                      {Array.isArray(b.url) ? (
-                        b.url.map((u) => (
-                          <ExternalLink key={u.url} href={u.url}>
-                            {u.text ?? "Посилання"}
-                            <br />
-                          </ExternalLink>
-                        ))
-                      ) : (
-                        <ExternalLink href={b.url}>Переглянути</ExternalLink>
-                      )}
-                    </td>
+            <div className="overflow-x-auto p-0.5">
+              <table className="table-default table-fixed">
+                <colgroup>
+                  <col className="w-100" />
+                  <col className="w-30" />
+                  <col className="w-30" />
+                </colgroup>
+                <thead>
+                  <tr className="border-b border-slate-300">
+                    <th>Назва підручника</th>
+                    <th>Автор(и)</th>
+                    <th>Посилання</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                  <tr className="h-2" />
+                </thead>
+                <tbody>
+                  {sort(textbooks).map((b) => (
+                    <tr key={b.title}>
+                      <td>{b.title}</td>
+                      <td>
+                        {Array.isArray(b.author)
+                          ? b.author.map((a) => <div key={a}>{a}</div>)
+                          : b.author}
+                      </td>
+                      <td>
+                        {Array.isArray(b.url) ? (
+                          b.url.map((u) => (
+                            <ExternalLink key={u.url} href={u.url}>
+                              {u.text ?? "Посилання"}
+                              <br />
+                            </ExternalLink>
+                          ))
+                        ) : (
+                          <ExternalLink href={b.url}>Переглянути</ExternalLink>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </Tabs.Tab>
         );
       })}

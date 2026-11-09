@@ -420,11 +420,11 @@ function Lessons(props: {
 
   return (
     <>
-      <table className="table-responsive">
+      <table className="table-default">
         <colgroup>
-          <col />
-          <col />
-          {hasGroups && <col />}
+          <col className="w-30" />
+          <col className="w-20" />
+          {hasGroups && <col className="w-20" />}
           <col />
         </colgroup>
         <thead>
@@ -473,18 +473,13 @@ function Lesson(props: LessonProps) {
   return (
     <tr ref={ref} className="group">
       <td>{props.date}</td>
-      <td className="whitespace-nowrap">{props.fullClass}</td>
-      {props.hasGroups && (
-        <td className="md:text-center">
-          {props.group}
-          {props.group && <span className="md:hidden"> група</span>}
-        </td>
-      )}
+      <td>{props.fullClass}</td>
+      {props.hasGroups && <td>{props.group}</td>}
       <td>
         <ExternalLink href={buildUrl(props)}>{props.theme}</ExternalLink>
         <ExternalLink
           href={buildDownloadUrl(props)}
-          className="ml-1 text-black md:hidden md:group-hover:inline-block"
+          className="ml-1 hidden text-black group-hover:inline-block"
         >
           <Download className="inline-block size-5" />
         </ExternalLink>

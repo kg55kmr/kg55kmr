@@ -71,8 +71,7 @@ export function useSectionMenu() {
   const sectionsList = Object.keys(sections) as SectionType[];
   if (sectionMeta.id === "/(main)") sectionsList.splice(0, 1);
 
-  const sectionItems = sections[sectionMeta.id as SectionType];
-  sectionItems.map((s) => ({
+  const sectionItems = sections[sectionMeta.id as SectionType].map((s) => ({
     ...s,
     groups: s.groups.map((g) => {
       const items = g.items.filter((i) => {
@@ -89,6 +88,7 @@ export function useSectionMenu() {
       return { ...g, items };
     }),
   }));
+
   const items = [
     ...sectionItems,
     {

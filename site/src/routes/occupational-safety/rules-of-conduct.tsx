@@ -4,7 +4,7 @@ import { asset } from "~/lib/utils";
 export const Route = createFileRoute("/occupational-safety/rules-of-conduct")({
   component: RouteComponent,
   staticData: {
-    title: "Правила поведінки учнів",
+    title: "Правила поведінки здобувачів освіти",
   },
 });
 

@@ -1,11 +1,4 @@
 import type {
-  LocalItem,
-  NavigationItem,
-  Section,
-  SectionItem,
-  SectionType,
-} from "~/data/sections/types";
-import type {
   FileRoutesByFullPath,
   FileRoutesById,
   FileRouteTypes,
@@ -19,12 +12,20 @@ import {
 } from "@tanstack/react-router";
 import { Globe } from "lucide-react";
 import { sections } from "~/data/sections";
+import {
+  type LocalItem,
+  type NavigationItem,
+  type Section,
+  type SectionItem,
+  type SectionType,
+  isLocalItem,
+} from "~/data/sections/types";
 
 export function useSections() {
   const { routesById } = useRouter();
 
   return (Object.entries(sections) as [FileRouteTypes["id"], Section][])
-    .filter(([id]) => isShowSection(routesById, id))
+    .filter(([id]) => showRoute(routesById, id))
     .map(([id]) => {
       const route = routesById[id];
       const section = route.options.staticData?.section;
@@ -65,20 +66,38 @@ export function useSection() {
 }
 
 export function useSectionMenu() {
-  const section = useSection();
-  const { routesById } = useRouter();
+  const sectionMeta = useSection();
+  const { routesById, routesByPath } = useRouter();
   const sectionsList = Object.keys(sections) as SectionType[];
-  if (section.id === "/(main)") sectionsList.splice(0, 1);
+  if (sectionMeta.id === "/(main)") sectionsList.splice(0, 1);
 
+  const sectionItems = sections[sectionMeta.id as SectionType];
+  sectionItems.map((s) => ({
+    ...s,
+    groups: s.groups.map((g) => {
+      const items = g.items.filter((i) => {
+        if (isLocalItem(i)) {
+          const dev =
+            routesByPath[i.to as FileRouteTypes["fullPaths"]].options.staticData
+              ?.dev;
+
+          return import.meta.env.DEV || !dev;
+        }
+        return true;
+      });
+
+      return { ...g, items };
+    }),
+  }));
   const items = [
-    ...sections[section.id as SectionType],
+    ...sectionItems,
     {
       title: "Розділи",
       groups: [
         {
           groupTitle: "Розділи",
           items: sectionsList
-            .filter((id) => isShowSection(routesById, id))
+            .filter((id) => showRoute(routesById, id))
             .map((id) => {
               const route = routesById[id];
               const title = route.options.staticData?.title;
@@ -104,7 +123,9 @@ export function useRouteByPath() {
     if (item.title) return { title: item.title };
     if (typeof item === "string")
       return getRoute({ routesByPath, data: { to: item } });
+
     if ("to" in item) return getRoute({ routesByPath, data: item });
+
     return { title: item.title };
   };
 }
@@ -171,7 +192,7 @@ export function useRouteTitle() {
   });
 }
 
-function isShowSection(routesById: FileRoutesById, id: FileRouteTypes["id"]) {
+function showRoute(routesById: FileRoutesById, id: FileRouteTypes["id"]) {
   const dev = routesById[id].options.staticData?.section?.dev;
   return import.meta.env.DEV || !dev;
 }

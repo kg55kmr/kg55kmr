@@ -22,6 +22,7 @@ function RouteComponent() {
       background={asset(
         "images/розділи/мо-вчителів-суспільно-гуманітарного-циклу.jpg",
       )}
+      aspectRatio="3168 / 1344"
     >
       <Outlet />
     </Layout>

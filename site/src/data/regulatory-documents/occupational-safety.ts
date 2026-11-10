@@ -230,11 +230,6 @@ export const occupationalSafety: RegulatoryDocuments = [
           "Правила безпеки під час проведення навчання з біології в загальноосвітніх навчальних закладах (Наказ Міністерства освіти і науки України 15.11.2010 N 1085)",
         url: "https://zakon.rada.gov.ua/laws/show/z1215-10",
       },
-      {
-        title:
-          "Правила безпеки під час трудового навчання й літніх практичних робіт учнів 10-12 класів загальноосвітніх навчальних закладів у сільськогосподарському виробництві",
-        url: "https://zakon.rada.gov.ua/laws/show/z0793-98",
-      },
     ],
   },
   {
@@ -253,10 +248,6 @@ export const occupationalSafety: RegulatoryDocuments = [
       {
         title: "Санітарний регламент для закладів загальної середньої освіти",
         url: "https://zakon.rada.gov.ua/laws/show/z1111-20",
-      },
-      {
-        title: "Санітарний регламент для дошкільних навчальних закладів",
-        url: "https://zakon.rada.gov.ua/laws/show/z0563-16",
       },
       {
         title:

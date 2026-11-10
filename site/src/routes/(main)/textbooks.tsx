@@ -678,7 +678,7 @@ type TextBook = {
   url: string | Url[];
 };
 type Url = { text?: string; url: string };
-
+// TODO: додати відступи
 function RouteComponent() {
   return (
     <Tabs defaultValue="1 клас">

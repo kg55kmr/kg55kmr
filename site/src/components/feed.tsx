@@ -40,16 +40,12 @@ function FeedItem({ post }: { post: FeedPost }) {
   return (
     <div
       className={
-        "w-full rounded-md border border-gray-400 bg-white drop-shadow-[7px_7px_7px] drop-shadow-black/15 " +
+        "h-100 w-full overflow-y-clip rounded-md border border-gray-400 bg-white p-2 drop-shadow-[7px_7px_7px] drop-shadow-black/15 " +
         "group/feed hover:border-blue-400 hover:bg-sky-100"
       }
     >
       <Dialog.Root>
-        <Dialog.Trigger
-          render={<div />}
-          nativeButton={false}
-          className="relative h-100 cursor-pointer overflow-clip p-2"
-        >
+        <Dialog.Trigger className="relative cursor-pointer focus:outline-0">
           {post.title && (
             <div className="flex gap-2">
               <BookOpenText className="size-7 translate-y-0.5 text-blue-700" />

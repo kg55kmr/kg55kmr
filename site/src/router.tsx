@@ -31,6 +31,7 @@ declare module "@tanstack/react-router" {
     title?: string | TitleFn;
     shortTitle?: string;
     hasParent?: boolean;
+    dev?: true;
     section?: {
       id: FileRouteTypes["id"];
       thumbnail: string;

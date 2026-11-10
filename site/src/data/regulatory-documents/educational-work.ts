@@ -6,7 +6,7 @@ export const educationalWork: RegulatoryDocuments = [
     items: [
       {
         title:
-          "Про організаваний початок 2026/2027 навчального року в закладах загальної середньої освіти",
+          "Про організований початок 2026/2027 навчального року в закладах загальної середньої освіти",
         url: "https://drive.google.com/file/d/1bbOvZQzFj7r3uu7j6zWTJ7SNNUI79PtF/preview",
       },
       {

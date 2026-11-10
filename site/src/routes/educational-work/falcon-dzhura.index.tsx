@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ImageKitGallery, PostGallery } from "~/components/gallery";
+import { ImageKitGallery } from "~/components/gallery";
 import { asset } from "~/lib/utils";
 
 export const Route = createFileRoute("/educational-work/falcon-dzhura/")({

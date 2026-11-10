@@ -153,6 +153,10 @@ export const socialAndPsychologicalService = [
             to: "/social-and-psychological-service/speech-therapist",
             icon: Info,
           },
+          {
+            to: "/social-and-psychological-service/speech-therapist/regulatory-documents",
+            icon: FileText,
+          },
         ],
       },
     ],

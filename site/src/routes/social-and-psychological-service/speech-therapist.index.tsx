@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ExternalLink } from "~/components/link";
 import { employees } from "~/data/employees";
 import { EmployeeInfo } from "./-components/employee-info";
 
@@ -25,11 +24,6 @@ function RouteComponent() {
           ["12:35", "16:35"],
         ]}
       />
-      <div className="text-center">
-        <ExternalLink href="https://zakon.rada.gov.ua/laws/show/z0059-93">
-          Положення про логопедичні пункти системи освіти
-        </ExternalLink>
-      </div>
       <div className="font-bold text-violet-700">Мета роботи:</div>
       <ul>
         <li>

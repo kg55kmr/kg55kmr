@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { RegulatoryDocuments } from "~/components/regulatory-documents";
+import { speechTherapist } from "~/data/regulatory-documents/speech-therapist";
 
 export const Route = createFileRoute(
   "/social-and-psychological-service/speech-therapist/regulatory-documents",
@@ -11,5 +13,5 @@ export const Route = createFileRoute(
 });
 
 function RouteComponent() {
-  return <div></div>;
+  return <RegulatoryDocuments items={speechTherapist} />;
 }

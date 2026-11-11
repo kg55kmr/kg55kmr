@@ -40,6 +40,10 @@ export const socialAndPsychologicalService = [
             icon: UserRoundCog,
           },
           {
+            to: "/social-and-psychological-service/social-pedagogue/annual-work-plan",
+            icon: FileClock,
+          },
+          {
             to: "/social-and-psychological-service/social-pedagogue/information-asc",
             icon: Info,
           },
@@ -152,6 +156,14 @@ export const socialAndPsychologicalService = [
           {
             to: "/social-and-psychological-service/speech-therapist",
             icon: Info,
+          },
+          {
+            to: "/social-and-psychological-service/speech-therapist/tips-for-parents",
+            icon: Lightbulb,
+          },
+          {
+            to: "/social-and-psychological-service/speech-therapist/tips-for-pupils",
+            icon: Lightbulb,
           },
           {
             to: "/social-and-psychological-service/speech-therapist/regulatory-documents",

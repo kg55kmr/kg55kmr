@@ -15,10 +15,9 @@ export const Route = createFileRoute(
 function RouteComponent() {
   return (
     <div className="content">
-      <div className="gap-x-10 lg:columns-2">
+      <div className="grid-cols-auto-fit-100 grid gap-x-5">
         <Embed src="//www.slideshare.net/slideshow/embed_code/key/IhVyEeVh6yxI0J" />
         <Embed src="//www.slideshare.net/slideshow/embed_code/key/wW7FpoOOBxoeqx" />
-        <Embed src="//www.slideshare.net/slideshow/embed_code/key/Ignpm59JefVX27" />
         <YouTube videoId="zlnPRxt3KEE" />
         <img
           src={asset("images/профорієнтаційна-робота-3.jpg")}

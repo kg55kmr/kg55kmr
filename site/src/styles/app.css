@@ -102,7 +102,12 @@
   }
 }
 
-@custom-variant table-th (& th);
+@utility grid-cols-auto-fit-* {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(--spacing(--value(integer)), 1fr)
+  );
+}
 
 @utility list-counter {
   @layer base {

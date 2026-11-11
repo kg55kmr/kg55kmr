@@ -11,7 +11,7 @@ export const Route = createFileRoute("/(main)/graduates")({
 
 function RouteComponent() {
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
+    <div className="grid-cols-auto-fit-80 grid gap-5">
       {graduates.map((graduate) => (
         <div key={graduate.name} className="flex flex-col text-center">
           <img

@@ -183,6 +183,7 @@ import { Route as SocialAndPsychologicalServicePracticalPsychologistResilienceCe
 import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-pupils'
 import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-teachers'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport } from './routes/social-and-psychological-service/social-pedagogue.index'
+import { Route as SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRouteImport } from './routes/social-and-psychological-service/social-pedagogue.annual-work-plan'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport } from './routes/social-and-psychological-service/social-pedagogue.bullying'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport } from './routes/social-and-psychological-service/social-pedagogue.hotline-numbers'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport } from './routes/social-and-psychological-service/social-pedagogue.information-asc'
@@ -194,6 +195,8 @@ import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnW
 import { Route as SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport } from './routes/social-and-psychological-service/social-pedagogue.work-in-the-neighborhood'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistIndexRouteImport } from './routes/social-and-psychological-service/speech-therapist.index'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/speech-therapist.regulatory-documents'
+import { Route as SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRouteImport } from './routes/social-and-psychological-service/speech-therapist.tips-for-parents'
+import { Route as SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRouteImport } from './routes/social-and-psychological-service/speech-therapist.tips-for-pupils'
 import { Route as mainPostsTypeIndexRouteImport } from './routes/(main)/posts.$type.index'
 import { Route as mainPostsTypeIdRouteImport } from './routes/(main)/posts.$type.$id'
 import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForParentsIndexRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-parents.index'
@@ -1212,6 +1215,12 @@ const SocialAndPsychologicalServiceSocialPedagogueIndexRoute =
     path: '/social-pedagogue/',
     getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
   } as any)
+const SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute =
+  SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRouteImport.update({
+    id: '/social-pedagogue/annual-work-plan',
+    path: '/social-pedagogue/annual-work-plan',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
 const SocialAndPsychologicalServiceSocialPedagogueBullyingRoute =
   SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport.update({
     id: '/social-pedagogue/bullying',
@@ -1288,6 +1297,18 @@ const SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute =
       getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
     } as any,
   )
+const SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute =
+  SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRouteImport.update({
+    id: '/speech-therapist/tips-for-parents',
+    path: '/speech-therapist/tips-for-parents',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute =
+  SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRouteImport.update({
+    id: '/speech-therapist/tips-for-pupils',
+    path: '/speech-therapist/tips-for-pupils',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
 const mainPostsTypeIndexRoute = mainPostsTypeIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -1483,6 +1504,7 @@ export interface FileRoutesByFullPath {
   '/social-and-psychological-service/practical-psychologist/resilience-center': typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
+  '/social-and-psychological-service/social-pedagogue/annual-work-plan': typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
   '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   '/social-and-psychological-service/social-pedagogue/hotline-numbers': typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   '/social-and-psychological-service/social-pedagogue/information-asc': typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
@@ -1493,6 +1515,8 @@ export interface FileRoutesByFullPath {
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
   '/social-and-psychological-service/speech-therapist/regulatory-documents': typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
+  '/social-and-psychological-service/speech-therapist/tips-for-parents': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
+  '/social-and-psychological-service/speech-therapist/tips-for-pupils': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
   '/album/': typeof mainAlbumIndexRoute
   '/educational-process/gifted-pupils/': typeof EducationalProcessGiftedPupilsIndexRoute
   '/educational-work/ca-primrose/': typeof EducationalWorkCaPrimroseIndexRoute
@@ -1662,6 +1686,7 @@ export interface FileRoutesByTo {
   '/social-and-psychological-service/practical-psychologist/resilience-center': typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
+  '/social-and-psychological-service/social-pedagogue/annual-work-plan': typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
   '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   '/social-and-psychological-service/social-pedagogue/hotline-numbers': typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   '/social-and-psychological-service/social-pedagogue/information-asc': typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
@@ -1672,6 +1697,8 @@ export interface FileRoutesByTo {
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
   '/social-and-psychological-service/speech-therapist/regulatory-documents': typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
+  '/social-and-psychological-service/speech-therapist/tips-for-parents': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
+  '/social-and-psychological-service/speech-therapist/tips-for-pupils': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
   '/album': typeof mainAlbumIndexRoute
   '/educational-process/gifted-pupils': typeof EducationalProcessGiftedPupilsIndexRoute
   '/educational-work/ca-primrose': typeof EducationalWorkCaPrimroseIndexRoute
@@ -1855,6 +1882,7 @@ export interface FileRoutesById {
   '/social-and-psychological-service/practical-psychologist/resilience-center': typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
+  '/social-and-psychological-service/social-pedagogue/annual-work-plan': typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
   '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   '/social-and-psychological-service/social-pedagogue/hotline-numbers': typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   '/social-and-psychological-service/social-pedagogue/information-asc': typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
@@ -1865,6 +1893,8 @@ export interface FileRoutesById {
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
   '/social-and-psychological-service/speech-therapist/regulatory-documents': typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
+  '/social-and-psychological-service/speech-therapist/tips-for-parents': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
+  '/social-and-psychological-service/speech-therapist/tips-for-pupils': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
   '/(main)/album/': typeof mainAlbumIndexRoute
   '/educational-process/gifted-pupils/': typeof EducationalProcessGiftedPupilsIndexRoute
   '/educational-work/ca-primrose/': typeof EducationalWorkCaPrimroseIndexRoute
@@ -2048,6 +2078,7 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/resilience-center'
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
+    | '/social-and-psychological-service/social-pedagogue/annual-work-plan'
     | '/social-and-psychological-service/social-pedagogue/bullying'
     | '/social-and-psychological-service/social-pedagogue/hotline-numbers'
     | '/social-and-psychological-service/social-pedagogue/information-asc'
@@ -2058,6 +2089,8 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
     | '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
     | '/social-and-psychological-service/speech-therapist/regulatory-documents'
+    | '/social-and-psychological-service/speech-therapist/tips-for-parents'
+    | '/social-and-psychological-service/speech-therapist/tips-for-pupils'
     | '/album/'
     | '/educational-process/gifted-pupils/'
     | '/educational-work/ca-primrose/'
@@ -2227,6 +2260,7 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/resilience-center'
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
+    | '/social-and-psychological-service/social-pedagogue/annual-work-plan'
     | '/social-and-psychological-service/social-pedagogue/bullying'
     | '/social-and-psychological-service/social-pedagogue/hotline-numbers'
     | '/social-and-psychological-service/social-pedagogue/information-asc'
@@ -2237,6 +2271,8 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
     | '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
     | '/social-and-psychological-service/speech-therapist/regulatory-documents'
+    | '/social-and-psychological-service/speech-therapist/tips-for-parents'
+    | '/social-and-psychological-service/speech-therapist/tips-for-pupils'
     | '/album'
     | '/educational-process/gifted-pupils'
     | '/educational-work/ca-primrose'
@@ -2419,6 +2455,7 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/resilience-center'
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
+    | '/social-and-psychological-service/social-pedagogue/annual-work-plan'
     | '/social-and-psychological-service/social-pedagogue/bullying'
     | '/social-and-psychological-service/social-pedagogue/hotline-numbers'
     | '/social-and-psychological-service/social-pedagogue/information-asc'
@@ -2429,6 +2466,8 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
     | '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
     | '/social-and-psychological-service/speech-therapist/regulatory-documents'
+    | '/social-and-psychological-service/speech-therapist/tips-for-parents'
+    | '/social-and-psychological-service/speech-therapist/tips-for-pupils'
     | '/(main)/album/'
     | '/educational-process/gifted-pupils/'
     | '/educational-work/ca-primrose/'
@@ -3684,6 +3723,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
+    '/social-and-psychological-service/social-pedagogue/annual-work-plan': {
+      id: '/social-and-psychological-service/social-pedagogue/annual-work-plan'
+      path: '/social-pedagogue/annual-work-plan'
+      fullPath: '/social-and-psychological-service/social-pedagogue/annual-work-plan'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
     '/social-and-psychological-service/social-pedagogue/bullying': {
       id: '/social-and-psychological-service/social-pedagogue/bullying'
       path: '/social-pedagogue/bullying'
@@ -3759,6 +3805,20 @@ declare module '@tanstack/react-router' {
       path: '/speech-therapist/regulatory-documents'
       fullPath: '/social-and-psychological-service/speech-therapist/regulatory-documents'
       preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/speech-therapist/tips-for-parents': {
+      id: '/social-and-psychological-service/speech-therapist/tips-for-parents'
+      path: '/speech-therapist/tips-for-parents'
+      fullPath: '/social-and-psychological-service/speech-therapist/tips-for-parents'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/speech-therapist/tips-for-pupils': {
+      id: '/social-and-psychological-service/speech-therapist/tips-for-pupils'
+      path: '/speech-therapist/tips-for-pupils'
+      fullPath: '/social-and-psychological-service/speech-therapist/tips-for-pupils'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
     '/(main)/posts/$type/': {
@@ -4316,6 +4376,7 @@ interface SocialAndPsychologicalServiceRouteRouteChildren {
   SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute: typeof SocialAndPsychologicalServicePracticalPsychologistResilienceCenterRoute
   SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
+  SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute: typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
   SocialAndPsychologicalServiceSocialPedagogueBullyingRoute: typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute: typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute: typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
@@ -4326,6 +4387,8 @@ interface SocialAndPsychologicalServiceRouteRouteChildren {
   SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute: typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
   SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute: typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
+  SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute: typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
+  SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute: typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
   SocialAndPsychologicalServicePracticalPsychologistIndexRoute: typeof SocialAndPsychologicalServicePracticalPsychologistIndexRoute
   SocialAndPsychologicalServiceSocialPedagogueIndexRoute: typeof SocialAndPsychologicalServiceSocialPedagogueIndexRoute
   SocialAndPsychologicalServiceSpeechTherapistIndexRoute: typeof SocialAndPsychologicalServiceSpeechTherapistIndexRoute
@@ -4349,6 +4412,8 @@ const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalSer
       SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute,
     SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute:
       SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute,
+    SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute:
+      SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute,
     SocialAndPsychologicalServiceSocialPedagogueBullyingRoute:
       SocialAndPsychologicalServiceSocialPedagogueBullyingRoute,
     SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute:
@@ -4369,6 +4434,10 @@ const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalSer
       SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute,
     SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute:
       SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute,
+    SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute:
+      SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute,
+    SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute:
+      SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute,
     SocialAndPsychologicalServicePracticalPsychologistIndexRoute:
       SocialAndPsychologicalServicePracticalPsychologistIndexRoute,
     SocialAndPsychologicalServiceSocialPedagogueIndexRoute:

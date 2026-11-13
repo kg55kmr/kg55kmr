@@ -21,6 +21,7 @@ import {
   Rainbow,
   Scale,
   Scroll,
+  Shield,
   ShieldCheck,
   ShieldHalf,
   TrendingUp,
@@ -44,11 +45,23 @@ export const educationalWork = [
         ],
       },
       {
-        groupTitle: "Центр безпеки",
+        groupTitle: "Безпечне освітнє середовище",
         items: [
           {
             to: "/educational-work/safe-educational-environment",
             icon: ShieldCheck,
+          },
+          {
+            to: "/educational-work/safe-educational-environment/bullying-prevention-and-response",
+            icon: Shield,
+          },
+          {
+            to: "/educational-work/safe-educational-environment/information-digest",
+            icon: Info,
+          },
+          {
+            to: "/educational-work/safe-educational-environment/regulatory-documents",
+            icon: BookText,
           },
           { to: "/educational-work/safety-class", icon: ShieldHalf },
         ],

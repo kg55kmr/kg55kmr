@@ -63,7 +63,6 @@ import { Route as EducationalWorkParentalResponsibilityRouteImport } from './rou
 import { Route as EducationalWorkPlanRouteImport } from './routes/educational-work/plan'
 import { Route as EducationalWorkRainbowRouteImport } from './routes/educational-work/rainbow'
 import { Route as EducationalWorkRegulatoryDocumentsRouteImport } from './routes/educational-work/regulatory-documents'
-import { Route as EducationalWorkSafeEducationalEnvironmentRouteImport } from './routes/educational-work/safe-educational-environment'
 import { Route as EducationalWorkSafetyClassRouteImport } from './routes/educational-work/safety-class'
 import { Route as EducationalWorkSitemapRouteImport } from './routes/educational-work/sitemap'
 import { Route as EducationalWorkYearOfStatehoodInKeyDatesRouteImport } from './routes/educational-work/year-of-statehood-in-key-dates'
@@ -140,6 +139,10 @@ import { Route as EducationalWorkNationalAndPatrioticEducationActionPlansRouteIm
 import { Route as EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport } from './routes/educational-work/national-and-patriotic-education.heroes-live-forever'
 import { Route as EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRouteImport } from './routes/educational-work/national-and-patriotic-education.regulatory-documents'
 import { Route as EducationalWorkNationalAndPatrioticEducationReportRouteImport } from './routes/educational-work/national-and-patriotic-education.report'
+import { Route as EducationalWorkSafeEducationalEnvironmentIndexRouteImport } from './routes/educational-work/safe-educational-environment.index'
+import { Route as EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRouteImport } from './routes/educational-work/safe-educational-environment.bullying-prevention-and-response'
+import { Route as EducationalWorkSafeEducationalEnvironmentInformationDigestRouteImport } from './routes/educational-work/safe-educational-environment.information-digest'
+import { Route as EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRouteImport } from './routes/educational-work/safe-educational-environment.regulatory-documents'
 import { Route as MaPrimaryMethodologicalAchievementsCertificatesRouteImport } from './routes/ma-primary/methodological-achievements.certificates'
 import { Route as MaPrimaryMethodologicalAchievementsEducationalActivitiesRouteImport } from './routes/ma-primary/methodological-achievements.educational-activities'
 import { Route as MaPrimaryMethodologicalAchievementsPupilsWorkRouteImport } from './routes/ma-primary/methodological-achievements.pupils-work'
@@ -493,12 +496,6 @@ const EducationalWorkRegulatoryDocumentsRoute =
   EducationalWorkRegulatoryDocumentsRouteImport.update({
     id: '/regulatory-documents',
     path: '/regulatory-documents',
-    getParentRoute: () => EducationalWorkRouteRoute,
-  } as any)
-const EducationalWorkSafeEducationalEnvironmentRoute =
-  EducationalWorkSafeEducationalEnvironmentRouteImport.update({
-    id: '/safe-educational-environment',
-    path: '/safe-educational-environment',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
 const EducationalWorkSafetyClassRoute =
@@ -939,6 +936,34 @@ const EducationalWorkNationalAndPatrioticEducationReportRoute =
     path: '/national-and-patriotic-education/report',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
+const EducationalWorkSafeEducationalEnvironmentIndexRoute =
+  EducationalWorkSafeEducationalEnvironmentIndexRouteImport.update({
+    id: '/safe-educational-environment/',
+    path: '/safe-educational-environment/',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute =
+  EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRouteImport.update(
+    {
+      id: '/safe-educational-environment/bullying-prevention-and-response',
+      path: '/safe-educational-environment/bullying-prevention-and-response',
+      getParentRoute: () => EducationalWorkRouteRoute,
+    } as any,
+  )
+const EducationalWorkSafeEducationalEnvironmentInformationDigestRoute =
+  EducationalWorkSafeEducationalEnvironmentInformationDigestRouteImport.update({
+    id: '/safe-educational-environment/information-digest',
+    path: '/safe-educational-environment/information-digest',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
+const EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute =
+  EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRouteImport.update(
+    {
+      id: '/safe-educational-environment/regulatory-documents',
+      path: '/safe-educational-environment/regulatory-documents',
+      getParentRoute: () => EducationalWorkRouteRoute,
+    } as any,
+  )
 const MaPrimaryMethodologicalAchievementsCertificatesRoute =
   MaPrimaryMethodologicalAchievementsCertificatesRouteImport.update({
     id: '/methodological-achievements/certificates',
@@ -1342,6 +1367,7 @@ const ApiGithubShaRepoShaRoute = ApiGithubShaRepoShaRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof mainIndexRoute
   '/educational-process': typeof EducationalProcessRouteRouteWithChildren
   '/educational-work': typeof EducationalWorkRouteRouteWithChildren
   '/library': typeof LibraryRouteRouteWithChildren
@@ -1392,7 +1418,6 @@ export interface FileRoutesByFullPath {
   '/educational-work/plan': typeof EducationalWorkPlanRoute
   '/educational-work/rainbow': typeof EducationalWorkRainbowRoute
   '/educational-work/regulatory-documents': typeof EducationalWorkRegulatoryDocumentsRoute
-  '/educational-work/safe-educational-environment': typeof EducationalWorkSafeEducationalEnvironmentRoute
   '/educational-work/safety-class': typeof EducationalWorkSafetyClassRoute
   '/educational-work/sitemap': typeof EducationalWorkSitemapRoute
   '/educational-work/year-of-statehood-in-key-dates': typeof EducationalWorkYearOfStatehoodInKeyDatesRoute
@@ -1434,7 +1459,6 @@ export interface FileRoutesByFullPath {
   '/parent-forum/sitemap': typeof ParentForumSitemapRoute
   '/parent-forum/tips-for-parents': typeof ParentForumTipsForParentsRoute
   '/social-and-psychological-service/sitemap': typeof SocialAndPsychologicalServiceSitemapRoute
-  '/': typeof mainIndexRoute
   '/educational-process/': typeof EducationalProcessIndexRoute
   '/educational-work/': typeof EducationalWorkIndexRoute
   '/library/': typeof LibraryIndexRoute
@@ -1466,6 +1490,9 @@ export interface FileRoutesByFullPath {
   '/educational-work/national-and-patriotic-education/heroes-live-forever': typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   '/educational-work/national-and-patriotic-education/regulatory-documents': typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
   '/educational-work/national-and-patriotic-education/report': typeof EducationalWorkNationalAndPatrioticEducationReportRoute
+  '/educational-work/safe-educational-environment/bullying-prevention-and-response': typeof EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute
+  '/educational-work/safe-educational-environment/information-digest': typeof EducationalWorkSafeEducationalEnvironmentInformationDigestRoute
+  '/educational-work/safe-educational-environment/regulatory-documents': typeof EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute
   '/ma-primary/methodological-achievements/certificates': typeof MaPrimaryMethodologicalAchievementsCertificatesRoute
   '/ma-primary/methodological-achievements/educational-activities': typeof MaPrimaryMethodologicalAchievementsEducationalActivitiesRoute
   '/ma-primary/methodological-achievements/pupils-work': typeof MaPrimaryMethodologicalAchievementsPupilsWorkRoute
@@ -1523,6 +1550,7 @@ export interface FileRoutesByFullPath {
   '/educational-work/career-guidance-work/': typeof EducationalWorkCareerGuidanceWorkIndexRoute
   '/educational-work/falcon-dzhura/': typeof EducationalWorkFalconDzhuraIndexRoute
   '/educational-work/national-and-patriotic-education/': typeof EducationalWorkNationalAndPatrioticEducationIndexRoute
+  '/educational-work/safe-educational-environment/': typeof EducationalWorkSafeEducationalEnvironmentIndexRoute
   '/occupational-safety/covid-19/': typeof OccupationalSafetyCovid19IndexRoute
   '/occupational-safety/meals/': typeof OccupationalSafetyMealsIndexRoute
   '/occupational-safety/medical-care/': typeof OccupationalSafetyMedicalCareIndexRoute
@@ -1575,7 +1603,6 @@ export interface FileRoutesByTo {
   '/educational-work/plan': typeof EducationalWorkPlanRoute
   '/educational-work/rainbow': typeof EducationalWorkRainbowRoute
   '/educational-work/regulatory-documents': typeof EducationalWorkRegulatoryDocumentsRoute
-  '/educational-work/safe-educational-environment': typeof EducationalWorkSafeEducationalEnvironmentRoute
   '/educational-work/safety-class': typeof EducationalWorkSafetyClassRoute
   '/educational-work/sitemap': typeof EducationalWorkSitemapRoute
   '/educational-work/year-of-statehood-in-key-dates': typeof EducationalWorkYearOfStatehoodInKeyDatesRoute
@@ -1648,6 +1675,9 @@ export interface FileRoutesByTo {
   '/educational-work/national-and-patriotic-education/heroes-live-forever': typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   '/educational-work/national-and-patriotic-education/regulatory-documents': typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
   '/educational-work/national-and-patriotic-education/report': typeof EducationalWorkNationalAndPatrioticEducationReportRoute
+  '/educational-work/safe-educational-environment/bullying-prevention-and-response': typeof EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute
+  '/educational-work/safe-educational-environment/information-digest': typeof EducationalWorkSafeEducationalEnvironmentInformationDigestRoute
+  '/educational-work/safe-educational-environment/regulatory-documents': typeof EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute
   '/ma-primary/methodological-achievements/certificates': typeof MaPrimaryMethodologicalAchievementsCertificatesRoute
   '/ma-primary/methodological-achievements/educational-activities': typeof MaPrimaryMethodologicalAchievementsEducationalActivitiesRoute
   '/ma-primary/methodological-achievements/pupils-work': typeof MaPrimaryMethodologicalAchievementsPupilsWorkRoute
@@ -1705,6 +1735,7 @@ export interface FileRoutesByTo {
   '/educational-work/career-guidance-work': typeof EducationalWorkCareerGuidanceWorkIndexRoute
   '/educational-work/falcon-dzhura': typeof EducationalWorkFalconDzhuraIndexRoute
   '/educational-work/national-and-patriotic-education': typeof EducationalWorkNationalAndPatrioticEducationIndexRoute
+  '/educational-work/safe-educational-environment': typeof EducationalWorkSafeEducationalEnvironmentIndexRoute
   '/occupational-safety/covid-19': typeof OccupationalSafetyCovid19IndexRoute
   '/occupational-safety/meals': typeof OccupationalSafetyMealsIndexRoute
   '/occupational-safety/medical-care': typeof OccupationalSafetyMedicalCareIndexRoute
@@ -1770,7 +1801,6 @@ export interface FileRoutesById {
   '/educational-work/plan': typeof EducationalWorkPlanRoute
   '/educational-work/rainbow': typeof EducationalWorkRainbowRoute
   '/educational-work/regulatory-documents': typeof EducationalWorkRegulatoryDocumentsRoute
-  '/educational-work/safe-educational-environment': typeof EducationalWorkSafeEducationalEnvironmentRoute
   '/educational-work/safety-class': typeof EducationalWorkSafetyClassRoute
   '/educational-work/sitemap': typeof EducationalWorkSitemapRoute
   '/educational-work/year-of-statehood-in-key-dates': typeof EducationalWorkYearOfStatehoodInKeyDatesRoute
@@ -1844,6 +1874,9 @@ export interface FileRoutesById {
   '/educational-work/national-and-patriotic-education/heroes-live-forever': typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   '/educational-work/national-and-patriotic-education/regulatory-documents': typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
   '/educational-work/national-and-patriotic-education/report': typeof EducationalWorkNationalAndPatrioticEducationReportRoute
+  '/educational-work/safe-educational-environment/bullying-prevention-and-response': typeof EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute
+  '/educational-work/safe-educational-environment/information-digest': typeof EducationalWorkSafeEducationalEnvironmentInformationDigestRoute
+  '/educational-work/safe-educational-environment/regulatory-documents': typeof EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute
   '/ma-primary/methodological-achievements/certificates': typeof MaPrimaryMethodologicalAchievementsCertificatesRoute
   '/ma-primary/methodological-achievements/educational-activities': typeof MaPrimaryMethodologicalAchievementsEducationalActivitiesRoute
   '/ma-primary/methodological-achievements/pupils-work': typeof MaPrimaryMethodologicalAchievementsPupilsWorkRoute
@@ -1901,6 +1934,7 @@ export interface FileRoutesById {
   '/educational-work/career-guidance-work/': typeof EducationalWorkCareerGuidanceWorkIndexRoute
   '/educational-work/falcon-dzhura/': typeof EducationalWorkFalconDzhuraIndexRoute
   '/educational-work/national-and-patriotic-education/': typeof EducationalWorkNationalAndPatrioticEducationIndexRoute
+  '/educational-work/safe-educational-environment/': typeof EducationalWorkSafeEducationalEnvironmentIndexRoute
   '/occupational-safety/covid-19/': typeof OccupationalSafetyCovid19IndexRoute
   '/occupational-safety/meals/': typeof OccupationalSafetyMealsIndexRoute
   '/occupational-safety/medical-care/': typeof OccupationalSafetyMedicalCareIndexRoute
@@ -1916,6 +1950,7 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/'
     | '/educational-process'
     | '/educational-work'
     | '/library'
@@ -1966,7 +2001,6 @@ export interface FileRouteTypes {
     | '/educational-work/plan'
     | '/educational-work/rainbow'
     | '/educational-work/regulatory-documents'
-    | '/educational-work/safe-educational-environment'
     | '/educational-work/safety-class'
     | '/educational-work/sitemap'
     | '/educational-work/year-of-statehood-in-key-dates'
@@ -2008,7 +2042,6 @@ export interface FileRouteTypes {
     | '/parent-forum/sitemap'
     | '/parent-forum/tips-for-parents'
     | '/social-and-psychological-service/sitemap'
-    | '/'
     | '/educational-process/'
     | '/educational-work/'
     | '/library/'
@@ -2040,6 +2073,9 @@ export interface FileRouteTypes {
     | '/educational-work/national-and-patriotic-education/heroes-live-forever'
     | '/educational-work/national-and-patriotic-education/regulatory-documents'
     | '/educational-work/national-and-patriotic-education/report'
+    | '/educational-work/safe-educational-environment/bullying-prevention-and-response'
+    | '/educational-work/safe-educational-environment/information-digest'
+    | '/educational-work/safe-educational-environment/regulatory-documents'
     | '/ma-primary/methodological-achievements/certificates'
     | '/ma-primary/methodological-achievements/educational-activities'
     | '/ma-primary/methodological-achievements/pupils-work'
@@ -2097,6 +2133,7 @@ export interface FileRouteTypes {
     | '/educational-work/career-guidance-work/'
     | '/educational-work/falcon-dzhura/'
     | '/educational-work/national-and-patriotic-education/'
+    | '/educational-work/safe-educational-environment/'
     | '/occupational-safety/covid-19/'
     | '/occupational-safety/meals/'
     | '/occupational-safety/medical-care/'
@@ -2149,7 +2186,6 @@ export interface FileRouteTypes {
     | '/educational-work/plan'
     | '/educational-work/rainbow'
     | '/educational-work/regulatory-documents'
-    | '/educational-work/safe-educational-environment'
     | '/educational-work/safety-class'
     | '/educational-work/sitemap'
     | '/educational-work/year-of-statehood-in-key-dates'
@@ -2222,6 +2258,9 @@ export interface FileRouteTypes {
     | '/educational-work/national-and-patriotic-education/heroes-live-forever'
     | '/educational-work/national-and-patriotic-education/regulatory-documents'
     | '/educational-work/national-and-patriotic-education/report'
+    | '/educational-work/safe-educational-environment/bullying-prevention-and-response'
+    | '/educational-work/safe-educational-environment/information-digest'
+    | '/educational-work/safe-educational-environment/regulatory-documents'
     | '/ma-primary/methodological-achievements/certificates'
     | '/ma-primary/methodological-achievements/educational-activities'
     | '/ma-primary/methodological-achievements/pupils-work'
@@ -2279,6 +2318,7 @@ export interface FileRouteTypes {
     | '/educational-work/career-guidance-work'
     | '/educational-work/falcon-dzhura'
     | '/educational-work/national-and-patriotic-education'
+    | '/educational-work/safe-educational-environment'
     | '/occupational-safety/covid-19'
     | '/occupational-safety/meals'
     | '/occupational-safety/medical-care'
@@ -2343,7 +2383,6 @@ export interface FileRouteTypes {
     | '/educational-work/plan'
     | '/educational-work/rainbow'
     | '/educational-work/regulatory-documents'
-    | '/educational-work/safe-educational-environment'
     | '/educational-work/safety-class'
     | '/educational-work/sitemap'
     | '/educational-work/year-of-statehood-in-key-dates'
@@ -2417,6 +2456,9 @@ export interface FileRouteTypes {
     | '/educational-work/national-and-patriotic-education/heroes-live-forever'
     | '/educational-work/national-and-patriotic-education/regulatory-documents'
     | '/educational-work/national-and-patriotic-education/report'
+    | '/educational-work/safe-educational-environment/bullying-prevention-and-response'
+    | '/educational-work/safe-educational-environment/information-digest'
+    | '/educational-work/safe-educational-environment/regulatory-documents'
     | '/ma-primary/methodological-achievements/certificates'
     | '/ma-primary/methodological-achievements/educational-activities'
     | '/ma-primary/methodological-achievements/pupils-work'
@@ -2474,6 +2516,7 @@ export interface FileRouteTypes {
     | '/educational-work/career-guidance-work/'
     | '/educational-work/falcon-dzhura/'
     | '/educational-work/national-and-patriotic-education/'
+    | '/educational-work/safe-educational-environment/'
     | '/occupational-safety/covid-19/'
     | '/occupational-safety/meals/'
     | '/occupational-safety/medical-care/'
@@ -2508,7 +2551,7 @@ declare module '@tanstack/react-router' {
     '/(main)': {
       id: '/(main)'
       path: ''
-      fullPath: ''
+      fullPath: '/'
       preLoaderRoute: typeof mainRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -2881,13 +2924,6 @@ declare module '@tanstack/react-router' {
       path: '/regulatory-documents'
       fullPath: '/educational-work/regulatory-documents'
       preLoaderRoute: typeof EducationalWorkRegulatoryDocumentsRouteImport
-      parentRoute: typeof EducationalWorkRouteRoute
-    }
-    '/educational-work/safe-educational-environment': {
-      id: '/educational-work/safe-educational-environment'
-      path: '/safe-educational-environment'
-      fullPath: '/educational-work/safe-educational-environment'
-      preLoaderRoute: typeof EducationalWorkSafeEducationalEnvironmentRouteImport
       parentRoute: typeof EducationalWorkRouteRoute
     }
     '/educational-work/safety-class': {
@@ -3420,6 +3456,34 @@ declare module '@tanstack/react-router' {
       path: '/national-and-patriotic-education/report'
       fullPath: '/educational-work/national-and-patriotic-education/report'
       preLoaderRoute: typeof EducationalWorkNationalAndPatrioticEducationReportRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/safe-educational-environment/': {
+      id: '/educational-work/safe-educational-environment/'
+      path: '/safe-educational-environment'
+      fullPath: '/educational-work/safe-educational-environment/'
+      preLoaderRoute: typeof EducationalWorkSafeEducationalEnvironmentIndexRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/safe-educational-environment/bullying-prevention-and-response': {
+      id: '/educational-work/safe-educational-environment/bullying-prevention-and-response'
+      path: '/safe-educational-environment/bullying-prevention-and-response'
+      fullPath: '/educational-work/safe-educational-environment/bullying-prevention-and-response'
+      preLoaderRoute: typeof EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/safe-educational-environment/information-digest': {
+      id: '/educational-work/safe-educational-environment/information-digest'
+      path: '/safe-educational-environment/information-digest'
+      fullPath: '/educational-work/safe-educational-environment/information-digest'
+      preLoaderRoute: typeof EducationalWorkSafeEducationalEnvironmentInformationDigestRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
+    '/educational-work/safe-educational-environment/regulatory-documents': {
+      id: '/educational-work/safe-educational-environment/regulatory-documents'
+      path: '/safe-educational-environment/regulatory-documents'
+      fullPath: '/educational-work/safe-educational-environment/regulatory-documents'
+      preLoaderRoute: typeof EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRouteImport
       parentRoute: typeof EducationalWorkRouteRoute
     }
     '/ma-primary/methodological-achievements/certificates': {
@@ -4010,7 +4074,6 @@ interface EducationalWorkRouteRouteChildren {
   EducationalWorkPlanRoute: typeof EducationalWorkPlanRoute
   EducationalWorkRainbowRoute: typeof EducationalWorkRainbowRoute
   EducationalWorkRegulatoryDocumentsRoute: typeof EducationalWorkRegulatoryDocumentsRoute
-  EducationalWorkSafeEducationalEnvironmentRoute: typeof EducationalWorkSafeEducationalEnvironmentRoute
   EducationalWorkSafetyClassRoute: typeof EducationalWorkSafetyClassRoute
   EducationalWorkSitemapRoute: typeof EducationalWorkSitemapRoute
   EducationalWorkYearOfStatehoodInKeyDatesRoute: typeof EducationalWorkYearOfStatehoodInKeyDatesRoute
@@ -4029,10 +4092,14 @@ interface EducationalWorkRouteRouteChildren {
   EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute: typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute: typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
   EducationalWorkNationalAndPatrioticEducationReportRoute: typeof EducationalWorkNationalAndPatrioticEducationReportRoute
+  EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute: typeof EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute
+  EducationalWorkSafeEducationalEnvironmentInformationDigestRoute: typeof EducationalWorkSafeEducationalEnvironmentInformationDigestRoute
+  EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute: typeof EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute
   EducationalWorkCaPrimroseIndexRoute: typeof EducationalWorkCaPrimroseIndexRoute
   EducationalWorkCareerGuidanceWorkIndexRoute: typeof EducationalWorkCareerGuidanceWorkIndexRoute
   EducationalWorkFalconDzhuraIndexRoute: typeof EducationalWorkFalconDzhuraIndexRoute
   EducationalWorkNationalAndPatrioticEducationIndexRoute: typeof EducationalWorkNationalAndPatrioticEducationIndexRoute
+  EducationalWorkSafeEducationalEnvironmentIndexRoute: typeof EducationalWorkSafeEducationalEnvironmentIndexRoute
 }
 
 const EducationalWorkRouteRouteChildren: EducationalWorkRouteRouteChildren = {
@@ -4046,8 +4113,6 @@ const EducationalWorkRouteRouteChildren: EducationalWorkRouteRouteChildren = {
   EducationalWorkRainbowRoute: EducationalWorkRainbowRoute,
   EducationalWorkRegulatoryDocumentsRoute:
     EducationalWorkRegulatoryDocumentsRoute,
-  EducationalWorkSafeEducationalEnvironmentRoute:
-    EducationalWorkSafeEducationalEnvironmentRoute,
   EducationalWorkSafetyClassRoute: EducationalWorkSafetyClassRoute,
   EducationalWorkSitemapRoute: EducationalWorkSitemapRoute,
   EducationalWorkYearOfStatehoodInKeyDatesRoute:
@@ -4079,12 +4144,20 @@ const EducationalWorkRouteRouteChildren: EducationalWorkRouteRouteChildren = {
     EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute,
   EducationalWorkNationalAndPatrioticEducationReportRoute:
     EducationalWorkNationalAndPatrioticEducationReportRoute,
+  EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute:
+    EducationalWorkSafeEducationalEnvironmentBullyingPreventionAndResponseRoute,
+  EducationalWorkSafeEducationalEnvironmentInformationDigestRoute:
+    EducationalWorkSafeEducationalEnvironmentInformationDigestRoute,
+  EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute:
+    EducationalWorkSafeEducationalEnvironmentRegulatoryDocumentsRoute,
   EducationalWorkCaPrimroseIndexRoute: EducationalWorkCaPrimroseIndexRoute,
   EducationalWorkCareerGuidanceWorkIndexRoute:
     EducationalWorkCareerGuidanceWorkIndexRoute,
   EducationalWorkFalconDzhuraIndexRoute: EducationalWorkFalconDzhuraIndexRoute,
   EducationalWorkNationalAndPatrioticEducationIndexRoute:
     EducationalWorkNationalAndPatrioticEducationIndexRoute,
+  EducationalWorkSafeEducationalEnvironmentIndexRoute:
+    EducationalWorkSafeEducationalEnvironmentIndexRoute,
 }
 
 const EducationalWorkRouteRouteWithChildren =

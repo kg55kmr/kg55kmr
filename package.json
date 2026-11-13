@@ -9,7 +9,7 @@
     "@types/node": "^26.6.6",
     "eslint": "^10.14.0",
     "eslint-config": "workspace:^",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",

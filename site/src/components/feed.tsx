@@ -85,8 +85,8 @@ function FeedItem(props: { post: FeedPost; onClick: () => void }) {
   return (
     <div
       className={
-        "rounded-md border border-gray-400 bg-white p-2 drop-shadow-[7px_7px_7px] drop-shadow-black/15 " +
-        "group/feed hover:border-blue-400 hover:bg-sky-100"
+        "group/feed relative rounded-md border border-gray-400 bg-slate-100 p-2 drop-shadow-[7px_7px_7px] drop-shadow-black/15 " +
+        " hover:border-blue-400 hover:bg-blue-50"
       }
     >
       <div
@@ -100,7 +100,7 @@ function FeedItem(props: { post: FeedPost; onClick: () => void }) {
           </div>
         )}
         <post.Content />
-        <div className="absolute inset-0 bg-white mask-t-from-10% mask-t-to-100% group-hover/feed:bg-sky-100" />
+        <div className="absolute inset-0 hidden bg-blue-50/50 group-hover/feed:block" />
       </div>
     </div>
   );
@@ -123,7 +123,14 @@ function assertIsFeedPost(
   if (typeof data === "object" && data && "Content" in data) return;
   throw new Error(`(${path}) is not a feed post`);
 }
+
 export type FeedPost = {
   title?: string;
+  Content: FC;
+};
+
+export type FeedPost2 = {
+  title: string;
+  summary: string;
   Content: FC;
 };

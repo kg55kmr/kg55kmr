@@ -8,7 +8,6 @@ export const Route = createFileRoute(
   component: RouteComponent,
   staticData: {
     title: "Нормативні документи",
-    dev: true,
   },
 });
 

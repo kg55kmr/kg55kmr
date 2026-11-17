@@ -109,6 +109,13 @@
   );
 }
 
+@utility grid-cols-auto-fill-* {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(--spacing(--value(integer)), 1fr)
+  );
+}
+
 @utility list-counter {
   @layer base {
     @apply list-none [counter-reset:item];

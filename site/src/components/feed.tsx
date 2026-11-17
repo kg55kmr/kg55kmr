@@ -1,7 +1,15 @@
 import { Dialog } from "@base-ui/react/dialog";
-import { BookOpenText, CircleX } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import {
+  ArrowLeft,
+  BookOpenText,
+  CircleX,
+  MoveLeft,
+  MoveRight,
+} from "lucide-react";
 import { type FC, useState } from "react";
 import { useMutative } from "use-mutative";
+import { useSticky } from "~/hooks/use-sticky";
 import { pagination } from "~/lib/pagination";
 import { Pagination } from "./pagination";
 
@@ -129,8 +137,63 @@ export type FeedPost = {
   Content: FC;
 };
 
+type Feed2Props = {
+  items: Record<string, FeedPost2>;
+  id?: number;
+};
+
+export function Feed2(props: Feed2Props) {
+  const items = Object.values(props.items).toReversed();
+  const ref = useSticky();
+  if (props.id) {
+    const item = items[props.id - 1];
+
+    return (
+      <div>
+        <div
+          ref={ref}
+          className="-mx-(--main-offset) mb-5 flex items-center border-y bg-slate-100 p-2"
+        >
+          <Link to="." resetScroll={false} search={{ id: undefined }}>
+            <ArrowLeft className="size-8" />
+          </Link>
+          <h1 className="font-roboto-condensed flex-1 text-center text-3xl">
+            {item.title}
+          </h1>
+        </div>
+        <div className="content">
+          <item.Content />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid-cols-auto-fit-80 grid gap-5">
+      {items.map((v, i) => (
+        <Link
+          key={v.title + i}
+          to="."
+          search={{ id: i + 1 }}
+          resetScroll={false}
+          className="row-span-3 grid cursor-pointer grid-rows-subgrid gap-2 rounded-xl border border-gray-300 p-6 hover:border-blue-400"
+        >
+          <div className="font-roboto-condensed text-lg font-bold">
+            {v.title}
+          </div>
+          <div className="mb-5">{v.preview}</div>
+          <div className="flex justify-between">
+            <div className="font-bold text-blue-700">Читати повністю</div>
+            <MoveRight className="text-blue-700" />
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
 export type FeedPost2 = {
   title: string;
-  summary: string;
+  preview: string;
   Content: FC;
 };

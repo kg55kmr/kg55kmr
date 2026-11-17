@@ -5,10 +5,10 @@
   "dependencies": {
     "@eslint/js": "^10.0.1",
     "@tanstack/eslint-plugin-router": "^1.162.0",
-    "eslint-plugin-perfectionist": "^5.13.0",
+    "eslint-plugin-perfectionist": "^5.14.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.7",
+    "eslint-plugin-react-refresh": "^0.5.8",
     "globals": "^17.14.0",
     "typescript-eslint": "^8.72.2"
   }

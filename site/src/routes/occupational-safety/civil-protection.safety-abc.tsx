@@ -17,16 +17,14 @@ type PostProps = {
   Content: ComponentType;
 };
 
-const data = import.meta.glob<PostProps>(
+const entries = import.meta.glob<PostProps>(
   "./-civil-protection.safety-abc/*.tsx",
   {
     eager: true,
   },
 );
 
-const items = Object.keys(data)
-  .toSorted((a, b) => a.localeCompare(b, "uk", { numeric: true }))
-  .map((k) => data[k]);
+const items = Object.values(entries).toReversed();
 
 function RouteComponent() {
   return (

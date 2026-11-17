@@ -1,9 +1,12 @@
+import image from "./2.jpg";
+
 export const id = "safe-heating";
 export const title = "Безпечне опалення";
 
 export function Content() {
   return (
     <div className="content">
+      <img src={image} className="float-right w-150 pl-2" />
       <p>
         З початку осені та впродовж зимового періоду настає зниження
         температурних показників, внаслідок – значно збільшується кількість

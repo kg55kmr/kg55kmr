@@ -1,3 +1,5 @@
+import image from "./1.jpg";
+
 export const id = "initial-actions-in-case-of-fire";
 export const title = "Перші дії при пожежі";
 
@@ -5,6 +7,7 @@ export function Content() {
   return (
     <div className="content">
       <h1>Перші дії при пожежі</h1>
+      <img src={image} className="float-right w-150 pl-2" />
 
       <p>
         Щорічно внаслідок пожеж гине та страждає значна кількість людей. В дим

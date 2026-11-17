@@ -187,7 +187,6 @@ import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForPupil
 import { Route as SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRouteImport } from './routes/social-and-psychological-service/practical-psychologist.tips-for-teachers'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueIndexRouteImport } from './routes/social-and-psychological-service/social-pedagogue.index'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRouteImport } from './routes/social-and-psychological-service/social-pedagogue.annual-work-plan'
-import { Route as SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport } from './routes/social-and-psychological-service/social-pedagogue.bullying'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport } from './routes/social-and-psychological-service/social-pedagogue.hotline-numbers'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueInformationAscRouteImport } from './routes/social-and-psychological-service/social-pedagogue.information-asc'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/social-pedagogue.regulatory-documents'
@@ -1246,12 +1245,6 @@ const SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute =
     path: '/social-pedagogue/annual-work-plan',
     getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
   } as any)
-const SocialAndPsychologicalServiceSocialPedagogueBullyingRoute =
-  SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport.update({
-    id: '/social-pedagogue/bullying',
-    path: '/social-pedagogue/bullying',
-    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
-  } as any)
 const SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute =
   SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRouteImport.update({
     id: '/social-pedagogue/hotline-numbers',
@@ -1532,7 +1525,6 @@ export interface FileRoutesByFullPath {
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/annual-work-plan': typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
-  '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   '/social-and-psychological-service/social-pedagogue/hotline-numbers': typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   '/social-and-psychological-service/social-pedagogue/information-asc': typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
   '/social-and-psychological-service/social-pedagogue/regulatory-documents': typeof SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRoute
@@ -1717,7 +1709,6 @@ export interface FileRoutesByTo {
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/annual-work-plan': typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
-  '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   '/social-and-psychological-service/social-pedagogue/hotline-numbers': typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   '/social-and-psychological-service/social-pedagogue/information-asc': typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
   '/social-and-psychological-service/social-pedagogue/regulatory-documents': typeof SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRoute
@@ -1916,7 +1907,6 @@ export interface FileRoutesById {
   '/social-and-psychological-service/practical-psychologist/tips-for-pupils': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   '/social-and-psychological-service/practical-psychologist/tips-for-teachers': typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/annual-work-plan': typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
-  '/social-and-psychological-service/social-pedagogue/bullying': typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   '/social-and-psychological-service/social-pedagogue/hotline-numbers': typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   '/social-and-psychological-service/social-pedagogue/information-asc': typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
   '/social-and-psychological-service/social-pedagogue/regulatory-documents': typeof SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRoute
@@ -2115,7 +2105,6 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/annual-work-plan'
-    | '/social-and-psychological-service/social-pedagogue/bullying'
     | '/social-and-psychological-service/social-pedagogue/hotline-numbers'
     | '/social-and-psychological-service/social-pedagogue/information-asc'
     | '/social-and-psychological-service/social-pedagogue/regulatory-documents'
@@ -2300,7 +2289,6 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/annual-work-plan'
-    | '/social-and-psychological-service/social-pedagogue/bullying'
     | '/social-and-psychological-service/social-pedagogue/hotline-numbers'
     | '/social-and-psychological-service/social-pedagogue/information-asc'
     | '/social-and-psychological-service/social-pedagogue/regulatory-documents'
@@ -2498,7 +2486,6 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/practical-psychologist/tips-for-pupils'
     | '/social-and-psychological-service/practical-psychologist/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/annual-work-plan'
-    | '/social-and-psychological-service/social-pedagogue/bullying'
     | '/social-and-psychological-service/social-pedagogue/hotline-numbers'
     | '/social-and-psychological-service/social-pedagogue/information-asc'
     | '/social-and-psychological-service/social-pedagogue/regulatory-documents'
@@ -3794,13 +3781,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
-    '/social-and-psychological-service/social-pedagogue/bullying': {
-      id: '/social-and-psychological-service/social-pedagogue/bullying'
-      path: '/social-pedagogue/bullying'
-      fullPath: '/social-and-psychological-service/social-pedagogue/bullying'
-      preLoaderRoute: typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRouteImport
-      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
-    }
     '/social-and-psychological-service/social-pedagogue/hotline-numbers': {
       id: '/social-and-psychological-service/social-pedagogue/hotline-numbers'
       path: '/social-pedagogue/hotline-numbers'
@@ -4450,7 +4430,6 @@ interface SocialAndPsychologicalServiceRouteRouteChildren {
   SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForPupilsRoute
   SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute: typeof SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute
   SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute: typeof SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute
-  SocialAndPsychologicalServiceSocialPedagogueBullyingRoute: typeof SocialAndPsychologicalServiceSocialPedagogueBullyingRoute
   SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute: typeof SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute
   SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute: typeof SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute
   SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRoute: typeof SocialAndPsychologicalServiceSocialPedagogueRegulatoryDocumentsRoute
@@ -4487,8 +4466,6 @@ const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalSer
       SocialAndPsychologicalServicePracticalPsychologistTipsForTeachersRoute,
     SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute:
       SocialAndPsychologicalServiceSocialPedagogueAnnualWorkPlanRoute,
-    SocialAndPsychologicalServiceSocialPedagogueBullyingRoute:
-      SocialAndPsychologicalServiceSocialPedagogueBullyingRoute,
     SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute:
       SocialAndPsychologicalServiceSocialPedagogueHotlineNumbersRoute,
     SocialAndPsychologicalServiceSocialPedagogueInformationAscRoute:

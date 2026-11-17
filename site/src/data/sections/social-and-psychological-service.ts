@@ -9,7 +9,6 @@ import {
   MapPinned,
   PhoneCall,
   PhoneForwarded,
-  ShieldAlert,
   Sprout,
   UserRoundCog,
   UserRoundSearch,
@@ -63,10 +62,6 @@ export const socialAndPsychologicalService = [
           {
             to: "/social-and-psychological-service/social-pedagogue/hotline-numbers",
             icon: PhoneCall,
-          },
-          {
-            to: "/social-and-psychological-service/social-pedagogue/bullying",
-            icon: ShieldAlert,
           },
           {
             to: "/social-and-psychological-service/social-pedagogue/safe-internet",

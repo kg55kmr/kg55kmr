@@ -64,7 +64,6 @@ declare module 'virtual:static-assets' {
     "images/безпечна-зима/9.webp" |
     "images/безпечний-інтернет-1.jpg" |
     "images/безпечний-інтернет-2.jpg" |
-    "images/булінг.jpg" |
     "images/бібліотека-1.jpg" |
     "images/бібліотека-2.jpg" |
     "images/бібліотека-3.jpg" |
@@ -165,7 +164,6 @@ declare module 'virtual:static-assets' {
     "images/навчальні-програми-хімія.jpg" |
     "images/навчальні-програми-інформатика.jpg" |
     "images/навчальні-програми-історія.jpg" |
-    "images/насильство-у-сім`ї.jpg" |
     "images/науково-дослідницька-робота.jpg" |
     "images/обдаровані-учні.jpg" |
     "images/охорона-праці.jpg" |

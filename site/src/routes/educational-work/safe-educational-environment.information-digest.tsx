@@ -26,55 +26,6 @@ function RouteComponent() {
   return <Feed2 items={entries} id={id} />;
 }
 
-// <img src={asset("images/stop-bullying.jpg")} className="mx-auto w-80" />
-
-//       <ul>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#2">
-//             Про булінг
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#4">
-//             Жертви та ініціатори булінгу
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#5">
-//             Форми та види булінґу
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#6">
-//             Наслідки шкільного насилля
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#7">
-//             Як реагувати на цькування
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#8">
-//             Що можуть зробити батьки
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#9">
-//             Що можуть зробити вчителі
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="http://llt.multycourse.com.ua/ua/page/22/103#10">
-//             Навчання навичок протидії булінґу у закладі
-//           </ExternalLink>
-//         </li>
-//         <li>
-//           <ExternalLink href="https://minjust.gov.ua/m/str_19188">
-//             Захист прав дітей в україні з урахуванням міжнародних договорів з
-//             питань сімейного права
-//           </ExternalLink>
-//         </li>
 //         <li>
 //           <ExternalLink href="https://drive.google.com/drive/folders/1Dk39QXQTYicI1Ularf_iTY5eMykSDvM9">
 //             Методичні розробки, посібники

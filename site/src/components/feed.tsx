@@ -4,13 +4,14 @@ import {
   ArrowLeft,
   BookOpenText,
   CircleX,
-  MoveLeft,
+  LucideExternalLink,
   MoveRight,
 } from "lucide-react";
-import { type FC, useState } from "react";
+import { type FC, type PropsWithChildren, useState } from "react";
 import { useMutative } from "use-mutative";
 import { useSticky } from "~/hooks/use-sticky";
 import { pagination } from "~/lib/pagination";
+import { ExternalLink } from "./link";
 import { Pagination } from "./pagination";
 
 type Props = {
@@ -144,9 +145,11 @@ type Feed2Props = {
 
 export function Feed2(props: Feed2Props) {
   const items = Object.values(props.items).toReversed();
+  const itemsLen = items.length;
   const ref = useSticky();
+
   if (props.id) {
-    const item = items[props.id - 1];
+    const item = items[itemsLen - props.id];
 
     return (
       <div>
@@ -161,39 +164,67 @@ export function Feed2(props: Feed2Props) {
             {item.title}
           </h1>
         </div>
-        <div className="content">
-          <item.Content />
-        </div>
+        {item.Content && (
+          <div className="content">
+            <item.Content />
+          </div>
+        )}
       </div>
     );
   }
 
   return (
     <div className="grid-cols-auto-fit-80 grid gap-5">
-      {items.map((v, i) => (
-        <Link
-          key={v.title + i}
-          to="."
-          search={{ id: i + 1 }}
-          resetScroll={false}
-          className="row-span-3 grid cursor-pointer grid-rows-subgrid gap-2 rounded-xl border border-gray-300 p-6 hover:border-blue-400"
-        >
-          <div className="font-roboto-condensed text-lg font-bold">
-            {v.title}
-          </div>
-          <div className="mb-5">{v.preview}</div>
-          <div className="flex justify-between">
-            <div className="font-bold text-blue-700">Читати повністю</div>
-            <MoveRight className="text-blue-700" />
-          </div>
-        </Link>
-      ))}
+      {items.map((post, i) => {
+        const id = itemsLen - i;
+        const text = post.Content ? "Прочитати" : "Переглянути";
+        const Icon = post.Content ? MoveRight : LucideExternalLink;
+        return (
+          <DynamicLink key={post.title + id} post={post} id={id}>
+            <div className="font-roboto-condensed text-lg font-bold">
+              {post.title}
+            </div>
+            <div className="mb-5">{post.preview}</div>
+            <div className="flex justify-between">
+              <div className="font-bold text-blue-700">{text}</div>
+              <Icon className="text-blue-700" />
+            </div>
+          </DynamicLink>
+        );
+      })}
     </div>
   );
+}
+
+function DynamicLink(
+  props: PropsWithChildren<{ post: FeedPost2; id: number }>,
+) {
+  const className =
+    "row-span-3 grid cursor-pointer grid-rows-subgrid gap-2 rounded-xl border border-gray-300 p-6 hover:border-blue-400";
+
+  if (props.post.Content)
+    return (
+      <Link
+        to="."
+        search={{ id: props.id }}
+        resetScroll={false}
+        className={className}
+      >
+        {props.children}
+      </Link>
+    );
+
+  if (props.post.url)
+    return (
+      <ExternalLink href={props.post.url} className={className}>
+        {props.children}
+      </ExternalLink>
+    );
 }
 
 export type FeedPost2 = {
   title: string;
   preview: string;
-  Content: FC;
+  url?: string;
+  Content?: FC;
 };

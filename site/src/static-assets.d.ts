@@ -15,7 +15,6 @@ declare module 'virtual:static-assets' {
     "images/covid-19-3.jpg" |
     "images/covid-19-4.jpg" |
     "images/covid-19-5.jpg" |
-    "images/stop-bullying.jpg" |
     "images/безоплатна-правова-допомога.webp" |
     "images/безпечна-зима/1.webp" |
     "images/безпечна-зима/10.webp" |

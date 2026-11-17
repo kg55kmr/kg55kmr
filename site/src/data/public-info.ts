@@ -313,7 +313,15 @@ const items: ReportItemWithItems[] = [
     title: "Пропозиції до проекту бюджету",
     items: [
       {
-        title: "2021 р.",
+        title: "на 2027 р.",
+        href: "https://drive.google.com/file/d/1HtkoaOdBmeLEB7PCodUvuHfER_ejUc5m/preview",
+      },
+      {
+        title: "на 2026 р.",
+        href: "https://drive.google.com/file/d/1a3th5rhR7X1uqMsdRsNh35ujbBT4w9NW/preview",
+      },
+      {
+        title: "на 2021 р.",
         href: "https://drive.google.com/file/d/1la2EBti0qCwyOjKRM2O8Y279lJ_y55xA/preview",
       },
     ],

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { type FC, type PropsWithChildren, useState } from "react";
 import { useMutative } from "use-mutative";
+import z from "zod";
 import { useSticky } from "~/hooks/use-sticky";
 import { pagination } from "~/lib/pagination";
 import { ExternalLink } from "./link";
@@ -155,7 +156,7 @@ export function Feed2(props: Feed2Props) {
       <div>
         <div
           ref={ref}
-          className="-mx-(--main-offset) mb-5 flex items-center border-y bg-slate-100 p-2"
+          className="z-1 -mx-(--main-offset) mb-5 flex items-center border-y bg-slate-100 p-2"
         >
           <Link to="." resetScroll={false} search={{ id: undefined }}>
             <ArrowLeft className="size-8" />
@@ -221,6 +222,10 @@ function DynamicLink(
       </ExternalLink>
     );
 }
+
+export const validateId = z.object({
+  id: z.number().optional(),
+});
 
 export type FeedPost2 = {
   title: string;

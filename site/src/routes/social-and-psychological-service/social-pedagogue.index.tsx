@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { LucideExternalLink } from "lucide-react";
 import { Gallery } from "~/components/gallery";
+import { ExternalLink } from "~/components/link";
 import { employees } from "~/data/employees";
 import { useImagesSize } from "~/hooks/use-queries";
 import { EmployeeInfo } from "./-components/employee-info";
@@ -134,6 +136,13 @@ function RouteComponent() {
           соціально-педагогічного життя навчального закладу.
         </li>
       </ul>
+      <ExternalLink href="https://drive.google.com/file/d/16s5au4dTBitL8g6yIYwuMJZwRRGRMTO9/view">
+        <p className="flex gap-2">
+          Зміст роботи соціального педагога у школі
+          <LucideExternalLink />
+        </p>
+      </ExternalLink>
+
       <Gallery images={images} />
     </div>
   );

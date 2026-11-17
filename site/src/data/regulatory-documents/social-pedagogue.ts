@@ -58,11 +58,6 @@ export const socialPedagogue: RegulatoryDocumentSection[] = [
         url: "https://zakon.rada.gov.ua/laws/show/195/2020",
       },
       {
-        title:
-          "Методичний посібник МОН України, ВБО Український фонд «Благополуччя дітей», м. Київ 2018 рік, «Кодекс безпечного освітнього середовища»",
-        url: "https://mon.gov.ua/storage/app/media/zagalna%20serednya/protidia-bulingu/21kbos.pdf",
-      },
-      {
         title: "Навчально-методичні матеріали щодо роботи в умовах війни",
         url: "https://drive.google.com/drive/folders/1dHkoOgZO4y7Nnmpvm5ixQlzF_8VWG5GK",
       },
@@ -213,7 +208,7 @@ export const socialPedagogue: RegulatoryDocumentSection[] = [
       {
         title:
           'Закон України "Про забезпечення прав і свобод внутрішньо переміщених осіб"',
-        url: "https://zakon.rada.gov.ua/laws/show/1706-18",
+        url: "https://zakon.rada.gov.ua/laws/show/4924-20",
       },
       {
         title:
@@ -243,7 +238,7 @@ export const socialPedagogue: RegulatoryDocumentSection[] = [
       {
         title:
           'Закон України "Про забезпечення прав і свобод внутрішньо переміщених осіб"',
-        url: "https://zakon.rada.gov.ua/laws/show/1706-18",
+        url: "https://zakon.rada.gov.ua/laws/show/4924-20",
       },
       {
         title:

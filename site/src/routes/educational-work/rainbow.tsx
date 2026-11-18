@@ -22,6 +22,15 @@ const data: YearData[] = [
       },
     ],
   },
+  {
+    year: "2024-2025",
+    items: [
+      {
+        title: "січень - березень",
+        url: "https://drive.google.com/file/d/1TGjrlvHZQTPqTs-ZudVsMJwLQlfv-g-1/view",
+      },
+    ],
+  },
   // {
   //   year: "2023-2024",
   //   items: [
@@ -41,11 +50,24 @@ const data: YearData[] = [
   //   ],
   // },
   {
+    year: "2021-2022",
+    items: [
+      {
+        title: "грудень - лютий",
+        url: "https://drive.google.com/file/d/169_FfCQuJFgIn8YIJjBx1rxT4dKXyWGe/view",
+      },
+    ],
+  },
+  {
     year: "2020-2021",
     items: [
       {
         title: "грудень - лютий",
         url: "https://drive.google.com/file/d/1ZiZSCWj8NawWFOMUm-h1SekL2hbAfRoO/view",
+      },
+      {
+        title: "вересень - листопад",
+        url: "https://drive.google.com/file/d/1pUl2zv6U0NzSi3bc0FqtTtIL_2oCFvzr/view",
       },
     ],
   },
@@ -55,6 +77,23 @@ const data: YearData[] = [
       {
         title: "вересень - листопад",
         url: "https://drive.google.com/file/d/1lWlDIwJfObV1drwZi2ZSPH3hLrwoEF0K/view",
+      },
+      {
+        title: "грудень - лютий",
+        url: "https://drive.google.com/file/d/1rQUtMkN-fgWRtPVeFt0MhTkRxzXuPL8O/view",
+      },
+    ],
+  },
+  {
+    year: "2018-2019",
+    items: [
+      {
+        title: "грудень - лютий",
+        url: "https://drive.google.com/file/d/1dhYGFyEtW6yp6TEyUtS1OSW5ez5vlZkg/view",
+      },
+      {
+        title: "лютий - квітень",
+        url: "https://drive.google.com/file/d/1025pf5enWFtlm0hlI-2bVE9ntXfjo3gJ/view",
       },
     ],
   },

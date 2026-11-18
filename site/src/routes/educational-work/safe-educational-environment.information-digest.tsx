@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { type FeedPost2, Feed2, validateId } from "~/components/feed";
+import { type FeedPost2, Feed2 } from "~/components/feed";
+import { validateId } from "~/lib/validate";
 
 export const Route = createFileRoute(
   "/educational-work/safe-educational-environment/information-digest",

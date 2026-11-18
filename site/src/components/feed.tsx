@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import { type FC, type PropsWithChildren, useState } from "react";
 import { useMutative } from "use-mutative";
-import z from "zod";
 import { useSticky } from "~/hooks/use-sticky";
 import { pagination } from "~/lib/pagination";
 import { ExternalLink } from "./link";
@@ -222,10 +221,6 @@ function DynamicLink(
       </ExternalLink>
     );
 }
-
-export const validateId = z.object({
-  id: z.number().optional(),
-});
 
 export type FeedPost2 = {
   title: string;

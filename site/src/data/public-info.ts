@@ -321,6 +321,22 @@ const items: ReportItemWithItems[] = [
         href: "https://drive.google.com/file/d/1a3th5rhR7X1uqMsdRsNh35ujbBT4w9NW/preview",
       },
       {
+        title: "на 2025 р.",
+        href: "https://drive.google.com/file/d/13jJIHL-JdnmQbORohXamehg_p0btPo5_/preview",
+      },
+      {
+        title: "на 2024 р.",
+        href: "https://drive.google.com/file/d/1QAn60vtW4OYxYuvLtx-yK_EbRnFgvqSf/preview",
+      },
+      {
+        title: "на 2023 р.",
+        href: "https://drive.google.com/file/d/1e1B4nc8XFchBVFRU3Z94tvhejzV3Y7TJ/preview",
+      },
+      {
+        title: "на 2022 р.",
+        href: "https://drive.google.com/file/d/1WUBjWwctrFiDjrIeqjJNvgvJ4Wmj3m30/preview",
+      },
+      {
         title: "на 2021 р.",
         href: "https://drive.google.com/file/d/1la2EBti0qCwyOjKRM2O8Y279lJ_y55xA/preview",
       },

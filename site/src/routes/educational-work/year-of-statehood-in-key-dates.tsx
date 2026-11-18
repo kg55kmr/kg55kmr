@@ -468,8 +468,8 @@ function RouteComponent() {
             <thead>
               <tr>
                 <th>Річниця</th>
-                <th>Дата події</th>
                 <th>Опис події</th>
+                <th>Дата події</th>
               </tr>
             </thead>
             <tbody>
@@ -480,12 +480,12 @@ function RouteComponent() {
                       {elapsed(v.date)}
                     </div>
                   </td>
+                  <td>З {v.title}</td>
                   <td className="align-middle whitespace-nowrap tabular-nums">
                     <div className="inline-block rounded-md border border-gray-300 bg-gray-50 px-2">
                       {v.date}
                     </div>
                   </td>
-                  <td>З {v.title}</td>
                 </tr>
               ))}
             </tbody>

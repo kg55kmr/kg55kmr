@@ -1,1 +1,1 @@
-export * from "../../-practical-psychologist.tips-for-parents/30";
+export { default } from "../../-practical-psychologist.tips-for-parents/30";

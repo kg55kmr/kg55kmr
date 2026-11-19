@@ -1,7 +1,9 @@
-export const title = "Надзвичайні ситуації, їх ознаки, види і рівні";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Надзвичайні ситуації, їх ознаки, види і рівні",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         Закон “Про цивільну оборону України” визначає надзвичайну ситуацію як
@@ -125,5 +127,5 @@ export function Content() {
         або його санітарно-захисної зони.
       </p>
     </div>
-  );
-}
+  ),
+});

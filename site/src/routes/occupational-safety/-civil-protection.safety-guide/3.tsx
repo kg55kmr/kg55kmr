@@ -1,7 +1,9 @@
-export const title = "БЕЗПЕКА НА ЛЬОДУ";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Безпека на льоду",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         В зимовий час особливу занепокоєність викликає загибель людей на льоду.
@@ -110,5 +112,5 @@ export function Content() {
         </p>
       </b>
     </div>
-  );
-}
+  ),
+});

@@ -1,7 +1,9 @@
-export const title = "ОЖЕЛЕДИЦЯ";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Ожеледиця",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         Щорічно Міністерством охорони здоров'я України реєструється статистика
@@ -67,5 +69,5 @@ export function Content() {
         </p>
       </b>
     </div>
-  );
-}
+  ),
+});

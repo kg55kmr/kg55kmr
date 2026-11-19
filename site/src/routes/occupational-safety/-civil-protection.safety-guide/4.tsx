@@ -1,7 +1,9 @@
-export const title = "ПЕРШІ ДІЇ ПРИ ПОЖЕЖІ В ПОБУТІ";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Перші дії при пожежі в побуті",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         Щорічно внаслідок пожеж гине та страждає значна кількість людей. В дим
@@ -82,5 +84,5 @@ export function Content() {
         </b>
       </p>
     </div>
-  );
-}
+  ),
+});

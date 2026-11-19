@@ -1,7 +1,9 @@
-export const title = "ВИКОРИСТАННЯ ПІРОТЕХНІЧНИХ ВИРОБІВ";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Використання піротехнічних виробів",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         Феєрверки, петарди, ракети та інші вибухові "іграшки" завжди притягували
@@ -75,5 +77,5 @@ export function Content() {
         </p>
       </b>
     </div>
-  );
-}
+  ),
+});

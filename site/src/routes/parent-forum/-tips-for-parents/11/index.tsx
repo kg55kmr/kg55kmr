@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Культура поведінки учня. Як її виховати?";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Культура поведінки учня. Як її виховати?",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="w-72 md:float-right md:ml-3" />
 
@@ -62,5 +63,5 @@ export function Content() {
         </b>
       </p>
     </div>
-  );
-}
+  ),
+});

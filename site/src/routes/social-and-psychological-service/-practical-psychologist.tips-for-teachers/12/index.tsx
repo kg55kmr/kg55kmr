@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Особливості вікових криз підліткового віку";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Особливості вікових криз підліткового віку",
+  preview:
+    "Розвиток дитини є нерівномірним. На одних етапах зміни у дитячій психіці відбуваються повільно та поступово (стабільні періоди), на інших – бурхливо і швидко (кризові періоди).",
+  content: (
     <div className="content">
       <img src={image} className="float-right ml-3 w-80" />
 
@@ -274,5 +276,5 @@ export function Content() {
         залежності.
       </p>
     </div>
-  );
-}
+  ),
+});

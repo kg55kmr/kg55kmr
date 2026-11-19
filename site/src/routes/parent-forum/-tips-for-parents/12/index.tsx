@@ -1,7 +1,9 @@
-export const title = "Поради фахівця";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Поради фахівця",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         Хлопчики люблять <b>тримати руки в кишенях</b> і часто навіть не
@@ -59,5 +61,5 @@ export function Content() {
         </b>
       </p>
     </div>
-  );
-}
+  ),
+});

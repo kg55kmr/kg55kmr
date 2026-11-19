@@ -1,7 +1,10 @@
-export const title = "Правила покарання агресивних дітей та підлітків";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Правила покарання агресивних дітей та підлітків",
+  preview:
+    "Покарання не повинно шкодити здоров'ю дитини — ні фізичному, ні психічному. Понад те, воно має бути корисним. Якщо є сумніви, покарати чи ні, не карайте.",
+  content: (
     <div className="content">
       <ul>
         <li>
@@ -39,5 +42,5 @@ export function Content() {
         </li>
       </ul>
     </div>
-  );
-}
+  ),
+});

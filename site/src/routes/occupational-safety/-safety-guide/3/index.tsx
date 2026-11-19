@@ -1,7 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Подбай про свою безпеку!",
+  preview:
+    "Пам'ятка безпечної поведінки для дітей у великому місті: 10 впевнених «ЗАВЖДИ» щодо правил дорожнього руху, ліфта й пожежної безпеки та 10 рішучих «НІКОЛИ» для захисту вдома, на вулиці й біля водойм.",
+  content: (
     <div className="content">
       <h1 className="text-red-600">Подбай про свою безпеку!</h1>
 
@@ -112,5 +116,5 @@ export function Content() {
         </div>
       </div>
     </div>
-  );
-}
+  ),
+});

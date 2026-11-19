@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Гострі кишкові захворювання";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Гострі кишкові захворювання",
+  preview:
+    "Пам'ятка про профілактику гострих кишкових інфекцій: загальні ознаки та шляхи поширення, правила гігієни, безпеки продуктів і води, а також дії при перших симптомах.",
+  content: (
     <div className="content">
       <img src={image} className="mr-9 w-60 md:float-left" />
 
@@ -67,5 +69,5 @@ export function Content() {
         захистите себе і оточуючих від гострих кишкових інфекційних захворювань.
       </p>
     </div>
-  );
-}
+  ),
+});

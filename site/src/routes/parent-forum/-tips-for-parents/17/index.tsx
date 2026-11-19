@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Поради батькам учнів початкових класів";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Поради батькам учнів початкових класів",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         Пропонований нижче опитувальник допоможе вам краще усвідомити ряд
@@ -103,5 +104,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

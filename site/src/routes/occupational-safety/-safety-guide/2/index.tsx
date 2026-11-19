@@ -1,9 +1,13 @@
+import { definePost } from "~/components/posts";
 import i1 from "./1.jpg";
 import i2 from "./2.jpg";
 import i3 from "./3.jpg";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Види та вікові особливості дитячого травматизму",
+  preview:
+    "Пам'ятка про профілактику дитячого травматизму: основні види травм за місцем виникнення та вікові ризики — від немовлят до підлітків.",
+  content: (
     <div className="content">
       <img src={i1} className="float-left mr-3 w-80" />
       <p>
@@ -86,5 +90,5 @@ export function Content() {
         гірше, ніж інші, і безрозсудною сміливістю.
       </p>
     </div>
-  );
-}
+  ),
+});

@@ -1,26 +1,27 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { type FeedPost2, Feed2 } from "~/components/feed";
-import { validateId } from "~/lib/validate";
+import { type Post, Posts } from "~/components/posts";
+import { postIdSchema } from "~/lib/validate";
 
 export const Route = createFileRoute(
   "/educational-work/safe-educational-environment/information-digest",
 )({
   component: RouteComponent,
-  validateSearch: validateId,
+  validateSearch: postIdSchema,
   staticData: {
     title: "Інформаційний дайджест",
   },
 });
 
-const entries = import.meta.glob<FeedPost2>(
+const items = import.meta.glob<Post>(
   "./-safe-educational-environment/*/*.tsx",
   {
     eager: true,
+    import: "default",
   },
 );
 
 function RouteComponent() {
   const { id } = Route.useSearch();
-  return <Feed2 items={entries} id={id} />;
+  return <Posts items={items} id={id} />;
 }
 

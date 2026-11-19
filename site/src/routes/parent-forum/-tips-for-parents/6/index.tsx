@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "5 проблем першокласника";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "5 проблем першокласника",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="w-96 md:float-right md:ml-3" />
 
@@ -127,5 +128,5 @@ export function Content() {
         турботу й підтримку, вона швидше звикне до нових реалій.
       </p>
     </div>
-  );
-}
+  ),
+});

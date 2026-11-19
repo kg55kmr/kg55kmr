@@ -1,10 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title =
-  "МАЙСТЕР-КЛАС «Як долати гнів» (арт-терапія, глинотерапія)";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "МАЙСТЕР-КЛАС «Як долати гнів» (арт-терапія, глинотерапія)",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="w-72 md:float-right md:ml-3" />
 
@@ -90,5 +90,5 @@ export function Content() {
         настрій, поведінка дітей стає контрольованою.
       </p>
     </div>
-  );
-}
+  ),
+});

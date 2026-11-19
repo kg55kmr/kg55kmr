@@ -1,9 +1,11 @@
 import { PostCarousel } from "~/components/carousel";
+import { definePost } from "~/components/posts";
 
-export const title = "Правила поведінки на воді";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Правила поведінки на воді",
+  preview:
+    "Ключові правила безпечної поведінки дітей на воді під час літнього відпочинку: купання лише в облаштованих місцях і під наглядом дорослих, заборона запливати за буйки та пірнати в незнайомих місцях.",
+  content: (
     <div className="content">
       <p>
         Літо — прекрасна пора, коли стовпчики термометрів показують понад 25
@@ -54,5 +56,5 @@ export function Content() {
 
       <PostCarousel id="useful/2023-06-06" />
     </div>
-  );
-}
+  ),
+});

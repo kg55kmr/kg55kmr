@@ -1,7 +1,9 @@
-export const title = "Основні функції сучасної сім'ї";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Основні функції сучасної сім'ї",
+  preview: "",
+  content: (
     <div className="overflow-x-auto">
       <table className="table-border">
         <thead>
@@ -105,5 +107,5 @@ export function Content() {
         </tbody>
       </table>
     </div>
-  );
-}
+  ),
+});

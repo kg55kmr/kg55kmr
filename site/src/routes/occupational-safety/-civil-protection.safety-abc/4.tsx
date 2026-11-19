@@ -1,12 +1,13 @@
+import { definePost } from "~/components/posts";
 import { dirAsset } from "~/lib/utils";
-
-export const id = "safe-winter";
-export const title = "Безпечна зима";
 
 const image = dirAsset("images/безпечна-зима/");
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Безпечна зима",
+  preview:
+    "Щоб кожна пригода залишила тільки приємні спогади, варто подбати про свою безпеку. Прості правила поведінки на дорозі, льоду, ожеледиці, а також що робити, якщо знайшли підозрілі предмети чи міни.",
+  content: (
     <div className="content">
       <img src={image("1.webp")} className="mx-auto w-250" />
       <img src={image("2.webp")} className="mx-auto w-250" />
@@ -262,5 +263,5 @@ export function Content() {
       </p>
       <img src={image("46.webp")} className="mx-auto w-250" />
     </div>
-  );
-}
+  ),
+});

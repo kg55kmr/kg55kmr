@@ -36,7 +36,7 @@ export function useSections() {
         throw new Error(`${id}: title is not defined`);
 
       return {
-        to: route.to === "" ? "/" : route.to,
+        to: route.to,
         title,
         thumbnail: section.thumbnail,
       };
@@ -105,7 +105,6 @@ export function useSectionMenu() {
                 throw new Error(`No section title in: ${route.fullPath}`);
 
               const to = route.to;
-              if (to === "") throw new Error("BUG"); // TODO: fix empty to
               return { to, title, icon: Globe };
             }),
         },

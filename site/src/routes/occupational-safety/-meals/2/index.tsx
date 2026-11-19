@@ -1,10 +1,12 @@
+import { definePost } from "~/components/posts";
 import { ExternalLink } from "~/components/link";
 import image from "./1.jpg";
 
-export const title = "Організація харчування";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Організація харчування",
+  preview:
+    "Засновник, керівник закладу освіти та суб'єкти господарської діяльності, які надають послуги з харчування, зобов'язані забезпечити учнів безпечною, якісною, повноцінною та корисною їжею. Витяг з Санітарного регламенту для закладів загальної середньої освіти.",
+  content: (
     <div className="content">
       <h1 className="font-bold text-red-600 italic">
         ВИТЯГ
@@ -102,5 +104,5 @@ export function Content() {
         харчових продуктів.
       </p>
     </div>
-  );
-}
+  ),
+});

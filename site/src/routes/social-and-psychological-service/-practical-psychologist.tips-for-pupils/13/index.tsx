@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Пам'ятка успішного спілкування";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Пам'ятка успішного спілкування",
+  preview:
+    "Практичні правила ефективної комунікації: вміння слухати й зберігати спокій, звертання на ім'я, невербальні сигнали та дистанція спілкування, пунктуальність і впевненість під час публічних виступів.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
 
@@ -69,5 +71,5 @@ export function Content() {
         </li>
       </ul>
     </div>
-  );
-}
+  ),
+});

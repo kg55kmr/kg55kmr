@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.webp";
 
-export const title = "Харчування дітей у закладі";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Харчування дітей у закладі",
+  preview:
+    "Поки дитина перебуває вдома, батьки самі стежать за її харчуванням. Але коли малюк йде в перший клас, дуже складно простежити, коли і чим він пообідав. Яким повинно бути харчування дітей у школі?",
+  content: (
     <div className="content">
       <img src={image} className="w-80 md:float-right md:ml-3" />
 
@@ -55,5 +57,5 @@ export function Content() {
         школяра на вчителів. Завжди стежте, що, де і коли їсть ваше чадо.
       </p>
     </div>
-  );
-}
+  ),
+});

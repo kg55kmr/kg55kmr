@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Ентеробіоз";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Ентеробіоз",
+  preview:
+    "Інформація про ентеробіоз у дітей та дорослих: характерні симптоми і прояви при масивному зараженні, діагностика, лікування та роль особистої гігієни в профілактиці повторного зараження.",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
 
@@ -83,5 +85,5 @@ export function Content() {
         попереджає повторне зараження хворих.
       </p>
     </div>
-  );
-}
+  ),
+});

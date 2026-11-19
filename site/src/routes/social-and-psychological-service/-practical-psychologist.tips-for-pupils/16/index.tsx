@@ -1,13 +1,15 @@
+import { definePost } from "~/components/posts";
 import image1 from "./1.jpg";
 import image2 from "./2.jpg";
 import image3 from "./3.jpg";
 import image4 from "./4.jpg";
 import image5 from "./5.jpg";
 
-export const title = "ВИДИ НАСИЛЬСТВА НАД ЛЮДЬМИ!";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Види насильства над людьми",
+  preview:
+    "Інформаційний матеріал про основні форми насильства в сім'ї та протидії їм: фізичне, сексуальне, психологічне та економічне насильство й наочні пам'ятки щодо захисту прав.",
+  content: (
     <div className="content">
       <img src={image1} className="mx-auto w-100" />
 
@@ -47,5 +49,5 @@ export function Content() {
 
       <img src={image5} className="mx-auto w-230" />
     </div>
-  );
-}
+  ),
+});

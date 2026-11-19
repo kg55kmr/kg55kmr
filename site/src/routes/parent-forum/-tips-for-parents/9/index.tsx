@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Лихослів'я — ПРИЧИНА КОНФЛІКТІВ між учителем і учнем";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Лихослів'я — ПРИЧИНА КОНФЛІКТІВ між учителем і учнем",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="w-72 md:float-right md:ml-3" />
       <p>
@@ -156,5 +157,5 @@ export function Content() {
         особистості.
       </p>
     </div>
-  );
-}
+  ),
+});

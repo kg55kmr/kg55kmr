@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Туберкульоз";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Туберкульоз",
+  preview:
+    "Туберкульоз (сухоти) - інфекційна хвороба, яку спричиняють мікобактерії туберкульозу, паличка Коха. Етіологія і патогенез: джерела зараження, шляхи передачі, первинний і вторинний туберкульоз.",
+  content: (
     <div className="content">
       <h1>(ЕТІОЛОГІЯ І ПАТОГЕНЕЗ)</h1>
 
@@ -139,5 +141,5 @@ export function Content() {
         виявлення - до сформування незворотних змін у легенях.
       </p>
     </div>
-  );
-}
+  ),
+});

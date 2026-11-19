@@ -1,11 +1,13 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 import image2 from "./2.jpg";
 import image3 from "./3.jpg";
 
-export const title = "Переохолодження організму";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Переохолодження організму",
+  preview:
+    "Пам'ятка про переохолодження та обмороження: групи ризику, три ступені переохолодження та їх симптоми, правила надання першої допомоги і заходи профілактики під час морозів.",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
 
@@ -155,5 +157,5 @@ export function Content() {
         не страшні.
       </p>
     </div>
-  );
-}
+  ),
+});

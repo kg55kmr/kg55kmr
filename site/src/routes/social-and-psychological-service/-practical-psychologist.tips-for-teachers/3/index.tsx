@@ -1,7 +1,10 @@
-export const title = "Для підвищення мотивації учнів пропонується";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Для підвищення мотивації учнів пропонується",
+  preview:
+    "Забезпечити в учнів відчуття просування вперед, переживання успіху в діяльності, для чого необхідно правильно підбирати рівень складності завдань і заслужено оцінювати результат діяльності.",
+  content: (
     <div className="content">
       <ul>
         <li>
@@ -31,5 +34,5 @@ export function Content() {
         </li>
       </ul>
     </div>
-  );
-}
+  ),
+});

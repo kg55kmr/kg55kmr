@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Поради батькам учнів початкових класів";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Поради батькам учнів початкових класів",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="w-96 md:float-right md:ml-3" />
 
@@ -154,5 +155,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

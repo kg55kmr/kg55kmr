@@ -1,7 +1,9 @@
-export const title = "Пам’ятка батькам";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Пам’ятка батькам",
+  preview: "",
+  content: (
     <div className="content">
       <ol>
         <li>
@@ -127,5 +129,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

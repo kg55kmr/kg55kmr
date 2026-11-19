@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Як допомогти дитині обрати майбутню професію";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Як допомогти дитині обрати майбутню професію",
+  preview:
+    "Вибрати професію до душі і знайти роботу, на яку хотілося б ходити - це дуже непросте завдання, з яким справляються не всі дорослі. Ми не знаємо, як буде складатися подальше життя наших дітей, але ми можемо постаратися допомогти їм з вибором професії вже зараз.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-160" />
 
@@ -139,5 +141,5 @@ export function Content() {
         </b>
       </p>
     </div>
-  );
-}
+  ),
+});

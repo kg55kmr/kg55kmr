@@ -1,7 +1,10 @@
-export const title = "Як готувати домашнє завдання";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Як готувати домашнє завдання",
+  preview:
+    "Покрокові поради для школярів щодо ефективної підготовки домашніх завдань: робота на уроці, планування часу та робочого місця, метод ключових слів, метод 5-П та куди звертатися у разі булінгу.",
+  content: (
     <div className="content">
       <ol>
         <li>
@@ -167,5 +170,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

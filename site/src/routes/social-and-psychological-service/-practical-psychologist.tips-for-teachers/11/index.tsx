@@ -1,10 +1,12 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title =
-  "Рекомендації педагогам щодо спілкування з дітьми схильними до правопорушень";
-
-export function Content() {
-  return (
+export default definePost({
+  title:
+    "Рекомендації педагогам щодо спілкування з дітьми схильними до правопорушень",
+  preview:
+    "Проявляйте витримку під час спілкування з проблемними підлітками. Терпляче і наполегливо пояснюйте неправильність їхніх поглядів і поведінки.",
+  content: (
     <div className="content">
       <img src={image} className="float-right w-80 md:ml-3" />
       <ol>
@@ -52,5 +54,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

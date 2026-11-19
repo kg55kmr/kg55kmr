@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Тривожні діти";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Тривожні діти",
+  preview:
+    "Висока тривожність стає стійкою, якщо батьки та вчитель постійно незадоволені навчальною роботою дитини і від них дитина постійно отримує тільки зауваження, докори, інші різновиди негативного оцінювання.",
+  content: (
     <div className="content">
       <img src={image} className="float-right w-80 md:ml-3" />
 
@@ -152,5 +154,5 @@ export function Content() {
         саме цих проблем сприяють розвиненню особистості дитини.
       </p>
     </div>
-  );
-}
+  ),
+});

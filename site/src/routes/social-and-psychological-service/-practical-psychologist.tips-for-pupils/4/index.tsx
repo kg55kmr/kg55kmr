@@ -1,10 +1,12 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title =
-  "Показники соціально-психологічної готовності випускника школи до самостійного життя";
-
-export function Content() {
-  return (
+export default definePost({
+  title:
+    "Показники соціально-психологічної готовності випускника школи до самостійного життя",
+  preview:
+    "Ключові критерії готовності старшокласників до дорослого життя: сила духу, освіченість, розсудливість, здатність до праці та вибір професії, особистісна культура, готовність до сім'ї та культура спілкування.",
+  content: (
     <div className="content">
       <img src={image} className="float-right w-100 md:ml-3" />
 
@@ -86,5 +88,5 @@ export function Content() {
         проектується у майбутнє.
       </p>
     </div>
-  );
-}
+  ),
+});

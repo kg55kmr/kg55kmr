@@ -1,7 +1,10 @@
-export const title = "Як розвинути пам’ять?";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Як розвинути пам’ять?",
+  preview:
+    "Корисні поради для дітей і дорослих, як тренувати пам’ять і покращити засвоєння матеріалу: осмислення суті замість зубріння, виділення головного, асоціації та правильне чергування предметів.",
+  content: (
     <div className="content">
       <p>
         Невпинно стікає час, немов у піщаному годиннику. Шаленим галопом мчить
@@ -152,5 +155,5 @@ export function Content() {
         собі педагоги.
       </p>
     </div>
-  );
-}
+  ),
+});

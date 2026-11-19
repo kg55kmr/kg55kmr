@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Самооцінка як важлива якість особистості";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Самооцінка як важлива якість особистості",
+  preview:
+    "Як формується самооцінка та самоповага в дитинстві й у шкільні роки: вплив батьківської уваги та оцінювання в школі, рівні самооцінки та домагань і їх роль у життєвому успіху.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
 
@@ -93,5 +95,5 @@ export function Content() {
         <li>Середній (нормальний) – адекватна думка про себе.</li>
       </ul>
     </div>
-  );
-}
+  ),
+});

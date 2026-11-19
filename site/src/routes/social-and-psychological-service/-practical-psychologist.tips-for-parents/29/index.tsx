@@ -1,9 +1,11 @@
 import { ImageKitCarousel } from "~/components/carousel";
+import { definePost } from "~/components/posts";
 
-export const title = "Перша психологічна допомога дітям";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Перша психологічна допомога дітям",
+  preview:
+    "Як надати дитині першу психологічну допомогу в стресових і кризових ситуаціях? Розповідаємо, з чого почати.",
+  content: (
     <div className="content">
       <p>
         На жаль, в останні роки, стабільність та відчуття власної безпеки
@@ -18,5 +20,5 @@ export function Content() {
       </p>
       <ImageKitCarousel path="psychological-service/psychologist/Перша психологічна допомога дітям" />
     </div>
-  );
-}
+  ),
+});

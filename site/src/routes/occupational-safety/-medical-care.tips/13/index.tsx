@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Грип та ГРВІ";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Грип та ГРВІ",
+  preview:
+    "Пам'ятка про грип і ГРВІ: небезпека та ускладнення, симптоми для лікування вдома й ознаки термінової госпіталізації, заходи інфекційного контролю та групи ризику.",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
 
@@ -214,5 +216,5 @@ export function Content() {
         засоби інфекційного контролю і профілактики грипу.
       </p>
     </div>
-  );
-}
+  ),
+});

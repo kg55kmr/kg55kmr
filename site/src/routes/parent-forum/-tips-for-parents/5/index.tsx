@@ -1,7 +1,9 @@
-export const title = "Поради молодим батькам";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Поради молодим батькам",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         <b>Найперші завдання родинного виховання дітей дошкільного віку</b>
@@ -86,5 +88,5 @@ export function Content() {
         Будьте вічно ви з нами в житті
       </p>
     </div>
-  );
-}
+  ),
+});

@@ -1,9 +1,11 @@
 import { PostCarousel } from "~/components/carousel";
+import { definePost } from "~/components/posts";
 
-export const title = "Обережно, кліщі!";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Обережно, кліщі!",
+  preview:
+    "Пам'ятка про профілактику укусів іксодових кліщів та ризик хвороби Лайма: закритий одяг і взаємоогляд, що робити при укусі та коли негайно звертатися до лікаря.",
+  content: (
     <div className="content">
       <p>
         Криворізька гімназія №55 учням, батькам, працівникам нагадує про загрозу
@@ -32,5 +34,5 @@ export function Content() {
 
       <PostCarousel id="useful/2023-05-25" />
     </div>
-  );
-}
+  ),
+});

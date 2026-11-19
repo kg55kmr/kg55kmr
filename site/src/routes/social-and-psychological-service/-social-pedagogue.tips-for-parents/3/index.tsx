@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Допомога батькам під час дистанційного навчання";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Допомога батькам під час дистанційного навчання",
+  preview:
+    "Практичні поради для батьків щодо організації дистанційного навчання та побуту вдома: спільний розклад і короткі навчальні блоки, порядок на робочому місці, домовленості щодо гаджетів, фільтрація сповіщень, емоційна рівновага та конструктивна комунікація з учителями.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-80" />
 
@@ -113,5 +115,5 @@ export function Content() {
         Бережіть себе і своїх близьких.
       </p>
     </div>
-  );
-}
+  ),
+});

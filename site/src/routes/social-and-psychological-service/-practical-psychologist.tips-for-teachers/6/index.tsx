@@ -1,7 +1,10 @@
-export const title = "Методи керування пасивно-агресивною поведінкою учнів";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Методи керування пасивно-агресивною поведінкою учнів",
+  preview:
+    "Зрозуміти, що пасивно-агресивна дитина може викликати в педагога у відповідь негативні почуття і неконструктивну поведінку. Зрозуміти, що мета такої дитини — вивести вчителя з рівноваги.",
+  content: (
     <div className="content">
       <ol>
         <li>
@@ -23,5 +26,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

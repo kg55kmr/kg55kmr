@@ -1,10 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./2.jpg";
 
-export const id = "safe-heating";
-export const title = "Безпечне опалення";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Безпечне опалення",
+  preview:
+    "З початку осені та впродовж зимового періоду настає зниження температурних показників, внаслідок – значно збільшується кількість пожеж у житловому секторі. Аби запобігти пожежі у власній оселі, слід дотримуватись правил пожежної безпеки.",
+  content: (
     <div className="content">
       <img src={image} className="float-right w-150 pl-2" />
       <p>
@@ -77,5 +78,5 @@ export function Content() {
         до Служби порятунку за номером «101»!
       </p>
     </div>
-  );
-}
+  ),
+});

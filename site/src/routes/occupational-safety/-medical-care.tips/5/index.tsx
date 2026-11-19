@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Обережно кліщі!";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Обережно кліщі!",
+  preview:
+    "Пам'ятка про профілактику укусів кліщів та інфекції, які вони переносять: сезонні піки активності, світлий одяг і репеленти, огляд після прогулянок і звернення до медиків при виявленні кліща.",
+  content: (
     <div className="content">
       <img src={image} className="float-left mr-3 w-60" />
       <p>
@@ -64,5 +66,5 @@ export function Content() {
         здоров’я.
       </p>
     </div>
-  );
-}
+  ),
+});

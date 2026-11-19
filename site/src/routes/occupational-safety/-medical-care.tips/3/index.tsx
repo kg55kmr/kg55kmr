@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "СНІД";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "СНІД",
+  preview:
+    "Синдром набутого імунодефіциту (СНІД) є одним з найтяжчих захворювань. Цю хворобу спричинює вірус імунодефіциту людини (ВІЛ). Про шляхи зараження, профілактику та права ВІЛ-інфікованих.",
+  content: (
     <div className="content">
       <img src={image} className="float-left mr-3 w-60" />
 
@@ -198,5 +200,5 @@ export function Content() {
         Пам’ятайте: єдина людина, що може вберегти вас від СНІДу – це ви самі!
       </div>
     </div>
-  );
-}
+  ),
+});

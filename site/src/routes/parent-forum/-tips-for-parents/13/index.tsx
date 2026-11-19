@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Практикум із культури спілкування";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Практикум із культури спілкування",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="w-72 md:float-right md:ml-3" />
 
@@ -118,5 +119,5 @@ export function Content() {
         себе і за будь-яких обставин залишайтеся собою!
       </p>
     </div>
-  );
-}
+  ),
+});

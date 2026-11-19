@@ -1,10 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const id = "initial-actions-in-case-of-fire";
-export const title = "Перші дії при пожежі";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Перші дії при пожежі",
+  preview:
+    "Щорічно внаслідок пожеж гине та страждає значна кількість людей. Небезпечність пожежі полягає у токсичності продуктів горіння, вогні, підвищеній температурі, задимленості та зменшенні концентрації кисню.",
+  content: (
     <div className="content">
       <h1>Перші дії при пожежі</h1>
       <img src={image} className="float-right w-150 pl-2" />
@@ -80,5 +81,5 @@ export function Content() {
         підрозділу за телефоном «101».
       </p>
     </div>
-  );
-}
+  ),
+});

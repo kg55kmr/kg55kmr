@@ -3,7 +3,7 @@ import { ExternalLink as EL } from "lucide-react";
 import { ExternalLink } from "~/components/link";
 
 type Props = {
-  employee: Employee2;
+  employee: Employee2<string>;
   workingHours: WorkingHours[];
 };
 

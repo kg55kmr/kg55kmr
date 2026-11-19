@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Кір";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Кір",
+  preview:
+    "Інформація про кір: шляхи передачі та заразність, характерні симптоми і поетапний висип, можливі ускладнення, догляд за хворим, ізоляція та профілактика шляхом вакцинації.",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
       <p>
@@ -108,5 +110,5 @@ export function Content() {
         днів після контакту для попередження або полегшення перебігу хвороби.
       </p>
     </div>
-  );
-}
+  ),
+});

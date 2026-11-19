@@ -1,25 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { type FeedPost2, Feed2 } from "~/components/feed";
-import { validateId } from "~/lib/validate";
+import { type Post, Posts } from "~/components/posts";
+import { postIdSchema } from "~/lib/validate";
 
 export const Route = createFileRoute(
   "/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families",
 )({
   component: RouteComponent,
-  validateSearch: validateId,
+  validateSearch: postIdSchema,
   staticData: {
     title: "Поради вчителям у роботі з сім'ями",
   },
 });
 
-const data = import.meta.glob<FeedPost2>(
+const data = import.meta.glob<Post>(
   "./-social-pedagogue.tips-for-teachers-on-working-with-families/*/*.tsx",
-  {
-    eager: true,
-  },
+  { eager: true, import: "default" },
 );
 
 function RouteComponent() {
   const { id } = Route.useSearch();
-  return <Feed2 items={data} id={id} />;
+  return <Posts items={data} id={id} />;
 }

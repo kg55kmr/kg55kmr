@@ -1,7 +1,9 @@
-export const title = "7 порад що допоможуть щасливо прожити навчальний рік";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "7 порад що допоможуть щасливо прожити навчальний рік",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         <b>
@@ -84,5 +86,5 @@ export function Content() {
         успішність, вона завжди має відчувати Вашу підтримку!
       </p>
     </div>
-  );
-}
+  ),
+});

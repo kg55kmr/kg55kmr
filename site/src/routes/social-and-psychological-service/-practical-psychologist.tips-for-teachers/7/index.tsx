@@ -1,8 +1,11 @@
-export const title =
-  "Прийоми, які можна використовувати під час роботи з агресивними дітьми";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title:
+    "Прийоми, які можна використовувати під час роботи з агресивними дітьми",
+  preview:
+    "Якщо агресія є усвідомленим, контрольованим актом з боку дитини, то для дорослого важливо не піддатися на таку маніпуляцію. Також у пості описано, як працювати з агресією як виявом гніву.",
+  content: (
     <div className="content">
       <ol>
         <li>
@@ -36,5 +39,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

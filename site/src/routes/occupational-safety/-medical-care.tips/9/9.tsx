@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Електротравма";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Електротравма",
+  preview:
+    "Пам'ятка про ураження електричним струмом: класифікація електротравм за ступенем тяжкості, основні симптоми та види місцевих ушкоджень, правила надання першої допомоги й застереження щодо обережності з електрострумом.",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
 
@@ -66,5 +68,5 @@ export function Content() {
         <br /> Шановні батьки і діти будьте обережні з електрострумом !
       </p>
     </div>
-  );
-}
+  ),
+});

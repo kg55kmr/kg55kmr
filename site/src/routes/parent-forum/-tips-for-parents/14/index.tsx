@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Анкета «Самоаналіз для батьків»";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Анкета «Самоаналіз для батьків»",
+  preview: "",
+  content: (
     <div className="content">
       <p className="text-center">
         Шановні батьки!
@@ -46,5 +47,5 @@ export function Content() {
         <li>Чи часто ми разом проводимо своє дозвілля?</li>
       </ol>
     </div>
-  );
-}
+  ),
+});

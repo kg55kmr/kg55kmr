@@ -1,9 +1,13 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 import image2 from "./2.jpg";
 import image3 from "./3.jpg";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Харчування учнів",
+  preview:
+    "Для забезпечення харчування учнів 1-9 класів працює шкільна їдальня на 180 посадочних місць. Їдальня обладнана відповідно до санітарних вимог.",
+  content: (
     <div>
       <div className="grid gap-5 md:grid-cols-2">
         <div className="flex flex-col gap-1">
@@ -56,5 +60,5 @@ export function Content() {
         </div>
       </div>
     </div>
-  );
-}
+  ),
+});

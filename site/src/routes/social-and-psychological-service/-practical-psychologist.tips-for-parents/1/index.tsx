@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Як врятувати дитину від згубної залежності?";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Як врятувати дитину від згубної залежності?",
+  preview:
+    "Поради батькам щодо профілактики залежностей у дітей і підлітків: відкритий діалог, власний приклад, чіткі правила, розвиток самостійності та вміння долати невдачі, фрази, яких варто уникати, а також дії у разі булінгу.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
       <ol>
@@ -165,5 +167,5 @@ export function Content() {
         </b>
       </p>
     </div>
-  );
-}
+  ),
+});

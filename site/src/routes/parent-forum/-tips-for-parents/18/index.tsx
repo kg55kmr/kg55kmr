@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Мама, робота, дитина";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Мама, робота, дитина",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="float-right ml-3 w-72" />
 
@@ -61,5 +62,5 @@ export function Content() {
         все вийде.
       </p>
     </div>
-  );
-}
+  ),
+});

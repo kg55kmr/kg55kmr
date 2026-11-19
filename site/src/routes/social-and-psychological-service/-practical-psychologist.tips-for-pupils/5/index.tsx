@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Підготовка до іспиту";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Підготовка до іспиту",
+  preview:
+    "Поради з психологічної та практичної підготовки до іспитів: як подолати хвилювання, ознайомитися з форматом оцінювання та ефективно скласти власний конспект з урахуванням зорового, слухового чи моторного типу пам'яті.",
+  content: (
     <div className="content">
       <img src={image} className="float-right w-100 md:ml-3" />
 
@@ -56,5 +58,5 @@ export function Content() {
         дуже гарний. Власний конспект виявляється завжди набагато кориснішим.
       </p>
     </div>
-  );
-}
+  ),
+});

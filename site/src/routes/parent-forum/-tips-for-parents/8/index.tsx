@@ -1,7 +1,9 @@
-export const title = "Устами дитини";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Устами дитини",
+  preview: "",
+  content: (
     <div className="content">
       <p>
         <b>
@@ -209,5 +211,5 @@ export function Content() {
         спільних дій із колективом приводить до вироблення моральних звичок.
       </p>
     </div>
-  );
-}
+  ),
+});

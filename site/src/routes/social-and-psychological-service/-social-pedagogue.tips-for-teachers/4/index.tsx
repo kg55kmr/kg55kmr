@@ -1,1 +1,1 @@
-export * from "../../-social-pedagogue.tips-for-parents/12";
+export { default } from "../../-social-pedagogue.tips-for-parents/12";

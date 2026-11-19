@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "ЯК ЕФЕКТИВНО ОРГАНІЗУВАТИ СВІЙ ЧАС";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Як ефективно організувати свій час",
+  preview:
+    "Практичні поради з тайм-менеджменту: планування дня з вечора, розподіл справ за категоріями, концентрація на одному завданні, відмова від перфекціонізму, повноцінний сон та виділення 6–7 головних справ на день.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
 
@@ -76,5 +78,5 @@ export function Content() {
         вже перемога, яка принесе вам неабияке задоволення.
       </p>
     </div>
-  );
-}
+  ),
+});

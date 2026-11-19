@@ -1,5 +1,5 @@
 import z from "zod";
 
-export const validateId = z.object({
+export const postIdSchema = z.object({
   id: z.number().optional(),
 });

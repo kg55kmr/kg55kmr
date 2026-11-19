@@ -1,10 +1,12 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title =
-  "ПОРАДИ ВІД ЕКСПЕРТІВ ЮНІСЕФ: “ЯК ПІДТРИМАТИ ДІТЕЙ У СТРЕСОВИХ СИТУАЦІЯХ”";
-
-export function Content() {
-  return (
+export default definePost({
+  title:
+    "Поради від експертів ЮНІСЕФ: “Як Підтримати дітей у стресових ситуаціях”",
+  preview:
+    "Наразі тисячі людей вимушені перебувати в укриттях, щоб врятуватися від обстрілів у зоні активних бойових дій. Експерти ЮНІСЕФ підготували поради, як підтримати дітей у стресових ситуаціях та допомогти їм подолати тривогу та страх.",
+  content: (
     <div className="content">
       <img src={image} className="float-right w-120 p-1" />
 
@@ -158,5 +160,5 @@ export function Content() {
         <p>Усе буде Україна!</p>
       </b>
     </div>
-  );
-}
+  ),
+});

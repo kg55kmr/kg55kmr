@@ -1,1 +1,1 @@
-export * from "../../-practical-psychologist.tips-for-pupils/16";
+export { default } from "../../-practical-psychologist.tips-for-pupils/16";

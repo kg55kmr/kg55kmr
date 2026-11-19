@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Як організувати дозвілля дитини вдома";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Як організувати дозвілля дитини вдома",
+  preview:
+    "Як дорослі, так і діти з нетерпінням очікують на вихідні. За тиждень організм стомлюється не лише фізично, а й морально. Тому у вихідні дні так важливо якомога більше приділяти увагу одне одному у сім’ї.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
 
@@ -52,5 +54,5 @@ export function Content() {
         сердечок ваших дітей.
       </p>
     </div>
-  );
-}
+  ),
+});

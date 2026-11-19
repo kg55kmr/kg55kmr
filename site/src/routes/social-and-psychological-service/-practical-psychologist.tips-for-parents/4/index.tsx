@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.webp";
 
-export const title = "Виховання й темперамент дитини";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Виховання й темперамент дитини",
+  preview:
+    "Як ураховувати тип темпераменту дитини у вихованні: характеристика сангвініка, меланхоліка, холерика та флегматика, індивідуальний підхід і типові виховні помилки.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-96" />
       <p>
@@ -125,5 +127,5 @@ export function Content() {
         залишиться важливою складовою її особистості протягом усього життя.
       </p>
     </div>
-  );
-}
+  ),
+});

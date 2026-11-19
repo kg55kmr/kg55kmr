@@ -1,7 +1,10 @@
-export const title = "Поради щодо спілкування";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Поради щодо спілкування",
+  preview:
+    "Корисні рекомендації для ефективної комунікації та саморозвитку: правила доброзичливого спілкування, встановлення контактів з оточуючими, культура розумової праці та формування особистісних якостей.",
+  content: (
     <div className="content">
       <ol>
         <li>Ставлення людей до вас ніби віддзеркалює ваше ставлення до них;</li>
@@ -83,5 +86,5 @@ export function Content() {
         </li>
       </ul>
     </div>
-  );
-}
+  ),
+});

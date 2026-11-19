@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Емоційне вигорання";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Емоційне вигорання",
+  preview:
+    "Емоційне вигорання – синдром постійної втоми та емоційного виснаження. Синдром притаманний людям, робота яких пов’язана зі спілкуванням. В умовах сьогодення зросла необхідність бути на зв’язку, вислуховувати інших, говорити, стежити за актуальними новинами та перевіряти їх.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-80" />
 
@@ -94,5 +96,5 @@ export function Content() {
         психолог – не лікар, звернувшись до нього ми не стаємо «психами».
       </p>
     </div>
-  );
-}
+  ),
+});

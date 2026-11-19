@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Реакція Манту";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Реакція Манту",
+  preview:
+    "Інформація для батьків про пробу Манту: принцип дії та відмінність від щеплення, протипоказання, оцінка результатів і значення показників («віраж», бустерний ефект, поствакцинальний імунітет).",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
 
@@ -166,5 +168,5 @@ export function Content() {
         </i>
       </h1>
     </div>
-  );
-}
+  ),
+});

@@ -1,8 +1,10 @@
-export const title =
-  "Основні правила безпечної поведінки в інтернеті для батьків";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Основні правила безпечної поведінки в інтернеті для батьків",
+  preview:
+    "Пам'ятка для батьків щодо кібербезпеки дітей: контроль онлайн-активності та завантажень, захист персональних даних, правила знайомств і фінансових операцій у мережі, етика спілкування та ризики віртуальних розваг.",
+  content: (
     <div className="content">
       <ul>
         <li>
@@ -76,5 +78,5 @@ export function Content() {
         </b>
       </p>
     </div>
-  );
-}
+  ),
+});

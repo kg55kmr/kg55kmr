@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Як захистити дитячу психіку під час війни";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Як захистити дитячу психіку під час війни",
+  preview:
+    "Поради шкільних психологів батькам щодо підтримки психіки дитини під час війни: терапевтичні казки та ігри в укритті, образи захисту, малюнки для захисників, рух, дихання та стабільний ритм занять.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
 
@@ -45,5 +47,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

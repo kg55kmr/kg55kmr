@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Як зняти стрес у дитини під час війни";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Як зняти стрес у дитини під час війни",
+  preview:
+    "Сім практичних порад для батьків щодо підтримки дітей під час війни: емоційна стійкість дорослих, тілесне заспокоєння й тепло, чесні розмови зі старшими дітьми, безпечне відволікання та чіткі правила безпеки.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
       <h2>7 способів</h2>
@@ -53,5 +55,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

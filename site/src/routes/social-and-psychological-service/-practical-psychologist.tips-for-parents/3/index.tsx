@@ -1,10 +1,12 @@
+import { definePost } from "~/components/posts";
 import image1 from "./1.jpg";
 import image2 from "./2.jpg";
 
-export const title = "Способи розвитку креативності дитини";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Способи розвитку креативності дитини",
+  preview:
+    "П'ятнадцять практичних ідей для батьків, як розкрити та підтримати дитячу творчість: від арт-щоденника, рукоділля та ігор до спільного готування, цифрової графіки й безоцінкової підтримки.",
+  content: (
     <div className="content">
       <div className="flex flex-col gap-5 md:float-right md:ml-2">
         <img src={image1} className="mx-auto w-80" />
@@ -128,5 +130,5 @@ export function Content() {
         нічого не кажіть і станьте осторонь. Дозвольте їй радіти безумовно!
       </p>
     </div>
-  );
-}
+  ),
+});

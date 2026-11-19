@@ -1,13 +1,14 @@
+import { definePost } from "~/components/posts";
 import { YouTube } from "~/components/youtube";
 import { dirAsset } from "~/lib/utils";
 
-export const id = "power-outrage";
-export const title = "Відключення електроенергії";
-
 const images = dirAsset("images/");
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Відключення електроенергії",
+  preview:
+    "Необережне поводження з вогнем може наробити багато біди. Неухильно дотримуйтеся правил безпеки під час використання свічок, газових пальників, пічного опалення та генераторів.",
+  content: (
     <div className="content">
       <h1>
         Необережне поводження з вогнем може наробити багато біди. Неухильно
@@ -234,5 +235,5 @@ export function Content() {
       <YouTube videoId="A2YTSofNaOQ" />
       <YouTube videoId="7Y3AqP97X9w" />
     </div>
-  );
-}
+  ),
+});

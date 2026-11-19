@@ -1,10 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title =
-  "Війна має свою «психологію»: як подолати моральне виснаження";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Війна має свою «психологію»: як подолати моральне виснаження",
+  preview:
+    "Українці вже пережили всі стани психіки, які спостерігаються під час біди. Спочатку була фаза заперечення, далі ейфорія, а зараз багато хто може почувати себе тотально виснаженим.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-80" />
 
@@ -73,5 +74,5 @@ export function Content() {
         </li>
       </ul>
     </div>
-  );
-}
+  ),
+});

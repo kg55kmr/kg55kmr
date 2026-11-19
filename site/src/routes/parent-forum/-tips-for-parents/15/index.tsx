@@ -1,9 +1,10 @@
+import { definePost } from "~/components/posts";
 import image from "./1.webp";
 
-export const title = "Пам'ятка для батьків";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Пам'ятка для батьків",
+  preview: "",
+  content: (
     <div className="content">
       <img src={image} className="w-40 md:float-right md:ml-3" />
 
@@ -51,5 +52,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

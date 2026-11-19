@@ -1,5 +1,5 @@
+import type { Post } from "~/components/posts";
 import { createFileRoute } from "@tanstack/react-router";
-import { type ComponentType } from "react";
 import { Tabs } from "~/components/tabs";
 
 export const Route = createFileRoute(
@@ -11,27 +11,19 @@ export const Route = createFileRoute(
   },
 });
 
-type PostProps = {
-  title: string;
-  id: string;
-  Content: ComponentType;
-};
-
-const entries = import.meta.glob<PostProps>(
-  "./-civil-protection.safety-abc/*.tsx",
-  {
-    eager: true,
-  },
-);
+const entries = import.meta.glob<Post>("./-civil-protection.safety-abc/*.tsx", {
+  eager: true,
+  import: "default",
+});
 
 const items = Object.values(entries).toReversed();
 
 function RouteComponent() {
   return (
-    <Tabs defaultValue={items[0].id}>
-      {items.map((v) => (
-        <Tabs.Tab key={v.id} title={v.title} value={v.id}>
-          <v.Content />
+    <Tabs defaultValue={"0"}>
+      {items.map((p, i) => (
+        <Tabs.Tab key={i.toString()} title={p.title} value={i.toString()}>
+          {p.content}
         </Tabs.Tab>
       ))}
     </Tabs>

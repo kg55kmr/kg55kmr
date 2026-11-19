@@ -1,10 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title =
-  "Толерантність як ознака високого духовного розвитку суспільства";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Толерантність як ознака високого духовного розвитку суспільства",
+  preview:
+    "Про значення толерантності, поваги до прав людини та асертивності в сучасному суспільстві: від Декларації принципів толерантності ЮНЕСКО до нульової толерантності до дискримінації та насильства.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-80" />
 
@@ -60,5 +61,5 @@ export function Content() {
         визнання універсальних прав і основних свобод людини.
       </p>
     </div>
-  );
-}
+  ),
+});

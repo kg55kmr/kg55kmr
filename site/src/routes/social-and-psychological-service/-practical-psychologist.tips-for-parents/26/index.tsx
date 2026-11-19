@@ -1,9 +1,11 @@
 import { ImageKitCarousel } from "~/components/carousel";
+import { definePost } from "~/components/posts";
 
-export const title = "5 технік психологічної самодопомоги для учнів 1-4 класів";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "5 технік психологічної самодопомоги для учнів 1-4 класів",
+  preview:
+    "Як допомогти дитині у стресовій ситуації? Добірка з 5 простих технік психологічної самодопомоги для учнів 1-4 класів.",
+  content: (
     <div className="content">
       <p>
         Повітряні тривоги застають маленьких українців як удома, так і в школі.
@@ -14,5 +16,5 @@ export function Content() {
 
       <ImageKitCarousel path="psychological-service/psychologist/5 технік психологічної самодопомоги для учнів 1-4 класів" />
     </div>
-  );
-}
+  ),
+});

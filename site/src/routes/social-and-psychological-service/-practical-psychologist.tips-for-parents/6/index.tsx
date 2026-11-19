@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Вибір професії - поради батькам";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Вибір професії - поради батькам",
+  preview:
+    "Як допомогти дитині з професійним самовизначенням у старших класах: поєднання здібностей і покликання з вимогами ринку праці, підтримка вибору та типові помилки батьків.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
 
@@ -73,5 +75,5 @@ export function Content() {
         успіху!
       </p>
     </div>
-  );
-}
+  ),
+});

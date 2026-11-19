@@ -1,10 +1,12 @@
+import { definePost } from "~/components/posts";
 import image1 from "./1.jpg";
 import image2 from "./2.jpg";
 
-export const title = "Позитивне мислення – щасливе життя";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Позитивне мислення – щасливе життя",
+  preview:
+    "Як розвинути позитивне мислення та сформувати оптимістичну звичку: візуалізація успіху, робота з думками та словами, фізична активність, постава й оточення.",
+  content: (
     <div className="content">
       <p>
         Позитивне мислення – це могутня сила, яка відіграє важливу роль у
@@ -72,5 +74,5 @@ export function Content() {
         <img src={image2} className="w-96" />
       </div>
     </div>
-  );
-}
+  ),
+});

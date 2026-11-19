@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Пам`ятка для вчителів стосовно булінгу";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Пам`ятка для вчителів стосовно булінгу",
+  preview:
+    "На що треба звернути увагу вчителю, що може бути передвісниками або маркерами цькування у класі: занадто підвищена емоційна атмосфера, відокремлення окремих учнів, кардинальна зміна поведінки дитини.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-80" />
 
@@ -166,5 +168,5 @@ export function Content() {
         швидке реагування та подолання найменших проявів та зародків цькування.
       </p>
     </div>
-  );
-}
+  ),
+});

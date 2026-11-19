@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Вірусна пневмонія";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Вірусна пневмонія",
+  preview:
+    "Пам'ятка про вірусну пневмонію: збудники та перебіг, симптоми й ознаки приєднання бактеріальної інфекції, підходи до лікування, роль антибіотиків та профілактика.",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
 
@@ -130,5 +132,5 @@ export function Content() {
         <li>Уникати місць скупчення людей під час епідемій.</li>
       </ul>
     </div>
-  );
-}
+  ),
+});

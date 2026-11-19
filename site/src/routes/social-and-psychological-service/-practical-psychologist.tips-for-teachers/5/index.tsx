@@ -1,7 +1,10 @@
-export const title = "Поради вчителям по роботі з дітьми агресивної поведінки";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Поради вчителям по роботі з дітьми агресивної поведінки",
+  preview:
+    "З агресивною дитиною не можна розмовляти на підвищених тонах — таким чином ви провокуєте посилення агресивних імпульсів. Послідовне використання спокійної, плавної мови дасть дитині змогу переключитися і почати слухати вас.",
+  content: (
     <div className="content">
       <ul>
         <li>
@@ -37,5 +40,5 @@ export function Content() {
         </li>
       </ul>
     </div>
-  );
-}
+  ),
+});

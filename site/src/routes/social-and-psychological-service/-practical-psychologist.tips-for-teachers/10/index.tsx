@@ -1,8 +1,11 @@
-export const title =
-  "Рекомендації вчителям із забезпечення засобів впливу на підлітка щодо поліпшення його поведінки";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title:
+    "Рекомендації вчителям із забезпечення засобів впливу на підлітка щодо поліпшення його поведінки",
+  preview:
+    "Пошук і знаходження шляхів підвищення мотивації до навчання у слабких учнів. Виховання теплих почуттів до школи у слабких учнів.",
+  content: (
     <div className="content">
       <ol>
         <li>
@@ -56,5 +59,5 @@ export function Content() {
         </li>
       </ol>
     </div>
-  );
-}
+  ),
+});

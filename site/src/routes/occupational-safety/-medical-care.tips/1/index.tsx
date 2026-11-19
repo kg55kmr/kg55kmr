@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Профілактика харчових отруєнь";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Профілактика харчових отруєнь",
+  preview:
+    "Чи знаєте Ви яке зло може ховатися за дверцятами Вашого холодильника? Харчових отруєнь можна запобігти, дотримуючись простих правил гігієни та зберігання продуктів у себе вдома.",
+  content: (
     <div className="content">
       <img src={image} className="mr-3 w-60 md:float-left" />
       <p>
@@ -107,5 +109,5 @@ export function Content() {
         уникнути харчових отруєнь і зберегти здоров’я.
       </p>
     </div>
-  );
-}
+  ),
+});

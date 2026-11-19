@@ -1,7 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Профілактика дитячого травматизму",
+  preview:
+    "Пам'ятка для батьків щодо запобігання дитячому травматизму залежно від віку: нагляд за немовлятами, безпечний побут для малюків та спокійне навчання правилам дорожнього руху й техніки безпеки у шкільному віці.",
+  content: (
     <div className="content">
       <img src={image} className="float-left mr-3 w-90" />
 
@@ -133,5 +137,5 @@ export function Content() {
         небезпечне.
       </p>
     </div>
-  );
-}
+  ),
+});

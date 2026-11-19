@@ -1,7 +1,10 @@
-export const title = "Правила роботи з агресивними дітьми";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Правила роботи з агресивними дітьми",
+  preview:
+    "Бути уважним до потреб дитини. Демонструвати модель неагресивної поведінки. Бути послідовним у покаранні дитини, карати за конкретні вчинки.",
+  content: (
     <div className="content">
       <ol>
         <li>Бути уважним до потреб дитини.</li>
@@ -20,5 +23,5 @@ export function Content() {
         <li>Учити брати відповідальність на себе.</li>
       </ol>
     </div>
-  );
-}
+  ),
+});

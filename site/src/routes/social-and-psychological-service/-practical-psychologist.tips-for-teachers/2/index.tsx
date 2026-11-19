@@ -1,7 +1,10 @@
-export const title = "Як сприяти саморозвитку школярів";
+import { definePost } from "~/components/posts";
 
-export function Content() {
-  return (
+export default definePost({
+  title: "Як сприяти саморозвитку школярів",
+  preview:
+    "Оцінювати реальні можливості учнів, рівень їхньої підготовки. Здійснювати індивідуальний підхід у керівництві саморозвитком.",
+  content: (
     <div className="content">
       <ul>
         <li>
@@ -47,5 +50,5 @@ export function Content() {
         </li>
       </ul>
     </div>
-  );
-}
+  ),
+});

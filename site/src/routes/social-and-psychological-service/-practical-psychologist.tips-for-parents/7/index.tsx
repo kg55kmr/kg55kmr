@@ -1,9 +1,11 @@
+import { definePost } from "~/components/posts";
 import image from "./1.jpg";
 
-export const title = "Батькам першокласників";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Батькам першокласників",
+  preview:
+    "Як підтримати першокласника на старті навчання: формування позитивного ставлення до школи та читання, уникнення конфліктів через домашні завдання, режим дня й ознаки успішної адаптації.",
+  content: (
     <div className="content">
       <img src={image} className="mx-auto w-100" />
       <h2>Формування у дитини емоційно - позитивного ставлення до навчання</h2>
@@ -217,5 +219,5 @@ export function Content() {
         </b>
       </p>
     </div>
-  );
-}
+  ),
+});

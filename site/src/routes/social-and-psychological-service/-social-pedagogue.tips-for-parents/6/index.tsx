@@ -1,9 +1,11 @@
 import { PostCarousel } from "~/components/carousel";
+import { definePost } from "~/components/posts";
 
-export const title = "Правила пожежної безпеки";
-
-export function Content() {
-  return (
+export default definePost({
+  title: "Правила пожежної безпеки",
+  preview:
+    "Основні правила пожежної безпеки у побуті та на природі: алгоритм дій у разі займання, небезпека спалювання сухої трави та як запобігти лісовим пожежам під час відпочинку.",
+  content: (
     <div className="content">
       <p>
         Пожежі – найбільш масові й розповсюджені лиха: вони відбуваються
@@ -55,5 +57,5 @@ export function Content() {
 
       <PostCarousel id="useful/2023-05-22" />
     </div>
-  );
-}
+  ),
+});

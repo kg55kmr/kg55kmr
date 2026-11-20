@@ -15,8 +15,9 @@ export const mainDocuments: RegulatoryDocuments = [
         url: "https://zakon.rada.gov.ua/laws/show/463-20",
       },
       {
-        title: 'Закон України "Про охорону праці"',
-        url: "https://zakon.rada.gov.ua/laws/show/2694-12",
+        title:
+          'Закон України "Про безпеку та охорону здоров’я працівників на роботі"',
+        url: "https://zakon.rada.gov.ua/laws/show/5007-20",
       },
       {
         title:

@@ -198,6 +198,8 @@ import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRou
 import { Route as SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRouteImport } from './routes/social-and-psychological-service/social-pedagogue.tips-for-teachers-on-working-with-families'
 import { Route as SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRouteImport } from './routes/social-and-psychological-service/social-pedagogue.work-in-the-neighborhood'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistIndexRouteImport } from './routes/social-and-psychological-service/speech-therapist.index'
+import { Route as SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRouteImport } from './routes/social-and-psychological-service/speech-therapist.annual-work-plan'
+import { Route as SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRouteImport } from './routes/social-and-psychological-service/speech-therapist.institution-assignments'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRouteImport } from './routes/social-and-psychological-service/speech-therapist.regulatory-documents'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRouteImport } from './routes/social-and-psychological-service/speech-therapist.tips-for-parents'
 import { Route as SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRouteImport } from './routes/social-and-psychological-service/speech-therapist.tips-for-pupils'
@@ -1323,6 +1325,20 @@ const SocialAndPsychologicalServiceSpeechTherapistIndexRoute =
     path: '/speech-therapist/',
     getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
   } as any)
+const SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute =
+  SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRouteImport.update({
+    id: '/speech-therapist/annual-work-plan',
+    path: '/speech-therapist/annual-work-plan',
+    getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+  } as any)
+const SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute =
+  SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRouteImport.update(
+    {
+      id: '/speech-therapist/institution-assignments',
+      path: '/speech-therapist/institution-assignments',
+      getParentRoute: () => SocialAndPsychologicalServiceRouteRoute,
+    } as any,
+  )
 const SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute =
   SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRouteImport.update(
     {
@@ -1535,6 +1551,8 @@ export interface FileRoutesByFullPath {
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
+  '/social-and-psychological-service/speech-therapist/annual-work-plan': typeof SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute
+  '/social-and-psychological-service/speech-therapist/institution-assignments': typeof SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute
   '/social-and-psychological-service/speech-therapist/regulatory-documents': typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
   '/social-and-psychological-service/speech-therapist/tips-for-parents': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
   '/social-and-psychological-service/speech-therapist/tips-for-pupils': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
@@ -1719,6 +1737,8 @@ export interface FileRoutesByTo {
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
+  '/social-and-psychological-service/speech-therapist/annual-work-plan': typeof SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute
+  '/social-and-psychological-service/speech-therapist/institution-assignments': typeof SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute
   '/social-and-psychological-service/speech-therapist/regulatory-documents': typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
   '/social-and-psychological-service/speech-therapist/tips-for-parents': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
   '/social-and-psychological-service/speech-therapist/tips-for-pupils': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
@@ -1917,6 +1937,8 @@ export interface FileRoutesById {
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRoute
   '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families': typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood': typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
+  '/social-and-psychological-service/speech-therapist/annual-work-plan': typeof SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute
+  '/social-and-psychological-service/speech-therapist/institution-assignments': typeof SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute
   '/social-and-psychological-service/speech-therapist/regulatory-documents': typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
   '/social-and-psychological-service/speech-therapist/tips-for-parents': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
   '/social-and-psychological-service/speech-therapist/tips-for-pupils': typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
@@ -2115,6 +2137,8 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
     | '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
+    | '/social-and-psychological-service/speech-therapist/annual-work-plan'
+    | '/social-and-psychological-service/speech-therapist/institution-assignments'
     | '/social-and-psychological-service/speech-therapist/regulatory-documents'
     | '/social-and-psychological-service/speech-therapist/tips-for-parents'
     | '/social-and-psychological-service/speech-therapist/tips-for-pupils'
@@ -2299,6 +2323,8 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
     | '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
+    | '/social-and-psychological-service/speech-therapist/annual-work-plan'
+    | '/social-and-psychological-service/speech-therapist/institution-assignments'
     | '/social-and-psychological-service/speech-therapist/regulatory-documents'
     | '/social-and-psychological-service/speech-therapist/tips-for-parents'
     | '/social-and-psychological-service/speech-therapist/tips-for-pupils'
@@ -2496,6 +2522,8 @@ export interface FileRouteTypes {
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers'
     | '/social-and-psychological-service/social-pedagogue/tips-for-teachers-on-working-with-families'
     | '/social-and-psychological-service/social-pedagogue/work-in-the-neighborhood'
+    | '/social-and-psychological-service/speech-therapist/annual-work-plan'
+    | '/social-and-psychological-service/speech-therapist/institution-assignments'
     | '/social-and-psychological-service/speech-therapist/regulatory-documents'
     | '/social-and-psychological-service/speech-therapist/tips-for-parents'
     | '/social-and-psychological-service/speech-therapist/tips-for-pupils'
@@ -3858,6 +3886,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistIndexRouteImport
       parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
     }
+    '/social-and-psychological-service/speech-therapist/annual-work-plan': {
+      id: '/social-and-psychological-service/speech-therapist/annual-work-plan'
+      path: '/speech-therapist/annual-work-plan'
+      fullPath: '/social-and-psychological-service/speech-therapist/annual-work-plan'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
+    '/social-and-psychological-service/speech-therapist/institution-assignments': {
+      id: '/social-and-psychological-service/speech-therapist/institution-assignments'
+      path: '/speech-therapist/institution-assignments'
+      fullPath: '/social-and-psychological-service/speech-therapist/institution-assignments'
+      preLoaderRoute: typeof SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRouteImport
+      parentRoute: typeof SocialAndPsychologicalServiceRouteRoute
+    }
     '/social-and-psychological-service/speech-therapist/regulatory-documents': {
       id: '/social-and-psychological-service/speech-therapist/regulatory-documents'
       path: '/speech-therapist/regulatory-documents'
@@ -4440,6 +4482,8 @@ interface SocialAndPsychologicalServiceRouteRouteChildren {
   SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersRoute
   SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute: typeof SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute
   SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute: typeof SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute
+  SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute: typeof SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute
+  SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute: typeof SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute
   SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute: typeof SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute
   SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute: typeof SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute
   SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute: typeof SocialAndPsychologicalServiceSpeechTherapistTipsForPupilsRoute
@@ -4486,6 +4530,10 @@ const SocialAndPsychologicalServiceRouteRouteChildren: SocialAndPsychologicalSer
       SocialAndPsychologicalServiceSocialPedagogueTipsForTeachersOnWorkingWithFamiliesRoute,
     SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute:
       SocialAndPsychologicalServiceSocialPedagogueWorkInTheNeighborhoodRoute,
+    SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute:
+      SocialAndPsychologicalServiceSpeechTherapistAnnualWorkPlanRoute,
+    SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute:
+      SocialAndPsychologicalServiceSpeechTherapistInstitutionAssignmentsRoute,
     SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute:
       SocialAndPsychologicalServiceSpeechTherapistRegulatoryDocumentsRoute,
     SocialAndPsychologicalServiceSpeechTherapistTipsForParentsRoute:

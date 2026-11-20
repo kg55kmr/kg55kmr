@@ -152,6 +152,14 @@ export const socialAndPsychologicalService = [
             icon: Info,
           },
           {
+            to: "/social-and-psychological-service/speech-therapist/annual-work-plan",
+            icon: FileClock,
+          },
+          {
+            to: "/social-and-psychological-service/speech-therapist/institution-assignments",
+            icon: FileClock,
+          },
+          {
             to: "/social-and-psychological-service/speech-therapist/tips-for-parents",
             icon: Lightbulb,
           },

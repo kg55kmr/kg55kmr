@@ -10,7 +10,10 @@ type PostsProps = {
 };
 
 export function Posts(props: PostsProps) {
-  const items = Object.values(props.items).toReversed();
+  const items = Object.entries(props.items)
+    .sort((a, b) => b[0].localeCompare(a[0], undefined, { numeric: true }))
+    .map((v) => v[1]);
+
   const itemsLen = items.length;
   const ref = useSticky();
 

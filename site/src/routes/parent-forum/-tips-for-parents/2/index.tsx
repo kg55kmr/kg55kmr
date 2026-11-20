@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "Психотехніка сімейного спілкування",
-  preview: "",
+  preview:
+    "Пам'ятка з психотехніки спілкування в сім'ї: важливі передумови, дев'ять правил конструктивного вирішення суперечок і порівняння психологічних портретів конфліктної та безконфліктної людини.",
   content: (
     <div className="content">
       <img src={image} className="w-96 md:float-right md:ml-3" />

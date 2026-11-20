@@ -2,7 +2,8 @@ import { definePost } from "~/components/posts";
 
 export default definePost({
   title: "Ожеледиця",
-  preview: "",
+  preview:
+    "Пам'ятка про безпечну поведінку під час ожеледиці: вибір взуття та підручні льодоступи, техніка ходьби, обережність поблизу будівель і бурульок та рекомендації для груп ризику.",
   content: (
     <div className="content">
       <p>

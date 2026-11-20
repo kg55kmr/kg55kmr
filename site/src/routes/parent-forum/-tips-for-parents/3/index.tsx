@@ -2,7 +2,8 @@ import { definePost } from "~/components/posts";
 
 export default definePost({
   title: "Пам’ятка батькам",
-  preview: "",
+  preview:
+    "Рекомендації для батьків щодо прийняття унікальності дитини, виховання з любов'ю та чіткими межами, спілкування й підтримки психічного здоров'я, а також анкета для батьків про навчання та цінності молоді.",
   content: (
     <div className="content">
       <ol>

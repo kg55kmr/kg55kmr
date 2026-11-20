@@ -2,7 +2,8 @@ import { definePost } from "~/components/posts";
 
 export default definePost({
   title: "Перші дії при пожежі в побуті",
-  preview: "",
+  preview:
+    "Пам'ятка про першочергові дії під час побутової пожежі: виклик рятувальників за номером «101», використання вогнегасників і пожежних кранів та безпечна евакуація із задимленого приміщення.",
   content: (
     <div className="content">
       <p>

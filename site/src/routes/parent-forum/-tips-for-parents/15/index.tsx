@@ -3,7 +3,8 @@ import image from "./1.webp";
 
 export default definePost({
   title: "Пам'ятка для батьків",
-  preview: "",
+  preview:
+    "На прикладах, узятих із життя, демонструйте дітям зразки чесного виконання обов'язку перед суспільством і сім'єю. Щоденно цікавтеся успіхами дитини в школі, підтримуйте її інтерес до навчання та співпрацюйте з учителем.",
   content: (
     <div className="content">
       <img src={image} className="w-40 md:float-right md:ml-3" />

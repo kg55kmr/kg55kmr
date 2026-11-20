@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "Практикум із культури спілкування",
-  preview: "",
+  preview:
+    "На питання про причини вживання нецензурщини більшість відповідає: «Не вистачає слів», не замислюючись про наслідки. Бесіда про лихослів'я, толерантність і ввічливість та вправи «Нитка дружби» й «Мішечок порад».",
   content: (
     <div className="content">
       <img src={image} className="w-72 md:float-right md:ml-3" />

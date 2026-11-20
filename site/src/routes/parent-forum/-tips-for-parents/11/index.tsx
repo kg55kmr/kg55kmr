@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "Культура поведінки учня. Як її виховати?",
-  preview: "",
+  preview:
+    "Роздуми про виховання справжньої культури поведінки в учнів: чому формального етикету недостатньо, яку роль відіграє особистий приклад батьків і чому добрі звички потрібно постійно культивувати на практиці.",
   content: (
     <div className="content">
       <img src={image} className="w-72 md:float-right md:ml-3" />

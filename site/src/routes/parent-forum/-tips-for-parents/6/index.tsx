@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "5 проблем першокласника",
-  preview: "",
+  preview:
+    "Поради батькам щодо адаптації дитини до школи: як допомогти першокласнику звикнути до нового розпорядку дня, розвинути посидючість, налагодити спілкування в колективі, подолати страх перед уроками та зміну звичного сімейного ритму.",
   content: (
     <div className="content">
       <img src={image} className="w-96 md:float-right md:ml-3" />

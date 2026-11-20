@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "Поради батькам учнів початкових класів",
-  preview: "",
+  preview:
+    "Нагадати дитині, що домашні завдання потрібні для того, щоб закріпити те, що пояснював вчитель на уроці. Як допомогти дитині у підготовці домашнього завдання, не карати за негативні оцінки та підтримувати її віру у свої сили.",
   content: (
     <div className="content">
       <img src={image} className="w-96 md:float-right md:ml-3" />

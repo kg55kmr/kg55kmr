@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "Мама, робота, дитина",
-  preview: "",
+  preview:
+    "У житті майже кожної мами постає питання: чи виходити на роботу, і якщо виходити, то коли? Як поєднати роботу та виховання дитини і не втратити контакт із нею.",
   content: (
     <div className="content">
       <img src={image} className="float-right ml-3 w-72" />

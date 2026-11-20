@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "Анкета «Самоаналіз для батьків»",
-  preview: "",
+  preview:
+    "Шановні батьки! Спробуйте подивитися на себе очима Вашої дитини і дайте відповіді на запитання: чи відчуває дитина, що я її люблю, чи вважає вона, що я її розумію, чи часто ми разом проводимо дозвілля.",
   content: (
     <div className="content">
       <p className="text-center">

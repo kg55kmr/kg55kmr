@@ -3,7 +3,8 @@ import image from "./1.jpg";
 
 export default definePost({
   title: "Сім принципів виховання дисципліни у дитини",
-  preview: "",
+  preview:
+    "Рекомендації для батьків щодо виховання дисципліни: відокремлення почуттів від дій, урахування емоційного стану дитини, усвідомлені межі та конструктивний діалог без жорстокості.",
   content: (
     <div className="content">
       <img src={image} className="mx-auto w-50 md:float-right md:ml-3" />

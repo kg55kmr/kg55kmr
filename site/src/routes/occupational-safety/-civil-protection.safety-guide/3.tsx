@@ -2,7 +2,8 @@ import { definePost } from "~/components/posts";
 
 export default definePost({
   title: "Безпека на льоду",
-  preview: "",
+  preview:
+    "Пам'ятка про безпечну поведінку на льоду взимку: товщина та колір криги, правила пересування й зимової риболовлі, а також алгоритм дій, якщо людина провалилася під лід.",
   content: (
     <div className="content">
       <p>

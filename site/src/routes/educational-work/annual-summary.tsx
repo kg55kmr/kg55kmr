@@ -9,7 +9,7 @@ export const Route = createFileRoute("/educational-work/annual-summary")({
   },
 });
 
-const data = [
+const items = [
   {
     years: "2025-2026",
     url: "https://drive.google.com/file/d/1A_Ac8pV23rtsYFwHpgLM44W0Gm7e6d1f/preview",
@@ -42,8 +42,8 @@ const data = [
 
 function RouteComponent() {
   return (
-    <Tabs orientation="vertical" defaultValue={data[0].years}>
-      {data.map((v) => (
+    <Tabs orientation="vertical" defaultValue={items[0].years}>
+      {items.map((v) => (
         <Tabs.Tab key={v.years} title={v.years} value={v.years}>
           <Embed src={v.url} />
         </Tabs.Tab>

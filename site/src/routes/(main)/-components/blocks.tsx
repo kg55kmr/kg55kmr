@@ -55,7 +55,7 @@ function BlockItem({ item }: { item: BlockItem }) {
     );
 
   return (
-    <Link {...item}>
+    <Link {...item} resetScroll={false}>
       <div className="absolute inset-0 hover:bg-blue-300/50" />
     </Link>
   );

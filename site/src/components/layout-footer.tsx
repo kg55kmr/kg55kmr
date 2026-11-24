@@ -18,7 +18,11 @@ export function LayoutFooter() {
         <ul>
           {sections?.items.map((item) => (
             <li key={item.title}>
-              <Link {...item} className="text-white hover:border-b-2">
+              <Link
+                {...item}
+                resetScroll={false}
+                className="text-white hover:border-b-2"
+              >
                 {item.title}
               </Link>
             </li>

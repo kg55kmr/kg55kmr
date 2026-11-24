@@ -202,7 +202,7 @@ function MenuItem(props: { item: NavigationItem; groupClassName?: string }) {
   const { item } = props;
   const { title } = useRouteByPath()(item);
   const link = isLocalItem(item) ? (
-    <Link {...getLocalLinkFromItem(item)} />
+    <Link {...getLocalLinkFromItem(item)} resetScroll={false} />
   ) : (
     <ExternalLink {...item} unstyled />
   );

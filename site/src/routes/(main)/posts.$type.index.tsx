@@ -1,11 +1,14 @@
 import type { MetaPost, PostType } from "posts";
 import { Accordion } from "@base-ui/react/accordion";
-import { createFileRoute, stripSearchParams } from "@tanstack/react-router";
+import {
+  createFileRoute,
+  Link,
+  stripSearchParams,
+} from "@tanstack/react-router";
 import { ChevronUp } from "lucide-react";
 import { type ReactElement, useRef, useState } from "react";
 import z from "zod";
 import { Highlight } from "~/components/highlight";
-import { Link } from "~/components/link";
 import { NoResults } from "~/components/no-results";
 import { Pagination } from "~/components/pagination";
 import { useStickyOffset } from "~/hooks/use-sticky";
@@ -119,6 +122,7 @@ function Item(props: { post: PostHighlight; type: PostType }) {
       from={Route.fullPath}
       to="./$id"
       params={{ type, id: post.id }}
+      resetScroll={false}
       className="block"
     >
       <div

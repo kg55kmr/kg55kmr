@@ -1,7 +1,8 @@
 import { NavigationMenu } from "@base-ui/react/navigation-menu";
+import { Link } from "@tanstack/react-router";
 import { ChevronDown, Menu as LucideMenu } from "lucide-react";
 import { type ComponentProps, createContext, useContext, useId } from "react";
-import { ExternalLink, Link } from "~/components/link";
+import { ExternalLink } from "~/components/link";
 import {
   type GroupItem,
   type NavigationItem,
@@ -203,7 +204,7 @@ function MenuItem(props: { item: NavigationItem; groupClassName?: string }) {
   const link = isLocalItem(item) ? (
     <Link {...getLocalLinkFromItem(item)} />
   ) : (
-    <ExternalLink {...item} />
+    <ExternalLink {...item} unstyled />
   );
 
   return (

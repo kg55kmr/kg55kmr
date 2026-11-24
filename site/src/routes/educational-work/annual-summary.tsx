@@ -11,6 +11,10 @@ export const Route = createFileRoute("/educational-work/annual-summary")({
 
 const data = [
   {
+    years: "2025-2026",
+    url: "https://drive.google.com/file/d/1A_Ac8pV23rtsYFwHpgLM44W0Gm7e6d1f/preview",
+  },
+  {
     years: "2024-2025",
     url: "https://drive.google.com/file/d/1zX2hdLk37z8KF_Gv1_FepzZbl5vc32e1/preview",
   },

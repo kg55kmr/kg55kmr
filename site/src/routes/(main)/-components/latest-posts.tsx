@@ -26,10 +26,11 @@ type ItemProps = {
 };
 
 function PostItem(props: ItemProps) {
-  const L = props.link.href ? ExternalLink : Link;
+  const DynamicLink = props.link.href ? ExternalLink : Link;
   return (
-    <L
+    <DynamicLink
       {...props.link}
+      unstyled
       className={cn(
         "group relative flex flex-col rounded-t-lg rounded-b-lg border border-gray-400 bg-gray-50 text-inherit hover:border-blue-500 hover:bg-blue-50",
         props.pin && "border-3 border-red-500 bg-red-50",
@@ -52,6 +53,6 @@ function PostItem(props: ItemProps) {
 
       <div className="font-cambria p-1.5 text-xl">{props.title}</div>
       <div className="mt-auto p-1.5 text-slate-500">{props.date}</div>
-    </L>
+    </DynamicLink>
   );
 }

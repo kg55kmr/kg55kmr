@@ -1,5 +1,5 @@
-import { type LinkOptions } from "@tanstack/react-router";
-import { ExternalLink, Link } from "~/components/link";
+import { type LinkOptions, Link } from "@tanstack/react-router";
+import { ExternalLink } from "~/components/link";
 import { cn } from "~/lib/utils";
 
 type Item = LinkOptions | { href: string };

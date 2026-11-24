@@ -79,7 +79,7 @@ function DynamicLink(props: PropsWithChildren<{ post: Post; id: number }>) {
 
   if (props.post.url)
     return (
-      <ExternalLink href={props.post.url} className={className}>
+      <ExternalLink href={props.post.url} unstyled className={className}>
         {props.children}
       </ExternalLink>
     );

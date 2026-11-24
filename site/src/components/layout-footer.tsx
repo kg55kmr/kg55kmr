@@ -1,7 +1,7 @@
+import { Link } from "@tanstack/react-router";
 import { address } from "~/data/common";
 import { useSectionMenu } from "~/hooks/use-sections";
 import { asset } from "~/lib/utils";
-import { Link } from "./link";
 
 export function LayoutFooter() {
   const sections = useSectionMenu().at(-1)?.groups[0];

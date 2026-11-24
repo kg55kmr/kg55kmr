@@ -99,9 +99,7 @@ function RouteComponent() {
       <Header>РОЗДІЛИ САЙТУ</Header>
       <Sections />
       <Header>
-        <Link to="/distance-learning" className="text-[blue]">
-          ДИСТАНЦІЙНЕ НАВЧАННЯ
-        </Link>
+        <Link to="/distance-learning">ДИСТАНЦІЙНЕ НАВЧАННЯ</Link>
       </Header>
       <DistanceLearning />
       <Header>КАРТКА КРИВОРІЖЦЯ</Header>
@@ -190,7 +188,7 @@ function Posts(props: { hide?: [PostType] }) {
       return (
         <Fragment key={title}>
           <Header>
-            <Link to={to} params={params} className="text-[blue]">
+            <Link to={to} params={params} unstyled>
               {title.toUpperCase()}
             </Link>
           </Header>

@@ -12,7 +12,7 @@
     "format": "prettier -w ../../../posts/**/*.md"
   },
   "dependencies": {
-    "@imagekit/nodejs": "^7.14.0",
+    "@imagekit/nodejs": "^7.15.0",
     "@supercharge/promise-pool": "^3.3.0",
     "@upstash/redis": "^1.41.0",
     "fdir": "^6.5.0",

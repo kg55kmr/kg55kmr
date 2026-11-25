@@ -1,0 +1,109 @@
+import type { ReactNode } from "react";
+import type { FilesInFolder } from "virtual:static-assets";
+import { createFileRoute } from "@tanstack/react-router";
+
+export const Route = createFileRoute("/educational-work/falcon-dzhura/terms")({
+  component: RouteComponent,
+  staticData: {
+    title: "Умови проведення",
+  },
+});
+
+function RouteComponent() {
+  return (
+    <div className="content">
+      <h1>
+        Умови проведення гри.
+        <br />
+        Організаційні засади та зміст етапів гри «Джура».
+      </h1>
+      <p>
+        У етапах беруть участь усі учасники рою. Проводяться етапи у режимі
+        онлайн за принципом проведення тестування.
+      </p>
+
+      <Stage title="«Смуга перешкод»" image="images/смуга-перешкод.jpg">
+        <p>Подолання перешкод, вузли, орієнтування на місцевості.</p>
+      </Stage>
+
+      <Stage title="«Відун»" image="images/відун.jpg">
+        <p>
+          Інтелектуальні змагання з історії України, доби козаччини, українських
+          військових формувань різних епох, сучасних Збройних сил України.
+        </p>
+        <p className="font-bold">Тематичні розділи:</p>
+        <ol>
+          <li>Військова історія України (за програмою «Історія України»);</li>
+          <li>Історія Українського війська, зокрема козацтва;</li>
+          <li>Історія національно-визвольних змагань;</li>
+          <li>Традиції, звичаї, побут, заняття козацтва;</li>
+          <li>Культура козацького бароко;</li>
+          <li>Лицарство в світовій та українській культурі;</li>
+          <li>Історія зброї, зокрема козацької;</li>
+          <li>Історія Збройних Сил України.</li>
+        </ol>
+      </Stage>
+
+      <Stage title="«Рятівник»" image="images/рятівник.jpg">
+        <p>
+          Змагання з надання першої долікарської допомоги та елементи
+          рятувальних робіт.
+        </p>
+        <p>Основи цивільного захисту (за програмою «Основи здоров’я»).</p>
+        <p className="font-bold">Перелік умовних травм і захворювань:</p>
+        <ul className="md:columns-2 md:gap-8">
+          <li>кровотечі;</li>
+          <li>укуси змій, комах;</li>
+          <li>переломи;</li>
+          <li>вивихи;</li>
+          <li>ураження блискавкою;</li>
+          <li>термічні опіки;</li>
+          <li>тепловий, сонячний удар;</li>
+          <li>утоплення;</li>
+          <li>зупинка серця та дихання;</li>
+          <li>харчові отруєння.</li>
+        </ul>
+      </Stage>
+
+      <Stage title="«Бівуак» (таборування)" image="images/бівуак.jpg">
+        <p>
+          Знання з організації побуту, доцільності розміщення, дотримання
+          санітарно-гігієнічних норм, стан спорядження, особистих речей,
+          продуктів харчування.
+        </p>
+      </Stage>
+
+      <Stage
+        title="«Змагання з орієнтування»"
+        image="images/змагання-з-орієнтування.jpg"
+      >
+        <p>Змагання передбачають запитання з тем:</p>
+        <ul>
+          <li>орієнтування на місцевості за допомогою компаса;</li>
+          <li>топографічні умовні знаки;</li>
+          <li>масштаб;</li>
+          <li>об’єкти гідрографії;</li>
+          <li>рух за напрямом.</li>
+        </ul>
+      </Stage>
+    </div>
+  );
+}
+
+type StageProps = {
+  title: string;
+  image: FilesInFolder<"images/">;
+  children: ReactNode;
+};
+
+function Stage({ title, image, children }: StageProps) {
+  return (
+    <section className="flex flex-col gap-6 border-t border-gray-200 py-6 md:flex-row md:items-start md:even:flex-row-reverse">
+      <div className="flex-1">
+        <h2 className="mb-2 font-bold">{title}</h2>
+        {children}
+      </div>
+      <img src={`/${image}`} className="w-60 place-self-center rounded-2xl" />
+    </section>
+  );
+}

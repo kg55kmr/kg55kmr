@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FileText } from "lucide-react";
 import { ExternalLink } from "~/components/link";
+import timeline from "./-falcon-dzhura/timeline.png";
 
 export const Route = createFileRoute(
   "/educational-work/falcon-dzhura/regulation",
@@ -21,7 +22,7 @@ function RouteComponent() {
         Всеукраїнської дитячо-юнацької військово-патріотичної <br />
         гри «Сокіл» («Джура») у 2026-2027 н.р.
       </h1>
-      <h1>Мета і завдання:</h1>
+      <h2>Мета і завдання:</h2>
       <p>
         Районний етап Всеукраїнської дитячо-юнацької військово-патріотичної гри
         «Сокіл» («Джура») (далі - «Джура») проводиться з метою виховання юних
@@ -63,7 +64,7 @@ function RouteComponent() {
         <li>«Відун»;</li>
         <li>«Бівуак» (таборування).</li>
       </ul>
-      <h1>Учасники гри «Сокіл» («Джура»)</h1>
+      <h2>Учасники гри «Сокіл» («Джура»)</h2>
       <p>
         Учасниками Гри є здобувачі освіти закладів загальної середньої освіти,
         які об’єднані в козацькі рої у трьох вікових групах:
@@ -85,41 +86,32 @@ function RouteComponent() {
         #dzhura_2027 #kzpo_cpo_dor #УДЦНПВ у соціальній мережі Facеbook закладів
         освіти.
       </p>
-      <h1>Керівництво грою «Сокіл» («Джура»)</h1>
-      <p>
-        Організатор районного етапу Всеукраїнської дитячо-юнацької
-        військово-патріотичної гри «Сокіл» («Джура») – відділ освіти виконкому
-        Тернівської районної у місті ради.
-      </p>
-      <p>
-        Підготовка та проведення гри, створення організаційного комітету та
-        суддівської колегії покладається на комунальний заклад позашкільної
-        освіти «Центр туризму, краєзнавства та екскурсій учнівської молоді
-        «Меридіан» Криворізької міської ради (в.о. директора Ірина Циба).
-      </p>
-      <h1>Час та місце проведення</h1>
+      <h2>Час та місце проведення</h2>
       <p>Районна гра «Джура» проводиться:</p>
-      <table className="table-default table-border table-header-bg-gray-100 w-auto">
-        <colgroup>
-          <col className="w-0" />
-          <col />
-        </colgroup>
-        <thead>
-          <tr>
-            <th>Дата</th>
-            <th>Назва</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((v) => (
-            <tr key={v.name}>
-              <td>{v.date}</td>
-              <td>{v.name}</td>
+      <div className="flex flex-wrap-reverse items-center justify-center gap-5">
+        <table className="table-default table-border table-header-bg-gray-100 w-auto">
+          <colgroup>
+            <col className="w-0" />
+            <col />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Назва</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <h1>Підбиття підсумків та нагородження переможців</h1>
+          </thead>
+          <tbody>
+            {data.map((v) => (
+              <tr key={v.name}>
+                <td>{v.date}</td>
+                <td>{v.name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <img src={timeline} className="mx-auto w-80" />
+      </div>
+      <h2>Підбиття підсумків та нагородження переможців</h2>
       <p>
         Підсумки районного етапу гри «Джура» підбиваються у кожній складовій
         частині змагань (конкурсів, вікторин). Переможці визначаються за

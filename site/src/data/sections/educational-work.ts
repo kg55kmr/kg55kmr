@@ -139,6 +139,7 @@ export const educationalWork = [
         items: [
           { to: "/educational-work/falcon-dzhura", icon: ShieldHalf },
           { to: "/educational-work/falcon-dzhura/regulation", icon: Scroll },
+          { to: "/educational-work/falcon-dzhura/terms", icon: Scroll },
           { to: "/educational-work/falcon-dzhura/patrols", icon: Users },
         ],
       },

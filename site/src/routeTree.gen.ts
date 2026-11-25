@@ -134,6 +134,7 @@ import { Route as EducationalWorkCareerGuidanceWorkUsefulInformationRouteImport 
 import { Route as EducationalWorkFalconDzhuraIndexRouteImport } from './routes/educational-work/falcon-dzhura.index'
 import { Route as EducationalWorkFalconDzhuraPatrolsRouteImport } from './routes/educational-work/falcon-dzhura.patrols'
 import { Route as EducationalWorkFalconDzhuraRegulationRouteImport } from './routes/educational-work/falcon-dzhura.regulation'
+import { Route as EducationalWorkFalconDzhuraTermsRouteImport } from './routes/educational-work/falcon-dzhura.terms'
 import { Route as EducationalWorkNationalAndPatrioticEducationIndexRouteImport } from './routes/educational-work/national-and-patriotic-education.index'
 import { Route as EducationalWorkNationalAndPatrioticEducationActionPlansRouteImport } from './routes/educational-work/national-and-patriotic-education.action-plans'
 import { Route as EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRouteImport } from './routes/educational-work/national-and-patriotic-education.heroes-live-forever'
@@ -903,6 +904,12 @@ const EducationalWorkFalconDzhuraRegulationRoute =
     path: '/falcon-dzhura/regulation',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
+const EducationalWorkFalconDzhuraTermsRoute =
+  EducationalWorkFalconDzhuraTermsRouteImport.update({
+    id: '/falcon-dzhura/terms',
+    path: '/falcon-dzhura/terms',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
 const EducationalWorkNationalAndPatrioticEducationIndexRoute =
   EducationalWorkNationalAndPatrioticEducationIndexRouteImport.update({
     id: '/national-and-patriotic-education/',
@@ -1495,6 +1502,7 @@ export interface FileRoutesByFullPath {
   '/educational-work/career-guidance-work/useful-information': typeof EducationalWorkCareerGuidanceWorkUsefulInformationRoute
   '/educational-work/falcon-dzhura/patrols': typeof EducationalWorkFalconDzhuraPatrolsRoute
   '/educational-work/falcon-dzhura/regulation': typeof EducationalWorkFalconDzhuraRegulationRoute
+  '/educational-work/falcon-dzhura/terms': typeof EducationalWorkFalconDzhuraTermsRoute
   '/educational-work/national-and-patriotic-education/action-plans': typeof EducationalWorkNationalAndPatrioticEducationActionPlansRoute
   '/educational-work/national-and-patriotic-education/heroes-live-forever': typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   '/educational-work/national-and-patriotic-education/regulatory-documents': typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
@@ -1681,6 +1689,7 @@ export interface FileRoutesByTo {
   '/educational-work/career-guidance-work/useful-information': typeof EducationalWorkCareerGuidanceWorkUsefulInformationRoute
   '/educational-work/falcon-dzhura/patrols': typeof EducationalWorkFalconDzhuraPatrolsRoute
   '/educational-work/falcon-dzhura/regulation': typeof EducationalWorkFalconDzhuraRegulationRoute
+  '/educational-work/falcon-dzhura/terms': typeof EducationalWorkFalconDzhuraTermsRoute
   '/educational-work/national-and-patriotic-education/action-plans': typeof EducationalWorkNationalAndPatrioticEducationActionPlansRoute
   '/educational-work/national-and-patriotic-education/heroes-live-forever': typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   '/educational-work/national-and-patriotic-education/regulatory-documents': typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
@@ -1881,6 +1890,7 @@ export interface FileRoutesById {
   '/educational-work/career-guidance-work/useful-information': typeof EducationalWorkCareerGuidanceWorkUsefulInformationRoute
   '/educational-work/falcon-dzhura/patrols': typeof EducationalWorkFalconDzhuraPatrolsRoute
   '/educational-work/falcon-dzhura/regulation': typeof EducationalWorkFalconDzhuraRegulationRoute
+  '/educational-work/falcon-dzhura/terms': typeof EducationalWorkFalconDzhuraTermsRoute
   '/educational-work/national-and-patriotic-education/action-plans': typeof EducationalWorkNationalAndPatrioticEducationActionPlansRoute
   '/educational-work/national-and-patriotic-education/heroes-live-forever': typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   '/educational-work/national-and-patriotic-education/regulatory-documents': typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
@@ -2081,6 +2091,7 @@ export interface FileRouteTypes {
     | '/educational-work/career-guidance-work/useful-information'
     | '/educational-work/falcon-dzhura/patrols'
     | '/educational-work/falcon-dzhura/regulation'
+    | '/educational-work/falcon-dzhura/terms'
     | '/educational-work/national-and-patriotic-education/action-plans'
     | '/educational-work/national-and-patriotic-education/heroes-live-forever'
     | '/educational-work/national-and-patriotic-education/regulatory-documents'
@@ -2267,6 +2278,7 @@ export interface FileRouteTypes {
     | '/educational-work/career-guidance-work/useful-information'
     | '/educational-work/falcon-dzhura/patrols'
     | '/educational-work/falcon-dzhura/regulation'
+    | '/educational-work/falcon-dzhura/terms'
     | '/educational-work/national-and-patriotic-education/action-plans'
     | '/educational-work/national-and-patriotic-education/heroes-live-forever'
     | '/educational-work/national-and-patriotic-education/regulatory-documents'
@@ -2466,6 +2478,7 @@ export interface FileRouteTypes {
     | '/educational-work/career-guidance-work/useful-information'
     | '/educational-work/falcon-dzhura/patrols'
     | '/educational-work/falcon-dzhura/regulation'
+    | '/educational-work/falcon-dzhura/terms'
     | '/educational-work/national-and-patriotic-education/action-plans'
     | '/educational-work/national-and-patriotic-education/heroes-live-forever'
     | '/educational-work/national-and-patriotic-education/regulatory-documents'
@@ -3438,6 +3451,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationalWorkFalconDzhuraRegulationRouteImport
       parentRoute: typeof EducationalWorkRouteRoute
     }
+    '/educational-work/falcon-dzhura/terms': {
+      id: '/educational-work/falcon-dzhura/terms'
+      path: '/falcon-dzhura/terms'
+      fullPath: '/educational-work/falcon-dzhura/terms'
+      preLoaderRoute: typeof EducationalWorkFalconDzhuraTermsRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
     '/educational-work/national-and-patriotic-education/': {
       id: '/educational-work/national-and-patriotic-education/'
       path: '/national-and-patriotic-education'
@@ -4110,6 +4130,7 @@ interface EducationalWorkRouteRouteChildren {
   EducationalWorkCareerGuidanceWorkUsefulInformationRoute: typeof EducationalWorkCareerGuidanceWorkUsefulInformationRoute
   EducationalWorkFalconDzhuraPatrolsRoute: typeof EducationalWorkFalconDzhuraPatrolsRoute
   EducationalWorkFalconDzhuraRegulationRoute: typeof EducationalWorkFalconDzhuraRegulationRoute
+  EducationalWorkFalconDzhuraTermsRoute: typeof EducationalWorkFalconDzhuraTermsRoute
   EducationalWorkNationalAndPatrioticEducationActionPlansRoute: typeof EducationalWorkNationalAndPatrioticEducationActionPlansRoute
   EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute: typeof EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute
   EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute: typeof EducationalWorkNationalAndPatrioticEducationRegulatoryDocumentsRoute
@@ -4158,6 +4179,7 @@ const EducationalWorkRouteRouteChildren: EducationalWorkRouteRouteChildren = {
     EducationalWorkFalconDzhuraPatrolsRoute,
   EducationalWorkFalconDzhuraRegulationRoute:
     EducationalWorkFalconDzhuraRegulationRoute,
+  EducationalWorkFalconDzhuraTermsRoute: EducationalWorkFalconDzhuraTermsRoute,
   EducationalWorkNationalAndPatrioticEducationActionPlansRoute:
     EducationalWorkNationalAndPatrioticEducationActionPlansRoute,
   EducationalWorkNationalAndPatrioticEducationHeroesLiveForeverRoute:

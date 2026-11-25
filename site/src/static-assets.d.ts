@@ -68,6 +68,7 @@ declare module 'virtual:static-assets' {
     "images/бібліотека-2.jpg" |
     "images/бібліотека-3.jpg" |
     "images/бібліотека-4.jpg" |
+    "images/бівуак.jpg" |
     "images/вакансії.jpg" |
     "images/вона-хаб.jpg" |
     "images/відключення-електроенергії-1.jpg" |
@@ -89,6 +90,7 @@ declare module 'virtual:static-assets' {
     "images/відомі-випускники/наумов.jpg" |
     "images/відомі-випускники/федін.jpg" |
     "images/відомі-випускники/чирка.jpg" |
+    "images/відун.jpg" |
     "images/вікові-норми-розвитку-1.jpg" |
     "images/вікові-норми-розвитку-2.jpg" |
     "images/вікові-норми-розвитку-3.jpg" |
@@ -124,6 +126,7 @@ declare module 'virtual:static-assets' {
     "images/захоплення-в-заручники-1.jpg" |
     "images/захоплення-в-заручники-2.jpg" |
     "images/зверніть-увагу.jpg" |
+    "images/змагання-з-орієнтування.jpg" |
     "images/календар-профілактичних-щеплень-1.jpg" |
     "images/календар-профілактичних-щеплень-2.jpg" |
     "images/картка-криворіжця.jpg" |
@@ -249,6 +252,7 @@ declare module 'virtual:static-assets' {
     "images/розділи/охорона-праці-та-безпека-життєдіяльності.jpg" |
     "images/розділи/соціально-психологічна-служба-мініатюра.jpg" |
     "images/розділи/соціально-психологічна-служба.jpg" |
+    "images/рятівник.jpg" |
     "images/санітарно-гігієнічні-норми.jpg" |
     "images/сертифікати-вчителів/заярнюк-1.jpg" |
     "images/сертифікати-вчителів/мугак-1.jpg" |
@@ -259,6 +263,7 @@ declare module 'virtual:static-assets' {
     "images/сертифікати-вчителів/старікова-2.jpg" |
     "images/сертифікати-вчителів/старікова-3.jpg" |
     "images/симптоми-інфекційної-хвороби.jpg" |
+    "images/смуга-перешкод.jpg" |
     "images/сокіл-джура.webp" |
     "images/структура-органів-управління.jpg" |
     "images/центр-життєстійкості.jpg" |

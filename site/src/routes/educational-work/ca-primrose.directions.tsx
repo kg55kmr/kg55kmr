@@ -13,8 +13,8 @@ export const Route = createFileRoute(
 function RouteComponent() {
   return (
     <img
-      src={asset("images/до-первоцвіт-напрямки.jpg")}
-      className="mx-auto w-250"
+      src={asset("images/первоцвіт/напрямки.jpg")}
+      className="mx-auto w-200"
     />
   );
 }

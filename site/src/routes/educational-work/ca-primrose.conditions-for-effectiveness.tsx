@@ -12,23 +12,9 @@ export const Route = createFileRoute(
 
 function RouteComponent() {
   return (
-    <div className="grid justify-items-center gap-5 md:grid-cols-2">
-      <img
-        src={asset("images/до-первоцвіт-умови-ефективності-1.jpg")}
-        className="w-152"
-      />
-      <img
-        src={asset("images/до-первоцвіт-умови-ефективності-2.jpg")}
-        className="w-152"
-      />
-      <img
-        src={asset("images/до-первоцвіт-умови-ефективності-3.jpg")}
-        className="w-152"
-      />
-      <img
-        src={asset("images/до-первоцвіт-умови-ефективності-4.jpg")}
-        className="w-152"
-      />
-    </div>
+    <img
+      src={asset("images/первоцвіт/умови-ефективності.jpg")}
+      className="mx-auto w-200"
+    />
   );
 }

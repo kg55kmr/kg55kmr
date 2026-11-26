@@ -11,7 +11,7 @@ export const Route = createFileRoute("/educational-work/ca-primrose/rules")({
 function RouteComponent() {
   return (
     <img
-      src={asset("images/до-первоцвіт-правила.jpg")}
+      src={asset("images/первоцвіт/правила.jpg")}
       className="mx-auto w-250"
     />
   );

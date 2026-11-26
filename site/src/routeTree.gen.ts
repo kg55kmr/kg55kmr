@@ -126,6 +126,7 @@ import { Route as EducationalWorkCaPrimroseCharterRouteImport } from './routes/e
 import { Route as EducationalWorkCaPrimroseConditionsForEffectivenessRouteImport } from './routes/educational-work/ca-primrose.conditions-for-effectiveness'
 import { Route as EducationalWorkCaPrimroseDirectionsRouteImport } from './routes/educational-work/ca-primrose.directions'
 import { Route as EducationalWorkCaPrimroseRulesRouteImport } from './routes/educational-work/ca-primrose.rules'
+import { Route as EducationalWorkCaPrimroseStructureRouteImport } from './routes/educational-work/ca-primrose.structure'
 import { Route as EducationalWorkCareerGuidanceWorkIndexRouteImport } from './routes/educational-work/career-guidance-work.index'
 import { Route as EducationalWorkCareerGuidanceWorkAnnouncementsRouteImport } from './routes/educational-work/career-guidance-work.announcements'
 import { Route as EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRouteImport } from './routes/educational-work/career-guidance-work.new-challenges-and-prospects'
@@ -856,6 +857,12 @@ const EducationalWorkCaPrimroseRulesRoute =
     path: '/ca-primrose/rules',
     getParentRoute: () => EducationalWorkRouteRoute,
   } as any)
+const EducationalWorkCaPrimroseStructureRoute =
+  EducationalWorkCaPrimroseStructureRouteImport.update({
+    id: '/ca-primrose/structure',
+    path: '/ca-primrose/structure',
+    getParentRoute: () => EducationalWorkRouteRoute,
+  } as any)
 const EducationalWorkCareerGuidanceWorkIndexRoute =
   EducationalWorkCareerGuidanceWorkIndexRouteImport.update({
     id: '/career-guidance-work/',
@@ -1496,6 +1503,7 @@ export interface FileRoutesByFullPath {
   '/educational-work/ca-primrose/conditions-for-effectiveness': typeof EducationalWorkCaPrimroseConditionsForEffectivenessRoute
   '/educational-work/ca-primrose/directions': typeof EducationalWorkCaPrimroseDirectionsRoute
   '/educational-work/ca-primrose/rules': typeof EducationalWorkCaPrimroseRulesRoute
+  '/educational-work/ca-primrose/structure': typeof EducationalWorkCaPrimroseStructureRoute
   '/educational-work/career-guidance-work/announcements': typeof EducationalWorkCareerGuidanceWorkAnnouncementsRoute
   '/educational-work/career-guidance-work/new-challenges-and-prospects': typeof EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute
   '/educational-work/career-guidance-work/student-career-guidance-card': typeof EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRoute
@@ -1683,6 +1691,7 @@ export interface FileRoutesByTo {
   '/educational-work/ca-primrose/conditions-for-effectiveness': typeof EducationalWorkCaPrimroseConditionsForEffectivenessRoute
   '/educational-work/ca-primrose/directions': typeof EducationalWorkCaPrimroseDirectionsRoute
   '/educational-work/ca-primrose/rules': typeof EducationalWorkCaPrimroseRulesRoute
+  '/educational-work/ca-primrose/structure': typeof EducationalWorkCaPrimroseStructureRoute
   '/educational-work/career-guidance-work/announcements': typeof EducationalWorkCareerGuidanceWorkAnnouncementsRoute
   '/educational-work/career-guidance-work/new-challenges-and-prospects': typeof EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute
   '/educational-work/career-guidance-work/student-career-guidance-card': typeof EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRoute
@@ -1884,6 +1893,7 @@ export interface FileRoutesById {
   '/educational-work/ca-primrose/conditions-for-effectiveness': typeof EducationalWorkCaPrimroseConditionsForEffectivenessRoute
   '/educational-work/ca-primrose/directions': typeof EducationalWorkCaPrimroseDirectionsRoute
   '/educational-work/ca-primrose/rules': typeof EducationalWorkCaPrimroseRulesRoute
+  '/educational-work/ca-primrose/structure': typeof EducationalWorkCaPrimroseStructureRoute
   '/educational-work/career-guidance-work/announcements': typeof EducationalWorkCareerGuidanceWorkAnnouncementsRoute
   '/educational-work/career-guidance-work/new-challenges-and-prospects': typeof EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute
   '/educational-work/career-guidance-work/student-career-guidance-card': typeof EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRoute
@@ -2085,6 +2095,7 @@ export interface FileRouteTypes {
     | '/educational-work/ca-primrose/conditions-for-effectiveness'
     | '/educational-work/ca-primrose/directions'
     | '/educational-work/ca-primrose/rules'
+    | '/educational-work/ca-primrose/structure'
     | '/educational-work/career-guidance-work/announcements'
     | '/educational-work/career-guidance-work/new-challenges-and-prospects'
     | '/educational-work/career-guidance-work/student-career-guidance-card'
@@ -2272,6 +2283,7 @@ export interface FileRouteTypes {
     | '/educational-work/ca-primrose/conditions-for-effectiveness'
     | '/educational-work/ca-primrose/directions'
     | '/educational-work/ca-primrose/rules'
+    | '/educational-work/ca-primrose/structure'
     | '/educational-work/career-guidance-work/announcements'
     | '/educational-work/career-guidance-work/new-challenges-and-prospects'
     | '/educational-work/career-guidance-work/student-career-guidance-card'
@@ -2472,6 +2484,7 @@ export interface FileRouteTypes {
     | '/educational-work/ca-primrose/conditions-for-effectiveness'
     | '/educational-work/ca-primrose/directions'
     | '/educational-work/ca-primrose/rules'
+    | '/educational-work/ca-primrose/structure'
     | '/educational-work/career-guidance-work/announcements'
     | '/educational-work/career-guidance-work/new-challenges-and-prospects'
     | '/educational-work/career-guidance-work/student-career-guidance-card'
@@ -3395,6 +3408,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EducationalWorkCaPrimroseRulesRouteImport
       parentRoute: typeof EducationalWorkRouteRoute
     }
+    '/educational-work/ca-primrose/structure': {
+      id: '/educational-work/ca-primrose/structure'
+      path: '/ca-primrose/structure'
+      fullPath: '/educational-work/ca-primrose/structure'
+      preLoaderRoute: typeof EducationalWorkCaPrimroseStructureRouteImport
+      parentRoute: typeof EducationalWorkRouteRoute
+    }
     '/educational-work/career-guidance-work/': {
       id: '/educational-work/career-guidance-work/'
       path: '/career-guidance-work'
@@ -4124,6 +4144,7 @@ interface EducationalWorkRouteRouteChildren {
   EducationalWorkCaPrimroseConditionsForEffectivenessRoute: typeof EducationalWorkCaPrimroseConditionsForEffectivenessRoute
   EducationalWorkCaPrimroseDirectionsRoute: typeof EducationalWorkCaPrimroseDirectionsRoute
   EducationalWorkCaPrimroseRulesRoute: typeof EducationalWorkCaPrimroseRulesRoute
+  EducationalWorkCaPrimroseStructureRoute: typeof EducationalWorkCaPrimroseStructureRoute
   EducationalWorkCareerGuidanceWorkAnnouncementsRoute: typeof EducationalWorkCareerGuidanceWorkAnnouncementsRoute
   EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute: typeof EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute
   EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRoute: typeof EducationalWorkCareerGuidanceWorkStudentCareerGuidanceCardRoute
@@ -4167,6 +4188,8 @@ const EducationalWorkRouteRouteChildren: EducationalWorkRouteRouteChildren = {
   EducationalWorkCaPrimroseDirectionsRoute:
     EducationalWorkCaPrimroseDirectionsRoute,
   EducationalWorkCaPrimroseRulesRoute: EducationalWorkCaPrimroseRulesRoute,
+  EducationalWorkCaPrimroseStructureRoute:
+    EducationalWorkCaPrimroseStructureRoute,
   EducationalWorkCareerGuidanceWorkAnnouncementsRoute:
     EducationalWorkCareerGuidanceWorkAnnouncementsRoute,
   EducationalWorkCareerGuidanceWorkNewChallengesAndProspectsRoute:

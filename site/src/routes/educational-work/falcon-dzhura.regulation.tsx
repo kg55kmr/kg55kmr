@@ -123,7 +123,7 @@ function RouteComponent() {
         етапі гри «Джура».
       </p>
       <ExternalLink
-        href="https://drive.google.com/file/d/1Tg-E8VW9uZySF7c305MDpuzxqkpu_q5C/view"
+        href="https://drive.google.com/file/d/1Nf_DxHbrzqnIoqnfAjzWPN8fToC-C20K/view"
         className="flex gap-1"
       >
         <FileText />

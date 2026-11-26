@@ -18,6 +18,7 @@ import {
   Lightbulb,
   Map,
   Megaphone,
+  Network,
   Rainbow,
   Scale,
   Scroll,
@@ -148,7 +149,7 @@ export const educationalWork = [
         items: [
           { to: "/educational-work/ca-primrose", icon: Flower2 },
           { to: "/educational-work/ca-primrose/charter", icon: FileText },
-          { to: "/educational-work/ca-primrose/structure", icon: FileText },
+          { to: "/educational-work/ca-primrose/structure", icon: Network },
           { to: "/educational-work/ca-primrose/rules", icon: Scale },
           { to: "/educational-work/ca-primrose/directions", icon: Compass },
           {

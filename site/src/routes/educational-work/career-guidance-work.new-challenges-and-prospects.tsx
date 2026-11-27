@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { User } from "lucide-react";
+import { Accordion } from "~/components/accordion";
 import { ImageKitCarousel } from "~/components/carousel";
 
 export const Route = createFileRoute(
@@ -13,40 +15,66 @@ export const Route = createFileRoute(
 
 function RouteComponent() {
   return (
-    <div className="content">
-      <h1>
-        Партнерство школи, родини й громади в професійному самовизначенні учнів.
-        (Алтинбаєва Л.М.)
-      </h1>
-      <ImageKitCarousel path="educational-work/educational-work-and-career-guidance/1" />
-
-      <h1>
-        Формування професійного самовизначення учнів у нових умовах. (Гнатюк
-        А.С.)
-      </h1>
-      <ImageKitCarousel path="educational-work/educational-work-and-career-guidance/2" />
-
-      <h1>
-        Профорієнтацію в контексті Нової української школи. (Лисенко О.Б.)
-      </h1>
-      <ImageKitCarousel path="educational-work/educational-work-and-career-guidance/3" />
-
-      <h1>
-        Формування готовності учнів до свідомого вибору професії. (Рябоконь
-        Н.О.)
-      </h1>
-      <ImageKitCarousel path="educational-work/educational-work-and-career-guidance/4" />
-
-      <h1>
-        Гру як засіб формування в дітей уявлення про професії. (Таран Н.В.)
-      </h1>
-      <ImageKitCarousel path="educational-work/educational-work-and-career-guidance/5" />
-
-      <h1>
-        Формування творчих здібності учнів: інтерактивна профорієнтація через
-        музичне мистецтво. (Дубачинська Н.О.)
-      </h1>
-      <ImageKitCarousel path="educational-work/educational-work-and-career-guidance/6" />
-    </div>
+    <Accordion className="font-roboto-condensed">
+      {items.map((item) => (
+        <Accordion.Item key={item.title} title={item.title}>
+          <div className="my-2 ml-2 flex items-center gap-5">
+            <User className="size-8 text-blue-700" />
+            <div className="flex flex-col">
+              <div className="text-gray-500">Автор презентації</div>
+              <div className="text-lg font-bold">{item.author}</div>
+            </div>
+          </div>
+          <ImageKitCarousel
+            path={`educational-work/educational-work-and-career-guidance/${item.id}`}
+          />
+        </Accordion.Item>
+      ))}
+    </Accordion>
   );
 }
+
+const items = [
+  {
+    title:
+      "Гендерночутливе освітнє середовище як складова сучасної виховної системи гімназії",
+    author: "Чудна Н.В.",
+    id: 1,
+  },
+  {
+    title:
+      "Формування гендерної культури учнівської молоді: роль учнівського самоврядування та практика проведення бездискримінаційних заходів",
+    author: "Гудзовський І.Р.",
+    id: 2,
+  },
+  {
+    title:
+      "Гендерночутливий клас: маленькі педагогічні рішення, які змінюють освітнє середовище",
+    author: "Рябоконь Н.О.",
+    id: 3,
+  },
+  {
+    title:
+      "Формування культури рівності та взаємоповаги серед учнів початкової школи",
+    author: "Фербей В.М.",
+    id: 4,
+  },
+  {
+    title:
+      "Гендерночутлива профорієнтація: формування у здобувачів освіти свідомого та неупередженого вибору майбутньої професії",
+    author: "Гнатюк А.С.",
+    id: 5,
+  },
+  {
+    title:
+      "Видимість жінок в історії та подолання андроцентричного підходу: від визвольних змагань XX століття до ролі жінок-захисниць у сучасній російсько-українській війні",
+    author: "Неплях Є.О.",
+    id: 6,
+  },
+  {
+    title:
+      "Від жарту до булінгу: як розпізнати гендерно зумовлені образи та приниження",
+    author: "Тельвак Н.В.",
+    id: 7,
+  },
+];

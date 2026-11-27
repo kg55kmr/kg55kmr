@@ -1,7 +1,7 @@
 import type { Sheet, SheetCell } from "~/server/sheets";
+import { cn } from "cn";
 import { type CSSProperties, type JSX, Suspense } from "react";
 import { useGoogleSheets } from "~/hooks/use-queries";
-import { cn } from "~/lib/utils";
 import { Loader } from "./loader";
 import { Tabs } from "./tabs";
 

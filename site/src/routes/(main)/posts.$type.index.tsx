@@ -5,6 +5,7 @@ import {
   Link,
   stripSearchParams,
 } from "@tanstack/react-router";
+import { cn } from "cn";
 import { ChevronUp } from "lucide-react";
 import { type ReactElement, useRef, useState } from "react";
 import z from "zod";
@@ -16,7 +17,7 @@ import { cacheHeader } from "~/lib/headers";
 import { monthsNominative } from "~/lib/months";
 import { pagination } from "~/lib/pagination";
 import { formatPostDate, getPostThumbnailUrl } from "~/lib/posts";
-import { asset, cn } from "~/lib/utils";
+import { asset } from "~/lib/utils";
 import { getPostsList } from "~/server/server-fn";
 
 export const Route = createFileRoute("/(main)/posts/$type/")({

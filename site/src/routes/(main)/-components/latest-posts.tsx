@@ -1,6 +1,7 @@
 import { type LinkOptions } from "@tanstack/react-router";
+import { cn } from "cn";
 import { ExternalLink, Link } from "~/components/link";
-import { asset, cn } from "~/lib/utils";
+import { asset } from "~/lib/utils";
 
 type Props = {
   items: ItemProps[];

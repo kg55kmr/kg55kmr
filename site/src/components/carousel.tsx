@@ -1,5 +1,6 @@
 import type { EmblaCarouselType } from "embla-carousel";
 import type { ImageKitImage } from "~/server/imagekit";
+import { cn } from "cn";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   ChevronLeftCircle,
@@ -11,7 +12,6 @@ import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react";
 import { useLightbox } from "~/hooks/use-lightbox";
 import { useImages, usePostImages } from "~/hooks/use-queries";
 import { useSlidesInView } from "~/hooks/use-slides-in-view";
-import { cn } from "~/lib/utils";
 import { withSuspense } from "~/lib/with";
 
 type Props = {

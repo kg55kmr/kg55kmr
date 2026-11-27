@@ -1,8 +1,8 @@
 import type { ChronologyEntry, ChronologyGroup } from "~/components/chronology";
 import { createFileRoute } from "@tanstack/react-router";
+import { cn } from "cn";
 import { Chronology } from "~/components/chronology";
 import { academicYear } from "~/data/common";
-import { cn } from "~/lib/utils";
 
 export const Route = createFileRoute(
   "/parent-forum/preparing-5-year-olds-for-school",

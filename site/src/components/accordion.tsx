@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
+import { cn } from "cn";
 import { ChevronUp } from "lucide-react";
-import { cn } from "~/lib/utils";
 
 type Props = {
   defaultValue?: string;

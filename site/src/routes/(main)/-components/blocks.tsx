@@ -1,6 +1,6 @@
 import { type LinkOptions, Link } from "@tanstack/react-router";
+import { cn } from "cn";
 import { ExternalLink } from "~/components/link";
-import { cn } from "~/lib/utils";
 
 type Item = LinkOptions | { href: string };
 export type BlockItem = {

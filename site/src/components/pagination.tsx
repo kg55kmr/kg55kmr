@@ -1,3 +1,4 @@
+import { cn } from "cn";
 import {
   ChevronFirst,
   ChevronLast,
@@ -5,7 +6,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { type KeyboardEvent } from "react";
-import { cn } from "~/lib/utils";
 
 type PaginationProps = {
   totalItems: number;

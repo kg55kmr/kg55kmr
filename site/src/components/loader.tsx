@@ -1,5 +1,5 @@
+import { cn } from "cn";
 import { LoaderCircle } from "lucide-react";
-import { cn } from "~/lib/utils";
 
 export function Loader(props: { className?: string }) {
   return (

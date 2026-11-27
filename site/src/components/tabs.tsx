@@ -1,4 +1,5 @@
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
+import { cn } from "cn";
 import {
   type CSSProperties,
   type ReactNode,
@@ -8,7 +9,6 @@ import {
   useRef,
 } from "react";
 import { useStickyOffset } from "~/hooks/use-sticky";
-import { cn } from "~/lib/utils";
 import { Accordion } from "./accordion";
 import { Responsive } from "./responsive";
 

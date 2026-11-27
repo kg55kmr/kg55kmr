@@ -1,10 +1,8 @@
-import type { FilesInFolder, StaticAssetDirectory, StaticAssetPath } from "virtual:static-assets";
-import clsx, { type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+import type {
+  FilesInFolder,
+  StaticAssetDirectory,
+  StaticAssetPath,
+} from "virtual:static-assets";
 
 export function dirAsset<T extends StaticAssetDirectory>(dir: T) {
   function fileAsset(file: DirAsset<T>): string;

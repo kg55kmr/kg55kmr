@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Collapsible as CollapsiblePrimitive } from "@base-ui/react/collapsible";
+import { cn } from "cn";
 import { ChevronRight } from "lucide-react";
-import { cn } from "~/lib/utils";
 
 type Props = { title: string; className?: string; children: ReactNode };
 

@@ -1,6 +1,6 @@
 import type { AnchorHTMLAttributes } from "react";
 import { type LinkComponent, createLink } from "@tanstack/react-router";
-import { cn } from "~/lib/utils";
+import { cn } from "cn";
 
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   unstyled?: boolean;

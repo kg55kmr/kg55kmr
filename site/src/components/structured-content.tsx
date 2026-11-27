@@ -1,4 +1,5 @@
 import { useLocation } from "@tanstack/react-router";
+import { cn } from "cn";
 import {
   type ReactElement,
   type ReactNode,
@@ -12,7 +13,6 @@ import {
 import { useMutative } from "use-mutative";
 import { useIntersectionObserver } from "~/hooks/use-intersection-observer";
 import { useSticky, useStickyOffset } from "~/hooks/use-sticky";
-import { cn } from "~/lib/utils";
 import { Accordion } from "./accordion";
 import { Link } from "./link";
 import { Responsive } from "./responsive";

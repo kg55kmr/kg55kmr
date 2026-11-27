@@ -1,7 +1,7 @@
+import { cn } from "cn";
 import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { useResizeObserverRef } from "rooks";
-import { cn } from "~/lib/utils";
 import { Pagination } from "../pagination";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";

@@ -1,5 +1,6 @@
 import { NavigationMenu } from "@base-ui/react/navigation-menu";
 import { Link } from "@tanstack/react-router";
+import { cn } from "cn";
 import { ChevronDown, Menu as LucideMenu } from "lucide-react";
 import { type ComponentProps, createContext, useContext, useId } from "react";
 import { ExternalLink } from "~/components/link";
@@ -15,7 +16,6 @@ import {
 import { useRouteByPath } from "~/hooks/use-sections";
 import { useSectionMenu } from "~/hooks/use-sections";
 import { useSticky } from "~/hooks/use-sticky";
-import { cn } from "~/lib/utils";
 import { Responsive } from "./responsive";
 
 const iconColors = [
